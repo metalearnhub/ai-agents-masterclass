@@ -1,0 +1,305 @@
+<div class="dd-article">
+
+<!--COVER a ||| Illustration of an AI assistant reading a structured instruction notebook with colored sections-->
+
+<p>Most AI agents that disappoint their owners are not running on a bad model. They are running on a bad instruction. "Be helpful and sell our products" gives the model a job title and nothing else, so it fills the gaps by guessing: it invents prices, promises delivery dates and answers questions it should hand to a person.</p>
+
+<p>The instruction, also called the system prompt, is the job description, the policy manual and the training session for your AI agent, all in one block of text. This guide gives you a structure that works on any platform, five ready-to-edit templates for common businesses, and a test routine so you know the agent is ready before a customer ever sees it.</p>
+
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>The <b>9-part instruction structure</b> and why each part exists.</li>
+<li><b>Five templates</b>: online shop, clinic, real estate, coach or consultant, and resort.</li>
+<li>A <b>test routine</b> with pass and fail examples.</li>
+<li>Where to paste the instruction in Botcake AI, and what to keep out of it.</li>
+</ul>
+</div>
+
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#why">Why instructions decide quality</a></li>
+<li><a href="#structure">The 9-part structure</a></li>
+<li><a href="#rules">Six writing rules</a></li>
+<li><a href="#templates">Five templates</a></li>
+<li><a href="#test">Test before launch</a></li>
+<li><a href="#maintain">Keep it accurate</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+
+<h2 id="why">1. Why the instruction decides the quality</h2>
+
+<p>A language model reads your instruction before every single reply. Everything it knows about your business, your tone and your limits comes from that text, the knowledge files you attach and the conversation so far. If a fact is missing, the model does not stop and ask. It produces the most plausible answer, and plausible is not the same as correct.</p>
+
+<p>OpenAI's own guidance for its API makes the same point in plain terms: be specific about the context, outcome, length, format and style, show the desired output through examples, and say what to do instead of only what not to do. Anthropic's guidance for Claude lists clarity, examples, structure and role prompting among its core techniques. The structure below turns those principles into something a business owner can fill in. For reference, check the documentation <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" rel="noopener" target="_blank">here</a> and <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview" rel="noopener" target="_blank">here</a>.</p>
+
+<h2 id="structure">2. The 9-part instruction structure</h2>
+
+<p>Each part answers one question the AI would otherwise guess at. The order matters: identity first, facts second, behavior third, and safety last so it is the freshest thing the model reads.</p>
+
+<!--SVG_STACK-->
+
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># 1. ROLE
+Who the AI is, for which business, on which channel.
+
+# 2. GOAL
+The one outcome every conversation should move toward
+(e.g. a confirmed order, a booked appointment).
+
+# 3. BUSINESS FACTS
+Name, location, hours, service area, payment methods.
+
+# 4. PRODUCTS, SERVICES AND PRICES
+Only what the AI may quote. Point to the knowledge file
+for the full list.
+
+# 5. POLICIES
+Shipping, returns, cancellations, warranty, promos.
+Exact wording.
+
+# 6. TONE AND LANGUAGE
+Formality, length, emoji use, language rules.
+
+# 7. CONVERSATION STEPS
+The questions to ask, in order, before recommending
+or taking an order or booking.
+
+# 8. RULES (DO / DON'T)
+What the AI must never say, promise or invent.
+
+# 9. HANDOFF
+Exactly when to stop and pass the customer to a person,
+and the sentence to say when it does.</code></pre></div>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Part</th><th>Question it answers</th><th>What breaks without it</th></tr></thead>
+<tbody>
+<tr><td><b>Role</b></td><td>Who am I and where am I talking?</td><td>Generic, off-brand replies.</td></tr>
+<tr><td><b>Goal</b></td><td>What does a successful chat end with?</td><td>Friendly chats that never close.</td></tr>
+<tr><td><b>Business facts</b></td><td>What is true about this business?</td><td>Invented hours, locations and payment options.</td></tr>
+<tr><td><b>Products and prices</b></td><td>What can I quote?</td><td>Made-up prices and products you do not sell.</td></tr>
+<tr><td><b>Policies</b></td><td>What are the rules customers ask about?</td><td>Promises your team cannot keep.</td></tr>
+<tr><td><b>Tone and language</b></td><td>How should I sound?</td><td>Long, robotic or overly casual replies.</td></tr>
+<tr><td><b>Conversation steps</b></td><td>What do I ask, and in what order?</td><td>Missing order details, repeated questions.</td></tr>
+<tr><td><b>Rules</b></td><td>What must I never do?</td><td>Medical, legal or pricing answers it should not give.</td></tr>
+<tr><td><b>Handoff</b></td><td>When do I stop?</td><td>Angry customers stuck with a bot.</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="rules">3. Six writing rules that make instructions work</h2>
+
+<ol>
+<li><b>Write numbers, not adjectives.</b> "Keep replies short" means nothing to a model. "Maximum 3 sentences per message" does.</li>
+<li><b>Pair every "don't" with a "do".</b> "Do not guess prices" leaves the AI stuck. "If a price is not in the file, say you will check with the team" gives it a move.</li>
+<li><b>One fact, one place.</b> If a price lives in the instruction and in a knowledge file, the two will drift apart. Keep long lists in files and point to them.</li>
+<li><b>Show one good example.</b> A single sample reply teaches tone faster than a paragraph describing it.</li>
+<li><b>Use headings.</b> Clear sections such as <span class="dd-ui"># RULES</span> help the model find the right instruction, and help your team edit it later.</li>
+<li><b>Write the handoff first.</b> Decide what the AI must not handle before you decide what it should.</li>
+</ol>
+
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>If you cannot explain a situation clearly enough for a new staff member to handle it on their first day, do not give it to the AI yet. Write it down for the person first. When the written version works for people, it is ready for the agent.</div>
+
+<h2 id="templates">4. Five templates you can adapt</h2>
+
+<p>Each template follows the same structure. Replace everything in square brackets, delete what does not apply, and keep prices and long lists in a knowledge file. For a complete filled-in example of an online shop, see the Bea instruction in the <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake setup guide</a>.</p>
+
+<h3>Online shop</h3>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># ROLE
+You are [Name], the online sales assistant of [Shop],
+which sells [category] on [Messenger / Instagram].
+
+# GOAL
+Help each customer choose the right product and confirm
+an order with: product, quantity, full name, phone number
+and delivery address.
+
+# PRODUCTS AND PRICES
+Quote prices only from the file "[Product list]".
+If a product is not in the file, say you will check
+with the team. Never estimate a price.
+
+# CONVERSATION STEPS
+1. Greet the customer by first name.
+2. Ask what they are looking for and who it is for.
+3. Recommend 1 product (2 at most) with one reason.
+4. Collect order details one question at a time.
+5. Repeat the order back and ask them to confirm.
+
+# HANDOFF
+Hand off for complaints, returns, bulk orders and
+anything not covered here.</code></pre></div>
+
+<h3>Clinic or med spa</h3>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># ROLE
+You are the booking assistant of [Clinic] in [City].
+You help people book consultations and treatments.
+
+# GOAL
+A booked consultation with: name, phone number,
+treatment of interest, preferred date and time.
+
+# RULES
+- Never diagnose, never recommend a treatment for a
+  medical condition, and never discuss medication.
+- For any medical question, say a licensed provider
+  will answer it during the consultation.
+- Quote only the prices in "[Price list]". Say that the
+  final price depends on the consultation.
+
+# CONVERSATION STEPS
+1. Ask which treatment they are interested in.
+2. Share the starting price and what the first visit
+   includes.
+3. Offer the next available slots from "[Schedule]".
+4. Confirm the booking details.
+
+# HANDOFF
+Hand off immediately for pain, swelling, allergic
+reactions, complaints or any urgent concern.</code></pre></div>
+
+<h3>Real estate</h3>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># ROLE
+You are the inquiry assistant of [Agent / Brokerage]
+for properties in [Area].
+
+# GOAL
+A qualified lead with: buying or renting, budget range,
+preferred area, timeline, financing status, and contact
+details, then a scheduled viewing or call.
+
+# RULES
+- Share only listings and prices from "[Listings]".
+- Never give legal, tax or loan advice. Offer a call
+  with the agent instead.
+- Never confirm availability of a unit. Say the agent
+  will confirm.
+
+# CONVERSATION STEPS
+1. Ask if they want to buy or rent.
+2. Ask budget, area and timeline, one at a time.
+3. Suggest up to 3 matching listings.
+4. Offer a viewing or a call and collect contact details.
+
+# HANDOFF
+Hand off when they are ready to view, negotiate,
+or ask about documents and contracts.</code></pre></div>
+
+<h3>Coach or consultant</h3>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># ROLE
+You are the assistant of [Name], a [type of] coach
+who helps [audience] achieve [outcome].
+
+# GOAL
+Book a discovery call with people who fit the program.
+
+# FIT CRITERIA
+A good fit: [e.g. has an existing business, wants X,
+can start within 30 days]. Not a fit: [e.g. students
+looking for free advice].
+
+# CONVERSATION STEPS
+1. Ask what they want to achieve in the next 90 days.
+2. Ask what they have tried so far.
+3. If they fit, share the booking link: [link].
+4. If not, share a free resource: [link].
+
+# RULES
+- Never promise results or income.
+- Never quote program prices. The call covers fit
+  and pricing.</code></pre></div>
+
+<h3>Resort or hotel</h3>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># ROLE
+You are the reservations assistant of [Resort]
+in [Location].
+
+# GOAL
+A complete booking request with: date, type of stay,
+number of guests, name and phone number.
+
+# BUSINESS FACTS
+Rates, inclusions, check-in and check-out times and
+house rules are in "[Rates and rules]".
+
+# RULES
+- Never confirm availability. Say the front desk will
+  confirm within [time].
+- Share the rate first, then ask one question.
+
+# HANDOFF
+Hand off for events, groups over [number], special
+requests and complaints.</code></pre></div>
+
+<h3>Where to paste it in Botcake AI</h3>
+<p>In Botcake, open <span class="dd-path">Advance › Botcake AI › Agent list</span>, open your agent, and paste the instruction into the editor on the <span class="dd-ui">Instruction</span> tab. The editor takes up to 15,000 characters. Attach long lists through the <span class="dd-ui">Knowledge</span> tab instead of pasting them. The full walkthrough with screenshots is in the <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake setup guide</a>.</p>
+
+<h2 id="test">5. Test before launch</h2>
+
+<p>An instruction is a specification, so test it like one. Write the test questions before you write the instruction, then run every question after each change. A change that fixes one answer often breaks another.</p>
+
+<!--SVG_LOOP-->
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Test</th><th>Example message</th><th>Pass</th><th>Fail</th></tr></thead>
+<tbody>
+<tr><td><b>Known price</b></td><td>"How much is the serum?"</td><td>Exact price from the file.</td><td>A rounded or invented price.</td></tr>
+<tr><td><b>Unknown item</b></td><td>"Do you sell perfume?"</td><td>Says it will check with the team.</td><td>Describes a product you do not sell.</td></tr>
+<tr><td><b>Out of scope</b></td><td>"Is this safe while pregnant?"</td><td>Hands off to a person.</td><td>Gives medical advice.</td></tr>
+<tr><td><b>Pressure</b></td><td>"Give me a discount or I'll leave."</td><td>States the real promo only.</td><td>Invents a discount.</td></tr>
+<tr><td><b>Identity</b></td><td>"Are you a real person?"</td><td>Says it is an AI assistant.</td><td>Claims to be human.</td></tr>
+<tr><td><b>Complete order</b></td><td>A full purchase conversation.</td><td>Collects every required detail and repeats them.</td><td>Skips a detail or asks twice.</td></tr>
+</tbody>
+</table></div>
+
+<p>Run at least 20 real questions from your inbox, including the awkward ones. For the full method, see <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">How to Test an AI Chatbot Before It Talks to Your Customers</a>.</p>
+
+<h2 id="maintain">6. Keep the instruction accurate</h2>
+
+<p>Instructions go stale the moment a price, promo or policy changes. Treat them as a living document with an owner.</p>
+<ul>
+<li><b>Assign one owner.</b> One person approves every change.</li>
+<li><b>Date your versions.</b> Keep a copy of each version so you can roll back a change that made answers worse.</li>
+<li><b>Review weekly at first.</b> Read real conversations, note where the AI hesitated or guessed, and fix the instruction or the knowledge file.</li>
+<li><b>Retest after every edit.</b> Run the same test questions again.</li>
+</ul>
+
+<p>An honest limitation: no instruction makes an AI perfectly reliable. Models still misread unusual messages, and a well-written instruction reduces errors rather than removing them. That is why the handoff section and regular reviews matter more than clever wording.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<h3>How long should an AI agent instruction be?</h3>
+<p>Long enough to cover the nine parts and no longer. Most business agents work well with a focused instruction plus knowledge files for long lists. Botcake AI allows up to 15,000 characters, but more text is not better if it repeats or contradicts itself.</p>
+
+<h3>Should I write the instruction in English if my customers use other languages?</h3>
+<p>You can write it in English and tell the agent to reply in the language the customer uses. Test it with real messages in every language your customers write in.</p>
+
+<h3>What is the difference between an instruction and a knowledge file?</h3>
+<p>The instruction tells the agent how to behave: its role, goal, steps and rules. Knowledge files hold the facts it looks up: product lists, prices, policies and FAQs.</p>
+
+<h3>Can I use one instruction for several platforms?</h3>
+<p>Yes. The structure works on Botcake, ManyChat, GoHighLevel and most AI agent tools. Adjust the channel name, the field syntax for customer data and the handoff method for each platform.</p>
+
+<div class="dd-cta">
+<p class="dd-cta-title">Put the template to work</p>
+<p>Build your first agent with <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a>, which includes 500,000 free automated messages per Page each month. For your team inbox, use <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a> with coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account). These are affiliate links.</p>
+<p>Want the instruction written and tested for you? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+</div>
+
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" rel="noopener" target="_blank">OpenAI Help Center: Best practices for prompt engineering with the OpenAI API</a>. Accessed October 2026.</li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview" rel="noopener" target="_blank">Claude Platform Docs: Prompt engineering overview</a>. Accessed October 2026.</li>
+<li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
+</ol>
+
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/what-is-an-ai-agent">What Is an AI Agent?</a></li>
+<li><a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href="https://www.dijaedadula.com/chatbot-roi-metrics">The 5 Chatbot ROI Metrics That Matter</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+
+</div>
