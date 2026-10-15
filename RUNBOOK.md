@@ -98,3 +98,6 @@ Short, English: post title + live URL, what visuals it has, any judgment calls, 
 ## Site-wide CTA rule (Oct 2026)
 - The top-navigation button on every page says **Subscribe** and links to `https://grow.dijaedadula.com/newsletter` (the post template already does this). Never change it back to "Book a call".
 - /home hero and closing CTA = "Join the free weekly newsletter". Footers keep their "Book a call" link. Posts about services may still link /book in the body and CTA box.
+
+## 11. Public-content rules
+Read CONFIDENTIALITY.md before writing. Run the private zero-hit scan on the final HTML before create_page and again before every publish.

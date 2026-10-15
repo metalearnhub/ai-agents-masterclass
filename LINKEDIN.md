@@ -30,3 +30,6 @@
 When an upcoming blog post goes live, swap or add its URL in that LinkedIn post's first comment (posts.json) before the LinkedIn date.
 
 Status: #01 posted and verified 2026-10-15.
+
+## Public-content rules
+Follow CONFIDENTIALITY.md. The "AI training explained" pillar uses public research only, with citations, and never first person.

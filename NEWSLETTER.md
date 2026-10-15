@@ -27,3 +27,6 @@
 
 ## Report
 Mention the scheduled email (subject, send time, broadcast id) in the daily report and email to Dijae.
+
+## Public-content rules
+Follow CONFIDENTIALITY.md. Run the private zero-hit scan on every email before scheduling. AI-trainer career posts are framed as general career guides, never as the lead story.

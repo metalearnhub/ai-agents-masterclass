@@ -18,3 +18,6 @@
 - Never mention: job titles, any private engagement or who it is with, clients' names, invented results or numbers. Expertise shows through the clarity of the idea, not claims.
 - English only. No hashtags in the caption.
 - Count characters with Python before posting.
+
+## Public-content rules
+Follow CONFIDENTIALITY.md. Run the private zero-hit scan on every post before scheduling. AI-trainer career posts are framed as general career guides.
