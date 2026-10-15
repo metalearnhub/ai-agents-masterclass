@@ -2,7 +2,7 @@
 
 - Page: "Dijae", pageId 1578607178925897 (platform facebook). Tool: mcp__MC__post_to_social_media with scheduledTime.
 - Cadence: ONE post per week, every MONDAY 09:00 Asia/Manila. Order: blog posts OLDEST FIRST (`python3 tools/fbq.py next`), one per week, until the newest.
-- Done on the MONDAY daily run: schedule the post for the FOLLOWING Monday 09:00 (+08:00), then `python3 tools/fbq.py mark <that date> <slug> "<info>"`. (Oct 19 #1 what-is-an-ai-agent is already scheduled.)
+- Done on the MONDAY daily run: schedule the post for the FOLLOWING Monday 09:00 (+08:00), then `python3 tools/fbq.py mark <that date> <slug> "<info>"`. (#1 what-is-an-ai-agent was posted 2026-10-15. The Mon 2026-10-19 run schedules #2 for Mon 2026-10-26.)
 
 ## Image
 - mcp__MC__generate_image, model gpt-image-2.5-flare, aspect 1:1. Same brand style as blog covers: clean flat vector, premium enterprise consulting feel, teal #007a66 + warm orange #c2410c on soft cream, generous empty space, rounded friendly objects that show the post's core idea (e.g. robot assistant, calendar, CRM card, chat bubbles, charts). NO text, letters, numbers or logos.
