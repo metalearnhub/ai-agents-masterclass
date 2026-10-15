@@ -71,7 +71,7 @@ python3 tools/make_post.py posts/<slug>     # writes source.json + geometry.json
   (eb_top values are in geometry.json), re-publish with the same domain and path, re-render with a new `?v=` and re-check. Max 3 rounds.
 - Also look at the top of the page (H1, dek, byline, cover) and at least two figures.
 
-## 8. Blog list, sitemap, checklist
+## 8. Blog list, home page "Latest from the blog", sitemap, checklist
 ```bash
 # get_page(51cab93b-...) -> the result file path (or save the JSON) then:
 python3 tools/blog_patch.py <get_page_result.json> <slug> "<H1>" "<one-sentence blurb>"
@@ -80,6 +80,9 @@ python3 tools/blog_patch.py <get_page_result.json> <slug> "<H1>" "<one-sentence 
 python3 tools/sitemap_patch.py <get_page_result.json> "<group>" <slug> "<short title>" "<short blurb>" <date>
 # groups: "AI agents and chatbots" | "Sales and lead automation" | "Case studies" | "Careers and income in the AI era"
 # patch_page(sitemap id, ...); publish_page(custom_path sitemap)
+# get_page(e4442f32-e964-4556-9573-02beece9a76e) (/home, saved to a file) then:
+python3 tools/home_patch.py <get_page_result_file> <slug> "<H1>"
+# patch_page(home id, patches=home_patch.json contents, dry_run=false); publish_page(custom_domain www.dijaedadula.com, custom_path home)
 python3 tools/checklist.py publish "<tab>" <#> https://www.dijaedadula.com/<slug> <date>
 ```
 
