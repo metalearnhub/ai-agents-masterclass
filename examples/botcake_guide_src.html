@@ -1,0 +1,477 @@
+<div class="dd-article">
+
+<p>Most Philippine businesses already sell through chat. The country had <b>95.8 million social media user identities</b> as of October 2025, according to the <a href="https://datareportal.com/reports/digital-2026-philippines" rel="noopener" target="_blank">Digital 2026 Philippines report by DataReportal and Meltwater</a> (<a href="https://www.gmanetwork.com/news/scitech/technology/991808/ph-social-media-user-identities-surge-by-9m-hit-95-8m-report/story/" rel="noopener" target="_blank">GMA News summary</a>). The bottleneck is no longer reach. It is replying to every inquiry fast, accurately and in your brand's voice, then getting real buyers to a person.</p>
+
+<p>Pancake and Botcake solve that together, but only when they are set up properly. This guide walks through the current Botcake AI setup from start to finish: funding the AI wallet, building the agent, writing and optimizing its instructions, training its answers, connecting Pancake POS, and handing buyers over to your team.</p>
+
+<div class="dd-note"><span class="dd-note-label">From Dijae · Updated October 14, 2026</span>I have spent almost nine years in this field, building chatbots since 2016, and in 2019 I became the primary and official pioneer educator for Pancake and Botcake. Botcake AI changed a lot this year: it no longer needs your own OpenAI key, it runs from a Pancake prepaid wallet, and the agent builder is now a full workspace. Every screenshot in this guide comes from my own walkthrough of a live Botcake account in October 2026. Customer details and file names are blurred. Interfaces change, so if a label looks different in your account, look for the closest match.</div>
+<figure class="dd-fig"><div class="dd-video" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#14181c"><iframe src="https://www.youtube-nocookie.com/embed/zIeP8V0ltHc" title="How to Set Up Botcake AI Agent (2026 Update) – Full Step-by-Step Guide" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"></iframe></div>
+<figcaption><b>Watch the full walkthrough</b> (about 15 minutes), or <a href="https://youtu.be/zIeP8V0ltHc" rel="noopener" target="_blank">open it on YouTube</a>. Prefer reading? Every step is written out below with screenshots.</figcaption></figure>
+
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will build</p>
+<ul>
+<li>A <b>Botcake AI agent</b> that answers customers on Messenger, Instagram or WhatsApp from your instructions and knowledge files.</li>
+<li><b>Two-way tag sync</b> with Pancake, so your team sees what the bot did.</li>
+<li><b>Automatic Pancake POS orders</b> from AI conversations (optional).</li>
+<li>A <b>human handoff</b> that assigns a staff member in Pancake and pauses the AI once an order is created.</li>
+</ul>
+<p><b>You need:</b> a Botcake account connected to your Page, a Pancake account for the same Page, and a Pancake prepaid account in USD with a card for top-ups. Pancake POS is optional. You do <b>not</b> need an OpenAI account.</p>
+</div>
+
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#roles">Know which tool does what</a></li>
+<li><a href="#connect">Connect Pancake and Botcake</a></li>
+<li><a href="#wallet">Fund the AI wallet and switch on Botcake AI</a></li>
+<li><a href="#workspace">Set up the Botcake AI page</a></li>
+<li><a href="#model">Create the agent and choose a model</a></li>
+<li><a href="#instructions">Write and optimize the instructions</a></li>
+<li><a href="#train">Test, check the cost and train answers</a></li>
+<li><a href="#files">Add knowledge files</a></li>
+<li><a href="#orders">Connect Pancake POS for auto-orders</a></li>
+<li><a href="#handoff">Follow-ups and the human handoff</a></li>
+<li><a href="#live">Go live and test</a></li>
+<li><a href="#team">Let Pancake AI Assistant help your team</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+
+<h2 id="roles">1. Know which tool does what</h2>
+
+<p>The most common confusion is between the two AI features. They do different jobs:</p>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Tool</th><th>Job in the system</th></tr></thead>
+<tbody>
+<tr><td><b>Botcake</b></td><td>The automation layer: flows, keywords, default replies, comment replies, sequences, rules and broadcasts.</td></tr>
+<tr><td><b>Botcake AI</b></td><td><b>Replies to customers by itself</b> using an AI agent you configure.</td></tr>
+<tr><td><b>Pancake</b></td><td>The team inbox: all channels in one place, tags, conversation assignment, quick replies, POS orders and CRM.</td></tr>
+<tr><td><b>Pancake AI Assistant</b></td><td><b>Only suggests replies</b> to your agents. A person still clicks Send.</td></tr>
+</tbody>
+</table></div>
+
+<p>Pancake AI Assistant does not reply to customers on its own. If you want AI to reply automatically, use Botcake AI. Both now draw from the same Pancake prepaid wallet. For reference, check the documentation <a href="https://docs.pancake.biz/pancake/st-f7/st-p11?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<!--SVG1-->
+
+<h2 id="connect">2. Connect Pancake and Botcake</h2>
+
+<p>Do this before you touch the AI. If the two apps are not synced, the bot and your team will work blind to each other.</p>
+
+<p class="dd-step"><span class="dd-num">1</span><b>Sync tags both ways (in Botcake).</b> Go to <span class="dd-path">Botcake › Settings › Tag</span> and turn on both options:</p>
+<ul>
+<li><span class="dd-ui">Sync Tag from Pancake to Botcake in real-time</span></li>
+<li><span class="dd-ui">Sync Pancake Tag from Botcake to Pancake in real-time</span></li>
+</ul>
+<p>Create your tags in Pancake first, then use them in Botcake. In the same screen you can attach or remove a sequence when a tag is added, which is how tag-based follow-up works. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f5/st-p2?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<p class="dd-step"><span class="dd-num">2</span><b>Turn on ecosystem sync (in Pancake).</b> Go to <span class="dd-path">Pancake › Settings › General › Ecosystem Synchronization</span>:</p>
+<ul>
+<li><b>Botcake Notifications:</b> shows a <span class="dd-ui">[Botcake Reply]</span> prefix on messages sent by the bot, so agents know what the customer has already been told.</li>
+<li><b>Real-time Botcake Tag Synchronization:</b> keeps tags identical in both apps.</li>
+</ul>
+
+<p class="dd-step"><span class="dd-num">3</span><b>Decide what happens when the bot fails or a person replies (in Botcake).</b> In <span class="dd-path">Botcake › Settings › General</span>, under <span class="dd-ui">Conversation Status on Pancake When the Bot Responds</span>, choose how failed bot replies are marked in Pancake and how long the bot <b>pauses</b> while a staff member is actively replying, so the bot never talks over your agent. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f5/st-p1?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<div class="dd-warn"><span class="dd-note-label">Check this if you use Meta's Business AI</span>Meta only lets one app reply in a conversation at a time. If your Page also uses Meta Business Agent, open your Page's <span class="dd-path">Settings › Advanced Messaging</span>, click <span class="dd-ui">Edit</span> on Botcake and on Pancake v2, and enable the take-control permission for both <b>before</b> passing any conversation to Meta's agent. Skip this and Botcake and Pancake cannot take the conversation back.</div>
+
+<h2 id="wallet">3. Fund the AI wallet and switch on Botcake AI</h2>
+
+<p>Botcake AI is now pay-as-you-go. Every reply uses tokens, and the tokens are paid from a <b>Pancake prepaid account</b> in USD. One prepaid account covers WhatsApp Business messaging, Pancake AI Assistant and Botcake AI Assistant, so you only fund one wallet.</p>
+
+<p class="dd-step"><span class="dd-num">1</span><b>Open the prepaid accounts.</b> In Botcake, click your avatar at the top right, open <span class="dd-path">Profile › Prepaid account</span> and click <span class="dd-ui">+ Add prepaid account</span>. This opens Pancake's wallet page at account.pancake.vn.</p>
+
+<!--FIG bc01 ||| Botcake profile page on the Prepaid account tab, with the Add prepaid account button highlighted ||| The <span class="dd-ui">Prepaid account</span> tab in your Botcake profile: (1) the tab, (2) <span class="dd-ui">+ Add prepaid account</span>.-->
+
+<p class="dd-step"><span class="dd-num">2</span><b>Create the account.</b> Click <span class="dd-ui">+ Create account</span>, enter an <span class="dd-ui">Account name</span> (for example "Botcake") and click <span class="dd-ui">Create account</span>. The card confirms what it pays for: WhatsApp Business messages, Pancake AI assistant and Botcake AI assistant, in USD only.</p>
+
+<!--FIG bc02 ||| Pancake Create account window with the Account name field, the list of services the wallet covers, and the Create account button ||| <span class="dd-ui">Set up your prepaid account</span>: (1) account name, (2) the services it covers, including Botcake AI, (3) <span class="dd-ui">Create account</span>.-->
+
+<p class="dd-step"><span class="dd-num">3</span><b>Top up.</b> Choose a <span class="dd-ui">Top-up amount</span> (the options start at $10), add your card under <span class="dd-ui">Card information</span>, check the total on the right and click <span class="dd-ui">Next</span> to pay. Your balance appears in the wallet list, and every account row has its own <span class="dd-ui">Top up</span> button for later.</p>
+
+<!--FIG bc03 ||| Pancake Top up form showing the Top-up amount dropdown and the Next button, with the total amount summary on the right ||| The top-up form: (1) amount, (2) <span class="dd-ui">Next</span> to pay by card. The transaction fee showed $0 in our test.-->
+
+<p class="dd-step"><span class="dd-num">4</span><b>Point Botcake at the wallet.</b> Back in Botcake, open <span class="dd-path">Settings › Account › Account Balance</span>. Confirm the balance, then under <span class="dd-ui">Account Information</span> pick your wallet in the <span class="dd-ui">Prepaid account</span> dropdown and set <span class="dd-ui">Auto top-up amount</span> and <span class="dd-ui">Auto top-up when balance is below</span>. <span class="dd-ui">Management</span> takes you back to the Pancake wallet.</p>
+
+<!--FIG bc05 ||| Botcake Settings, Account Balance page showing the balance, the Prepaid account dropdown and the two auto top-up fields ||| <span class="dd-ui">Account Balance</span>: (1) the menu item, (2) balance with <span class="dd-ui">Reconnect</span> and <span class="dd-ui">Management</span>, (3) wallet selection and auto top-up rules.-->
+
+<p class="dd-step"><span class="dd-num">5</span><b>Check the master switch.</b> Open <span class="dd-path">Settings › System › Integrations</span>. The <b>AI</b> row should say <span class="dd-ui">Connected</span>. Click the pencil icon to open <span class="dd-ui">Configure AI integration</span>, where the <b>Botcake AI</b> model has a toggle. That toggle turns AI on or off for the whole account. There is no API key to paste: Botcake manages the model for you.</p>
+
+<!--FIG bc07 ||| Configure AI integration window listing the Botcake AI model with an on and off toggle ||| The account-wide <b>Botcake AI</b> toggle in <span class="dd-ui">Configure AI integration</span>. Turn it off and every agent stops replying.-->
+
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Turn on auto top-up before you go live. An AI agent that stops in the middle of a sales conversation because the wallet hit zero costs you more than the tokens ever will. Set the trigger amount high enough to cover a busy weekend.</div>
+
+<h2 id="workspace">4. Set up the Botcake AI page</h2>
+
+<p>Open <span class="dd-path">Advance › Botcake AI</span> in the left menu. The page header reads "Each Agent can be used in multiple features," and the <span class="dd-ui">Category</span> list on the left has five parts:</p>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Category</th><th>What it holds</th></tr></thead>
+<tbody>
+<tr><td><span class="dd-ui">Agent list</span></td><td>Your default agent and all agents, plus <span class="dd-ui">+ Create new agent</span>.</td></tr>
+<tr><td><span class="dd-ui">Information</span></td><td>Business details shared by every agent: shop name, phone, email, address, countries and payment details.</td></tr>
+<tr><td><span class="dd-ui">Knowledge source</span></td><td>The shared library of files, website links and images your agents can rely on.</td></tr>
+<tr><td><span class="dd-ui">Statistics</span></td><td>Usage reports.</td></tr>
+<tr><td><span class="dd-ui">General</span></td><td>Balance, default agent, reply timing, permissions, speech-to-text and chat history.</td></tr>
+</tbody>
+</table></div>
+
+<!--FIG bc08 ||| Botcake AI Agent list page with the Category menu, the Create new agent button and the Default reply priority switch at the top ||| The Agent list: (1) categories, (2) <span class="dd-ui">+ Create new agent</span>, (3) the <span class="dd-ui">Default reply priority</span> / <span class="dd-ui">AI priority</span> switch. Agent names are blurred.-->
+
+<p class="dd-step"><span class="dd-num">1</span><b>Fill in Information once.</b> Enter your business details and click <span class="dd-ui">Update</span>. Every agent can attach this block, so you do not repeat your address and payment methods in each instruction.</p>
+
+<!--FIG bc09 ||| Botcake AI Information page with Shop name, Phone number, Email, Address, Shop countries and Payment information fields ||| <span class="dd-ui">Information</span>: (1) the category, (2) <span class="dd-ui">Update</span>. Client details are blurred.-->
+
+<p class="dd-step"><span class="dd-num">2</span><b>Load the Knowledge source library.</b> It has two views, <span class="dd-ui">File instruction</span> for documents and <span class="dd-ui">Attachment</span> for images the agent can send. Use <span class="dd-ui">Upload</span> for files or <span class="dd-ui">Config</span> to pick files from Google Drive.</p>
+
+<!--FIG bc10 ||| Botcake AI Knowledge source page with File instruction and Attachment tabs, a Config button for Google Drive and an Upload button ||| <span class="dd-ui">Knowledge source</span>: (1) <span class="dd-ui">File instruction</span> and <span class="dd-ui">Attachment</span>, (2) <span class="dd-ui">Config</span> for Google Drive, (3) <span class="dd-ui">Upload</span>. File names are blurred.-->
+
+<p><span class="dd-ui">Upload</span> opens <span class="dd-ui">Import data</span>. You can drop in Docx, PDF, TXT, XLSX or MD files up to 15 MB, or enter a website domain and click <span class="dd-ui">Check URL</span> so the AI searches that site live when it answers. Live web search only works with Botcake AI models, and sites with pop-ups or anti-robot checks may block it.</p>
+
+<!--FIG bc11 ||| Import data window with a drag-and-drop upload area and a field to search web content by domain ||| <span class="dd-ui">Import data</span>: (1) upload a file, (2) or add a domain for live search.-->
+
+<p class="dd-step"><span class="dd-num">3</span><b>Review General.</b> Check the <span class="dd-ui">Account Balance</span>, choose the <span class="dd-ui">Select Default Agent</span>, and set <span class="dd-ui">Smart delay</span> (how long the AI waits after a customer message) and <span class="dd-ui">Maximum length of a message</span>. The same page has <span class="dd-ui">Permissions &amp; Security</span>, speech-to-text and <span class="dd-ui">AI sync image search</span> for POS products.</p>
+
+<!--FIG bc13 ||| Botcake AI General settings showing Account Balance with Top up, Select Default Agent, Smart delay and Maximum length of a message ||| <span class="dd-ui">General</span>: (1) balance and <span class="dd-ui">Top up</span>, (2) default agent, (3) smart delay.-->
+
+<p>Further down, <span class="dd-ui">Enable chat history</span> lets the AI remember the last 50 messages of a conversation, and <span class="dd-ui">Clear chat</span> wipes it. Keep history on: an agent that forgets what the customer said three messages ago asks the same questions twice.</p>
+
+<!--FIG bc14 ||| Chat history settings with the Enable chat history toggle and the Clear chat button ||| (1) <span class="dd-ui">Enable chat history</span>, (2) <span class="dd-ui">Clear</span>.-->
+
+<h2 id="model">5. Create the agent and choose a model</h2>
+
+<p class="dd-step"><span class="dd-num">1</span>In <span class="dd-ui">Agent list</span>, click <span class="dd-ui">+ Create new agent</span>. Enter a name and a short description, tick <span class="dd-ui">Use as default Agent</span> if this is your main agent, and click <span class="dd-ui">Create new agent</span>.</p>
+
+<!--FIG bc15 ||| Add new agent window with Enter name, Description, Use as default Agent and the Create new agent button ||| <span class="dd-ui">Add new agent</span>: (1) name, (2) description, (3) create.-->
+
+<p class="dd-step"><span class="dd-num">2</span>The agent opens in its workspace. The left side has four tabs (<span class="dd-ui">Instruction</span>, <span class="dd-ui">Tools</span>, <span class="dd-ui">Knowledge</span>, <span class="dd-ui">AI response behavior</span>). The right side is a live <span class="dd-ui">Preview</span> chat. Remember the <span class="dd-ui">Save</span> button at the top right.</p>
+
+<!--FIG bc16 ||| Botcake AI agent workspace with the model selector, four tabs, AI enhancements button, instruction editor and a Preview chat panel ||| The agent workspace: (1) model, (2) tabs, (3) <span class="dd-ui">AI enhancements</span>, (4) <span class="dd-ui">Preview</span>, (5) <span class="dd-ui">Reference template</span>.-->
+
+<p class="dd-step"><span class="dd-num">3</span><b>Pick a model.</b> Click the model name at the top of the workspace. Under <span class="dd-ui">BOTCAKEAI</span> you will find OpenAI GPT models (GPT-4o mini, GPT-4o, GPT-4.1 mini, GPT-4.1, GPT-5 and GPT-5 mini) and DeepSeek models (V3.2, V4 Flash, V4.1 Flash and V4 Pro), each labeled Fast, Smart, or Smart &amp; Fast. All of them are billed from your wallet.</p>
+
+<!--FIG bc17 ||| Select model dropdown listing Botcake AI GPT models on the left and Botcake AI DeepSeek models on the right ||| The model list. Left: the GPT models, with GPT-4.1 mini selected in our test. Right: the DeepSeek models further down the same list.-->
+
+<p class="dd-step"><span class="dd-num">4</span><b>Choose a Config preset.</b> <span class="dd-ui">Creative</span>, <span class="dd-ui">Balanced</span> or <span class="dd-ui">Precise</span> sets the sliders for you. Each slider has a <b>?</b> tooltip that explains it.</p>
+
+<!--FIG bc18 ||| Config dropdown open with Creative, Balanced and Precise presets above the Temperature and Top P sliders ||| (1) the model, (2) the Config presets.-->
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Setting</th><th>What it controls</th><th>Balanced preset</th></tr></thead>
+<tbody>
+<tr><td><b>Temperature</b></td><td>Creativity. Lower means more consistent answers.</td><td>0.5</td></tr>
+<tr><td><b>Top P</b></td><td>How varied the word choices are.</td><td>0.85</td></tr>
+<tr><td><b>Presence Penalty</b></td><td>Discourages repeating the same topic.</td><td>0.2</td></tr>
+<tr><td><b>Frequency Penalty</b></td><td>"Reduce the possibility of AI repeating the same word too many times."</td><td>0.3</td></tr>
+<tr><td><b>Max Tokens</b></td><td>The response length limit.</td><td>1000</td></tr>
+</tbody>
+</table></div>
+
+<p>For a shop that quotes prices and policies, start with <span class="dd-ui">Balanced</span> or <span class="dd-ui">Precise</span> on a mini model. Move to a larger model only when testing shows the answers are weak, because a larger model costs more per message.</p>
+
+<h2 id="instructions">6. Write and optimize the instructions</h2>
+
+<p>This is the part that decides whether your AI sells or embarrasses you. The <span class="dd-ui">Instruction</span> tab holds a <span class="dd-ui">Business information</span> card (your Information block, optional) and the instruction editor, which now takes up to <b>15,000 characters</b>. Type <span class="dd-ui">{</span> to insert a customer field such as the first name, and <span class="dd-ui">@</span> to insert a picture.</p>
+
+<p>Not sure where to start? Click <span class="dd-ui">Reference template</span> under the editor. Botcake offers six example instructions you can preview and copy.</p>
+
+<!--FIG bc19 ||| Reference template window listing Templates 1 to 6 with the full instruction text and a copy icon on the right ||| <span class="dd-ui">Reference template</span>: (1) six templates, (2) copy the one you want, then edit it.-->
+
+<h3>The 9-part instruction structure</h3>
+<p>A strong agent instruction follows the same order. Each part answers one question the AI would otherwise guess at:</p>
+
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># 1. ROLE
+Who the AI is, for which business, on which channel.
+
+# 2. GOAL
+The one outcome every conversation should move toward
+(e.g. a confirmed order, a booked appointment).
+
+# 3. BUSINESS FACTS
+Name, location, hours, delivery areas, payment methods.
+
+# 4. PRODUCTS AND PRICES
+Only what the AI may quote. Point to the knowledge file
+for the full catalog.
+
+# 5. POLICIES
+Shipping, returns, warranty, promos. Exact wording.
+
+# 6. TONE AND LANGUAGE
+Formality, length, emoji use, language rules.
+
+# 7. CONVERSATION STEPS
+The questions to ask, in order, before recommending
+or taking an order.
+
+# 8. RULES (DO / DON'T)
+What the AI must never say, promise or invent.
+
+# 9. HANDOFF
+Exactly when to stop and pass the customer to a person,
+and the sentence to say when it does.</code></pre></div>
+
+<h3>A filled-in example</h3>
+<p>Here is the structure written out for a fictional skincare shop in Manila. It is the same instruction used in the screenshots below. Replace every detail with your own:</p>
+
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># ROLE
+You are Bea, the online sales assistant of Glow Lab PH,
+a skincare shop in Quezon City. You chat with customers
+on Facebook Messenger and Instagram.
+
+# GOAL
+Help each customer choose the right product and confirm
+an order. A complete order needs: product, quantity,
+full name, phone number and delivery address.
+
+# BUSINESS FACTS
+- Store hours: Mon-Sat, 9 AM-6 PM. You reply 24/7.
+- Delivery: nationwide via J&amp;T. Metro Manila 1-3 days,
+  provinces 3-7 days.
+- Payment: GCash, bank transfer, or COD (Metro Manila only).
+
+# PRODUCTS AND PRICES
+Quote prices only from the attached file "Glow Lab
+Products". If a product is not in the file, say you
+will check with the team. Never estimate a price.
+
+# POLICIES
+- Returns: unopened items within 7 days of delivery.
+- Promo: free shipping on orders of PHP 1,500 and up.
+  Do not offer any other discount.
+
+# TONE AND LANGUAGE
+- Friendly, polite and respectful. Address customers
+  as Sir or Ma'am unless they give their name.
+- Reply in the language the customer uses.
+- Maximum 3 short sentences per message. 1 emoji max.
+
+# CONVERSATION STEPS
+1. Greet the customer by first name: {{user.first_name}}.
+2. Ask their skin type and main concern.
+3. Recommend 1 product (2 at most) and explain why
+   in one sentence.
+4. If they want to buy, collect the order details one
+   question at a time.
+5. Repeat the full order back and ask them to confirm.
+
+# RULES
+- Never give medical advice. For allergies, rashes or
+  pregnancy questions, hand off to a person.
+- Never promise delivery dates outside the ranges above.
+- Never say you are human. If asked, say you are Glow
+  Lab's AI assistant and a person can join anytime.
+
+# HANDOFF
+Hand off when the customer: is angry or complaining,
+asks for a person, asks about a wholesale or reseller
+deal, or asks something not covered here.
+Say: "One moment, please. I'm passing you to our team
+so they can help you directly."</code></pre></div>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Weak instruction</th><th>Why it fails</th><th>Stronger version</th></tr></thead>
+<tbody>
+<tr><td>"Be helpful and sell our products."</td><td>No goal, no limits. The AI improvises prices and promises.</td><td>Name the goal (a confirmed order) and the exact details an order needs.</td></tr>
+<tr><td>"Answer all questions."</td><td>It will answer medical, legal and pricing questions it should not.</td><td>List what it must never answer and when to hand off.</td></tr>
+<tr><td>"Use a friendly tone."</td><td>Too vague. Replies become long and generic.</td><td>Set length, language and emoji rules, as in the example.</td></tr>
+</tbody>
+</table></div>
+
+<h3>Let Botcake optimize it, then review the changes</h3>
+<p>Click <span class="dd-ui">AI enhancements</span> above the editor. The <span class="dd-ui">Optimize instructions</span> window shows <span class="dd-ui">Your instructions</span> on the left and <span class="dd-ui">Instructions after optimization</span> on the right. Use the refresh icon to re-optimize, the copy icon to keep a version, and <span class="dd-ui">Apply</span> only when you agree with the result. In our test, the optimizer reorganized the example into Role and Task sections and added the customer's first name field.</p>
+
+<!--FIG bc21 ||| Optimize instructions window comparing the original instructions with the optimized version, with re-optimize, copy, Cancel and Apply buttons ||| <span class="dd-ui">Optimize instructions</span>: (1) re-optimize, (2) copy, (3) <span class="dd-ui">Apply</span>.-->
+
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Treat an optimization like a code change: read the difference before you apply it. Check that every price, policy and handoff rule survived. Optimizers improve structure, but they can soften a "never" into a "try not to," and that one word is where AI agents start promising things your business cannot deliver. Write the handoff section first and confirm it is still there after every optimization.</div>
+
+<h2 id="train">7. Test, check the cost and train answers</h2>
+
+<p class="dd-step"><span class="dd-num">1</span><b>Test in Preview.</b> Type a real customer message in the <span class="dd-ui">Preview</span> chat. In our test, "Hi Bea! what can you do" returned a greeting by first name, a one-line summary of what Bea can do, and the first question from the conversation steps.</p>
+
+<!--FIG bc20 ||| Agent workspace with the Bea instruction in the editor and the Preview chat showing the test question and the agent's reply ||| (1) the instruction, (2) the test message, (3) the agent's reply, following the conversation steps.-->
+
+<p class="dd-step"><span class="dd-num">2</span><b>Check what each reply costs.</b> Hover the <b>$</b> icon under a reply to see <span class="dd-ui">Message cost</span>: input tokens, output tokens and the estimated cost. Our first reply used 3,136 input tokens and 58 output tokens, for an estimated $0.0013. Input tokens are mostly your instructions, which are sent with every reply, so a long instruction costs a little on every message.</p>
+
+<!--FIG bc22 ||| Two Preview replies: one showing the Message cost popup with input tokens, output tokens and estimated cost, the other showing the Improve AI response tooltip ||| (1) <span class="dd-ui">Message cost</span> for a single reply, (2) <span class="dd-ui">Improve AI response</span>.-->
+
+<p class="dd-step"><span class="dd-num">3</span><b>Train the answers you care about.</b> Click the wand icon, <span class="dd-ui">Improve AI response</span>, under any reply. In <span class="dd-ui">Improved AI responses</span>, write the <span class="dd-ui">Customer question</span> and the exact <span class="dd-ui">AI response</span> you want, then click <span class="dd-ui">Save</span>. Saved examples appear in a list, and <span class="dd-ui">Add new</span> adds more. Refresh the Preview and ask again to confirm the agent uses your trained answer.</p>
+
+<!--FIG bc23 ||| Improved AI responses window with a Customer question box, an AI response box and a Save button ||| <span class="dd-ui">Improved AI responses</span>: (1) the customer's message, (2) the answer you want, (3) <span class="dd-ui">Save</span>.-->
+
+<p>Use trained answers for the moments that matter most: the first greeting, price questions, delivery questions and the handoff sentence. Fix general behavior in the instructions; fix specific answers here.</p>
+
+<h2 id="files">8. Add knowledge files</h2>
+
+<p>Long product lists, policies and FAQs belong in files, not in the instruction box. Open the agent's <span class="dd-ui">Knowledge</span> tab and click <span class="dd-ui">Add files</span>. The <span class="dd-ui">Add files knowledge</span> window has two tabs: <span class="dd-ui">File instructions</span> (files from your Knowledge source library, or <span class="dd-ui">Upload</span> a new one) and <span class="dd-ui">Link URL</span>. Tick the files and click <span class="dd-ui">Add to instruction</span>.</p>
+
+<!--FIG bc26 ||| Add files knowledge window with File instructions and Link URL tabs, an Upload button, a file list with checkboxes and the Add to instruction button ||| <span class="dd-ui">Add files knowledge</span>: (1) files or links, (2) <span class="dd-ui">Upload</span>, (3) <span class="dd-ui">Add to instruction</span>. File names are blurred.-->
+
+<p>Uploaded files are stored in the knowledge base, while for URL sources the AI searches the website each time it answers, so that information stays current. Use files for anything that must be exact (prices, policies) and links for content that changes often.</p>
+
+<p>Botcake's file search reads documents in small chunks, so how you format a file matters. Follow five rules:</p>
+<ol>
+<li>One topic per section, with a clear heading.</li>
+<li>Keyword-rich headings, such as "Return Policy" or "Product: Glow Serum".</li>
+<li>Short sections of 1 to 2 paragraphs.</li>
+<li>Bullets instead of tables.</li>
+<li>Repeat the product name in each section instead of writing "this product".</li>
+</ol>
+
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>Product: Glow Lab Vitamin C Serum (30 ml)
+- Price: PHP 650
+- Best for: dull skin, dark spots
+- How to use the Glow Lab Vitamin C Serum: 3-4 drops
+  every morning before sunscreen.
+- In stock: yes
+
+Return Policy - Glow Lab
+- Unopened items can be returned within 7 days of delivery.
+- Opened items cannot be returned unless damaged on arrival.</code></pre></div>
+<p>For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<h2 id="orders">9. Connect Pancake POS for auto-orders</h2>
+
+<p>Open the agent's <span class="dd-ui">Tools</span> tab. Under <span class="dd-ui">Integrate connection</span>, the built-in options are <b>Pancake POS</b> ("Automation create order") and <b>Pancake CRM</b> ("CRM Lead Automation"). Custom tools go under <span class="dd-ui">Tools</span> with <span class="dd-ui">Add new</span>.</p>
+
+<!--FIG bc24 ||| Tools tab showing Integrate connection with Pancake POS and Pancake CRM built-in options ||| (1) <span class="dd-ui">Tools</span>, (2) <b>Pancake POS</b>, (3) <b>Pancake CRM</b>.-->
+
+<p>Click <b>Pancake POS</b> to open <span class="dd-ui">Automation create order</span>:</p>
+
+<!--FIG bc25 ||| Pancake POS settings with Auto-create order when information is available turned on, plus Config options for image sending method and import product ||| (1) auto-create orders, (2) image and product settings.-->
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Option</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><span class="dd-ui">Auto-create order when information is available</span></td><td>Creates the Pancake POS order once the AI has collected the order details.</td></tr>
+<tr><td><span class="dd-ui">Automatic Upsell/Cross-sell based on POS configuration</span></td><td>Lets the AI suggest add-ons using your POS setup.</td></tr>
+<tr><td><span class="dd-ui">Stop auto-creating orders when receiving negative reports on Pancake</span></td><td>Skips automatic orders for customers with negative reports.</td></tr>
+<tr><td><span class="dd-ui">Image sending method</span></td><td><b>Send as single image</b> or <b>Send as image collection</b>.</td></tr>
+<tr><td><span class="dd-ui">Import product</span></td><td><b>Import all</b> POS products, or none, so the AI quotes real names, prices and photos.</td></tr>
+</tbody>
+</table></div>
+
+<p>An honest limitation: the AI can only sell what it can see. In our test account no POS products were imported, so when asked "what are your products," the agent correctly said it had no product list and asked about the customer's skin instead. That is the behavior you want, but it also means an empty catalog produces a polite agent that cannot close. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss2?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<h2 id="handoff">10. Follow-ups and the human handoff</h2>
+
+<p>Open the agent's <span class="dd-ui">AI response behavior</span> tab. It has two parts, switched at the top right: <span class="dd-ui">Auto follow-up</span> and <span class="dd-ui">Special case</span>.</p>
+
+<h3>Auto follow-up</h3>
+<p>Turn on <span class="dd-ui">Auto follow-up</span> to message customers who go quiet. Set <span class="dd-ui">Send follow-up messages automatically after</span> (30 minutes in our test), the <span class="dd-ui">Number of messages</span> (3), and whether follow-ups are written <span class="dd-ui">Automatically with AI</span> or <span class="dd-ui">Manually</span>. One or two follow-ups is usually enough. Remember that Meta limits what you can send more than 24 hours after a customer's last message.</p>
+
+<!--FIG bc27 ||| AI response behavior tab with the Auto follow-up toggle, the Auto follow-up and Special case switch, and follow-up timing settings ||| (1) <span class="dd-ui">Auto follow-up</span>, (2) the two sections, (3) timing and number of messages.-->
+
+<h3>Special case: assign a person and pause the AI</h3>
+<p>This is the handoff. Turn on <span class="dd-ui">Special case</span> ("AI automatically detects &amp; handles special situations in the conversation as configured") and click <span class="dd-ui">Add case</span>.</p>
+
+<p class="dd-step"><span class="dd-num">1</span>Choose a template in <span class="dd-ui">Select template</span>: <span class="dd-ui">When the order is created successfully</span>, <span class="dd-ui">When the order creation fails</span> or <span class="dd-ui">When the customer sends a phone number</span>.</p>
+
+<!--FIG bc28 ||| Special case turned on with Case 1 and the Select template dropdown showing three templates ||| (1) <span class="dd-ui">Special case</span>, (2) the case templates.-->
+
+<p class="dd-step"><span class="dd-num">2</span>Click <span class="dd-ui">Add action</span>. <span class="dd-ui">Bot Action</span> offers <span class="dd-ui">Add tag</span>, <span class="dd-ui">Remove tag</span>, <span class="dd-ui">Assign to Staff on Pancake</span>, <span class="dd-ui">Start a Flow</span>, <span class="dd-ui">Set User Field</span> and <span class="dd-ui">Notify Admins</span>. <span class="dd-ui">AI action</span> offers <span class="dd-ui">Pause AI</span>.</p>
+
+<!--FIG bc29 ||| Add action menu with Bot Action options including Assign to Staff on Pancake and the AI action Pause AI ||| (1) <span class="dd-ui">Assign to Staff on Pancake</span>, (2) <span class="dd-ui">Pause AI</span>, (3) <span class="dd-ui">Add action</span>.-->
+
+<p class="dd-step"><span class="dd-num">3</span>Choose <span class="dd-ui">Assign to Staff on Pancake</span>. Pick the staff in <span class="dd-ui">Select staff</span> and set the rules: <span class="dd-ui">Assign randomizer</span>, <span class="dd-ui">Replace staff</span> (replace an existing assignment), <span class="dd-ui">Only assign to online staff</span>, or <span class="dd-ui">Only assign to available staff on Pancake</span> (staff whose receive mode is Available). Click <span class="dd-ui">Save</span>.</p>
+
+<!--FIG bc30 ||| Assign to Staff on Pancake window with toggles for randomizer, replace staff, online staff and available staff, a Select staff dropdown and Save ||| (1) <span class="dd-ui">Replace staff</span>, (2) available staff only, (3) <span class="dd-ui">Select staff</span>, (4) <span class="dd-ui">Save</span>.-->
+
+<p class="dd-step"><span class="dd-num">4</span>Add a second action, <span class="dd-ui">Pause AI</span>. Choose <span class="dd-ui">Pause AI for a period of time</span> (for example 1 hour; the AI resumes automatically) or <span class="dd-ui">Pause AI until turned back on</span> (the AI only replies again when a staff member reactivates it). Then click <span class="dd-ui">Save</span> at the top of the workspace.</p>
+
+<!--FIG bc31 ||| A completed special case: order created successfully, assign to staff on Pancake, and pause AI for one hour ||| The finished handoff: (1) trigger, (2) assign a person in Pancake, (3) pause the AI.-->
+
+<!--SVG6-->
+
+<p>The result is a clean human-in-the-loop: the AI handles the conversation and creates the order, a person in Pancake confirms it, and the AI stays quiet while they do. Pair it with a tag your Pancake team filters on, so no handed-off customer waits unseen. You can still place the AI inside a Botcake <b>Flow</b> with an <b>AI</b> block when you need different steps for successful replies, failed replies and special intents. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss3?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<h2 id="live">11. Go live and test</h2>
+
+<ol>
+<li><b>Set the default agent.</b> In <span class="dd-ui">General</span> or the Agent list, make sure your agent is the default.</li>
+<li><b>Choose who replies first.</b> At the top of the Botcake AI page, the <span class="dd-ui">Default reply priority</span> / <span class="dd-ui">AI priority</span> switch decides whether your default reply or the AI answers.</li>
+<li><b>Confirm the wallet.</b> Balance above zero, auto top-up on, and the Botcake AI toggle in Integrations switched on.</li>
+<li><b>Watch the first week.</b> Read real conversations every day, check message costs, and fix the instructions or train answers where the AI hesitated or guessed.</li>
+</ol>
+
+<h3>Define "ready to go live" before you test</h3>
+<p>Treat the agent like any product release: agree on acceptance criteria first, then test against them. These are the minimum checks I recommend:</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Check</th><th>Passes when</th></tr></thead>
+<tbody>
+<tr><td><b>Prices and policies</b></td><td>Every price, fee and policy the AI quotes matches your file exactly, across at least 20 test questions.</td></tr>
+<tr><td><b>Unknown questions</b></td><td>When the answer is not in its instructions or files, the AI says it will check with the team instead of guessing.</td></tr>
+<tr><td><b>Handoff</b></td><td>Complaints, requests for a person and created orders all reach a staff member in Pancake, and the AI pauses.</td></tr>
+<tr><td><b>Orders</b></td><td>A test order with complete details appears in Pancake POS. An order with missing details does not.</td></tr>
+<tr><td><b>Cost</b></td><td>The average message cost in Preview fits your budget at your expected monthly conversation volume.</td></tr>
+<tr><td><b>Tone and length</b></td><td>Replies follow your language, length and emoji rules on mobile.</td></tr>
+</tbody>
+</table></div>
+<p>After launch, track a few numbers weekly: share of conversations handed off, orders created by the AI, wallet spend, and the questions it could not answer. Those tell you where to improve next. For a full test method, see <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">How to Test an AI Chatbot Before It Talks to Your Customers</a>.</p>
+
+<h2 id="team">12. Let Pancake AI Assistant help your team</h2>
+
+<p>Once a customer reaches a person, Pancake AI Assistant speeds up the human side. Set it up in <span class="dd-path">Pancake › Settings › AI Assistant</span>:</p>
+<ul>
+<li><b>AI reply suggestions:</b> 3 suggested replies under the message box. Press <kbd>Tab</kbd> to cycle and <kbd>Enter</kbd> to send.</li>
+<li><b>Sentiment detection:</b> automatically tags angry or frustrated customers (for example "Needs manager") so a manager can step in.</li>
+<li><b>Dataset:</b> train it on 20 to 200 of your best past conversations plus 1 or 2 policy files.</li>
+</ul>
+<p>It is billed per token from the same USD prepaid wallet. The <b>Suggest frequently bought products</b> feature is free. For reference, check the documentation <a href="https://docs.pancake.biz/pancake/st-f7/st-p11?lang=en" rel="noopener" target="_blank">here</a>.</p>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Assistive AI before full automation. Let the AI suggest while your team stays in control, especially for closing sales and handling complaints, where customers need a real person. Your team learns from what the AI suggests, you see where it is reliable, and you automate the parts that have proven themselves.</div>
+
+<h2 id="mistakes">13. Common mistakes</h2>
+<ul>
+<li><b>No auto top-up.</b> The wallet runs dry on a busy day and the AI goes silent mid-conversation.</li>
+<li><b>Applying an optimization without reading it.</b> Rules and handoff lines can change. Compare before you click Apply.</li>
+<li><b>Prices in the instruction box and in a file.</b> When the two disagree, the AI may quote the wrong one. Keep prices in one place.</li>
+<li><b>An empty POS catalog with auto-orders on.</b> The AI cannot create orders for products it cannot see.</li>
+<li><b>No handoff case.</b> Every AI needs an exit to a person, and someone in Pancake must be watching for it.</li>
+<li><b>Tags synced in one direction only.</b> Your team sees the bot's tags, but the bot never sees your team's (or the other way around).</li>
+<li><b>Handover Protocol left on.</b> If you only use Botcake and Pancake, do not use Handover Protocol. A wrong setup breaks keywords, buttons, inputs, sequences and rules. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f7/st-p3?lang=en" rel="noopener" target="_blank">here</a>.</li>
+</ul>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<h3>Do I need my own OpenAI API key for Botcake AI?</h3>
+<p>No. Botcake AI now runs on Botcake-managed models (OpenAI GPT and DeepSeek) and is paid per token from a Pancake prepaid account in USD. You only fund the wallet and keep the Botcake AI toggle on in Settings › Integrations.</p>
+
+<h3>How much does a Botcake AI reply cost?</h3>
+<p>It depends on the model and the length of your instructions. Botcake shows the input tokens, output tokens and estimated cost under every Preview reply. In our test on GPT-4.1 mini, one reply cost an estimated $0.0013.</p>
+
+<h3>Does Pancake AI Assistant reply to customers automatically?</h3>
+<p>No. It only suggests replies, and your agent clicks Send. To have AI reply to customers automatically, use Botcake AI.</p>
+
+<h3>Can Botcake AI create orders in Pancake POS?</h3>
+<p>Yes. In the agent's Tools tab, open Pancake POS and turn on Auto-create order when information is available. Import your products first so the AI can quote and order them.</p>
+
+<h3>How do I hand a customer to my team after an order?</h3>
+<p>In the agent's AI response behavior tab, turn on Special case, add a case with the template When the order is created successfully, then add the actions Assign to Staff on Pancake and Pause AI.</p>
+
+<div class="dd-cta">
+<p class="dd-cta-title">Start with the tools in this guide</p>
+<p>Botcake includes 500,000 free automated messages per Page each month. Get it here: <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a>. For Pancake, use my link <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a> and coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free. The coupon is for new Pancake customers or a new billing account on a Pancake account, and it applies at checkout when you subscribe or renew. These are affiliate links.</p>
+<p>Want it built for you instead? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+</div>
+
+<h2>References</h2>
+<ol class="dd-refs">
+<li>Dijae Dadula, Botcake AI setup walkthrough (wallet, agent creation, training and handoff), recorded on a live Botcake account, October 2026. Source of all screenshots in this guide.</li>
+<li>Botcake documentation: <a href="https://docs.pancake.biz/botcake/st-f5/st-p2?lang=en" rel="noopener" target="_blank">Tag</a>, <a href="https://docs.pancake.biz/botcake/st-f5/st-p1?lang=en" rel="noopener" target="_blank">General Setting</a>, <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">Overview of Botcake AI</a>, <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss2?lang=en" rel="noopener" target="_blank">Auto Order Creation with Botcake AI</a>, <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss3?lang=en" rel="noopener" target="_blank">How to Use AI in a Flow</a>, <a href="https://docs.pancake.biz/botcake/st-f7/st-p3?lang=en" rel="noopener" target="_blank">Handover Protocol</a>. Accessed October 2026.</li>
+<li>Pancake documentation: <a href="https://docs.pancake.biz/pancake/st-f7/st-p11?lang=en" rel="noopener" target="_blank">AI Assistant</a>. Accessed October 2026.</li>
+<li><a href="https://datareportal.com/reports/digital-2026-philippines" rel="noopener" target="_blank">DataReportal, Digital 2026: The Philippines</a> (with Meltwater).</li>
+<li><a href="https://www.gmanetwork.com/news/scitech/technology/991808/ph-social-media-user-identities-surge-by-9m-hit-95-8m-report/story/" rel="noopener" target="_blank">GMA News: PH social media user identities hit 95.8M</a>, June 17, 2026.</li>
+</ol>
+
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/pancake-vs-botcake-vs-manychat">Pancake vs Botcake vs ManyChat: Which One Fits Your Business?</a></li>
+<li><a href="https://www.dijaedadula.com/qualify-leads-messenger-automatically">How to Qualify Leads in Messenger Automatically</a></li>
+<li><a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+
+</div>

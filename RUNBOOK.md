@@ -31,7 +31,7 @@ python3 tools/checklist.py next
 - Length 1,300-2,200 words. 5-8 H2 sections + FAQ (3-5 questions).
 
 ## 3. Write `posts/<slug>/article.html`
-Copy the structure of `examples/c_src.html` (best reference) and `examples/a_src.html`, `examples/b_src.html`. Order:
+Read `context/README.md` first. Copy the structure of `examples/c_src.html` (best reference) and `examples/a_src.html`, `examples/b_src.html`. Order:
 1. `<div class="dd-article">` wrapper
 2. `<!--COVER-->` (replaced by the cover image)
 3. 2 intro paragraphs (problem, who it is for, what they will get)
