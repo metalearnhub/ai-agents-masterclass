@@ -15,3 +15,4 @@ This repo is a working kit. Treat everything in it as potentially public.
 - One disclosed job-referral box ("Where to find AI training roles") lives only on the two AI-trainer career posts (what-does-an-ai-trainer-do, how-to-become-an-ai-trainer), element ids t_0970/t_0971 and t_1970/t_1971.
 - It is treated like any affiliate link: neutral wording, rel="sponsored nofollow", disclosure in the same paragraph, no first-person claims next to it. The scan ignores exactly these elements; everything else must still return zero hits.
 - Never place the referral link in navigation, /home, newsletter CTAs, emails, Facebook or LinkedIn posts.
+- Next to the referral box: never present Dijae as the platform's agent, recruiter, representative, partner or spokesperson; never promise or imply hiring, placement, pay, interview success or acceptance rates; never share non-public platform information (target industries, demand, volumes, pricing).
