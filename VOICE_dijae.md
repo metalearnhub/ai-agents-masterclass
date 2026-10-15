@@ -53,7 +53,7 @@ Shift:
 - ENGLISH ONLY, always (Dijae, 2026-10-14). No Tagalog/Taglish words anywhere in posts, including examples, sample customer messages and bot scripts. Translate any Filipino from transcripts into natural English.
 
 Rules:
-- No inflated claims. Only stated credentials: chatbots since 2016; ChatFuel moderator 2018; Pancake & Botcake official pioneer educator 2019; ManyChat Partner Agency + Chat Marketing Expert 2020; speaker; course/mentorship/VIP community; expert AI trainer (micro1, no internals); IRD consultancy. Never claim reinforcement learning or fine-tuning.
+- No inflated claims. Only stated credentials: chatbots since 2016; ChatFuel moderator 2018; Pancake & Botcake official pioneer educator 2019; ManyChat Partner Agency + Chat Marketing Expert 2020; speaker; course/mentorship/VIP community; IRD consultancy. Never mention AI trainer contract work or the client behind it in any public content. Never claim reinforcement learning or fine-tuning.
 - "Almost 9 years" in this field (use as stated by Dijae).
 - Every post: at least one "Dijae's rule" / judgment call, one PM or QA element (success metric, test checklist, acceptance criteria or failure mode), and one honest limitation.
 
