@@ -1,0 +1,1 @@
+- 2026-10-15: previews sent to Dijae (broadcast 970 Friday digest, 971 Tuesday story email 'The leak you already paid for'). Use them as the style reference: newsletter/preview-digest.html and broadcast 971.
