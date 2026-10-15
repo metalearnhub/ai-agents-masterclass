@@ -1,2 +1,3 @@
 - 2026-10-15: previews sent to Dijae (broadcast 970 Friday digest, 971 Tuesday story email 'The leak you already paid for'). Use them as the style reference: newsletter/preview-digest.html and broadcast 971.
 - 2026-10-15: Dijae: digests go OLDEST-first in sets of 3 (newest reserved); welcome series links oldest posts only; Tuesday talks only about the last Friday's 3. Preview v2 sent via Gmail.
+- 2026-10-15: FB weekly post set up. #1 what-is-an-ai-agent scheduled Mon 2026-10-19 09:00 Manila.
