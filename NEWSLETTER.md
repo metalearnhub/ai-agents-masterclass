@@ -7,16 +7,20 @@
 
 ## Friday (every week): Blog digest
 - Run on Friday's daily run, after the day's post is published.
-- Content: the 3 newest posts (from sitemap.xml lastmod / the checklist Publish date). For each: title (linked), 2 sentences on the problem it solves and one takeaway, "Read the guide" link.
+- Content: the NEXT 3 posts from the OLDEST-FIRST queue (`python3 tools/digest.py next`), never the newest posts (Dijae reserves the newest for later emails). After scheduling, run `python3 tools/digest.py mark YYYY-MM-DD <broadcastId>`. For each post: title (linked), 2 sentences on the problem it solves and one takeaway, "Read the guide" link.
 - Subject pattern: "3 new guides: <short hook from the strongest post>".
 - create_broadcast(channel email, name "Digest YYYY-MM-DD", subject, htmlContent, tagIds [1532], emailSender "user") then send_broadcast(channel email, broadcastId, scheduledAt "YYYY-MM-DDT10:00:00", timezone "Asia/Manila").
 - Save a copy in newsletter/YYYY-MM-DD-digest.html and log it in newsletter/log.md.
 
 ## Tuesday (every week): Story / campaign email
-- Built on Tuesday's daily run. Theme = the most useful idea from the previous Friday's 3 posts.
+- Built on Tuesday's daily run. It must talk ONLY about the 3 posts in the most recent Friday digest (`python3 tools/digest.py last`), never other or newer posts.
 - Shape: hook (a common problem business owners face) -> the insight from the posts, stated with authority -> one practical step they can do this week -> CTA to book a free AI Automation Blueprint call (https://www.dijaedadula.com/book) for their business, or to learn (link the relevant post).
 - Story-led is allowed ONLY with real facts Dijae stated (VOICE_dijae.md, profile) or clearly hypothetical "Imagine a clinic that..." scenarios. Never invent a client story.
 - Subject: curiosity + benefit, under 50 characters. Schedule for 10:00 Asia/Manila the same day.
+
+## Daily run
+- After publishing the day's post, append it to the queue: `python3 tools/digest.py add <slug> "<H1>" "<one-sentence blurb>"`.
+- Welcome series (flow 7030) only links the oldest posts (queue #1-#4). Never put newest posts in it.
 
 ## Footer (append to every email)
 <hr style="border:none;border-top:1px solid #e3e8ee;margin:24px 0 12px 0"><p style="font-size:12px;color:#888">You are receiving this because you subscribed to Dijae Dadula's newsletter at dijaedadula.com. IRD Digital Marketing Services, Bacoor City, Cavite, Philippines.</p>
