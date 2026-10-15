@@ -15,6 +15,6 @@
 - Line 1 = headline: short, scroll-stopping, calm and confident. A sharp contrast or reframe, not hype. No emojis, no ALL CAPS, no clickbait. Examples: "A chatbot answers. An agent acts." / "The tools come last."
 - 1-2 short sentences: the insight from the post, framed for business owners and leaders. Enterprise/consultant tone; frontier expert voice; speaks from judgment, not tutorial.
 - Simple CTA line + link: "The plain-English guide:" / "The full method:" / "Read the guide:" then the blog URL.
-- Never mention: AI product owner, AI trainer roles, micro1, clients' names, invented results or numbers. Expertise shows through the clarity of the idea, not claims.
+- Never mention: job titles, any private engagement or who it is with, clients' names, invented results or numbers. Expertise shows through the clarity of the idea, not claims.
 - English only. No hashtags in the caption.
 - Count characters with Python before posting.

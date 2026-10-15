@@ -4,7 +4,7 @@
 - Dijae Dadula, Bacoor City, Cavite, Philippines. Founder of IRD Digital Marketing Services (ird.dijaedadula.com) and Chatbot Authority.
 - Almost 9 years in the field: chatbots, AI agents, CRM pipelines and automation for coaches, consultants, agencies, SMEs and experts in the Philippines, US, Canada and ASEAN.
 - Real milestones you may use: ChatFuel community moderator (2018); ManyChat Partner Agency and Chat Marketing Expert (2020); speaker at the first ManyChat event in the Philippines (2020) and at RPA Philippines events; official pioneer educator for Pancake and Botcake (2019); course, mentorship and VIP community; YouTube channel youtube.com/c/DijaeDadulaPRO; LinkedIn linkedin.com/in/dijaedadula.
-- Confidential: never name or describe my AI trainer contract work, the client behind it, pay or methods anywhere public. Don't call me a product owner or product manager in public content.
+- Confidential: never mention any private engagement of mine, who it is with, its terms, pay or methods anywhere public. Don't call me a product owner or product manager in public content.
 
 ## My goal
 Be known as a frontier consultant and expert in AI agents: enterprise-level, calm, clear, never aggressive or hypey. My mastery of building and training AI agents should show through the quality of the thinking, never stated as a claim. Rank on Google, get recommended by AI search, grow the newsletter, and turn readers into "AI Automation Blueprint" calls (www.dijaedadula.com/book).

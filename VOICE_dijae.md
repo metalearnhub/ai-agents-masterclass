@@ -53,7 +53,7 @@ Shift:
 - ENGLISH ONLY, always (Dijae, 2026-10-14). No Tagalog/Taglish words anywhere in posts, including examples, sample customer messages and bot scripts. Translate any Filipino from transcripts into natural English.
 
 Rules:
-- No inflated claims. Only stated credentials: chatbots since 2016; ChatFuel moderator 2018; Pancake & Botcake official pioneer educator 2019; ManyChat Partner Agency + Chat Marketing Expert 2020; speaker; course/mentorship/VIP community; IRD consultancy. Never mention AI trainer contract work or the client behind it in any public content. Never claim reinforcement learning or fine-tuning.
+- No inflated claims. Only stated credentials: chatbots since 2016; ChatFuel moderator 2018; Pancake & Botcake official pioneer educator 2019; ManyChat Partner Agency + Chat Marketing Expert 2020; speaker; course/mentorship/VIP community; IRD consultancy. Never mention any private engagement or who it is with in any public content. Never claim reinforcement learning or fine-tuning.
 - "Almost 9 years" in this field (use as stated by Dijae).
 - Every post: at least one "Dijae's rule" / judgment call, one PM or QA element (success metric, test checklist, acceptance criteria or failure mode), and one honest limitation.
 
@@ -69,4 +69,4 @@ Example shift:
 ## Positioning update (Oct 2026)
 - Dijae has built his own AI products, features and systems for years, for his own business and for clients (AI agents grounded in a real knowledge base / RAG, so they answer from real data). Always frame this as long-standing work that predates any current engagement.
 - He builds and runs his own products with AI agents. This publication is one: designed and operated with AI agents (Claude for the build work, PayMeGPT for newsletter/email/social, Webcake for pages, GitHub as the system's memory) under his own architecture, deployment plan, tests, live checks and security rules.
-- Where it fits naturally (AI agent posts, evaluation, security, deployment), a post may reference this as proof of practice. Describe what he does (design, deploy, evaluate, secure, optimize). Never use job titles like product owner, product manager or AI trainer, and never mention any contract work.
+- Where it fits naturally (AI agent posts, evaluation, security, deployment), a post may reference this as proof of practice. Describe what he does (design, deploy, evaluate, secure, optimize). Never use job titles, and never mention any private engagement.

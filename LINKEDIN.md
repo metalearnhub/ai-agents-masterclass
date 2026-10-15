@@ -5,7 +5,7 @@
 - Two text versions per post (`post` and `post2`, optional `comment2`): same verified facts, different hook and angle, for reposting or recycling later. Verification is tracked per version (`p05` and `p05#2`); a post counts as Verified once either version is posted, and shows "1 of 2" until both are.
 - Cadence: Tuesday and Thursday mornings Manila time. One hook line, short lines, one closing question, 3 hashtags, under 1,300 characters. Links only in the first comment.
 - Every LinkedIn post points to a LIVE blog post in its first comment. Only link URLs listed in sitemap.xml.
-- Confidentiality: zero-hit scan for micro1, labs, rubric, AI-trainer first-person lines before publishing.
+- Confidentiality: zero-hit scan for the private-engagement terms listed in the private project instructions before publishing.
 - Stats must come from a primary source opened in the session. HBR 2011 speed-to-lead figures are paywalled: cite only its conclusion.
 
 ## Calendar
