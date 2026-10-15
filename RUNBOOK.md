@@ -94,3 +94,7 @@ Do not commit node_modules (it is in .gitignore).
 
 ## 10. Report to Dijae (SendUserMessage, then final reply)
 Short, English: post title + live URL, what visuals it has, any judgment calls, anything that failed. Send the updated `checklist/Blog content checklist.xlsx` and `sitemap.xml` with SendUserFile. If something blocked publishing, say exactly what and leave the checklist row as Planned.
+
+## Site-wide CTA rule (Oct 2026)
+- The top-navigation button on every page says **Subscribe** and links to `https://grow.dijaedadula.com/newsletter` (the post template already does this). Never change it back to "Book a call".
+- /home hero and closing CTA = "Join the free weekly newsletter". Footers keep their "Book a call" link. Posts about services may still link /book in the body and CTA box.
