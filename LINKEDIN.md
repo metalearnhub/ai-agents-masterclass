@@ -2,6 +2,7 @@
 
 - Content bank: https://paymegpt.com/p/TE836bKrZ (PayMeGPT page 8185, passcode 1023). The PayMeGPT page is a small shell; the app UI is `metalearnhub/dijae-cv-landing/assets/content-bank/app.html` and the posts are `.../posts.json`. To change the UI or add posts, edit those files and push. Never edit the PayMeGPT page unless the shell itself must change.
 - Two images per post: `image` (diagram, 1080x1350 PNG in the repo) and `art` (AI illustration, flat vector, teal #007a66 + orange #c2410c on cream, no text, generated with mcp__MC__generate_image gpt-image-2.5-flare 3:4, hosted on paymegpt.com). The page overlays `artTitle` + pillar + DIJAE DADULA on the art in the browser and downloads it as `artFile`.
+- Two text versions per post (`post` and `post2`, optional `comment2`): same verified facts, different hook and angle, for reposting or recycling later. Verification is tracked per version (`p05` and `p05#2`); a post counts as Verified once either version is posted, and shows "1 of 2" until both are.
 - Cadence: Tuesday and Thursday mornings Manila time. One hook line, short lines, one closing question, 3 hashtags, under 1,300 characters. Links only in the first comment.
 - Every LinkedIn post points to a LIVE blog post in its first comment. Only link URLs listed in sitemap.xml.
 - Confidentiality: zero-hit scan for micro1, labs, rubric, AI-trainer first-person lines before publishing.
