@@ -10,3 +10,8 @@ This repo is a working kit. Treat everything in it as potentially public.
 6. Before publishing anything, run the private zero-hit scan (the term list lives in the private project instructions and the scheduled task, never in this repo). Any hit = stop, fix, re-scan.
 7. No job titles in public content. Describe what he does (design, deploy, evaluate, secure, optimize).
 8. New products in AI evaluation or AI-training tooling wait for a legal review of the engagement terms. Consulting, chatbots and automation are fine.
+
+## Approved exception: job-referral box
+- One disclosed job-referral box ("Where to find AI training roles") lives only on the two AI-trainer career posts (what-does-an-ai-trainer-do, how-to-become-an-ai-trainer), element ids t_0970/t_0971 and t_1970/t_1971.
+- It is treated like any affiliate link: neutral wording, rel="sponsored nofollow", disclosure in the same paragraph, no first-person claims next to it. The scan ignores exactly these elements; everything else must still return zero hits.
+- Never place the referral link in navigation, /home, newsletter CTAs, emails, Facebook or LinkedIn posts.
