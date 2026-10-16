@@ -110,9 +110,24 @@
    "slug": "ai-automation-clinics-med-spas",
    "title": "AI Automation for Clinics and Med Spas: Bookings, Reminders and Reviews",
    "blurb": "Instant replies, booking, reminders that cut no-shows, and review requests that follow Google's rules."
+  },
+  {
+   "slug": "facebook-messenger-missed-messages",
+   "title": "Why Your Business Is Losing Customers in Facebook Messenger (and How to Fix It)",
+   "blurb": "Where Messenger conversations leak, why the 24-hour window raises the stakes, and how to fix your inbox."
   }
  ],
- "sent": [],
+ "sent": [
+  {
+   "date": "2026-10-16",
+   "broadcastId": "972",
+   "slugs": [
+    "what-is-an-ai-agent",
+    "turn-skills-into-ai-income",
+    "dont-automate-chaos"
+   ]
+  }
+ ],
  "fb": [
   {
    "date": "2026-10-15",

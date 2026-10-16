@@ -1,0 +1,171 @@
+<div class="dd-article">
+
+<!--COVER-->
+
+<p>Most businesses that sell through a Facebook Page do not have a traffic problem. They have an inbox problem. The ads work, the posts get comments, people send a message asking for the price, and then the message waits. It waits overnight, it waits under fifty other chats, or it waits because everyone on the team assumed someone else would answer it. By the time a reply goes out, the customer has bought from the page that answered first.</p>
+
+<p>This guide is for business owners, sales teams and agencies who run Messenger as a sales channel. You will see where conversations leak, how to check your own inbox for the leaks in one afternoon, and how to fix them with a shared inbox, clear ownership and an AI that answers the known questions while your team keeps control of the sale.</p>
+
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>The <b>four leaks</b> that turn Messenger inquiries into lost sales.</li>
+<li>Why Meta's <b>24-hour messaging window</b> makes slow replies more expensive than they look.</li>
+<li>An <b>inbox leak checklist</b> you can run on your own page today.</li>
+<li>A practical fix: <b>Pancake</b> for the team inbox, <b>Botcake AI</b> for instant answers, and a clean handoff between them.</li>
+<li>The <b>metrics</b> that tell you the leak is closed.</li>
+</ul>
+</div>
+
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#leak">Where Messenger conversations leak</a></li>
+<li><a href="#window">Why the 24-hour window raises the stakes</a></li>
+<li><a href="#checklist">Run the inbox leak checklist</a></li>
+<li><a href="#inbox">Fix 1: one inbox, one owner per conversation</a></li>
+<li><a href="#ai">Fix 2: instant answers with a human handoff</a></li>
+<li><a href="#measure">Measure that the leak is closed</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+
+<h2 id="leak">1. Where Messenger conversations leak</h2>
+
+<p>A Messenger sale has five stages: the message arrives, someone sees it, someone replies with a real answer, the customer is offered a next step, and the sale or booking happens. Customers drop out between those stages, and almost never because of the product.</p>
+
+<!--SVG_LEAK-->
+
+<ol>
+<li><b>The message lands when nobody is working.</b> Evenings, weekends and lunch breaks are when many customers finally have time to message. If the page only answers during office hours, those inquiries start the day already cold.</li>
+<li><b>Nobody owns the conversation.</b> Several people can see the inbox, so each one assumes another will reply. Or the message is buried under comment notifications and old chats and nobody sees it at all.</li>
+<li><b>The first reply is slow or vague.</b> "Hi, how can we help?" after a customer already asked for the price is a reply that costs a round trip. Every extra round trip is another chance for the customer to leave.</li>
+<li><b>The conversation is left hanging.</b> The customer got the price but no next step: no booking link, no order form, no question about what they need. The chat ends politely and the sale never happens.</li>
+</ol>
+
+<p>So why does this matter more in Messenger than in email? Because people message several pages at once when they compare options, and the chat app shows them exactly who answered. Research on online sales inquiries has made the same point for years: most companies do not respond nearly fast enough, and the companies that respond first have the advantage.</p>
+
+<h2 id="window">2. Why the 24-hour window raises the stakes</h2>
+
+<p>Messenger is not a channel where you can answer whenever you like. When a person messages your page, Meta gives your business up to 24 hours to respond. That period is called the standard messaging window, and inside it you can send normal messages, including promotional ones.</p>
+
+<p>Outside the window, your options shrink. Message tags allow certain one-to-one updates after 24 hours, but they may not contain promotional content. Meta has also been narrowing those tags: from April 27, 2026, API requests that use the CONFIRMED_EVENT_UPDATE, ACCOUNT_UPDATE or POST_PURCHASE_UPDATE tags return an error. The Human Agent tag still lets a business representative reply manually to a customer within 7 days, but it is meant for a real person handling a real request, not for automated follow-ups. For reference, check the documentation <a href="https://developers.facebook.com/docs/messenger-platform/send-messages" rel="noopener" target="_blank">here</a>.</p>
+
+<p>Put simply: a message you leave unanswered for a day is not just a slow reply. It is a conversation you may no longer be able to continue the way you want. Every leak in Figure 1 gets more expensive once the 24 hours pass.</p>
+
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Treat every Messenger inquiry as if it expires in 24 hours, because in practice it does. Your goal is not "reply today". Your goal is a useful answer while the customer is still on their phone.</div>
+
+<h2 id="checklist">3. Run the inbox leak checklist</h2>
+
+<p>Before you buy any tool, measure the leak you already have. Take one afternoon and go through the last two weeks of conversations on your page. This is the same diagnostic I recommend before any automation project: find out what is broken before you decide what to build.</p>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Leak</th><th>What to check</th><th>Sign of a leak</th></tr></thead>
+<tbody>
+<tr><td><b>After-hours messages</b></td><td>Inquiries that arrived outside working hours and when they were first answered</td><td>The first reply came the next morning or later</td></tr>
+<tr><td><b>No owner</b></td><td>Conversations with no assigned person and no reply</td><td>Any unanswered inquiry older than a few hours</td></tr>
+<tr><td><b>Slow first reply</b></td><td>Time from the customer's first message to the first real answer</td><td>A greeting first, the actual answer much later</td></tr>
+<tr><td><b>Vague first reply</b></td><td>Whether the first reply answered the question asked</td><td>"Please send us a message" or "check our page" instead of the price</td></tr>
+<tr><td><b>Left hanging</b></td><td>Chats that ended right after you shared information</td><td>No booking link, order step or follow-up question</td></tr>
+<tr><td><b>Window expired</b></td><td>Conversations where your last chance to follow up was over 24 hours ago</td><td>Hot inquiries you can no longer message freely</td></tr>
+</tbody>
+</table></div>
+
+<p>Count each type. You do not need a perfect number. You need to know which two leaks are the biggest, because those are the ones you fix first.</p>
+
+<h2 id="inbox">4. Fix 1: one inbox, one owner per conversation</h2>
+
+<p>The cheapest fix is organizational, not technical. Every conversation needs exactly one person responsible for it, and nobody should have to search three apps to find it.</p>
+
+<p>This is why I recommend <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a> for teams that sell through Facebook and Instagram. It brings the inbox, comments, tags, quick replies and orders for your pages into one place, and it assigns conversations to your staff automatically with round robin. The settings that matter most for the inbox leak:</p>
+
+<ol>
+<li><b>Round robin assignment.</b> New conversations are distributed across the team so each one has an owner. You can prioritize staff who are online, or only assign when someone online is available.</li>
+<li><b>Working hours.</b> Outside working hours, conversations can be assigned only to accounts that are online, so night messages go to whoever is actually there.</li>
+<li><b>Reassign idle conversations.</b> If the assigned person does not reply within the time you set, a second person is added to the conversation. This one setting closes the "assumed someone else had it" leak.</li>
+<li><b>Tags for intent.</b> Tag conversations as price inquiry, ready to order, complaint and so on, so the team can filter what needs a person now.</li>
+</ol>
+
+<p>For reference, check the documentation <a href="https://docs.pancake.vn/english/round-robin-mode" rel="noopener" target="_blank">here</a>. If you want the full Pancake and Botcake setup step by step, my <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI and Pancake setup guide</a> walks through every screen.</p>
+
+<h2 id="ai">5. Fix 2: instant answers with a human handoff</h2>
+
+<p>Ownership fixes the "nobody answered" leak. It does not fix the 11 PM message or the question your team answers forty times a day. That is where an AI agent earns its place.</p>
+
+<p><a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake AI</a> replies to customers in Messenger automatically, using instructions and files you give it: your products, prices, policies and the way your best salespeople answer. Pancake's AI Assistant is different: it suggests replies to your staff but does not send them. If you want the AI to reply on its own, that is Botcake AI's job. For reference, check the documentation <a href="https://docs.pancake.biz/pancake/st-f7/st-p11?lang=en" rel="noopener" target="_blank">here</a>.</p>
+
+<!--SVG_FLOW-->
+
+<p>The setup that works is assistive, not fully automated:</p>
+
+<ol>
+<li><b>The AI answers the known questions</b> immediately, at any hour: price, availability, location, how to order, policies.</li>
+<li><b>Ready-to-buy and complex conversations go to a person.</b> Tag them and let Pancake assign them, so a human confirms the order, handles the exception or closes the deal.</li>
+<li><b>Failed bot replies come back to the team.</b> In Botcake's general settings, under "Conversation Status on Pancake When the Bot Responds", you choose how a failed bot reply is marked in Pancake, for example as unread, and how long the bot pauses while a staff member is replying, so the bot never talks over your agent. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f5/st-p1?lang=en" rel="noopener" target="_blank">here</a>.</li>
+<li><b>Every reply ends with a next step.</b> Instruct the AI to finish with a question or an action: "Would you like me to reserve Saturday for you?" is a next step. "Let us know if you have questions" is a leak.</li>
+</ol>
+
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Assistive intelligence before full automation. Let the AI handle speed and the questions you can answer the same way every time. Keep closing, complaints and anything that needs judgment with a person. Your team stays in control, and you learn exactly which parts are safe to automate next.</div>
+
+<p>Before the AI talks to a single customer, test it on the questions from your checklist review. Use real inquiries, including the awkward ones. My guide on <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">how to test an AI chatbot before it talks to your customers</a> has the full test plan.</p>
+
+<h2 id="measure">6. Measure that the leak is closed</h2>
+
+<p>"The inbox feels calmer" is not a result. Decide what success looks like before you launch, then check it weekly for the first month.</p>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Metric</th><th>How to measure</th><th>Acceptance criterion (set your own target)</th></tr></thead>
+<tbody>
+<tr><td><b>First response time</b></td><td>Time from first customer message to first useful answer</td><td>Inside your target for both office hours and after hours</td></tr>
+<tr><td><b>Unanswered inquiries</b></td><td>Conversations with no reply after your target time</td><td>Zero inquiries left without an owner</td></tr>
+<tr><td><b>Handoff speed</b></td><td>Time from "ready to buy" tag to a person replying</td><td>A person replies well inside the 24-hour window</td></tr>
+<tr><td><b>Failed bot replies</b></td><td>Conversations marked as bot reply failed</td><td>Every one reviewed and answered by staff</td></tr>
+<tr><td><b>Conversation to sale</b></td><td>Orders or bookings divided by new conversations</td><td>Higher than your baseline from the checklist period</td></tr>
+</tbody>
+</table></div>
+
+<p>Your checklist review in section 3 is your baseline. Compare against it, not against someone else's benchmark.</p>
+
+<div class="dd-warn"><p><b>Watch for this:</b> a fast reply that is wrong is worse than a slow reply that is right. If the AI quotes an old price or promises a slot you do not have, you lose the sale and the customer's trust at the same time. Update the AI's files every time a price, promo or policy changes.</p></div>
+
+<p>An honest limitation: no inbox setup fixes an offer people do not want, a price that does not fit the market or a product that disappoints. Faster replies make a good business visible to more of its customers. They do not make a weak offer strong. And some customers will always prefer to talk to a person from the first message, so keep that path open.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<h3>How fast should a business reply in Facebook Messenger?</h3>
+<p>As fast as you can give a useful answer, and always well inside the 24-hour standard messaging window. After 24 hours, Meta limits what your page can send, and promotional follow-ups are no longer allowed through message tags.</p>
+
+<h3>Can I message a customer after 24 hours on Messenger?</h3>
+<p>Only in limited cases. Message tags allow certain non-promotional updates, several tags were retired in April 2026, and the Human Agent tag lets a business representative reply manually within 7 days. Plan your process so the important reply happens inside the first 24 hours.</p>
+
+<h3>Do I need an AI chatbot, or is a shared inbox enough?</h3>
+<p>Start with the shared inbox and clear ownership, because it fixes the "nobody answered" leak at low cost. Add an AI agent when after-hours messages or repeated questions are your biggest leaks in the checklist.</p>
+
+<h3>Will an AI chatbot reply to every message automatically?</h3>
+<p>It can, but I do not recommend it for closing sales or handling complaints. Let the AI answer known questions and pass ready-to-buy and complex conversations to a person.</p>
+
+<div class="dd-cta">
+<p class="dd-cta-title">Tools for a Messenger sales inbox</p>
+<p>For the team inbox, tags and round robin assignment I recommend <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a> (coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free, for new Pancake customers or a new billing account only). For AI replies and flows in Messenger, <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a>. For Instagram-first brands, <a href="https://manychat.partnerlinks.io/rozuomtj4677" rel="sponsored nofollow">ManyChat</a>. These are affiliate links.</p>
+<p>Want me to map the leaks in your inbox and design the fix? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+</div>
+
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://developers.facebook.com/docs/messenger-platform/send-messages" rel="noopener" target="_blank">Send a Message: standard messaging window and message tags</a>. Meta for Developers, Messenger Platform. Accessed October 2026.</li>
+<li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/policy" rel="noopener" target="_blank">Messenger Platform and IG Messaging API policy</a>. Meta for Developers. Accessed October 2026.</li>
+<li><a href="https://scholarsarchive.byu.edu/facpub/9711" rel="noopener" target="_blank">The Short Life of Online Sales Leads</a>. Oldroyd, McElheran and Elkington, <i>Harvard Business Review</i>, 2011.</li>
+<li><a href="https://docs.pancake.vn/english/round-robin-mode" rel="noopener" target="_blank">Round robin mode</a>. Pancake documentation. Accessed October 2026.</li>
+<li><a href="https://docs.pancake.biz/pancake/st-f7/st-p11?lang=en" rel="noopener" target="_blank">Pancake AI Assistant</a>. Pancake documentation. Accessed October 2026.</li>
+<li><a href="https://docs.pancake.biz/botcake/st-f5/st-p1?lang=en" rel="noopener" target="_blank">General Setting</a>. Botcake documentation. Accessed October 2026.</li>
+</ol>
+
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI and Pancake setup guide</a></li>
+<li><a href="https://www.dijaedadula.com/qualify-leads-messenger-automatically">How to Qualify Leads in Messenger Automatically (Without Annoying Your Customers)</a></li>
+<li><a href="https://www.dijaedadula.com/automate-lead-follow-up">How to Automate Lead Follow-Up With AI</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+
+</div>
