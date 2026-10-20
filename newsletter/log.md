@@ -2,3 +2,4 @@
 - 2026-10-15: Dijae: digests go OLDEST-first in sets of 3 (newest reserved); welcome series links oldest posts only; Tuesday talks only about the last Friday's 3. Preview v2 sent via Gmail.
 - 2026-10-15: FB weekly post set up. #1 what-is-an-ai-agent scheduled Mon 2026-10-19 09:00 Manila.
 - 2026-10-16: Friday digest broadcast 972 "3 guides: what an AI agent really is" (what-is-an-ai-agent, turn-skills-into-ai-income, dont-automate-chaos), tag 1532, scheduled 2026-10-16 02:00 UTC = 10:00 Manila. Note: schedule in UTC explicitly; the tool stored a Manila-local time as "Z".
+- 2026-10-20: Oct 17-19 runs missed (trigger delivered late). Tuesday story email broadcast 976 'Why your next AI tool will disappoint you' created as DRAFT only (not sent; 10:00 slot had passed). FB #3 dont-automate-chaos scheduled Mon 2026-10-26 09:00 Manila (post 4933).

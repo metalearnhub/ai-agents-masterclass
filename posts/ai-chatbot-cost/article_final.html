@@ -1,0 +1,195 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/3f/c0/7c/c8/e304667fae1120948e2b189a10bc3c867b1c9bb53dbaa1eea3a16681.png' alt='Illustration of a teal calculator, a smartphone with chat bubbles, a stack of coins, a rising bar chart and a friendly robot holding a receipt on a desk' width='1536' height='864' loading='lazy'></div></figure>
+<p>Ask five vendors what an AI chatbot costs and you will get five answers, most of them a monthly plan price. The plan is rarely the number that decides whether a chatbot is worth it. A small business pays for five different things: the platform, the AI usage, the setup, the time someone spends keeping it accurate, and sometimes the channel itself, such as SMS.</p>
+<p>This guide breaks the bill into those five lines, shows the per-reply math with a real measured figure, compares 2026 plan prices for the platforms small businesses use most, and gives you a calculator you can fill in with your own numbers in ten minutes.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>The <b>five cost lines</b> of any AI chatbot, and which one usually dominates.</li>
+<li>The <b>per-reply token math</b>, using a measured cost of about $0.0013 per reply.</li>
+<li><b>2026 plan prices</b> for Botcake, ManyChat and GoHighLevel.</li>
+<li>A <b>monthly cost calculator</b> and a worked example.</li>
+<li>A <b>pre-launch cost check</b> with acceptance criteria.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#lines'>The five cost lines</a></li>
+<li><a href='#reply'>What one AI reply costs</a></li>
+<li><a href='#plans'>Platform plans in 2026</a></li>
+<li><a href='#calc'>The monthly calculator</a></li>
+<li><a href='#hidden'>Costs people forget</a></li>
+<li><a href='#cut'>Cut cost without hurting answers</a></li>
+<li><a href='#check'>Cost check before launch</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='lines'>1. The five cost lines</h2>
+<p>Every chatbot bill, on any platform, is made of the same five lines. Write them down before you compare vendors, because a cheap plan with expensive maintenance is not cheap.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Cost line</th><th>What it is</th><th>How it is billed</th></tr></thead>
+<tbody>
+<tr><td><b>Platform</b></td><td>The chatbot or CRM tool itself.</td><td>Monthly or yearly plan, often tied to contacts, pages or seats.</td></tr>
+<tr><td><b>AI usage</b></td><td>The language model that writes the replies.</td><td>Per token, from a wallet or included in the plan.</td></tr>
+<tr><td><b>Setup</b></td><td>Instructions, knowledge files, flows, integrations and testing.</td><td>One-time: your own hours or a done-for-you project.</td></tr>
+<tr><td><b>Maintenance</b></td><td>Reading conversations, updating prices and promos, retesting.</td><td>Staff or freelancer hours every month.</td></tr>
+<tr><td><b>Channel fees</b></td><td>SMS, email or calls sent through the platform.</td><td>Per message or per minute, where they apply.</td></tr>
+</tbody>
+</table></div>
+<p>For most Messenger and Instagram chatbots, the AI usage line is the smallest. Maintenance time is usually the largest recurring cost, and it is the one most quotes leave out.</p>
+<h2 id='reply'>2. What one AI reply actually costs</h2>
+<p>AI models are billed in tokens, small chunks of text. Every reply has two parts: the <b>input</b> (your instructions, the knowledge the AI pulls in and the conversation so far) and the <b>output</b> (the reply itself). Input is usually much larger, because your full instruction is sent with every single reply.</p>
+<p>In a Botcake AI test on GPT-4.1 mini, one reply used 3,136 input tokens and 58 output tokens, and Botcake showed an estimated cost of $0.0013. You can check that against the model's list price: GPT-4.1 mini is priced at $0.40 per million input tokens and $1.60 per million output tokens.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>Cost per reply = (input tokens  x input price  / 1,000,000)
+               + (output tokens x output price / 1,000,000)
+
+Example (GPT-4.1 mini):
+  3,136 x $0.40 / 1,000,000 = $0.00125
+     58 x $1.60 / 1,000,000 = $0.00009
+  Cost per reply            = about $0.0013</code></pre></div>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 230' role='img' aria-labelledby='ac1t ac1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='ac1t'>Where the cost of one AI reply comes from</title>
+<desc id='ac1d'>Bar chart of one measured reply on GPT-4.1 mini. Input tokens cost about 0.00125 dollars, which is 93 percent of the reply cost. Output tokens cost about 0.00009 dollars, 7 percent. Total about 0.0013 dollars.</desc>
+<rect x='0' y='0' width='640' height='230' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>ONE MEASURED REPLY ON GPT-4.1 MINI</text>
+<text x='24' y='80' class='svg-t'>Input: 3,136 tokens</text>
+<rect x='210' y='60' width='370' height='32' rx='6' fill='#007a66'/><text x='570' y='81' text-anchor='end' class='svg-w'>$0.00125 (93%)</text>
+<text x='24' y='132' class='svg-t'>Output: 58 tokens</text>
+<rect x='210' y='112' width='28' height='32' rx='6' fill='#c2410c'/><text x='248' y='133' class='svg-o'>$0.00009 (7%)</text>
+<line x1='210' y1='164' x2='580' y2='164' stroke='#cfd6dd'/>
+<text x='24' y='190' class='svg-t'>Total per reply: about $0.0013</text>
+<text x='24' y='212' class='svg-s'>Your instruction is sent with every reply, so its length drives most of the cost.</text>
+</svg>
+<figcaption><b>Figure 1.</b> Input tokens, mostly your instruction, make up almost the whole cost of a reply.</figcaption>
+</figure>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:740/596'><img src='https://statics.pancake.vn/web-media-264/e9/07/bd/0c/5c367788c47046489698a84db6e7fbc831826f56d14e35728af69427.webp' alt='Botcake AI Preview reply with the Message cost popup showing input tokens, output tokens and estimated cost' width='740' height='596' loading='lazy'></div>
+<figcaption><b>Figure 2.</b> Botcake AI shows the input tokens, output tokens and estimated cost under every Preview reply. Screenshot: Dijae Dadula, October 2026. The full setup is in the <a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake setup guide</a>.</figcaption></figure>
+<p>Two things follow from this math. First, a shorter, cleaner instruction lowers the cost of every reply. Second, a larger model multiplies the whole bill, so move up a model only when testing shows the smaller one gives weak answers.</p>
+<h2 id='plans'>3. Platform plans in 2026</h2>
+<p>Plan prices change often, so treat this as a snapshot from October 2026 and confirm on the vendor's page before you buy. All prices are in US dollars and exclude tax.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Platform</th><th>Entry point</th><th>What drives the price</th></tr></thead>
+<tbody>
+<tr><td><b>Botcake</b></td><td>Free Starter plan with 500,000 automated messages per month. Pro starts at $30.</td><td>Message volume and features. Botcake AI replies are billed per token from a Pancake prepaid wallet.</td></tr>
+<tr><td><b>ManyChat</b></td><td>Free for 25 active contacts. Pro is $29 per month billed yearly, or $39 month to month, with 2,500 active contacts.</td><td>Active contacts per month: $0.05 for each extra contact on Pro with monthly billing.</td></tr>
+<tr><td><b>GoHighLevel</b></td><td>Starter $97 per month, Unlimited $297 per month.</td><td>The plan, plus usage fees such as SMS at about $0.0075 per segment and AI usage.</td></tr>
+<tr><td><b>Pancake</b> (team inbox)</td><td>Plans by number of connected pages, users and term.</td><td>Pages and staff seats. Coupon <b>CHAMP20</b> gives 20% off plus 30 days free for new customers.</td></tr>
+</tbody>
+</table></div>
+<p>For reference, check the pricing pages <a href='https://botcake.io/pricing' rel='noopener' target='_blank'>for Botcake here</a>, <a href='https://manychat.com/pricing' rel='noopener' target='_blank'>for ManyChat here</a> and <a href='https://pancake.vn/pricing' rel='noopener' target='_blank'>for Pancake here</a>. The pricing model matters more than the headline number: contact-based plans grow with your audience, message-based plans grow with your chat volume, and usage fees grow with every SMS or AI reply.</p>
+<h2 id='calc'>4. The monthly calculator</h2>
+<p>Fill in your own numbers. The formula works on any platform.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>AI usage     = conversations per month
+               x AI replies per conversation
+               x cost per reply
+Maintenance  = review hours per month x hourly cost
+Monthly cost = platform plan + AI usage + maintenance
+               + channel fees (SMS, email, calls)
+Setup        = one-time, spread over 12 months if you want
+               a monthly figure</code></pre></div>
+<p>Here is how AI usage alone scales with volume, at 6 AI replies per conversation and $0.0013 per reply. Every figure is an <b>illustrative example</b>.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 250' role='img' aria-labelledby='ac2t ac2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='ac2t'>Monthly AI usage cost by conversation volume</title>
+<desc id='ac2d'>Illustrative bar chart at 6 replies per conversation and 0.0013 dollars per reply: 500 conversations cost 3.90 dollars a month, 3,000 conversations cost 23.40 dollars, and 10,000 conversations cost 78 dollars.</desc>
+<rect x='0' y='0' width='640' height='250' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>AI USAGE PER MONTH (ILLUSTRATIVE)</text>
+<text x='24' y='80' class='svg-t'>500 conversations</text>
+<rect x='230' y='60' width='17' height='32' rx='6' fill='#5b9e90'/><text x='257' y='81' class='svg-t'>$3.90</text>
+<text x='24' y='130' class='svg-t'>3,000 conversations</text>
+<rect x='230' y='110' width='104' height='32' rx='6' fill='#007a66'/><text x='344' y='131' class='svg-t'>$23.40</text>
+<text x='24' y='180' class='svg-t'>10,000 conversations</text>
+<rect x='230' y='160' width='346' height='32' rx='6' fill='#007a66'/><text x='566' y='181' text-anchor='end' class='svg-w'>$78.00</text>
+<text x='24' y='226' class='svg-s'>6 AI replies per conversation x $0.0013 per reply (GPT-4.1 mini, measured in Botcake AI).</text>
+</svg>
+<figcaption><b>Figure 3.</b> AI usage grows in a straight line with volume, and stays small next to staff time at most small-business volumes.</figcaption>
+</figure>
+<p>Now a full month for an online shop with 3,000 AI conversations, using Botcake for the AI agent and a team inbox for handoffs. Again, every figure is an <b>illustrative assumption</b>; replace each one.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Line (example)</th><th>Value</th><th>How it is calculated</th></tr></thead>
+<tbody>
+<tr><td>Botcake plan</td><td>$0</td><td>Starter plan, within 500,000 automated messages</td></tr>
+<tr><td>AI usage</td><td>$23.40</td><td>3,000 × 6 × $0.0013</td></tr>
+<tr><td>Team inbox plan</td><td>Your plan price</td><td>Depends on pages, users and term</td></tr>
+<tr><td>Maintenance</td><td>$60</td><td>4 review hours × $15 per hour</td></tr>
+<tr><td>Channel fees</td><td>$0</td><td>Messenger and Instagram replies are not billed per message here</td></tr>
+<tr><td><b>Monthly total</b></td><td><b>$83.40 + inbox plan</b></td><td>Setup is extra and one-time</td></tr>
+</tbody>
+</table></div>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 200' role='img' aria-labelledby='ac3t ac3d' xmlns='http://www.w3.org/2000/svg'>
+<title id='ac3t'>Example month: AI usage versus maintenance time</title>
+<desc id='ac3d'>Illustrative stacked bar for one month: AI usage 23.40 dollars and maintenance time 60 dollars, a total of 83.40 dollars before the team inbox plan. Maintenance is about 72 percent of the total.</desc>
+<rect x='0' y='0' width='640' height='200' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>EXAMPLE MONTH BEFORE THE INBOX PLAN (ILLUSTRATIVE)</text>
+<rect x='24' y='64' width='166' height='48' rx='6' fill='#5b9e90'/><text x='36' y='93' class='svg-w'>AI $23.40</text>
+<rect x='190' y='64' width='426' height='48' rx='6' fill='#c2410c'/><text x='204' y='93' class='svg-w'>Maintenance time $60 (about 72%)</text>
+<text x='616' y='140' text-anchor='end' class='svg-t'>Total $83.40</text>
+<text x='24' y='176' class='svg-s'>Budget for the time it takes to keep answers accurate before you worry about tokens.</text>
+</svg>
+<figcaption><b>Figure 4.</b> In this example, the hours spent reviewing conversations cost about two and a half times the AI.</figcaption>
+</figure>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span>Budget for time before tokens. A chatbot that nobody reviews gets worse every time a price, promo or policy changes, and the cost of one wrong answer to a buyer is far higher than a month of AI usage. Put a named owner and a fixed review hour in the budget, or the low AI bill is a false saving.</div>
+<h2 id='hidden'>5. Costs people forget</h2>
+<ul>
+<li><b>Long instructions.</b> Every extra paragraph is sent with every reply. Keep long lists in knowledge files instead.</li>
+<li><b>Longer conversations.</b> The conversation so far is part of the input, so later replies in a long chat usually cost more than the first one.</li>
+<li><b>Bigger models.</b> Switching to a larger model raises the cost of every reply, not just the hard ones.</li>
+<li><b>Contact overages.</b> On contact-based plans, a successful ad campaign can push you into a higher tier.</li>
+<li><b>Channel fees.</b> SMS and calls are billed per segment or minute on platforms that send them.</li>
+<li><b>An empty wallet.</b> On pay-as-you-go AI, a balance that hits zero stops replies mid-conversation. Turn on auto top-up.</li>
+</ul>
+<h2 id='cut'>6. Cut cost without hurting answers</h2>
+<ol>
+<li><b>Let keyword flows answer the simple questions first.</b> Fixed replies for hours, location and payment methods cost nothing in AI usage.</li>
+<li><b>Start on a mini model</b> and move up only when tests show weak answers.</li>
+<li><b>Trim the instruction.</b> Follow a clear structure, like the one in <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>How to Write AI Agent Instructions for Any Business</a>, and remove repetition.</li>
+<li><b>Train the answers that matter</b> so the AI gets them right the first time instead of across several back-and-forth replies.</li>
+<li><b>Cap automatic follow-ups</b> at one or two. Each follow-up is another paid reply.</li>
+</ol>
+<h2 id='check'>7. Cost check before launch</h2>
+<p>Treat cost like any other launch requirement. These are the acceptance criteria I recommend before a chatbot goes live:</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>CHATBOT COST CHECK
+[ ] Average cost per reply measured on 20+ real test questions
+[ ] Replies per conversation estimated from real chat history
+[ ] Monthly AI usage = volume x replies x cost per reply
+[ ] Total stays within budget at 2x expected volume
+[ ] Platform tier checked against expected contacts or messages
+[ ] Auto top-up on, with a balance that covers a busy weekend
+[ ] Review owner named, review hours booked every month
+[ ] Cost per conversation added to the monthly report</code></pre></div>
+<p>After launch, compare actual cost per conversation with your estimate every month. <a href='https://www.dijaedadula.com/chatbot-roi-metrics'>The 5 Chatbot ROI Metrics That Matter</a> shows how to put that cost next to the value the chatbot creates.</p>
+<p>An honest limitation: the $0.0013 figure is one measured reply on one instruction and one model. Your instruction length, model choice and conversation style will change it, and vendors change both token and plan prices. Measure your own cost per reply in testing and redo the math whenever a price changes.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>How much does an AI chatbot cost per month for a small business?</h3>
+<p>Add four lines: the platform plan, AI usage, maintenance time and any channel fees. At 3,000 conversations a month, AI usage on a mini model can be around $25, while staff review time and the plan price are usually larger.</p>
+<h3>How much does one AI chatbot reply cost?</h3>
+<p>It depends on the model and on how many tokens each reply uses. In a Botcake AI test on GPT-4.1 mini, one reply with 3,136 input tokens and 58 output tokens cost about $0.0013.</p>
+<h3>Is a free chatbot plan enough?</h3>
+<p>For many small pages, yes, as long as the free tier covers your volume. Botcake's Starter plan includes 500,000 automated messages a month. AI replies and staff time still cost money.</p>
+<h3>Why is maintenance part of the cost?</h3>
+<p>Prices, promos and policies change. Someone has to read conversations, update the instructions and knowledge files, and retest. Without that time, answers drift out of date and the chatbot starts losing sales.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Start with a low-cost stack</p>
+<p>Build your AI agent on <a href='https://www.dijaedadula.com/botcake' rel='sponsored nofollow'>Botcake</a>, which includes 500,000 free automated messages per month, and run your team inbox on <a href='https://www.dijaedadula.com/pancake' rel='sponsored nofollow'>Pancake</a> with coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account). For Instagram-first brands, <a href='https://manychat.partnerlinks.io/rozuomtj4677' rel='sponsored nofollow'>ManyChat</a>. For a CRM with SMS and email in one place, <a href='https://www.gohighlevel.com/?fp_ref=dijae-044b83' rel='sponsored nofollow'>GoHighLevel</a>. These are affiliate links.</p>
+<p>Want the numbers scoped for your business? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://botcake.io/pricing' rel='noopener' target='_blank'>Botcake pricing</a>. Accessed October 2026.</li>
+<li><a href='https://manychat.com/pricing' rel='noopener' target='_blank'>Manychat pricing</a> and <a href='https://www.featurebase.app/blog/manychat-pricing' rel='noopener' target='_blank'>Featurebase: Manychat Pricing 2026</a> (monthly versus yearly prices), updated October 2026.</li>
+<li><a href='https://www.clickfunnels.com/blog/gohighlevel-pricing/' rel='noopener' target='_blank'>GoHighLevel Pricing 2026: Every Plan and Usage Fee Explained</a>, prices verified July 2026.</li>
+<li><a href='https://pricepertoken.com/pricing-page/model/openai-gpt-4.1-mini' rel='noopener' target='_blank'>GPT-4.1 mini API pricing</a>, Price Per Token. Accessed October 2026.</li>
+<li><a href='https://pancake.vn/pricing' rel='noopener' target='_blank'>Pancake pricing</a>. Accessed October 2026.</li>
+<li><a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake Setup Guide</a> (message cost test), Dijae Dadula, October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/chatbot-roi-metrics'>How Much Does an AI Agent Save? The 5 Chatbot ROI Metrics That Matter</a></li>
+<li><a href='https://www.dijaedadula.com/ai-chatbot-for-small-business'>AI Chatbot for Small Business: What It Does, What It Costs, and How to Choose One</a></li>
+<li><a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake Setup Guide</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>

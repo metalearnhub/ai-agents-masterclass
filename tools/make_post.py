@@ -66,13 +66,21 @@ faq=[]
 if "id='faq'" in art:
     for mm in re.finditer(r'<h3>(.*?)</h3>\n<p>(.*?)</p>',art.split("id='faq'")[1].split("dd-cta")[0],re.S):
         faq.append({"@type":"Question","name":html.unescape(mm.group(1)),"acceptedAnswer":{"@type":"Answer","text":html.unescape(re.sub('<[^>]+>','',mm.group(2)))}})
-post={"@context":"https://schema.org","@type":"BlogPosting","@id":url+"#post","mainEntityOfPage":url,"headline":m['h1'][:110],"description":m['desc'],"image":[m['cover']],"datePublished":date,"dateModified":date,"inLanguage":"en","wordCount":words,"articleSection":m['cat'],"keywords":m['kw'],
+post={"@context":"https://schema.org","@type":"BlogPosting","@id":url+"#post","mainEntityOfPage":url,"headline":m['h1'][:110],"description":m['desc'],"image":{"@type":"ImageObject","url":m['cover'],"width":1536,"height":864,"caption":m['cover_alt']},"datePublished":date,"dateModified":date,"inLanguage":"en","wordCount":words,"articleSection":m['cat'],"keywords":m['kw'],
   "author":{"@type":"Person","@id":U+"home#person","name":"Dijae Dadula","url":U+"home"},"publisher":{"@type":"Person","@id":U+"home#person","name":"Dijae Dadula"},"isPartOf":{"@type":"Blog","@id":U+"blog#blog","url":U+"blog"}}
 lds=[post]
 if faq: lds.append({"@context":"https://schema.org","@type":"FAQPage","@id":url+"#faq","mainEntity":faq})
 lds.append({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":U+"home"},{"@type":"ListItem","position":2,"name":"Blog","item":U+"blog"},{"@type":"ListItem","position":3,"name":m['short'],"item":url}]})
 ld=''.join('<script type="application/ld+json">%s</script>'%json.dumps(x,ensure_ascii=False) for x in lds)
-meta="<meta name='author' content='Dijae Dadula'><meta property='og:type' content='article'><meta property='og:title' content='%s'><meta property='og:description' content='%s'><meta property='og:url' content='%s'><meta property='og:image' content='%s'>"%(html.escape(m['h1'],quote=True),html.escape(m['desc'],quote=True),url,m['cover'])
+e=lambda x:html.escape(x,quote=True)
+assert len(m['seo'])<=60, 'seo title over 60 chars: %d'%len(m['seo'])
+assert 120<=len(m['desc'])<=160, 'meta description must be 120-160 chars: %d'%len(m['desc'])
+meta=("<meta property='og:type' content='article'><meta property='og:site_name' content='Dijae Dadula'>"
+ "<meta property='og:url' content='%s'><meta property='og:title' content='%s'><meta property='og:description' content='%s'>"
+ "<meta property='og:image' content='%s'><meta property='og:image:width' content='1536'><meta property='og:image:height' content='864'>"
+ "<meta property='og:image:alt' content='%s'><meta name='twitter:card' content='summary_large_image'>"
+ "<meta name='twitter:title' content='%s'><meta name='twitter:description' content='%s'><meta name='twitter:image' content='%s'>"
+ "<meta name='twitter:image:alt' content='%s'><meta name='author' content='Dijae Dadula'>")%(url,e(m['h1']),e(m['desc']),m['cover'],e(m['cover_alt']),e(m['h1']),e(m['desc']),m['cover'],e(m['cover_alt']))
 st['bhet']=ld+meta+rest
 json.dump(S,open(os.path.join(d,'source.json'),'w'),ensure_ascii=False,separators=(',',':'))
 geo=dict(eb_top_d=etop,DH=DH,hcss_top_d=etop+DH+47,sec_d=etop+DH+57,eb_top_m=metop,MH=MH,hcss_top_m=metop+MH+39,sec_m=metop+MH+49,words=words,mins=mins,faq=len(faq),measured=[ad,am])

@@ -50,8 +50,8 @@ Use normal double quotes in your HTML; the build converts everything to the quot
 ```json
 {"slug":"kebab-case-slug","cat":"<one of: AI agents and workflows | CRM and automation that sells | Monetize your skills with AI | AI quality and evaluation | Your career in the AI era | Trends, tools and stories>",
  "short":"Breadcrumb name","h1":"Full title","dek":"One or two sentence subtitle",
- "seo":"SEO title under 65 chars | Dijae Dadula","desc":"Meta description 140-160 chars","kw":"comma, separated, keywords, Dijae Dadula",
- "cover":"https://statics.pancake.vn/...","cover_alt":"Describe the cover","date":"YYYY-MM-DD"}
+ "seo":"SEO title, 60 chars max incl. | Dijae Dadula","desc":"Meta description 120-160 chars: benefit first, keyword early, soft CTA","kw":"comma, separated, keywords, Dijae Dadula",
+ "cover":"https://statics.pancake.vn/...","cover_alt":"Specific, searchable description of the 16:9 1536x864 cover (also used for og:image:alt, twitter:image:alt and the ImageObject caption)","date":"YYYY-MM-DD"}
 ```
 Slug: short, keyword-first, not already in sitemap.xml.
 
