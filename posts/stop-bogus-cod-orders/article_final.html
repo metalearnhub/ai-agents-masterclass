@@ -1,0 +1,217 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/94/f8/55/63/7d3bfbc8f318369d337f07ee90933f503302ea86fc82281da485a7b1.png' alt='Illustration of a confirmed parcel, a smartphone with chat bubbles and a confirm button, a delivery rider on a scooter, a security shield and a returned parcel being stopped' width='1536' height='864' loading='lazy'></div></figure>
+<p>Every Philippine online seller knows the parcel that comes back. The buyer ordered on Messenger, gave a name and an address, and then was not home, changed their mind, or never meant to buy at all. You paid for the packaging, the shipping and the staff time, and the stock sat on a truck for a week instead of on your shelf.</p>
+<p>This guide is for sellers who take cash-on-delivery (COD) orders through chat. You will get the main reasons parcels are returned to sender (RTS), a simple way to cost one returned parcel, and a chat automation setup in Botcake AI and Pancake that confirms orders, blocks known bogus buyers and keeps a person in charge of risky orders.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>The <b>five main reasons</b> COD parcels come back, and which ones chat can prevent.</li>
+<li>A <b>cost-per-RTS calculator</b> you can fill in with your own numbers.</li>
+<li>A <b>confirm-before-ship flow</b> with copy-ready messages.</li>
+<li>The <b>Botcake and Pancake settings</b> that block repeat bogus buyers.</li>
+<li>A <b>launch checklist</b> and the two metrics to track every week.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#why'>Why COD parcels come back</a></li>
+<li><a href='#cost'>What one returned parcel costs</a></li>
+<li><a href='#confirm'>Confirm by chat before you ship</a></li>
+<li><a href='#block'>Block repeat bogus buyers</a></li>
+<li><a href='#handoff'>Put a person on risky orders</a></li>
+<li><a href='#exposure'>Reduce how much rides on COD</a></li>
+<li><a href='#updates'>Messages after the order</a></li>
+<li><a href='#check'>Launch checklist and metrics</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='why'>1. Why COD parcels come back</h2>
+<p>COD is not going away. About 23% of Philippine e-commerce value on Xendit's platform is still paid in cash on delivery, even as QR Ph and InstaPay payments grew 198% from January 2025 to April 2026. For many buyers, paying the rider is the only way they will order from a page they do not know yet.</p>
+<p>Ninja Van lists the five most common reasons parcels are returned to sender in the Philippines:</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>RTS reason</th><th>Can chat prevent it?</th></tr></thead>
+<tbody>
+<tr><td><b>Incomplete or wrong address</b></td><td>Yes. Confirm the full address, landmark and barangay before you book the courier.</td></tr>
+<tr><td><b>Nobody home to receive</b></td><td>Mostly. Confirm who receives and send a heads-up when the parcel ships.</td></tr>
+<tr><td><b>Buyer changed their mind or refused</b></td><td>Partly. A clear order summary, total and delivery time removes impulse and surprise.</td></tr>
+<tr><td><b>Defective or damaged package</b></td><td>No. That is packing and courier handling.</td></tr>
+<tr><td><b>Wrong item inside</b></td><td>Partly. A confirmed order summary gives the packer one source of truth.</td></tr>
+</tbody>
+</table></div>
+<p>Three of the five start in the conversation, before a single box is packed. That is where automation earns its keep: not by replying faster, but by making sure every order that leaves your shop is complete, confirmed and wanted.</p>
+<h2 id='cost'>2. What one returned parcel really costs</h2>
+<p>Sellers often price an RTS as “the shipping fee.” It is more than that. Add up these lines for one returned parcel:</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>Cost of one RTS =
+    outbound shipping fee
+  + return fee (if your courier charges one; check your agreement)
+  + packaging and insert materials
+  + staff time to pack, follow up and restock
+  + margin lost on stock tied up or damaged in transit
+
+Monthly RTS cost = cost of one RTS x number of RTS parcels</code></pre></div>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 260' role='img' aria-labelledby='rts1t rts1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='rts1t'>Illustrative cost of one returned COD parcel</title>
+<desc id='rts1d'>Illustrative example only. Stacked bar of the cost of one returned parcel: outbound shipping 120 pesos, return fee 60 pesos, packaging 25 pesos, staff time 40 pesos, total 245 pesos. At 60 returned parcels a month, that is 14,700 pesos a month.</desc>
+<rect x='0' y='0' width='640' height='260' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>ILLUSTRATIVE EXAMPLE: ONE RETURNED PARCEL</text>
+<rect x='24' y='58' width='236' height='44' rx='6' fill='#007a66'/>
+<rect x='260' y='58' width='118' height='44' fill='#5b9e90'/>
+<rect x='378' y='58' width='49' height='44' fill='#c2410c'/>
+<rect x='427' y='58' width='79' height='44' rx='6' fill='#e8a27a'/>
+<text x='34' y='86' class='svg-w'>Shipping ₱120</text>
+<text x='270' y='86' class='svg-w'>Return ₱60</text>
+<text x='24' y='130' class='svg-s'>Packaging ₱25 (orange)  ·  Staff time ₱40 (light orange)</text>
+<text x='24' y='168' class='svg-t'>Total per returned parcel: ₱245</text>
+<line x1='24' y1='186' x2='616' y2='186' stroke='#cfd6dd'/>
+<text x='24' y='216' class='svg-t'>At 60 returns a month: ₱14,700 lost</text>
+<text x='24' y='240' class='svg-s'>Replace every figure with your own courier rates and staff cost.</text>
+</svg>
+<figcaption><b>Figure 1.</b> An illustrative cost of one returned parcel. Every figure is an example, not a courier rate.</figcaption>
+</figure>
+<p>Imagine a page that ships 600 COD orders a month with a 10% RTS rate. That is 60 parcels coming back. At the illustrative ₱245 each, the page loses ₱14,700 a month before counting the buyers who never ordered again. Cutting RTS from 10% to 6% saves 24 parcels, or ₱5,880 a month in this example. Do this math with your own numbers before you buy any tool, because it tells you what a fix is worth.</p>
+<h2 id='confirm'>3. Confirm by chat before you ship</h2>
+<p>The single most effective habit is an order confirmation in the same chat where the buyer ordered. Ninja Van recommends confirming buyer details by call or chat and sending a delivery schedule confirmation. Chat automation makes that consistent, every order, every day, without someone remembering to do it.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 300' role='img' aria-labelledby='rts2t rts2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='rts2t'>Confirm-before-ship flow for COD orders</title>
+<desc id='rts2d'>Flow diagram. The AI collects the order, then sends a summary for the buyer to confirm. If the buyer confirms, the system checks for negative reports. A clean record goes to packing. A negative report or no reply puts the order on hold for a staff member to call.</desc>
+<rect x='0' y='0' width='640' height='300' rx='14' fill='#f6f8fa'/>
+<rect x='20' y='40' width='130' height='64' rx='10' fill='#e8f4f1' stroke='#007a66'/>
+<text x='85' y='68' text-anchor='middle' class='svg-t'>AI collects</text><text x='85' y='88' text-anchor='middle' class='svg-s'>item, name, phone,</text><text x='85' y='100' text-anchor='middle' class='svg-s'>full address</text>
+<rect x='180' y='40' width='130' height='64' rx='10' fill='#e8f4f1' stroke='#007a66'/>
+<text x='245' y='68' text-anchor='middle' class='svg-t'>Order summary</text><text x='245' y='88' text-anchor='middle' class='svg-s'>total + delivery</text><text x='245' y='100' text-anchor='middle' class='svg-s'>time, “Confirm?”</text>
+<rect x='340' y='40' width='130' height='64' rx='10' fill='#e8f4f1' stroke='#007a66'/>
+<text x='405' y='68' text-anchor='middle' class='svg-t'>Risk check</text><text x='405' y='88' text-anchor='middle' class='svg-s'>negative reports</text><text x='405' y='100' text-anchor='middle' class='svg-s'>on Pancake</text>
+<rect x='500' y='40' width='120' height='64' rx='10' fill='#007a66'/>
+<text x='560' y='78' text-anchor='middle' class='svg-w'>Pack and ship</text>
+<path d='M150 72 H176' stroke='#007a66' stroke-width='2' marker-end='url(#rts2a)'/>
+<path d='M310 72 H336' stroke='#007a66' stroke-width='2' marker-end='url(#rts2a)'/>
+<path d='M470 72 H496' stroke='#007a66' stroke-width='2' marker-end='url(#rts2a)'/>
+<text x='485' y='30' text-anchor='middle' class='svg-s'>clean</text>
+<path d='M245 104 V180' stroke='#c2410c' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#rts2b)'/>
+<path d='M405 104 V180' stroke='#c2410c' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#rts2b)'/>
+<text x='253' y='146' class='svg-o'>no reply</text>
+<text x='413' y='146' class='svg-o'>flagged</text>
+<rect x='180' y='184' width='290' height='70' rx='10' fill='#fff4ec' stroke='#c2410c'/>
+<text x='325' y='212' text-anchor='middle' class='svg-t'>Hold: assign to staff, pause AI</text>
+<text x='325' y='234' text-anchor='middle' class='svg-s'>A person calls or chats before anything ships</text>
+<defs>
+<marker id='rts2a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='#007a66'/></marker>
+<marker id='rts2b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='#c2410c'/></marker>
+</defs>
+</svg>
+<figcaption><b>Figure 2.</b> The confirm-before-ship flow: only confirmed, clean orders go straight to packing.</figcaption>
+</figure>
+<p>Add this to your AI agent's instructions so every order ends with the same confirmation. Adjust the wording to your brand, but keep the structure.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>ORDER CONFIRMATION (add to your agent instructions)
+Before an order is created, collect: product and variant,
+quantity, full name, mobile number, complete address
+(house number, street, barangay, city, province, landmark).
+If any item is missing or unclear, ask for it. Never guess.
+
+Then send exactly one summary and wait for a reply:
+“Here is your order:
+ {product} x {qty}
+ Total to pay the rider: {total} (cash on delivery)
+ Deliver to: {name}, {mobile}, {address}
+ Expected delivery: {delivery window}
+ Reply YES to confirm, or tell me what to change.”
+
+Only treat a clear YES as confirmation.
+Do not promise delivery dates the courier has not given.</code></pre></div>
+<p>The summary does three jobs at once. It catches address errors while the buyer is still in the chat, it states the cash amount so there is no surprise at the door, and it gives your packer one confirmed record to pack from. If your agent is new, the <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>AI agent instructions template</a> shows where this block fits.</p>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span>No YES, no box. An order without a clear confirmation in the chat is a lead, not an order. Hold it, follow up once, and only pack it after a person or the buyer confirms. The few sales you delay cost far less than the parcels you stop sending to people who never meant to pay.</div>
+<h2 id='block'>4. Block repeat bogus buyers automatically</h2>
+<p>Some returns are honest mistakes. Others come from the same people again and again. If you run your inbox on Pancake and your AI agent on Botcake AI, connect the two so the agent creates orders in Pancake POS and skips customers who already have negative reports.</p>
+<ol>
+<li>Open your agent in Botcake AI and go to the <span class='dd-ui'>Tools</span> tab.</li>
+<li>Under <span class='dd-ui'>Integrate connection</span>, click <b>Pancake POS</b> to open <span class='dd-ui'>Automation create order</span>.</li>
+<li>Turn on <span class='dd-ui'>Auto-create order when information is available</span>, so orders are only created once the details are complete.</li>
+<li>Turn on <span class='dd-ui'>Stop auto-creating orders when receiving negative reports on Pancake</span>.</li>
+<li>Set <span class='dd-ui'>Import product</span> to <b>Import all</b>, so the agent quotes real names and prices from your POS.</li>
+</ol>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:1010/610'><img src='https://statics.pancake.vn/web-media-264/36/32/6a/5e/2d697cd9d91f84d73ee96d58edf2d2e155bbad97f710b3328fb464eb.webp' alt='Botcake AI Pancake POS Automation create order settings with auto-create order, upsell and the option to stop auto-creating orders for customers with negative reports on Pancake' width='1010' height='610' loading='lazy'></div>
+<figcaption><b>Figure 3.</b> The Pancake POS order settings in Botcake AI, including the negative-report stop. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p>With that switch on, a flagged customer can still chat and ask questions, but the agent will not push an order straight into your system. That is the right balance: you do not insult a buyer who may have a good reason for a past return, and you do not ship blind either. For reference, check the documentation <a href='https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss2?lang=en' rel='noopener' target='_blank'>here</a>. The full setup, step by step, is in the <a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake setup guide</a>.</p>
+<h2 id='handoff'>5. Put a person on risky orders</h2>
+<p>Automation should decide which orders are routine, and a person should decide the rest. In Botcake AI, open <span class='dd-ui'>AI response behavior</span>, switch to <span class='dd-ui'>Special case</span> and click <span class='dd-ui'>Add case</span>. Choose the template <span class='dd-ui'>When the order is created successfully</span>, then add two actions: <span class='dd-ui'>Assign to Staff on Pancake</span> and the AI action <span class='dd-ui'>Pause AI</span>.</p>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:980/680'><img src='https://statics.pancake.vn/web-media-264/85/95/bc/a4/e2859f00be07e948462c8786f2179050a3bfcd7959d634b709a7ea42.webp' alt='Botcake AI Special case set to assign the conversation to staff on Pancake and pause the AI for one hour after an order is created' width='980' height='680' loading='lazy'></div>
+<figcaption><b>Figure 4.</b> A special case that assigns the chat to a staff member and pauses the AI after an order is created. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p>Now a person sees every new order while the buyer is still warm. They can confirm high-value orders by phone, ask a first-time buyer one extra question, or call when the address looks thin. I recommend writing the rule down for the team, so every staff member treats risk the same way:</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Order looks like</th><th>What the team does</th></tr></thead>
+<tbody>
+<tr><td>Repeat buyer, confirmed YES, full address</td><td>Pack and ship.</td></tr>
+<tr><td>First-time buyer, high order value</td><td>Call or voice-message to confirm before packing.</td></tr>
+<tr><td>Address missing landmark or barangay</td><td>Ask once in chat; hold until complete.</td></tr>
+<tr><td>Negative report on Pancake</td><td>Offer prepaid payment or a deposit; do not ship COD.</td></tr>
+<tr><td>No reply to the summary within a day</td><td>One follow-up, then close the order as unconfirmed.</td></tr>
+</tbody>
+</table></div>
+<h2 id='exposure'>6. Reduce how much rides on COD</h2>
+<p>You do not have to remove COD to lower the risk. Ninja Van suggests capping the COD amount and asking for e-wallet or gateway payment above that cap, sometimes with a small incentive such as a freebie or free shipping. With QR Ph and InstaPay now about 13% of e-commerce value on Xendit's platform, many buyers already have a prepaid option in their pocket.</p>
+<ul>
+<li><b>Set a COD ceiling.</b> Above a total you choose, the agent offers prepaid payment only.</li>
+<li><b>Reward prepaid.</b> A small freebie or free shipping for prepaid orders changes behavior without forcing anyone.</li>
+<li><b>Ask for a deposit</b> on made-to-order or very high-value items.</li>
+<li><b>Keep COD for repeat buyers</b> who have received and paid before.</li>
+</ul>
+<p>Put these rules in the agent's instructions in plain words, so the AI explains them politely and the same way every time. Buyers accept a clear policy far more easily than a staff member deciding case by case.</p>
+<h2 id='updates'>7. Messages after the order</h2>
+<p>A short update when the parcel ships, with the expected delivery window and the cash amount, gives the buyer time to arrange for someone to be home. Plan these messages around Meta's rules. Standard replies are allowed within 24 hours of the buyer's last message. After that, order and shipping updates go through Messenger utility messages, which use approved templates for order and account updates and must not contain marketing.</p>
+<p>The old message tags for this are gone. Since April 27, 2026, requests using the POST_PURCHASE_UPDATE, CONFIRMED_EVENT_UPDATE and ACCOUNT_UPDATE tags are rejected, and Meta points businesses to utility templates or the Marketing Messages API instead. For reference, check the documentation <a href='https://developers.facebook.com/docs/messenger-platform/send-messages/utility-messages' rel='noopener' target='_blank'>here</a>. If your shipping updates still rely on an old tag, retest them now.</p>
+<div class='dd-warn'>Keep shipping updates factual: order number, item, delivery window and amount to pay. Adding a promo to a utility message can get the template rejected.</div>
+<h2 id='check'>8. Launch checklist and metrics</h2>
+<p>Before you switch this on for every order, test it like any other system. These are the acceptance criteria I recommend:</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>COD ORDER AUTOMATION: LAUNCH CHECK
+[ ] Agent asks for every missing field, never invents an address
+[ ] Summary shows item, quantity, total, address, delivery window
+[ ] Only a clear YES creates the order; “maybe” or silence does not
+[ ] Negative-report stop is on and tested with a flagged test contact
+[ ] New orders are assigned to a staff member on Pancake
+[ ] AI pauses after an order so staff and AI do not both reply
+[ ] COD ceiling and prepaid offer explained the same way every time
+[ ] Shipping update uses an approved utility template, no promo
+[ ] Tested on 20+ real order conversations from your own history</code></pre></div>
+<p>After launch, track two numbers every week:</p>
+<ul>
+<li><b>RTS rate</b> = returned parcels / parcels shipped. This is the outcome.</li>
+<li><b>Confirmation rate</b> = orders with a clear YES / orders collected. If it drops, your summary is unclear or your follow-up is too slow.</li>
+</ul>
+<p>Compare the RTS rate with the four weeks before launch. If it does not move after a month, look at the RTS reasons from your courier report: if most returns are damaged or wrong items, the fix is in packing, not in chat. <a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to test an AI chatbot</a> covers the test method in detail, and <a href='https://www.dijaedadula.com/chatbot-roi-metrics'>the chatbot ROI metrics</a> show how to report the savings.</p>
+<p>An honest limitation: no setup brings RTS to zero. Negative reports only help with buyers who have already been reported, a confirmed YES does not guarantee the cash is ready at the door, and some returns come from courier handling you do not control. Expect fewer returns, not none, and keep a person reviewing the flagged orders.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>What is RTS in COD selling?</h3>
+<p>RTS means return to sender: the courier could not complete the delivery, so the parcel comes back to the seller. Common causes are a wrong or incomplete address, nobody home to receive, and a buyer who refuses the parcel.</p>
+<h3>How do I stop bogus buyers on Facebook Messenger?</h3>
+<p>Confirm every order in the chat with a full summary and a clear YES, block automatic orders for customers with negative reports on Pancake, and have a person review first-time, high-value or flagged orders before anything ships.</p>
+<h3>Should I stop offering cash on delivery?</h3>
+<p>For most Philippine sellers, no. COD is still about 23% of e-commerce value on Xendit's platform. Cap the COD amount, reward prepaid payment, and keep COD for buyers with a clean record instead.</p>
+<h3>Can I send shipping updates after 24 hours on Messenger?</h3>
+<p>Yes, through Messenger utility messages, which use approved templates for order and account updates. They must not contain marketing, and the old post-purchase message tags no longer work.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Set up order confirmation that protects your margin</p>
+<p>Run your AI agent on <a href='https://www.dijaedadula.com/botcake' rel='sponsored nofollow'>Botcake</a> and your team inbox and orders on <a href='https://www.dijaedadula.com/pancake' rel='sponsored nofollow'>Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account). These are affiliate links.</p>
+<p>Want the confirmation flow and risk rules built for your shop? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://blog.ninjavan.co/en-ph/top-return-to-sender-reasons/' rel='noopener' target='_blank'>Ninja Van Philippines: Top RTS reasons and how to avoid them</a>, November 2022.</li>
+<li><a href='https://www.gmanetwork.com/news/money/companies/1006035/qr-ph-instapay-payments-nearly-triple-on-xendit-platform/story/' rel='noopener' target='_blank'>GMA News: QR Ph, InstaPay payments nearly triple on Xendit platform</a> (Xendit Ecommerce Payments Momentum Report), October 15, 2026.</li>
+<li><a href='https://developers.facebook.com/docs/messenger-platform/send-messages/utility-messages' rel='noopener' target='_blank'>Meta for Developers: Send a utility message</a>. Accessed October 2026.</li>
+<li><a href='https://developers.facebook.com/documentation/business-messaging/messenger-platform/changelog' rel='noopener' target='_blank'>Meta for Developers: Messenger Platform changelog</a> (message tag deprecation, March 27, 2026).</li>
+<li><a href='https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss2?lang=en' rel='noopener' target='_blank'>Botcake: Guide to setting up auto order creation with Botcake AI</a>. Accessed October 2026.</li>
+<li><a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/live-selling-automation-philippines'>Live Selling Automation: From Comment to Order to Repeat Buyer</a></li>
+<li><a href='https://www.dijaedadula.com/facebook-messenger-missed-messages'>Why Your Business Is Losing Customers in Facebook Messenger (and How to Fix It)</a></li>
+<li><a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake Setup Guide</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
