@@ -1,0 +1,197 @@
+<div class="dd-article">
+<!--COVER-->
+<p>Customers can tell within two messages when a chatbot is reading from a script. The reply is too long, too polite, too formal, and it answers a question nobody asked. They stop typing, or they type "human" and wait. The problem is rarely the AI model. It is the instructions, the settings and the training behind it.</p>
+<p>This guide is for business owners, agencies and freelancers who run an AI agent on Messenger, Instagram or WhatsApp and want it to sound like their best staff member. You will get the seven habits that make replies sound robotic, a copy-ready voice section for your instructions, the Botcake AI settings that shape how replies arrive, the two training loops that fix tone over time, and a test you can run before every update.</p>
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>The <b>seven habits</b> that make a chatbot sound robotic.</li>
+<li>The line between <b>sounding human and pretending to be human</b>.</li>
+<li>A <b>copy-ready voice section</b> with rules, banned phrases and examples.</li>
+<li>The <b>Botcake AI settings</b> for message length, delay and model behavior.</li>
+<li>A <b>tone test</b> with acceptance criteria.</li>
+</ul>
+</div>
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#why">Why chatbots sound robotic</a></li>
+<li><a href="#honest">Human, not a fake human</a></li>
+<li><a href="#voice">Write a voice section</a></li>
+<li><a href="#shape">Shape how replies arrive</a></li>
+<li><a href="#config">Tune the model settings</a></li>
+<li><a href="#train">Train on real conversations</a></li>
+<li><a href="#test">Test the tone before launch</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+<h2 id="why">1. Why chatbots sound robotic</h2>
+<p>Speed alone does not win customers. In Glance's 2026 CX Trends survey of more than 600 US consumers, 75% said they had received fast, AI-driven replies that still left them frustrated, and 68% said a complete resolution mattered more than a quick one. A reply that arrives in two seconds but reads like a policy document does not feel like help.</p>
+<p>Robotic replies almost always come from the same seven habits:</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Habit</th><th>What the customer feels</th></tr></thead>
+<tbody>
+<tr><td><b>Walls of text</b></td><td>"I asked one thing and got an essay."</td></tr>
+<tr><td><b>Template openers</b> ("Thank you for reaching out!")</td><td>"Nobody is actually reading my message."</td></tr>
+<tr><td><b>Over-apologizing</b></td><td>"Stop saying sorry and just answer."</td></tr>
+<tr><td><b>Answering a different question</b></td><td>"It did not understand me."</td></tr>
+<tr><td><b>Forgetting what was said</b></td><td>"I already told you my size."</td></tr>
+<tr><td><b>Corporate vocabulary</b> ("kindly be advised")</td><td>"This is not how people talk."</td></tr>
+<tr><td><b>Never asking a question back</b></td><td>"It is talking at me, not with me."</td></tr>
+</tbody>
+</table></div>
+<p>Every one of these is fixable without changing the model. Most are fixed in the instructions; two are fixed in settings.</p>
+<h2 id="honest">2. Sound human, do not pretend to be human</h2>
+<p>There is a clear line here, and crossing it costs trust. Sounding human means short, warm, specific replies in plain words. Pretending to be human means letting customers believe a person is typing when it is an AI.</p>
+<p>The rules point the same way. Meta's Messenger Platform policy requires automated chat experiences to disclose that a person is interacting with an automated service where applicable law requires it, at the start of a conversation, after a significant lapse of time and when a chat moves from a human to automation, and recommends doing so everywhere as best practice. In the European Union, Article 50 of the AI Act has applied since August 2, 2026: AI systems that interact directly with people must be designed so users are informed, at the latest at the first interaction, that they are dealing with an AI, unless that is already obvious. For reference, check the documentation <a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/policy" rel="noopener" target="_blank">here</a>.</p>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Give your agent a name and a voice, never a fake identity. "Hi, I'm Bea, the shop's AI assistant" builds more trust than a bot that claims to be Maria from the team. Customers forgive an AI that is clear and helpful. They do not forgive one that lied to them.</div>
+<p>Disclosure also protects the handoff. When a person takes over, the customer knows something changed, and the conversation does not feel like the same "person" suddenly forgot everything.</p>
+<h2 id="voice">3. Write a voice section in your instructions</h2>
+<p>Most instructions describe what the agent knows and almost nothing about how it talks. Add a dedicated voice section. Keep it short and concrete: rules, banned phrases and two or three example replies. Examples teach tone faster than adjectives like "friendly" ever will.</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code># VOICE
+You are {agent name}, the AI assistant of {business}.
+Say you are an AI assistant in your first message.
+Write like a helpful staff member chatting on a phone:
+- 1 to 3 short sentences per message. One idea per message.
+- Answer the question first, then add one useful detail.
+- Use the customer's first name once, not in every reply.
+- Plain words. No jargon, no corporate phrases.
+- Ask one question back when you need information.
+- Match the customer's energy: short message, short reply.
+- At most one emoji, and only if the customer uses them.
+- Remember what the customer already told you. Never ask twice.
+
+# NEVER SAY
+"Thank you for reaching out", "Kindly be advised",
+"I apologize for any inconvenience", "As an AI language model",
+"Is there anything else I can help you with?" after every reply.
+
+# EXAMPLES
+Customer: how much is the serum
+You: It's {price} for the 30 ml bottle. Is it for oily or dry skin?
+I can suggest the right one.
+
+Customer: do you deliver to Cebu
+You: Yes, we ship to Cebu. Delivery usually takes {days}.
+Want me to check the total with shipping?</code></pre></div>
+<p>Replace the placeholders with your real facts, and write the examples in your own brand's words. If your agent does not have a full instruction yet, start with the <a href="https://www.dijaedadula.com/ai-agent-instructions-template">AI agent instructions template</a> and add this block to it.</p>
+<p>Here is what the difference looks like in practice. These are illustrative examples, not real conversations.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 330" role="img" aria-labelledby="hu1t hu1d" xmlns="http://www.w3.org/2000/svg">
+<title id="hu1t">Robotic reply versus human reply to the same question</title>
+<desc id="hu1d">Illustrative example. The customer asks: do you deliver to Cebu. The robotic reply is a long block that thanks the customer, apologizes, and lists policies without answering first. The human reply answers yes, gives delivery time and asks one question back.</desc>
+<rect x="0" y="0" width="640" height="330" rx="14" fill="#f6f8fa"/>
+<text x="24" y="32" class="svg-k">ILLUSTRATIVE: SAME QUESTION, TWO REPLIES</text>
+<rect x="24" y="48" width="200" height="34" rx="17" fill="#e3e8ee"/>
+<text x="40" y="70" class="svg-t">do you deliver to Cebu</text>
+<text x="24" y="112" class="svg-o">ROBOTIC</text>
+<rect x="24" y="122" width="280" height="186" rx="12" fill="#ffffff" stroke="#cfd6dd"/>
+<text x="40" y="146" class="svg-s">Thank you for reaching out to us!</text>
+<text x="40" y="166" class="svg-s">We apologize for any inconvenience.</text>
+<text x="40" y="186" class="svg-s">Kindly be advised that our shipping</text>
+<text x="40" y="206" class="svg-s">policy covers selected areas subject</text>
+<text x="40" y="226" class="svg-s">to courier availability and terms...</text>
+<text x="40" y="246" class="svg-s">Delivery times may vary...</text>
+<text x="40" y="266" class="svg-s">Is there anything else I can help</text>
+<text x="40" y="286" class="svg-s">you with today?</text>
+<text x="336" y="112" class="svg-o" fill="#007a66" style="fill:#007a66">HUMAN</text>
+<rect x="336" y="122" width="280" height="56" rx="12" fill="#007a66"/>
+<text x="352" y="146" class="svg-ws">Yes, we ship to Cebu. Delivery</text>
+<text x="352" y="166" class="svg-ws">usually takes 3 to 5 days.</text>
+<rect x="336" y="188" width="280" height="36" rx="12" fill="#007a66"/>
+<text x="352" y="211" class="svg-ws">Want me to check the total with shipping?</text>
+<text x="336" y="256" class="svg-t">Answer first. Two short messages.</text>
+<text x="336" y="278" class="svg-s">One question back keeps the sale moving.</text>
+</svg>
+<figcaption><b>Figure N.</b> The same question answered two ways. Illustrative example: the human version answers first, stays short and asks one question back.</figcaption>
+</figure>
+<h2 id="shape">4. Shape how replies arrive</h2>
+<p>Even good wording feels robotic if it lands as one long block the instant the customer hits send. In Botcake, two general settings change how replies arrive:</p>
+<ul>
+<li><span class="dd-ui">Maximum length of a message</span> breaks long AI replies into shorter segments, so a three-part answer arrives as three chat bubbles instead of one wall of text.</li>
+<li><span class="dd-ui">Smart delay</span> ("AI delay after customer reply") sets a short pause before the AI answers. The reply no longer lands the instant the customer hits send.</li>
+</ul>
+<p>I recommend splitting replies and using a short delay rather than an instant one, then checking the result in real conversations. A short delay is about pacing, not disguise: your agent should still say it is an AI. Turn on <span class="dd-ui">Enable chat history</span> as well, which lets the AI remember the last 50 messages, so it stops asking for details the customer already gave. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f5/st-p1?lang=en" rel="noopener" target="_blank">here</a>.</p>
+<h2 id="config">5. Tune the model settings</h2>
+<p>Every Botcake AI agent has a model and a <span class="dd-ui">Config</span> with three presets: <b>Creative</b>, <b>Balanced</b> and <b>Precise</b>. Behind them are the usual model settings: temperature, Top P, presence penalty, frequency penalty and max tokens. Frequency penalty reduces the chance of the AI repeating the same words too often, which is one cause of that same-every-time feel.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 220" role="img" aria-labelledby="hu2t hu2d" xmlns="http://www.w3.org/2000/svg">
+<title id="hu2t">Which Botcake AI config preset to use</title>
+<desc id="hu2d">Three presets on a line from Precise to Creative. Precise suits prices, policies and orders. Balanced suits most sales and support chats and is the recommended starting point. Creative suits brand content and captions but carries more risk of invented details in customer chats.</desc>
+<rect x="0" y="0" width="640" height="220" rx="14" fill="#f6f8fa"/>
+<text x="24" y="32" class="svg-k">CONFIG PRESETS: WHERE EACH FITS</text>
+<line x1="60" y1="80" x2="580" y2="80" stroke="#cfd6dd" stroke-width="6" stroke-linecap="round"/>
+<circle cx="80" cy="80" r="14" fill="#5b9e90"/>
+<circle cx="320" cy="80" r="18" fill="#007a66"/>
+<circle cx="560" cy="80" r="14" fill="#c2410c"/>
+<text x="80" y="124" text-anchor="middle" class="svg-t">Precise</text>
+<text x="80" y="146" text-anchor="middle" class="svg-s">Prices, policies,</text>
+<text x="80" y="162" text-anchor="middle" class="svg-s">orders</text>
+<text x="320" y="124" text-anchor="middle" class="svg-t">Balanced (start here)</text>
+<text x="320" y="146" text-anchor="middle" class="svg-s">Most sales and</text>
+<text x="320" y="162" text-anchor="middle" class="svg-s">support chats</text>
+<text x="560" y="124" text-anchor="middle" class="svg-t">Creative</text>
+<text x="560" y="146" text-anchor="middle" class="svg-s">Captions, ideas;</text>
+<text x="560" y="162" text-anchor="middle" class="svg-o">riskier in chats</text>
+<text x="24" y="200" class="svg-s">Fix tone in the instructions first. Change presets only after testing.</text>
+</svg>
+<figcaption><b>Figure N.</b> Start customer chats on Balanced. Creative adds variety but also raises the risk of invented details.</figcaption>
+</figure>
+<p>My recommendation is to start on <b>Balanced</b> and fix tone in the instructions, not by pushing the model toward Creative. A more creative setting does make replies more varied, but in a sales chat it also makes it more likely the AI improvises a detail, such as a delivery time or a promo, that is not true. Change one setting at a time and rerun your tests after each change.</p>
+<h2 id="train">6. Train on real conversations</h2>
+<p>Botcake AI gives you two training loops, and together they fix most tone problems within a few rounds.</p>
+<p><b>Loop 1: AI enhancements.</b> In the agent's <span class="dd-ui">Instruction</span> tab, <span class="dd-ui">AI enhancements</span> opens <span class="dd-ui">Optimize instructions</span>, which shows your instruction next to a restructured version you can apply. Use it to tidy structure, then reread the voice section yourself: an optimizer improves organization, but it does not know your brand.</p>
+<figure class="dd-fig"><div class="dd-shot" style="aspect-ratio:864/686"><img src="https://statics.pancake.vn/web-media-264/46/e0/67/ee/0a4e476afd8094f794be3c9120c4c4e640d294c62ded28c3eca60c71.webp" alt="Botcake AI Optimize instructions window showing the original instruction beside the restructured version with Cancel and Apply buttons" width="864" height="686" loading="lazy"></div>
+<figcaption><b>Figure N.</b> Optimize instructions in Botcake AI shows your instruction beside a restructured version. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p><b>Loop 2: Improve AI response.</b> Under any reply in <span class="dd-ui">Preview</span>, the wand icon opens <span class="dd-ui">Improve AI response</span>. Enter the customer question and the reply you wish the AI had given, then save. Botcake uses these saved pairs to learn how to respond next time. Take the questions from your real inbox and the answers from your best staff replies, the ones that actually closed sales.</p>
+<figure class="dd-fig"><div class="dd-shot" style="aspect-ratio:849/710"><img src="https://statics.pancake.vn/web-media-264/78/88/ff/d4/8413bea9b48cd46f65938370e2ca592e71f351af8a8503ab44192927.webp" alt="Botcake AI Improved AI responses window with fields for the customer question and the preferred AI response" width="849" height="710" loading="lazy"></div>
+<figcaption><b>Figure N.</b> Improve AI response saves a customer question with the reply you want. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p>Start with the ten questions your page gets most, then add a pair every time you see a reply in your inbox that sounds wrong. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">here</a>. The full agent setup is in the <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake setup guide</a>.</p>
+<h2 id="test">7. Test the tone before launch</h2>
+<p>Tone is testable. Take 20 real customer messages from your inbox, including short ones, rude ones, typos and questions with two parts. Run each through <span class="dd-ui">Preview</span> and score every reply against these acceptance criteria:</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>TONE TEST (score each reply pass / fail)
+[ ] Answers the actual question in the first sentence
+[ ] 3 sentences or fewer per message
+[ ] No phrase from the NEVER SAY list
+[ ] Does not ask for information the customer already gave
+[ ] Asks at most one question back
+[ ] States facts only from instructions or knowledge files
+[ ] Says it is an AI assistant in the first message
+[ ] Hands off to a person when asked, without arguing
+
+Launch when 18 of 20 replies pass every line.
+Retest the same 20 after every instruction change.</code></pre></div>
+<p>After launch, track two numbers each week: the share of conversations where the customer asks for a human, and the share that reach the next step you care about, such as an order or a booking. If people ask for a human often, read those chats first; the tone or the answers are failing somewhere specific. Do not remove the human option to make the numbers look better. In the same Glance survey, nearly nine in ten consumers said losing access to human support lowered their loyalty to a brand. <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">How to test an AI chatbot</a> covers the wider test method.</p>
+<p>An honest limitation: no instruction makes an AI sound like your best staff member every time. Models still drift, overuse a phrase, or misread a short message, especially in mixed-language chats. The fix is not a perfect prompt but a routine: read a sample of real conversations every week, add an Improve AI response pair for each bad reply, and keep a person one tap away.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Why does my chatbot sound robotic?</h3>
+<p>Usually because of long replies, template phrases, over-apologizing and instructions that describe what the agent knows but not how it talks. Add a voice section with rules, banned phrases and example replies, and split long messages.</p>
+<h3>Should my chatbot pretend to be a person?</h3>
+<p>No. Give it a name and a warm voice, but say it is an AI assistant. Meta's Messenger policy requires disclosure of automated chats where the law requires it and recommends it everywhere, and the EU AI Act requires it for AI that talks directly to people.</p>
+<h3>Which Botcake AI config preset is best for customer chats?</h3>
+<p>Start with Balanced. Use Precise for strict facts like prices and orders. Avoid Creative for sales chats, because more variety also means more risk of invented details.</p>
+<h3>How do I train Botcake AI to reply like my team?</h3>
+<p>Use Improve AI response under replies in Preview. Save real customer questions with the replies your best staff would give, starting with your ten most common questions, and retest after each change.</p>
+<div class="dd-cta">
+<p class="dd-cta-title">Build an agent that sounds like your best staff member</p>
+<p>Run your AI agent on <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a> and your team inbox on <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account). For Instagram-first brands, <a href="https://manychat.partnerlinks.io/rozuomtj4677" rel="sponsored nofollow">ManyChat</a>. These are affiliate links.</p>
+<p>Want your agent's voice, training and tests set up for you? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://www.consumeraffairs.com/news/customer-service-ai-bots-not-ready-for-prime-time-survey-suggests-121825.html" rel="noopener" target="_blank">ConsumerAffairs: Customer service AI bots not ready for prime time, survey suggests</a> (Glance 2026 CX Trends Report), December 2025.</li>
+<li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/policy" rel="noopener" target="_blank">Meta for Developers: Messenger Platform and IG Messaging API policy</a>. Accessed October 2026.</li>
+<li><a href="https://artificialintelligenceact.eu/transparency-rules-article-50/" rel="noopener" target="_blank">The EU AI Act's transparency rules: a practical guide to Article 50</a>, artificialintelligenceact.eu. Accessed October 2026.</li>
+<li><a href="https://docs.pancake.biz/botcake/st-f5/st-p1?lang=en" rel="noopener" target="_blank">Botcake: General Setting</a> and <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">Overview of Botcake AI</a>. Accessed October 2026.</li>
+<li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/ai-agent-instructions-template">How to Write AI Agent Instructions for Any Business (Templates Inside)</a></li>
+<li><a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href="https://www.dijaedadula.com/automate-lead-follow-up">How to Automate Lead Follow-Up With AI (Without Sounding Like a Robot)</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>

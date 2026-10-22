@@ -125,6 +125,11 @@
    "slug": "stop-bogus-cod-orders",
    "title": "How to Stop Bogus COD Orders and Returned Parcels With Chat Automation",
    "blurb": "Confirm every COD order by chat, block repeat bogus buyers and keep a person on risky orders."
+  },
+  {
+   "slug": "chatbot-sound-human",
+   "title": "How to Make Your Chatbot Sound Human, Not Robotic",
+   "blurb": "A copy-ready voice section, the Botcake AI settings and training loops, and a tone test for natural replies."
   }
  ],
  "sent": [
