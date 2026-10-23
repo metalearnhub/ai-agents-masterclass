@@ -130,6 +130,11 @@
    "slug": "chatbot-sound-human",
    "title": "How to Make Your Chatbot Sound Human, Not Robotic",
    "blurb": "A copy-ready voice section, the Botcake AI settings and training loops, and a tone test for natural replies."
+  },
+  {
+   "slug": "ai-chatbot-human-handoff",
+   "title": "When Should an AI Chatbot Hand Off to a Human? A Handoff Playbook",
+   "blurb": "Seven handoff triggers, copy-ready rules, the Botcake and Pancake setup and a handoff test."
   }
  ],
  "sent": [
@@ -140,6 +145,15 @@
     "what-is-an-ai-agent",
     "turn-skills-into-ai-income",
     "dont-automate-chaos"
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "broadcastId": "989",
+   "slugs": [
+    "ai-chatbot-for-small-business",
+    "automate-lead-follow-up",
+    "get-more-clients-with-ai"
    ]
   }
  ],

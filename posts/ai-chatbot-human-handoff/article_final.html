@@ -1,0 +1,213 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/2c/9a/f3/2b/f5e862b08068eb7305b411693cd39218d7fbd6b1286f2e8f0b35eb1f.png' alt='Illustration of a friendly robot passing a chat bubble to a smiling support agent with a headset, a smartphone showing the conversation, a clock, a bell and a checkmark' width='1536' height='864' loading='lazy'></div></figure>
+<p>The moment an AI chatbot hands a conversation to a person decides whether the customer trusts the whole system. Hand off too late and the customer is stuck arguing with a bot. Hand off too early and your team drowns in chats the AI could have closed. Hand off badly, with no context and no warning, and the customer has to start again from zero.</p>
+<p>This playbook is for business owners, agencies and freelancers running an AI agent on Messenger, Instagram or WhatsApp. You will get the seven situations that should always reach a person, a copy-ready handoff section for your agent's instructions, the Botcake AI and Pancake setup that assigns the chat and pauses the AI, the message templates for a clean handover, and the metrics and tests that tell you whether it works.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>The <b>seven handoff triggers</b> and what to do for each.</li>
+<li>A <b>copy-ready handoff section</b> for your agent's instructions.</li>
+<li>The <b>Botcake and Pancake setup</b>: assign to staff, pause the AI.</li>
+<li><b>Message templates</b> for the customer and for your team.</li>
+<li>A <b>handoff test</b> and the four metrics to track.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#why'>Why the handoff matters</a></li>
+<li><a href='#triggers'>The seven handoff triggers</a></li>
+<li><a href='#rules'>Write the handoff rules</a></li>
+<li><a href='#setup'>Set it up in Botcake and Pancake</a></li>
+<li><a href='#clean'>What a clean handoff looks like</a></li>
+<li><a href='#measure'>Measure and test the handoff</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='why'>1. Why the handoff matters more than the bot</h2>
+<p>Customers judge AI support by how it ends, not how fast it starts. In Glance's 2026 CX Trends survey of more than 600 US consumers, 75% said they had received fast AI-driven replies that still left them frustrated, and nearly nine in ten said losing access to human support lowered their loyalty to a brand. More than a third said AI-based support made their interactions harder.</p>
+<p>So the goal is not to keep every conversation with the AI. The goal is to let the AI handle what it does well, such as answering common questions, collecting details and taking simple orders, and to move everything else to a person quickly, with the context already attached.</p>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span>Never trap a customer who asks for a person. The first time someone types “human”, “agent” or “real person”, the AI's only job is to say a person is coming, tell them when, and step aside. A bot that argues to keep the conversation saves nothing and costs you the customer.</div>
+<h2 id='triggers'>2. The seven handoff triggers</h2>
+<p>Write these down before you configure anything. Every AI agent I recommend going live with has an explicit answer for each one.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Trigger</th><th>Example</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td><b>1. Customer asks for a person</b></td><td>“Can I talk to someone?”</td><td>Hand off immediately. No questions first.</td></tr>
+<tr><td><b>2. Ready to buy or book</b></td><td>Order created, phone number shared</td><td>Assign a person to confirm and close.</td></tr>
+<tr><td><b>3. Complaint or frustration</b></td><td>“This is the third time I'm asking.”</td><td>Apologize once, hand off, flag as urgent.</td></tr>
+<tr><td><b>4. Money or account issues</b></td><td>Refunds, payment problems, wrong charges</td><td>Collect the order number, then hand off.</td></tr>
+<tr><td><b>5. Outside the AI's knowledge</b></td><td>A question the instructions and files do not cover</td><td>Say so honestly, hand off. Never guess.</td></tr>
+<tr><td><b>6. Sensitive or high-stakes topics</b></td><td>Health, legal or safety questions</td><td>Do not advise. Hand off to the right person.</td></tr>
+<tr><td><b>7. The loop</b></td><td>Same question twice, or the AI failed twice</td><td>Stop repeating. Hand off with a summary.</td></tr>
+</tbody>
+</table></div>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 300' role='img' aria-labelledby='ho1t ho1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='ho1t'>When the AI keeps the chat and when it hands off</title>
+<desc id='ho1d'>Decision flow. A customer message goes to the AI agent. If none of the seven triggers apply, the AI answers and continues. If any trigger applies, the AI tells the customer a person is coming, assigns the chat to staff in Pancake with a summary, and pauses itself. Staff reply, and the AI resumes only after the pause ends or staff turn it back on.</desc>
+<rect x='0' y='0' width='640' height='300' rx='14' fill='#f6f8fa'/>
+<text x='24' y='32' class='svg-k'>HANDOFF DECISION FLOW</text>
+<rect x='24' y='56' width='140' height='56' rx='10' fill='#e8f4f1' stroke='#007a66'/>
+<text x='94' y='80' text-anchor='middle' class='svg-t'>Customer</text>
+<text x='94' y='98' text-anchor='middle' class='svg-s'>sends a message</text>
+<rect x='200' y='56' width='140' height='56' rx='10' fill='#007a66'/>
+<text x='270' y='80' text-anchor='middle' class='svg-w'>AI agent</text>
+<text x='270' y='98' text-anchor='middle' class='svg-ws'>checks the 7 triggers</text>
+<path d='M164 84 H196' stroke='#007a66' stroke-width='2' marker-end='url(#ho1a)'/>
+<rect x='400' y='40' width='216' height='48' rx='10' fill='#ffffff' stroke='#cfd6dd'/>
+<text x='508' y='61' text-anchor='middle' class='svg-t'>No trigger</text>
+<text x='508' y='78' text-anchor='middle' class='svg-s'>AI answers and continues</text>
+<path d='M340 76 L396 64' stroke='#007a66' stroke-width='2' marker-end='url(#ho1a)'/>
+<rect x='400' y='104' width='216' height='48' rx='10' fill='#fff4ec' stroke='#c2410c'/>
+<text x='508' y='125' text-anchor='middle' class='svg-t'>Any trigger</text>
+<text x='508' y='142' text-anchor='middle' class='svg-o'>Hand off now</text>
+<path d='M340 92 L396 122' stroke='#c2410c' stroke-width='2' marker-end='url(#ho1b)'/>
+<rect x='24' y='190' width='180' height='70' rx='10' fill='#fff4ec' stroke='#c2410c'/>
+<text x='114' y='216' text-anchor='middle' class='svg-t'>1. Tell the customer</text>
+<text x='114' y='236' text-anchor='middle' class='svg-s'>a person is coming, and when</text>
+<rect x='230' y='190' width='180' height='70' rx='10' fill='#fff4ec' stroke='#c2410c'/>
+<text x='320' y='216' text-anchor='middle' class='svg-t'>2. Assign to staff</text>
+<text x='320' y='236' text-anchor='middle' class='svg-s'>in Pancake, with a summary</text>
+<rect x='436' y='190' width='180' height='70' rx='10' fill='#fff4ec' stroke='#c2410c'/>
+<text x='526' y='216' text-anchor='middle' class='svg-t'>3. Pause the AI</text>
+<text x='526' y='236' text-anchor='middle' class='svg-s'>so only the person replies</text>
+<path d='M508 152 V172 H114 V186' stroke='#c2410c' stroke-width='2' fill='none' marker-end='url(#ho1b)'/>
+<path d='M204 225 H226' stroke='#c2410c' stroke-width='2' marker-end='url(#ho1b)'/>
+<path d='M410 225 H432' stroke='#c2410c' stroke-width='2' marker-end='url(#ho1b)'/>
+<text x='24' y='286' class='svg-s'>The AI resumes only when the pause ends or a staff member turns it back on.</text>
+<defs>
+<marker id='ho1a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='#007a66'/></marker>
+<marker id='ho1b' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0 L10 5 L0 10 z' fill='#c2410c'/></marker>
+</defs>
+</svg>
+<figcaption><b>Figure 1.</b> Every message is checked against the seven triggers. Any trigger means three steps: tell the customer, assign a person, pause the AI.</figcaption>
+</figure>
+<h2 id='rules'>3. Write the handoff rules into the instructions</h2>
+<p>The AI can only hand off well if its instructions say exactly when and how. Add a dedicated section like this one, adjusted to your business, your hours and your team.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code># HANDOFF
+Hand the conversation to a person when ANY of these is true:
+1. The customer asks for a person, agent, staff or “human”.
+2. The customer is ready to order, book or pay.
+3. The customer is upset, complains, or repeats a complaint.
+4. The question is about a refund, payment problem or charge.
+5. You cannot answer from your instructions or knowledge files.
+6. The topic is medical, legal, financial advice or safety.
+7. The customer asked the same thing twice, or you failed twice.
+
+When you hand off:
+- Say a team member will continue the chat and when:
+  {business hours, e.g. “within the hour, Mon to Sat, 9 AM to 6 PM”}.
+- Outside business hours, say when the team will reply.
+- Do not ask more questions first (except an order number for 4).
+- Do not guess, promise refunds, or argue.
+- Write one line for the team: who, what they want, what you
+  already told them.</code></pre></div>
+<p>If you do not have a full instruction yet, start with the <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>AI agent instructions template</a>; this block replaces its shorter handoff section.</p>
+<h2 id='setup'>4. Set it up in Botcake AI and Pancake</h2>
+<p>Instructions tell the AI what to say. The platform settings make sure a person actually receives the chat and that the AI stops replying. In Botcake AI, open the agent's <span class='dd-ui'>AI response behavior</span> tab and switch to <span class='dd-ui'>Special case</span>, which detects and handles special situations in the conversation as you configure them.</p>
+<p class='dd-step'><span class='dd-num'>1</span>Click <span class='dd-ui'>Add case</span> and choose a template in <span class='dd-ui'>Select template</span>: <span class='dd-ui'>When the order is created successfully</span>, <span class='dd-ui'>When the order creation fails</span> or <span class='dd-ui'>When the customer sends a phone number</span>. The first and third map directly to trigger 2; the second catches orders that need a person to fix.</p>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:1000/500'><img src='https://statics.pancake.vn/web-media-264/6e/6a/ce/2b/ddb15cfc5a1d8f1754842b8274b3e153bac9e52fa2d9f7ed7e26e03a.webp' alt='Botcake AI Special case turned on with Case 1 and the Select template dropdown showing order created successfully, order creation fails and customer sends a phone number' width='1000' height='500' loading='lazy'></div>
+<figcaption><b>Figure 2.</b> Special case templates in Botcake AI. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p class='dd-step'><span class='dd-num'>2</span>Click <span class='dd-ui'>Add action</span>. Under <span class='dd-ui'>Bot Action</span> you can <span class='dd-ui'>Add tag</span>, <span class='dd-ui'>Assign to Staff on Pancake</span>, <span class='dd-ui'>Start a Flow</span> or <span class='dd-ui'>Notify Admins</span>. Under <span class='dd-ui'>AI action</span> is <span class='dd-ui'>Pause AI</span>.</p>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:1000/450'><img src='https://statics.pancake.vn/web-media-264/42/a8/50/9c/8a3a4a811219714ffd43aa127c2a05189106a337bf4dcd8000525cf9.webp' alt='Botcake AI Add action menu with Bot Action options including Add tag, Assign to Staff on Pancake, Start a Flow and Notify Admins, and the AI action Pause AI' width='1000' height='450' loading='lazy'></div>
+<figcaption><b>Figure 3.</b> The Add action menu: bot actions and the Pause AI action. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p class='dd-step'><span class='dd-num'>3</span>Choose <span class='dd-ui'>Assign to Staff on Pancake</span>, select the staff and set the rules. <span class='dd-ui'>Only assign to online staff</span> and <span class='dd-ui'>Only assign to available staff on Pancake</span> stop chats from landing with someone who is off shift; <span class='dd-ui'>Assign randomizer</span> spreads chats across the team.</p>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:696/574'><img src='https://statics.pancake.vn/web-media-264/6b/0f/c7/6d/87cb68d2cb6a42c993cc833c1d3d36fa8ba7566afbeb76339c010c15.webp' alt='Assign to Staff on Pancake window with toggles for assign randomizer, replace staff, only online staff and only available staff, a Select staff dropdown and Save button' width='696' height='574' loading='lazy'></div>
+<figcaption><b>Figure 4.</b> Assign to Staff on Pancake, with rules for online and available staff. Screenshot: Dijae Dadula, October 2026.</figcaption>
+</figure>
+<p class='dd-step'><span class='dd-num'>4</span>Add <span class='dd-ui'>Pause AI</span> as a second action. <span class='dd-ui'>Pause AI for a period of time</span> lets the AI resume automatically; <span class='dd-ui'>Pause AI until turned back on</span> keeps it quiet until a staff member reactivates it. For complaints and refunds, I recommend the second option, so the AI never jumps back into a sensitive conversation. Click <span class='dd-ui'>Save</span>.</p>
+<p>For triggers the templates do not cover, such as a customer asking for a person, combine the handoff rules in your instructions with an <span class='dd-ui'>Add tag</span> your Pancake team filters on, so no handed-off chat waits unseen. For reference, check the documentation <a href='https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss3?lang=en' rel='noopener' target='_blank'>here</a>.</p>
+<div class='dd-warn'>If you only use Botcake and Pancake, do not turn on Meta's Handover Protocol as well. A wrong setup breaks keywords, buttons, inputs, sequences and rules. For reference, check the documentation <a href='https://docs.pancake.biz/botcake/st-f7/st-p3?lang=en' rel='noopener' target='_blank'>here</a>.</div>
+<p>The full agent setup, from wallet to go-live, is in the <a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake setup guide</a>.</p>
+<h2 id='clean'>5. What a clean handoff looks like</h2>
+<p>A clean handoff has three parts: the customer knows what happens next, the person receiving the chat knows what happened before, and nobody has to repeat anything. Use these two templates.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>TO THE CUSTOMER (AI, at handoff)
+“I'm passing you to {team member or “our team”} now so they can
+help with this directly. They usually reply {time window}.
+You don't need to repeat anything; they can see our chat.”
+
+OUTSIDE HOURS
+“Our team is offline right now. They're back at {time} and will
+pick this up first thing. Your details are saved.”
+
+FOR THE TEAM (note or tag on the conversation)
+Customer: {name}  |  Wants: {goal}  |  Trigger: {1-7}
+Already told: {facts or prices the AI gave}
+Open question: {what the person needs to answer}</code></pre></div>
+<p>Two platform rules shape the timing. Meta's Messenger policy recommends telling people when a chat moves between a person and an automated experience, and requires it where the law does. And when a person needs to reply after the standard 24-hour window, the Human Agent message tag allows manual replies within a separate seven-day period. For reference, check the documentation <a href='https://developers.facebook.com/documentation/business-messaging/messenger-platform/policy' rel='noopener' target='_blank'>here</a>.</p>
+<h2 id='measure'>6. Measure and test the handoff</h2>
+<p>A handoff you never measure slowly breaks: staff change shifts, tags stop being filtered, and chats wait. Track four numbers every week and set your own targets from the first month of data.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 240' role='img' aria-labelledby='ho2t ho2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='ho2t'>Four handoff metrics along the handoff timeline</title>
+<desc id='ho2d'>Timeline from trigger to resolution with four metrics. Handoff rate: share of conversations handed to a person. Time to first human reply: from handoff to the first staff message. Missed handoffs: handed-off chats with no staff reply within your promised window. Resolved after handoff: share closed by staff without the customer coming back on the same issue.</desc>
+<rect x='0' y='0' width='640' height='240' rx='14' fill='#f6f8fa'/>
+<text x='24' y='32' class='svg-k'>WHAT TO MEASURE AT EACH STAGE</text>
+<line x1='60' y1='80' x2='580' y2='80' stroke='#cfd6dd' stroke-width='6' stroke-linecap='round'/>
+<circle cx='80' cy='80' r='14' fill='#007a66'/>
+<circle cx='253' cy='80' r='14' fill='#007a66'/>
+<circle cx='426' cy='80' r='14' fill='#c2410c'/>
+<circle cx='580' cy='80' r='14' fill='#007a66'/>
+<text x='80' y='120' text-anchor='middle' class='svg-t'>Handoff rate</text>
+<text x='80' y='140' text-anchor='middle' class='svg-s'>handed off /</text>
+<text x='80' y='156' text-anchor='middle' class='svg-s'>all chats</text>
+<text x='253' y='120' text-anchor='middle' class='svg-t'>Time to human</text>
+<text x='253' y='140' text-anchor='middle' class='svg-s'>handoff to first</text>
+<text x='253' y='156' text-anchor='middle' class='svg-s'>staff message</text>
+<text x='426' y='120' text-anchor='middle' class='svg-t'>Missed handoffs</text>
+<text x='426' y='140' text-anchor='middle' class='svg-s'>no reply within</text>
+<text x='426' y='156' text-anchor='middle' class='svg-o'>your promised window</text>
+<text x='566' y='120' text-anchor='middle' class='svg-t'>Resolved</text>
+<text x='566' y='140' text-anchor='middle' class='svg-s'>closed without a</text>
+<text x='566' y='156' text-anchor='middle' class='svg-s'>repeat contact</text>
+<text x='24' y='210' class='svg-s'>Missed handoffs should be zero. Investigate every one.</text>
+</svg>
+<figcaption><b>Figure 5.</b> Four metrics, one per stage of the handoff. Set targets from your own first month of data.</figcaption>
+</figure>
+<p>A very low handoff rate is not automatically good news. It can mean the AI is holding conversations it should release. Read a sample of AI-only conversations each week alongside the handed-off ones. <a href='https://www.dijaedadula.com/chatbot-roi-metrics'>The chatbot ROI metrics</a> show how to report the value of the conversations the AI does close.</p>
+<p>Before launch, test every trigger. These are the acceptance criteria I recommend:</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>HANDOFF TEST (run in Preview and on a test account)
+[ ] “Can I talk to a person?” hands off on the first ask
+[ ] A complaint is handed off and tagged for follow-up
+[ ] A refund question collects the order number, then hands off
+[ ] An unknown question gets “I'll get the team”, not a guess
+[ ] A medical, legal or safety question is not answered by the AI
+[ ] Asking the same thing twice triggers a handoff
+[ ] A created order assigns a staff member in Pancake
+[ ] The AI stays silent while it is paused
+[ ] Outside hours, the customer is told when the team is back
+[ ] The team note shows who, what, trigger and what was said</code></pre></div>
+<p>The broader test method is in <a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to test an AI chatbot</a>.</p>
+<p>An honest limitation: an AI will not catch every frustrated customer. Sarcasm, short replies and mixed-language messages are easy to misread, so some chats will miss trigger 3. And a handoff is only as good as the team behind it: if nobody is on shift, the best-designed handoff still leaves the customer waiting. Staff the hours you promise, and say plainly when you are offline.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>When should an AI chatbot hand off to a human?</h3>
+<p>When the customer asks for a person, is ready to buy, is upset, has a money or account issue, asks something outside the AI's knowledge, raises a sensitive topic, or gets stuck in a loop. Write all seven into the agent's instructions.</p>
+<h3>How do I hand off from Botcake AI to my team?</h3>
+<p>In the agent's AI response behavior tab, turn on Special case, add a case, and add two actions: Assign to Staff on Pancake and Pause AI. Use tags so your Pancake team can filter handed-off chats.</p>
+<h3>Should the AI pause after a handoff?</h3>
+<p>Yes. If the AI keeps replying while a person is typing, the customer gets mixed answers. Pause it for a set time for sales handoffs, and until staff turn it back on for complaints and refunds.</p>
+<h3>Can my team reply after the 24-hour window on Messenger?</h3>
+<p>Meta's Human Agent message tag lets a person reply manually within a separate seven-day period after the customer's last message. Use it for genuine human follow-up, not automated messages.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Build an AI agent that knows when to step aside</p>
+<p>Run your AI agent on <a href='https://www.dijaedadula.com/botcake' rel='sponsored nofollow'>Botcake</a> and your team inbox on <a href='https://www.dijaedadula.com/pancake' rel='sponsored nofollow'>Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account). These are affiliate links.</p>
+<p>Want your triggers, handoff flow and team routing designed for you? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://www.consumeraffairs.com/news/customer-service-ai-bots-not-ready-for-prime-time-survey-suggests-121825.html' rel='noopener' target='_blank'>ConsumerAffairs: Customer service AI bots not ready for prime time, survey suggests</a> (Glance 2026 CX Trends Report), December 2025.</li>
+<li><a href='https://developers.facebook.com/documentation/business-messaging/messenger-platform/policy' rel='noopener' target='_blank'>Meta for Developers: Messenger Platform and IG Messaging API policy</a>. Accessed October 2026.</li>
+<li><a href='https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1/st-ss3?lang=en' rel='noopener' target='_blank'>Botcake: Botcake AI documentation</a> and <a href='https://docs.pancake.biz/botcake/st-f7/st-p3?lang=en' rel='noopener' target='_blank'>Handover Protocol</a>. Accessed October 2026.</li>
+<li><a href='https://www.dijaedadula.com/botcake-ai-pancake-setup-guide'>Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/chatbot-sound-human'>How to Make Your Chatbot Sound Human, Not Robotic</a></li>
+<li><a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href='https://www.dijaedadula.com/qualify-leads-messenger-automatically'>How to Qualify Leads in Messenger Automatically (Without Annoying Your Customers)</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
