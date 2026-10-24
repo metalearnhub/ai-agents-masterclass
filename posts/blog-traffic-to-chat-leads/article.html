@@ -1,0 +1,207 @@
+<div class="dd-article">
+<!--COVER-->
+<p>Most business blogs do the hard part and skip the easy one. A post ranks, a stranger finds it through search, reads the answer to their problem, and then leaves, because the only next step on the page is a generic "Contact us" link at the bottom. The traffic was real. The lead never happened.</p>
+<p>This guide is for business owners, consultants and agencies who already publish content or plan to, and who sell through Messenger. You will get the six-step path from a search to a booked call, where to place chat buttons so they match what the reader came for, how to build m.me links with a ref value so the chat knows which post someone read, a first-message script, and the five numbers that tell you whether the path works.</p>
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>The <b>six-step path</b> from search to booked call.</li>
+<li>Where to place <b>chat buttons</b> on a post, and why the old Messenger website plugin is no longer an option.</li>
+<li>How to build <b>m.me links with a ref</b> in Botcake, with a naming convention.</li>
+<li>A <b>first-message script</b> that knows which post the reader came from.</li>
+<li>The <b>five numbers</b> to track and an acceptance test before launch.</li>
+</ul>
+</div>
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#leak">Why blog traffic leaks</a></li>
+<li><a href="#path">The path from search to booked call</a></li>
+<li><a href="#buttons">Where the chat buttons go</a></li>
+<li><a href="#ref">Build m.me links with a ref</a></li>
+<li><a href="#first">The first message</a></li>
+<li><a href="#measure">Measure it and test it</a></li>
+<li><a href="#this-site">How this publication runs the same path</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+<h2 id="leak">1. Why blog traffic leaks</h2>
+<p>Search traffic is the most qualified traffic most small businesses will ever get. The reader typed their own problem into a search box. Nobody interrupted them with an ad. When your post answers that problem well, you have their attention at the exact moment they care.</p>
+<p>Then most posts waste it in three ways:</p>
+<ul>
+<li><b>No next step near the answer.</b> The call to action sits only at the very bottom, after the reader has already found what they needed and left.</li>
+<li><b>A next step that is too big.</b> "Book a call" is the right ask for someone ready to buy. For someone still learning, it is a wall.</li>
+<li><b>A chat that starts cold.</b> If the reader does click to chat, the bot greets them with a generic menu, as if they had never read anything. They have to explain themselves again.</li>
+</ul>
+<p>So why does chat fix this better than a contact form? Because a chat can ask one easy question, answer back immediately, and move at the reader's pace. A form asks for everything up front and then goes silent.</p>
+<h2 id="path">2. The path from search to booked call</h2>
+<p>Think of each post as the first message of a sales conversation, not as a brochure. The path has six steps, and every step has one job.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 290" role="img" aria-labelledby="fp1t fp1d" xmlns="http://www.w3.org/2000/svg">
+<title id="fp1t">The path from a search to a booked call</title>
+<desc id="fp1d">Six steps in a loop. Search: a reader types a problem. Blog post: it answers that exact problem. Chat button: an m.me link with a ref value. First message: the chat knows which post they read. Two questions: fit and timing. Next step: book a call or reach a person. The chat button and the context-aware first message are highlighted as the steps most blogs skip.</desc>
+<defs><marker id="fp1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect x="0" y="0" width="640" height="290" rx="14" fill="#f6f8fa"/>
+<text x="24" y="34" class="svg-k">FROM SEARCH TO BOOKED CALL</text>
+<rect x="24" y="56" width="176" height="64" rx="10" fill="#fff" stroke="#007a66"/>
+<text x="38" y="83" class="svg-t">1. Search</text>
+<text x="38" y="104" class="svg-s">Reader types a problem</text>
+<rect x="232" y="56" width="176" height="64" rx="10" fill="#fff" stroke="#007a66"/>
+<text x="246" y="83" class="svg-t">2. Blog post</text>
+<text x="246" y="104" class="svg-s">Answers that exact problem</text>
+<rect x="440" y="56" width="176" height="64" rx="10" fill="#007a66" stroke="#007a66"/>
+<text x="454" y="83" class="svg-w">3. Chat button</text>
+<text x="454" y="104" class="svg-ws">m.me link with a ref</text>
+<rect x="440" y="170" width="176" height="64" rx="10" fill="#007a66" stroke="#007a66"/>
+<text x="454" y="197" class="svg-w">4. First message</text>
+<text x="454" y="218" class="svg-ws">Knows the post they read</text>
+<rect x="232" y="170" width="176" height="64" rx="10" fill="#fff" stroke="#007a66"/>
+<text x="246" y="197" class="svg-t">5. Two questions</text>
+<text x="246" y="218" class="svg-s">Fit and timing</text>
+<rect x="24" y="170" width="176" height="64" rx="10" fill="#fff4ec" stroke="#c2410c"/>
+<text x="38" y="197" class="svg-t">6. Next step</text>
+<text x="38" y="218" class="svg-s">Book a call or a person</text>
+<path d="M204 88.0 L226 88.0" stroke="#5b6470" stroke-width="1.6" marker-end="url(#fp1a)"/>
+<path d="M412 88.0 L434 88.0" stroke="#5b6470" stroke-width="1.6" marker-end="url(#fp1a)"/>
+<path d="M528.0 124 L528.0 164" stroke="#5b6470" stroke-width="1.6" marker-end="url(#fp1a)"/>
+<path d="M436 202.0 L414 202.0" stroke="#5b6470" stroke-width="1.6" marker-end="url(#fp1a)"/>
+<path d="M228 202.0 L206 202.0" stroke="#5b6470" stroke-width="1.6" marker-end="url(#fp1a)"/>
+<text x="24" y="270" class="svg-o">The teal steps are the ones most blogs skip.</text>
+</svg>
+<figcaption><b>Figure N.</b> The path from a search to a booked call. The chat button and the first message that knows the post are the two steps most blogs skip.</figcaption>
+</figure>
+<p class="dd-step"><span class="dd-num">1</span><b>Search.</b> The reader types a problem. Your post title and description match the words they use, not your internal jargon.</p>
+<p class="dd-step"><span class="dd-num">2</span><b>Blog post.</b> It answers that exact problem, fully. Holding back the answer to force a chat backfires: people leave and do not come back.</p>
+<p class="dd-step"><span class="dd-num">3</span><b>Chat button.</b> A clear button near the answer, with an m.me link that carries a ref value for this post.</p>
+<p class="dd-step"><span class="dd-num">4</span><b>First message.</b> The chat opens with a message about the post they just read, not a generic menu.</p>
+<p class="dd-step"><span class="dd-num">5</span><b>Two questions.</b> Fit and timing, nothing more. You can learn the rest later. See <a href="https://www.dijaedadula.com/qualify-leads-messenger-automatically">how to qualify leads in Messenger automatically</a> for the full method.</p>
+<p class="dd-step"><span class="dd-num">6</span><b>Next step.</b> Ready buyers get a booking link or a person. Everyone else gets something useful and a follow-up.</p>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Match the next step to the reader's intent, not to your sales target. A reader who searched "what is" wants to learn, so offer a checklist or a short answer in chat. A reader who searched "price", "cost" or "near me" is comparing options, so offer a quote or a call. One post, one intent, one next step.</div>
+<h2 id="buttons">3. Where the chat buttons go</h2>
+<p>First, one fact that changes older advice: Meta retired the Facebook Messenger chat plugin for websites, the small chat bubble many sites used to embed, on May 9, 2024. Older guides that tell you to install it are out of date. The reliable way to start a Messenger conversation from your website today is an m.me link on a button or text link.</p>
+<p>I recommend three placements per post, each with its own ref value so you can see which one works:</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Placement</th><th>Reader's state</th><th>Button text that fits</th></tr></thead>
+<tbody>
+<tr><td><b>Right after the key answer</b></td><td>Just got value, wants to apply it</td><td>"Get the checklist in Messenger"</td></tr>
+<tr><td><b>Next to the price or setup section</b></td><td>Comparing options, has a specific question</td><td>"Ask about your setup"</td></tr>
+<tr><td><b>End-of-post box</b></td><td>Read everything, deciding</td><td>"Talk to us on Messenger"</td></tr>
+</tbody>
+</table></div>
+<p>On mobile, a button the reader can tap with one thumb matters more than anything clever. Keep the button text about the reader's benefit, not about your channel: "Get the checklist" beats "Message us".</p>
+<div class="dd-warn"><span class="dd-note-label">Watch out</span>Do not put a chat button above the answer. Asking for a conversation before you have helped feels like a pop-up, and people scroll past it or leave.</div>
+<h2 id="ref">4. Build m.me links with a ref</h2>
+<p>An m.me link opens a conversation with your Facebook Page. Add a <span class="dd-path">ref</span> value and the conversation carries context about where it started, such as a link on your website versus a link in a store. The format is simple:</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>https://m.me/YOUR-PAGE-NAME?ref=blog-cod-orders-mid
+https://m.me/YOUR-PAGE-NAME?ref=blog-cod-orders-end</code></pre></div>
+<p>Two behaviors to know. When the person has never messaged your Page, Messenger shows that they came through a link and your Get Started step passes the ref along. When they already have a conversation with you, the link opens that same thread, still passes the ref, and resets the 24-hour standard messaging window so you can reply. For reference, check the documentation <a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/discovery/m-me-links" rel="noopener" target="_blank">here</a>.</p>
+<p>In Botcake you do not need to write code for this. The Messenger Ref URL growth tool creates the link and lets you choose which flow it starts, so each ref can open its own first message. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f3/st-p5/st-s3?lang=en" rel="noopener" target="_blank">here</a>. If you have not set up Botcake AI with Pancake yet, start with the <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake setup guide</a>.</p>
+<p>My naming convention for ref values, so the reports stay readable a year from now:</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>blog-[post-slug]-[placement]
+placement = mid | price | end
+
+Examples:
+blog-ai-chatbot-cost-price
+blog-stop-bogus-cod-orders-mid
+blog-ai-chatbot-human-handoff-end</code></pre></div>
+<p>Use only lowercase letters, numbers and hyphens, and keep each value short. Then add normal UTM parameters to the links that bring people to the post itself (from your newsletter or social posts), so your site analytics can tell you which channel sent the reader. For reference, check the documentation <a href="https://support.google.com/analytics/answer/10917952?hl=en" rel="noopener" target="_blank">here</a>.</p>
+<h2 id="first">5. The first message</h2>
+<p>The first message decides whether the reader stays. It should prove you know why they came, offer what you promised on the button, and ask one easy question. Here is a copy-ready script for a post about stopping bogus cash-on-delivery orders:</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>Message 1 (sent when ref = blog-stop-bogus-cod-orders-mid):
+Hi {first_name}! You were reading our guide on stopping bogus COD orders.
+Here is the order-confirmation checklist from the post: [link]
+
+Message 2 (one question, buttons):
+Quick question so I can point you to the right setup:
+How many COD orders do you ship per week?
+[Under 50]  [50 to 300]  [Over 300]
+
+Message 3 (based on the answer):
+Under 50   -> send the free setup guide, tag "blog-lead-small"
+50 to 300  -> ask: "Do you already use Pancake?" then offer a call
+Over 300   -> tag "blog-lead-priority", assign to a person, offer a call today</code></pre></div>
+<p>Keep the AI agent on standby for questions in between. If someone types a question instead of tapping a button, let Botcake AI answer from your knowledge base and then bring them back to the next step. If the question needs a person, hand off cleanly; the <a href="https://www.dijaedadula.com/ai-chatbot-human-handoff">human handoff playbook</a> covers the triggers and setup.</p>
+<p>Then follow up. A reader who started a chat but did not book is a warm lead, and a short, useful follow-up inside Meta's messaging rules often matters more than the first message. See <a href="https://www.dijaedadula.com/automate-lead-follow-up">how to automate lead follow-up with AI</a>.</p>
+<h2 id="measure">6. Measure it and test it</h2>
+<p>You need five numbers, and they live in different places. That is the part most teams get wrong: they look at blog views in one tool and chats in another and never connect them.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 378" role="img" aria-labelledby="fp2t fp2d" xmlns="http://www.w3.org/2000/svg">
+<title id="fp2t">The blog-to-chat funnel and where each number lives</title>
+<desc id="fp2d">A funnel with five stages from top to bottom: post views and chat-button clicks, measured in site analytics; chats started per ref and qualified leads, measured in Botcake; booked calls, measured in the calendar or CRM. The widths show order only, not real data.</desc>
+<defs><marker id="fp2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect x="0" y="0" width="640" height="378" rx="14" fill="#f6f8fa"/>
+<text x="24" y="34" class="svg-k">FIVE NUMBERS TO TRACK</text>
+<rect x="40" y="54" width="560" height="46" rx="8" fill="#e8f4f1"/>
+<text x="320" y="74" text-anchor="middle" class="svg-t" style="font-size:14px">Post views</text>
+<text x="320" y="91" text-anchor="middle" class="svg-s">Site analytics</text>
+<rect x="85" y="112" width="470" height="46" rx="8" fill="#d7efe9"/>
+<text x="320" y="132" text-anchor="middle" class="svg-t" style="font-size:14px">Chat-button clicks</text>
+<text x="320" y="149" text-anchor="middle" class="svg-s">Site analytics (UTM or click event)</text>
+<rect x="130" y="170" width="380" height="46" rx="8" fill="#5b9e90"/>
+<text x="320" y="190" text-anchor="middle" class="svg-w" style="font-size:14px">Chats started, per ref</text>
+<text x="320" y="207" text-anchor="middle" class="svg-ws">Botcake</text>
+<rect x="175" y="228" width="290" height="46" rx="8" fill="#007a66"/>
+<text x="320" y="248" text-anchor="middle" class="svg-w" style="font-size:14px">Qualified leads</text>
+<text x="320" y="265" text-anchor="middle" class="svg-ws">Botcake tag</text>
+<rect x="220" y="286" width="200" height="46" rx="8" fill="#c2410c"/>
+<text x="320" y="306" text-anchor="middle" class="svg-w" style="font-size:14px">Booked calls</text>
+<text x="320" y="323" text-anchor="middle" class="svg-ws">Calendar or CRM</text>
+<text x="24" y="358" class="svg-s">Shape only. The widths show the order of the stages, not real data.</text>
+</svg>
+<figcaption><b>Figure N.</b> The five numbers to track and where each one lives. Two come from your site analytics, two from Botcake and one from your calendar or CRM.</figcaption>
+</figure>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Metric</th><th>Formula</th><th>What it tells you</th></tr></thead>
+<tbody>
+<tr><td><b>Chat click rate</b></td><td>Chat-button clicks / post views</td><td>Whether the button matches the reader's intent</td></tr>
+<tr><td><b>Chat start rate</b></td><td>Chats started / chat-button clicks</td><td>Whether the link and first message work on all devices</td></tr>
+<tr><td><b>Qualification rate</b></td><td>Qualified leads / chats started</td><td>Whether the post attracts the right readers</td></tr>
+<tr><td><b>Booking rate</b></td><td>Booked calls / qualified leads</td><td>Whether the offer and follow-up are strong enough</td></tr>
+<tr><td><b>Leads per post</b></td><td>Qualified leads per post per month</td><td>Which posts deserve updates and more promotion</td></tr>
+</tbody>
+</table></div>
+<p>Do not compare your rates with numbers from other companies. Compare each post with itself month over month, and compare placements on the same post with each other. The ref values make that possible.</p>
+<p><b>Acceptance test before a post goes live with chat buttons:</b></p>
+<ul>
+<li>Every button opens Messenger on desktop, on iPhone and on Android, from a logged-in and a logged-out browser.</li>
+<li>Each ref starts the right flow. Test from a Facebook account that has never messaged the Page and from one that has.</li>
+<li>The first message names the post the reader came from.</li>
+<li>Each answer to the qualifying question lands on the right tag and the right next step.</li>
+<li>A typed question gets a correct AI answer, and "talk to a person" reaches a person.</li>
+<li>The click shows up in your site analytics and the chat shows up in Botcake with its ref.</li>
+</ul>
+<p>An honest limitation: m.me links do not pass the ref in every case. Meta states that refs might not work for some Messenger for Android users or for Pages with geographic restrictions. The link still opens the conversation, so build the flow to ask one quick "What brought you here today?" question whenever the ref is missing, and expect a small share of your chats to arrive without one.</p>
+<h2 id="this-site">7. How this publication runs the same path</h2>
+<p>This publication is built on the same principle. I designed it and run it with AI agents: Claude for the build work, PayMeGPT for the newsletter and social posts, Webcake for the pages, and GitHub as the system's memory, under my own architecture, checks and security rules.</p>
+<p>The path here is search, post, one next step. Most people who read a guide are still learning, not buying, so the main next step on every post is the free weekly newsletter. The booking link sits in the end-of-post box for readers who are ready. That is the same intent-matching rule from section 2, applied to a publication instead of a shop.</p>
+<p>A business that sells through Messenger should put chat where this site puts the newsletter. Your customers already live in Messenger, so a conversation is a smaller step for them than an email signup, and it lets you answer and qualify in the same place. If your offer needs time and trust, use both: chat for the ready readers, newsletter for the learners.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Can I still add the Facebook Messenger chat bubble to my website?</h3>
+<p>No. Meta retired the Facebook Messenger chat plugin for websites on May 9, 2024. Use m.me links on buttons instead, or a separate website chat tool if you need chat on the page itself.</p>
+<h3>What is a ref in an m.me link?</h3>
+<p>A ref is a short value added to an m.me link, such as ?ref=blog-pricing-end. It tells your Messenger bot where the conversation started, so Botcake can start a different flow for each post or placement.</p>
+<h3>How many chat buttons should a blog post have?</h3>
+<p>Usually three: one right after the key answer, one next to the price or setup section, and one in the end-of-post box. Give each one its own ref so you can see which placement works.</p>
+<h3>How do I know which blog posts bring leads?</h3>
+<p>Track chat-button clicks in your site analytics and chats per ref in Botcake, then tag qualified leads. Count qualified leads per post per month and update the posts that bring the most.</p>
+<div class="dd-cta">
+<p class="dd-cta-title">Turn your content into conversations</p>
+<p>Build the ref links, flows and AI agent on <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a> and manage the chats in <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account). These are affiliate links.</p>
+<p>Want the full path from search to booked call designed for your business? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/discovery/m-me-links" rel="noopener" target="_blank">Meta for Developers: m.me Links</a>. Accessed October 2026.</li>
+<li><a href="https://respond.io/help/facebook-messenger/facebook-chat-plugin" rel="noopener" target="_blank">respond.io: Facebook Chat Plugin</a> (deprecation of the plugin on May 9, 2024). Accessed October 2026.</li>
+<li><a href="https://docs.pancake.biz/botcake/st-f3/st-p5/st-s3?lang=en" rel="noopener" target="_blank">Botcake: Messenger Ref URL</a> and <a href="https://docs.pancake.biz/botcake/st-f3/st-p5/st-s1?lang=en" rel="noopener" target="_blank">QR Code</a> growth tools. Accessed October 2026.</li>
+<li><a href="https://support.google.com/analytics/answer/10917952?hl=en" rel="noopener" target="_blank">Google Analytics Help: URL builders, collect campaign data with custom URLs</a>. Accessed October 2026.</li>
+<li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/qualify-leads-messenger-automatically">How to Qualify Leads in Messenger Automatically (Without Annoying Your Customers)</a></li>
+<li><a href="https://www.dijaedadula.com/chatbot-roi-metrics">The 5 Chatbot ROI Metrics That Matter</a></li>
+<li><a href="https://www.dijaedadula.com/facebook-messenger-missed-messages">Why Your Business Is Losing Customers in Facebook Messenger</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>
