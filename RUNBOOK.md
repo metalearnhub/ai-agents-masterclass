@@ -101,3 +101,10 @@ Short, English: post title + live URL, what visuals it has, any judgment calls, 
 
 ## 11. Public-content rules
 Read CONFIDENTIALITY.md before writing. Run the private zero-hit scan on the final HTML before create_page and again before every publish.
+
+## 12. Vendor changelogs are a required source (Dijae, Oct 25 2026)
+Every post that mentions one of these platforms must check its changelog in the same run, cite it in References as a strong primary source, and link it with "For reference, check the changelog here." Changelog entries override older marketing or pricing pages; state the date of the latest entry you saw.
+- ChatbotBuilder AI: https://www.chatbotbuilder.ai/log
+- Chatrace: https://feedback.chatrace.com/changelog
+- PayMeGPT: https://paymegpt.com/changelog (JavaScript-rendered: if WebFetch returns no entries, open it in a browser tool; if it still cannot be read, say so in the report and do not state PayMeGPT features as current)
+Add new vendor changelogs here when Dijae provides them.
