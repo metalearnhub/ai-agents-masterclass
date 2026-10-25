@@ -33,3 +33,8 @@ Status: #01 posted and verified 2026-10-15.
 
 ## Public-content rules
 Follow CONFIDENTIALITY.md. The "AI training explained" pillar uses public research only, with citations, and never first person.
+
+## Content bank sync (Oct 25 2026)
+- Verifications and the profile ID now sync across devices. Store: Supabase project qbubwemdvwflxvxwesrl, tables cb_state (row id "dijae") and cb_keys (hashed key), edge function `content-bank` (actions get / set / del / merge / me).
+- The sync key lives only in the PayMeGPT shell (page 8185, behind the passcode gate), never in a public repo. The app (dijae-cv-landing/assets/content-bank/app.html) reads window.CB_SYNC_KEY and remembers it in the browser.
+- On first load a browser uploads any verifications it had saved locally (merge never overwrites the shared copy). Each browser refreshes every 20 seconds and when the tab regains focus.
