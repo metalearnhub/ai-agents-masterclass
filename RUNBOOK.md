@@ -108,3 +108,9 @@ Every post that mentions one of these platforms must check its changelog in the 
 - Chatrace: https://feedback.chatrace.com/changelog
 - PayMeGPT: https://paymegpt.com/changelog (JavaScript-rendered: if WebFetch returns no entries, open it in a browser tool; if it still cannot be read, say so in the report and do not state PayMeGPT features as current)
 Add new vendor changelogs here when Dijae provides them.
+
+## 13. /blog list (card grid)
+- Source of truth: pages/blog/list.json (newest first). After each new post: `python3 tools/blog_list.py <slug> "<H1>" "<blurb>"` (or `tools/blog_patch.py`, same args) → writes pages/blog/list.html and blog_patch.json.
+- Apply blog_patch.json with patch_page (page 51cab93b-…, dry_run false), publish custom_path blog, render at 1280 and 420 and check the gap above the "New posts every week" line.
+- Heights: headless measure + padding (+68 desktop, +208 mobile) because the live render runs taller. Re-tune if the gap drifts as posts are added.
+- Mobile header shows Home (n_0207) next to Subscribe.
