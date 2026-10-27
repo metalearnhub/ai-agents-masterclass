@@ -120,3 +120,10 @@ Add new vendor changelogs here when Dijae provides them.
 - Botcake AI = simple RAG (Messenger + Pancake). Chatrace and ChatbotBuilder AI = minor alternatives for chatbot-first builds; mention them briefly, never as the lead.
 - Learn and cite from the PayMeGPT YouTube channel: https://www.youtube.com/@PAYMEGPT (e.g. MCP with ChatGPT and Claude: https://www.youtube.com/watch?v=8IpTTydDlGc). Also link the changelog (section 12). Only state PayMeGPT features verified in the same run (YouTube, changelog, or the PayMeGPT MCP tool descriptions).
 - Teach the real workflow: what Dijae and Claude do together with Claude + PayMeGPT (rules in GitHub files, Claude builds through MCP, PayMeGPT for images, newsletter, Facebook scheduling and verification, welcome flows, content scan, live checks). Reference walkthrough: mcp-ai-agent-business-tools#this-site.
+
+## 15. Link old posts to new ones (internal links, Oct 27 2026)
+- Done once for all posts on Oct 27 (tools/interlink/: parse.py reads get_page files, build.py holds the topic map M and writes plan.json).
+- Two layouts exist:
+  - Old template (text-block posts): append `<b><a ...>Title</a></b><br><br>` entries to the "Keep reading" text-block just before "See all posts on the blog", grow that block and its section by the added height. Only shift elements whose top is BELOW the list (the CHAMP20 coupon box c_xx90 and the disclosed job-roles boxes t_x970/t_x971 sit above it; never move them).
+  - New template (eb_2120 article): add an editor-blog element `eb_newg` ("New guides on this topic" box, Inter inline styles) at top = eb_top + eb_height + 10, height measured with tools/measure_list.js (#bl), then h_css2121 top = block bottom + 47 (mobile +39) and sec_2108 height = block bottom + 57 (mobile +49). If eb_newg already exists, update its html instead of adding a second one.
+- After every new post: add a link to it from the 2-3 most related older posts this way, publish each with its own custom_path, and spot-check one per layout at 420 and 1280.
