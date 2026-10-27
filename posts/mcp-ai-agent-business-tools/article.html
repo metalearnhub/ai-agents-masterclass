@@ -1,7 +1,7 @@
 <div class="dd-article">
 <!--COVER-->
 <p>Most AI assistants in small businesses still work like a very smart stranger. You paste in a customer's details, ask a question, copy the answer back into your CRM and repeat. The AI knows a lot about the world and nothing about your pipeline, your calendar or your price list. MCP, the Model Context Protocol, is how you close that gap without building a custom integration for every tool.</p>
-<p>This guide is for business owners, consultants and agency teams who already understand what MCP is (if not, start with <a href="https://www.dijaedadula.com/what-is-mcp">the plain-English MCP guide</a>) and now want a working agent connected to real tools. You will get the architecture in one picture, how to choose a safe first job, a step-by-step connection to a real CRM, an instruction template, a permission ladder, a test checklist, and what the 2026 MCP specification changes for you.</p>
+<p>This guide is for business owners, consultants and agency teams who already understand what MCP is (if not, start with <a href="https://www.dijaedadula.com/what-is-mcp">the plain-English MCP guide</a>) and now want a working agent connected to real tools. You will get the architecture in one picture, how to choose a safe first job, a step-by-step connection to a real CRM, an instruction template, a permission ladder, a test checklist, what the 2026 MCP specification changes, where I recommend building, and a real walkthrough of how we build with Claude and PayMeGPT.</p>
 <div class="dd-tldr">
 <p class="dd-tldr-title">What you will get</p>
 <ul>
@@ -10,6 +10,7 @@
 <li>A <b>step-by-step connection</b> to a real CRM through a remote MCP server.</li>
 <li>A copy-ready <b>instruction template</b> for a CRM assistant.</li>
 <li>The <b>permission ladder</b>, the main security risks and a <b>test checklist</b> before you trust it.</li>
+<li>Why I recommend <b>PayMeGPT</b>, and how we build with <b>Claude and PayMeGPT</b>, step by step.</li>
 </ul>
 </div>
 <nav class="dd-toc" aria-label="Table of contents">
@@ -22,7 +23,8 @@
 <li><a href="#security">Permissions and security</a></li>
 <li><a href="#test">Test it before you trust it</a></li>
 <li><a href="#spec">What changed in MCP in 2026</a></li>
-<li><a href="#this-site">How this publication uses MCP</a></li>
+<li><a href="#platform">Where I recommend building it</a></li>
+<li><a href="#this-site">How we build with Claude and PayMeGPT</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ol>
 </nav>
@@ -151,21 +153,41 @@ RULES
 <li><b>A formal deprecation policy.</b> Deprecated features keep working for at least twelve months, and the older HTTP+SSE transport gets a year-long offramp.</li>
 </ul>
 <p>What this means for you: if you only connect vendor-hosted servers, very little, beyond keeping your AI app updated. If you or your developer built a custom server, plan the migration now, especially anything that relied on sessions. For reference, check the specification announcement <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" rel="noopener" target="_blank">here</a>.</p>
-<h2 id="this-site">8. How this publication uses MCP</h2>
-<p>This publication is my own working example. I designed it and run it with AI agents: Claude does the build work through MCP connectors to the page builder (Webcake), the newsletter and social platform (PayMeGPT), email and GitHub, which holds the system's memory. I set the architecture, the deployment plan, the checks and the security rules.</p>
-<p>The same ladder applies here. Page changes run as a dry run first and are only saved and published after they validate. Every page, email and post goes through a content scan before it goes out, and every new page gets a live check on desktop and mobile. Nothing that sends, posts or deletes runs without matching what was asked. The agent does the work; the rules decide what it is allowed to finish on its own.</p>
+<h2 id="platform">8. Where I recommend building it</h2>
+<p>Connecting one vendor's server, like HubSpot's above, is the right first step. When you want to build the agent itself, with its knowledge, its actions and the pages it lives on, my recommendation is <a href="https://paymegpt.com" rel="noopener" target="_blank">PayMeGPT</a>. It is the platform I rely on most for MCP and agent work, and it is one of the platforms this publication runs on.</p>
+<ul>
+<li><b>It is an MCP server itself.</b> You connect PayMeGPT to Claude or ChatGPT as a connector (the address is https://paymegpt.com/mcp), review the tools and permissions it asks for, and then build and run agents, forms, landing pages, automations and contacts from the AI app you already use.</li>
+<li><b>Agents ground their answers in your files.</b> An agent can take knowledge files (PDF, TXT, MD, HTML, JSON, CSV and spreadsheets), and its instructions can come from a live Google Doc, so editing the doc changes the agent.</li>
+<li><b>Agents take real actions.</b> AI Functions extract details from a conversation and can tag the contact, start a flow, notify your team, enroll a follow-up sequence or read and update rows in a Google Sheet.</li>
+<li><b>You choose the model.</b> OpenAI, Anthropic Claude, Google Gemini, xAI Grok and others, per agent.</li>
+</ul>
+<p>The PayMeGPT YouTube channel has the build tutorials, including setting up its MCP with ChatGPT and Claude. For reference, check the channel <a href="https://www.youtube.com/@PAYMEGPT" rel="noopener" target="_blank">here</a> and the changelog <a href="https://paymegpt.com/changelog" rel="noopener" target="_blank">here</a>.</p>
+<p>Alternatives: Chatrace and ChatbotBuilder AI are capable multichannel chatbot platforms, and ChatbotBuilder AI has offered MCP integration since July 2025. They are good fits for chatbot-first builds; see the <a href="https://www.dijaedadula.com/chatrace-vs-chatbotbuilder">Chatrace vs ChatbotBuilder comparison</a>. For reference, check the ChatbotBuilder changelog <a href="https://www.chatbotbuilder.ai/log" rel="noopener" target="_blank">here</a>.</p>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>Pick the platform where the agent, its knowledge and its actions live in one place. Every extra tool you stitch in is another permission to review and another place for answers to go stale.</div>
+<h2 id="this-site">9. How we build with Claude and PayMeGPT: a real walkthrough</h2>
+<p>This publication is my own working example, and it is the clearest way to show what this looks like in practice. I designed the system and run it with AI agents: Claude does the build work, connected through MCP to PayMeGPT (newsletter, email, social posts and images), Webcake (the pages) and GitHub (the system's memory). I set the architecture, the rules and the checks; Claude does the work inside them. Here is how one week runs.</p>
+<p class="dd-step"><span class="dd-num">1</span><b>Claude reads the rules first.</b> Before any run, Claude reads the runbook, the voice guide and the content rules from the GitHub repository. Instructions live in files, not in my memory, so every run starts from the same standard.</p>
+<p class="dd-step"><span class="dd-num">2</span><b>Claude writes and builds the post.</b> It picks the next topic from the content checklist, researches current facts with sources, writes the article, and draws the diagrams. Then it asks PayMeGPT, through MCP, to generate the cover image in the brand style.</p>
+<p class="dd-step"><span class="dd-num">3</span><b>Every page is a dry run first.</b> The page is validated before it is saved, published to the live domain, then checked on desktop and mobile. If the spacing is off, Claude fixes it and checks again.</p>
+<p class="dd-step"><span class="dd-num">4</span><b>Claude updates everything that lists the post.</b> The blog page, the home page, the sitemap, the checklist and the newsletter queue all change in the same run, and the result is committed to GitHub.</p>
+<p class="dd-step"><span class="dd-num">5</span><b>PayMeGPT handles the audience.</b> Through the same MCP connection, Claude schedules the weekly newsletter to the subscriber tag from my sending address, schedules the Facebook post, and then lists the scheduled posts to confirm each one is really there. New subscribers flow into a welcome sequence built in PayMeGPT.</p>
+<p class="dd-step"><span class="dd-num">6</span><b>Nothing goes out unchecked.</b> Every page, email and post passes a content scan before it is scheduled, and anything that sends, posts or deletes must match exactly what I asked for. Claude reports back with links, and emails me a summary with the checklist attached.</p>
+<p>The pattern to copy is not the tools. It is the split: <b>you own the rules, the agent owns the repetition</b>. Write your standards down, give the agent only the connections the job needs, make it verify its own work, and keep a person on anything that reaches a customer.</p>
+<p>To start the same way: connect PayMeGPT to Claude as a custom connector, ask Claude to list the tools it can see, and run one small job end to end, such as "create a lead form and show me the last five submissions". Then add the next job only when the first one passes its checks.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <h3>Do I need a developer to connect my business tools to an AI agent with MCP?</h3>
 <p>Not for tools whose vendors host a remote MCP server. You add the server address as a custom connector in your AI app and sign in. You need a developer when no server exists for your tool or when you want a custom server for your own systems.</p>
 <h3>Which AI apps support MCP?</h3>
 <p>MCP has client support in Claude, ChatGPT, Microsoft Copilot, Gemini, Cursor and Visual Studio Code, among others. Check each app's plan limits for custom connectors before you choose.</p>
+<h3>What is the best platform to build an AI agent with MCP?</h3>
+<p>My recommendation is PayMeGPT: it works as an MCP server you connect to Claude or ChatGPT, and it keeps the agent, its knowledge files, its actions and its pages in one place. Chatrace and ChatbotBuilder AI are alternatives for chatbot-first builds.</p>
 <h3>Is it safe to give an AI agent access to my CRM?</h3>
 <p>It can be, with controls. Start read-only, sign in with a limited account, turn off write tools the job does not need, require approval for every write, and test for prompt injection before you widen access.</p>
 <h3>What is the difference between an MCP server and an API integration?</h3>
 <p>An API integration is custom code that connects two specific systems. An MCP server describes a tool's actions in a standard way, so any MCP-compatible AI app can use it without a new integration for each app.</p>
 <div class="dd-cta">
 <p class="dd-cta-title">Want an agent connected to your tools, safely?</p>
-<p>I design, deploy and test AI agents that work inside your CRM, calendar and knowledge base, with the permissions and tests to match. <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+<p>Build your agent on <a href="https://paymegpt.com" rel="noopener" target="_blank">PayMeGPT</a> and connect it to Claude or ChatGPT through its MCP. Or have me design, deploy and test it for you, inside your CRM, calendar and knowledge base, with the permissions and tests to match: <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
 <p>Prefer to learn first? <a href="https://grow.dijaedadula.com/newsletter">Join the free weekly newsletter</a> for one practical idea every week.</p>
 </div>
 <h2>References</h2>
@@ -174,6 +196,8 @@ RULES
 <li><a href="https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/" rel="noopener" target="_blank">Model Context Protocol blog: MCP joins the Agentic AI Foundation</a>, December 9, 2025. Accessed October 2026.</li>
 <li><a href="https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available" rel="noopener" target="_blank">HubSpot Developer Changelog: Remote HubSpot MCP server is now generally available</a>, April 13, 2026 (updated April 15, 2026). Accessed October 2026.</li>
 <li><a href="https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp" rel="noopener" target="_blank">Claude Help Center: Getting started with custom connectors using remote MCP</a>. Accessed October 2026.</li>
+<li><a href="https://www.youtube.com/watch?v=8IpTTydDlGc" rel="noopener" target="_blank">PayMeGPT on YouTube: connecting ChatGPT and Claude to PayMeGPT with MCP</a>, July 30, 2026, and the <a href="https://www.youtube.com/@PAYMEGPT" rel="noopener" target="_blank">PayMeGPT YouTube channel</a>. Accessed October 2026.</li>
+<li><a href="https://www.chatbotbuilder.ai/log" rel="noopener" target="_blank">ChatbotBuilder AI changelog</a> (MCP Integration, July 1, 2025; latest entry seen February 14, 2026). Accessed October 2026.</li>
 <li><a href="https://simonw.substack.com/p/model-context-protocol-has-prompt" rel="noopener" target="_blank">Simon Willison: Model Context Protocol has prompt injection security problems</a>, April 2025. Accessed October 2026.</li>
 </ol>
 <h2>Keep reading</h2>

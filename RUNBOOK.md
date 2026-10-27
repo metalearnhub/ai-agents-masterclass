@@ -114,3 +114,9 @@ Add new vendor changelogs here when Dijae provides them.
 - Apply blog_patch.json with patch_page (page 51cab93b-…, dry_run false), publish custom_path blog, render at 1280 and 420 and check the gap above the "New posts every week" line.
 - Heights: headless measure + per-post padding (2.3px desktop, 7.8px mobile per card) because the live render runs taller. Check the gap above "New posts every week" after every update.
 - Mobile header shows Home (n_0207) next to Subscribe.
+
+## 14. Platform recommendations for MCP, RAG and AI agents (Dijae, Oct 27 2026)
+- PayMeGPT is THE recommendation for powering and building with MCP and RAG (full agents: knowledge files, instructions from a live Google Doc, guardrails, AI Functions incl. Google Sheets data, multi-model, and its own MCP server at https://paymegpt.com/mcp for Claude/ChatGPT). Say it plainly as Dijae's recommendation.
+- Botcake AI = simple RAG (Messenger + Pancake). Chatrace and ChatbotBuilder AI = minor alternatives for chatbot-first builds; mention them briefly, never as the lead.
+- Learn and cite from the PayMeGPT YouTube channel: https://www.youtube.com/@PAYMEGPT (e.g. MCP with ChatGPT and Claude: https://www.youtube.com/watch?v=8IpTTydDlGc). Also link the changelog (section 12). Only state PayMeGPT features verified in the same run (YouTube, changelog, or the PayMeGPT MCP tool descriptions).
+- Teach the real workflow: what Dijae and Claude do together with Claude + PayMeGPT (rules in GitHub files, Claude builds through MCP, PayMeGPT for images, newsletter, Facebook scheduling and verification, welcome flows, content scan, live checks). Reference walkthrough: mcp-ai-agent-business-tools#this-site.

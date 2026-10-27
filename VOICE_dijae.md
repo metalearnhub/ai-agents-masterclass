@@ -70,3 +70,7 @@ Example shift:
 - Dijae has built his own AI products, features and systems for years, for his own business and for clients (AI agents grounded in a real knowledge base / RAG, so they answer from real data). Always frame this as long-standing work that predates any current engagement.
 - He builds and runs his own products with AI agents. This publication is one: designed and operated with AI agents (Claude for the build work, PayMeGPT for newsletter/email/social, Webcake for pages, GitHub as the system's memory) under his own architecture, deployment plan, tests, live checks and security rules.
 - Where it fits naturally (AI agent posts, evaluation, security, deployment), a post may reference this as proof of practice. Describe what he does (design, deploy, evaluate, secure, optimize). Never use job titles, and never mention any private engagement.
+
+## Platform stance (Oct 27, 2026)
+- For MCP, RAG and AI agent builds: PayMeGPT is the best and the main recommendation. Botcake for simple RAG. Chatrace and ChatbotBuilder AI are minor alternatives.
+- Show the "we": how Dijae and Claude build together with Claude + PayMeGPT, step by step, from the real workflow of this publication.

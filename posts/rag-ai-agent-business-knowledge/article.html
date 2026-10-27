@@ -1,14 +1,15 @@
 <div class="dd-article">
 <!--COVER-->
 <p>Ask a general AI model about your return policy and it will answer with confidence. The answer will sound right, read well, and have nothing to do with your actual policy. The model learned from the public internet. It has never seen your price list, your delivery areas or the exceptions your team makes every day. Retrieval-augmented generation, usually shortened to RAG, is how you make an AI agent answer from your business knowledge instead of from a good guess.</p>
-<p>This guide is for business owners, consultants and teams who run, or plan to run, an AI agent that talks to customers or staff. You will get RAG in plain English, a simple rule for where each fact belongs, how to prepare knowledge files the agent can actually use, the setup in Botcake AI with real screens, a test plan with acceptance criteria, and how to keep it all current.</p>
+<p>This guide is for business owners, consultants and teams who run, or plan to run, an AI agent that talks to customers or staff. You will get RAG in plain English, a simple rule for where each fact belongs, how to prepare knowledge files the agent can actually use, where to build it (PayMeGPT for full agents, Botcake AI for simple RAG, with real screens), a test plan with acceptance criteria, and how to keep it all current.</p>
 <div class="dd-tldr">
 <p class="dd-tldr-title">What you will get</p>
 <ul>
 <li>What <b>RAG</b> is and why it beats pasting everything into the prompt.</li>
 <li>The <b>one-fact, one-home rule</b>: instructions, knowledge files or live tools.</li>
 <li>A copy-ready <b>knowledge file template</b>.</li>
-<li>The <b>Botcake AI setup</b> for knowledge sources, step by step.</li>
+<li>Why I recommend <b>PayMeGPT</b>, and the <b>Botcake AI setup</b> for simple RAG.</li>
+<li>How we build these agents together with <b>Claude and PayMeGPT</b>.</li>
 <li>A <b>retrieval test</b> with acceptance criteria and a monthly upkeep routine.</li>
 </ul>
 </div>
@@ -19,10 +20,11 @@
 <li><a href="#how">How RAG works in plain English</a></li>
 <li><a href="#where">Where each fact belongs</a></li>
 <li><a href="#prepare">Prepare knowledge the agent can use</a></li>
-<li><a href="#botcake">Set it up in Botcake AI</a></li>
+<li><a href="#paymegpt">Where I recommend building it: PayMeGPT</a></li>
+<li><a href="#botcake">Simple RAG in Botcake AI</a></li>
 <li><a href="#test">Test the retrieval</a></li>
 <li><a href="#maintain">Keep it current</a></li>
-<li><a href="#practice">How I build knowledge-grounded agents</a></li>
+<li><a href="#practice">How we build with Claude and PayMeGPT</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ol>
 </nav>
@@ -115,7 +117,17 @@ the customer to a person on the team.
 
 ## What we do NOT promise
 We do not promise same-day delivery.</code></pre></div>
-<h2 id="botcake">5. Set it up in Botcake AI</h2>
+<h2 id="paymegpt">5. Where I recommend building it: PayMeGPT</h2>
+<p>For a full knowledge-grounded agent, my recommendation is <a href="https://paymegpt.com" rel="noopener" target="_blank">PayMeGPT</a>. It keeps the three homes from section 3 in one place: instructions, knowledge files and live tools.</p>
+<ul>
+<li><b>Knowledge files.</b> Each agent takes PDF, TXT, MD, HTML, JSON, CSV and spreadsheet files (XLSX and XLS are converted to searchable text), up to 50 MB per file and 25 files per agent. Files index in the background, so check that indexing has finished before you test.</li>
+<li><b>Instructions from a live Google Doc.</b> The agent's instructions can come from a Google Doc, so the owner of the doc updates the agent by editing it. Guardrails are stored separately, so they stay in force when the instructions change.</li>
+<li><b>Live tools for live data.</b> AI Functions can read and update rows in a Google Sheet, which is the simplest way to give an agent stock, availability or order status without putting it in a file.</li>
+<li><b>Built with Claude through MCP.</b> PayMeGPT connects to Claude or ChatGPT as an MCP server, so you can create the agent, attach its knowledge files and test it from a chat.</li>
+</ul>
+<p>The PayMeGPT YouTube channel has the build tutorials. For reference, check the channel <a href="https://www.youtube.com/@PAYMEGPT" rel="noopener" target="_blank">here</a> and the changelog <a href="https://paymegpt.com/changelog" rel="noopener" target="_blank">here</a>.</p>
+<p>When you need simple RAG inside a Facebook Messenger and Pancake setup, Botcake AI is the easy option, shown next. Chatrace and ChatbotBuilder AI are alternatives for chatbot-first builds; ChatbotBuilder AI's knowledge base builder takes files, website links and YouTube transcripts. For reference, check its changelog <a href="https://www.chatbotbuilder.ai/log" rel="noopener" target="_blank">here</a>.</p>
+<h2 id="botcake">6. Simple RAG: set it up in Botcake AI</h2>
 <p>Botcake AI keeps knowledge in a shared library, then lets each agent use the files it needs. The setup from Botcake's left menu, under <span class="dd-ui">Botcake AI</span>:</p>
 <p class="dd-step"><span class="dd-num">1</span><b>Open the Knowledge source library.</b> It has two views: <span class="dd-ui">File instruction</span> for documents and <span class="dd-ui">Attachment</span> for images the agent can send. Use <span class="dd-ui">Upload</span> for files or <span class="dd-ui">Config</span> to pick files from Google Drive.</p>
 <figure class="dd-fig"><div class="dd-shot"><img src="https://statics.pancake.vn/web-media-264/43/aa/b9/b2/e7c20bc83a96f858f768f99dbb1d2ef574ecdc7d6986b878f660cdc3.webp" alt="Botcake AI Knowledge source page with File instruction and Attachment tabs, a Config button for Google Drive and an Upload button" loading="lazy"></div><figcaption><b>Figure N.</b> The <span class="dd-ui">Knowledge source</span> library in Botcake AI: <span class="dd-ui">File instruction</span> for documents, <span class="dd-ui">Attachment</span> for images the agent can send, <span class="dd-ui">Config</span> for Google Drive and <span class="dd-ui">Upload</span>. File names are blurred.</figcaption></figure>
@@ -126,7 +138,7 @@ We do not promise same-day delivery.</code></pre></div>
 <p class="dd-step"><span class="dd-num">4</span><b>Test in Preview before you go live.</b> Ask the questions from your test set in the agent's <span class="dd-ui">Preview</span> and compare every answer with the file it should come from.</p>
 <p>For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">here</a>. For the full agent setup, including instructions and handoff, see the <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake setup guide</a>.</p>
 <div class="dd-warn"><span class="dd-note-label">Watch out</span>A website URL as a knowledge source is convenient, but the agent then answers from whatever that site says today, including old pages and blog posts with outdated prices. Use files you control for prices and policies, and keep the live website source for general information.</div>
-<h2 id="test">6. Test the retrieval</h2>
+<h2 id="test">7. Test the retrieval</h2>
 <p>If you cannot test it, do not ship it. Build a test set of 30 real questions, taken from your inbox, not invented by you: 20 your files answer, 5 your files do not answer, and 5 tricky ones (two products with similar names, a policy with an exception, a question in a different order of words).</p>
 <p><b>Acceptance criteria before the agent goes live:</b></p>
 <ul>
@@ -137,7 +149,7 @@ We do not promise same-day delivery.</code></pre></div>
 </ul>
 <p>After launch, the metric to watch is the share of conversations where a person had to correct the agent, tracked weekly. If it rises, look at the files first, not the model. The full method is in <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">how to test an AI chatbot before it talks to your customers</a>.</p>
 <p>An honest limitation: RAG reduces invented answers, but it does not remove them. The search can return the wrong passage, and the model can still misread the right one. That is why the test set includes questions your files do not answer, and why every customer-facing agent needs a clear <a href="https://www.dijaedadula.com/ai-chatbot-human-handoff">handoff to a human</a>.</p>
-<h2 id="maintain">7. Keep it current</h2>
+<h2 id="maintain">8. Keep it current</h2>
 <p>Knowledge goes stale quietly. Nobody announces that a delivery fee changed; the agent just starts being wrong. A simple monthly routine prevents most of it:</p>
 <ul>
 <li><b>Review every file with an owner.</b> Update the date even when nothing changed, so you know it was checked.</li>
@@ -145,9 +157,14 @@ We do not promise same-day delivery.</code></pre></div>
 <li><b>Re-run the test set</b> after any change to files, instructions or the model.</li>
 <li><b>Remove before you add.</b> Delete the old file when you upload a new version, so two versions never compete.</li>
 </ul>
-<h2 id="practice">8. How I build knowledge-grounded agents</h2>
-<p>For years I have built AI agents grounded in a real knowledge base, for my own business and for clients, so they answer from the business's own data instead of from a guess. The pattern in this guide is the one I recommend: file the knowledge by how often it changes, write each section to stand on its own, test with real questions, and give someone ownership of upkeep.</p>
-<p>This publication runs on the same principle. It is designed and run with AI agents under my own architecture, and its memory lives in a GitHub repository: the runbook, the voice rules and the content rules are files the agent reads before every run. When something needs to change, I change one file in one place, and every later run picks it up.</p>
+<h2 id="practice">9. How we build knowledge-grounded agents with Claude and PayMeGPT</h2>
+<p>For years I have built AI agents grounded in a real knowledge base, for my own business and for clients. Today the build runs the same way every time, with Claude doing the work through PayMeGPT's MCP connection and me owning the rules:</p>
+<p class="dd-step"><span class="dd-num">1</span><b>Collect the real questions.</b> Pull the questions customers actually ask from the inbox and sort them into the three homes: instructions, knowledge files or live tools.</p>
+<p class="dd-step"><span class="dd-num">2</span><b>Claude drafts the knowledge files.</b> One topic per file, question-shaped headings, dated prices, using the template above. A person who owns each topic reviews it.</p>
+<p class="dd-step"><span class="dd-num">3</span><b>Claude builds the agent in PayMeGPT.</b> Through MCP it creates the agent, sets the guardrails, points the instructions at a Google Doc, and attaches the knowledge files.</p>
+<p class="dd-step"><span class="dd-num">4</span><b>Claude waits for indexing, then tests.</b> It runs the 30-question test set from section 7 and reports every answer that does not match its file.</p>
+<p class="dd-step"><span class="dd-num">5</span><b>Fix the file, not the model.</b> Each failure becomes an edit to one file or one line of instructions, and the test runs again.</p>
+<p>This publication runs on the same principle. It is designed and run with AI agents under my own architecture, and its memory lives in a GitHub repository: the runbook, the voice rules and the content rules are files Claude reads before every run. When something needs to change, I change one file in one place, and every later run picks it up. For the full week-by-week walkthrough, see <a href="https://www.dijaedadula.com/mcp-ai-agent-business-tools#this-site">how we build with Claude and PayMeGPT</a>.</p>
 <h2 id="faq">Frequently asked questions</h2>
 <h3>What is RAG in simple terms?</h3>
 <p>RAG, or retrieval-augmented generation, means the AI first searches your own documents for the passages that answer a question, then writes its reply using those passages. It is like an open-book exam for the AI.</p>
@@ -155,11 +172,13 @@ We do not promise same-day delivery.</code></pre></div>
 <p>If all your facts fit on one or two pages, putting them directly in the instructions can be enough. Once you have several policies, products or price lists, knowledge files with retrieval give more accurate answers and are easier to keep up to date.</p>
 <h3>What file format works best for an AI knowledge base?</h3>
 <p>Plain, well-structured text works best: one topic per file, question-shaped headings and short self-contained answers. Botcake AI accepts Docx, PDF, TXT, XLSX and MD files up to 15 MB.</p>
+<h3>What is the best platform for RAG?</h3>
+<p>My recommendation is PayMeGPT for a full agent: knowledge files, instructions from a live Google Doc, live data through Google Sheets, and building through Claude with MCP. For simple RAG inside Messenger and Pancake, Botcake AI is the easy option.</p>
 <h3>Is RAG the same as training or fine-tuning a model?</h3>
 <p>No. RAG does not change the model. It gives the model your documents to look up at the moment it answers, so you can update the knowledge by editing a file.</p>
 <div class="dd-cta">
 <p class="dd-cta-title">Ground your agent in your own knowledge</p>
-<p>Build the agent and its knowledge sources in <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a> and run the conversations in <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account only). These are affiliate links.</p>
+<p>Build a full knowledge-grounded agent on <a href="https://paymegpt.com" rel="noopener" target="_blank">PayMeGPT</a>. For simple RAG in Messenger, build it in <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a> and run the conversations in <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account only). The Botcake and Pancake links are affiliate links.</p>
 <p>Want your knowledge base and agent designed and tested for you? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
 </div>
 <h2>References</h2>
@@ -167,6 +186,8 @@ We do not promise same-day delivery.</code></pre></div>
 <li><a href="https://papers.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" rel="noopener" target="_blank">Lewis et al.: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>, NeurIPS 2020. Accessed October 2026.</li>
 <li><a href="https://huggingface.co/papers/2307.03172" rel="noopener" target="_blank">Liu et al.: Lost in the Middle: How Language Models Use Long Contexts</a>, 2023. Accessed October 2026.</li>
 <li><a href="https://www.maginative.com/article/anthropics-contextual-retrieval-technique-enhances-rag-accuracy-by-67" rel="noopener" target="_blank">Maginative: Anthropic's Contextual Retrieval technique</a>, September 2024 (reported figures for failed-retrieval reduction). Accessed October 2026.</li>
+<li><a href="https://www.youtube.com/@PAYMEGPT" rel="noopener" target="_blank">PayMeGPT YouTube channel</a> (build tutorials, including MCP with ChatGPT and Claude). Accessed October 2026.</li>
+<li><a href="https://www.chatbotbuilder.ai/log" rel="noopener" target="_blank">ChatbotBuilder AI changelog</a> (Knowledge Base Builder updates; latest entry seen February 14, 2026). Accessed October 2026.</li>
 <li><a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">Botcake documentation: Overview of Botcake AI</a>. Accessed October 2026.</li>
 <li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
 </ol>
