@@ -1,6 +1,16 @@
 {
  "posts": [
   {
+   "slug": "rag-ai-agent-business-knowledge",
+   "title": "How to Ground an AI Agent in Your Business Knowledge (RAG Explained for Business Owners)",
+   "blurb": "Stop your agent inventing answers: the one-fact-one-home rule, knowledge files that work, a Botcake setup and a retrieval test."
+  },
+  {
+   "slug": "mcp-ai-agent-business-tools",
+   "title": "Build an AI Agent That Uses Your Business Tools With MCP (Practical Guide)",
+   "blurb": "Connect an agent to your CRM with MCP: a safe first job, step-by-step setup, an instruction template, a permission ladder and tests."
+  },
+  {
    "slug": "chatrace-vs-chatbotbuilder",
    "title": "Chatrace vs ChatbotBuilder: Best Multichannel AI Chatbot for Small Businesses",
    "blurb": "Plans, channels, AI costs, white label and WhatsApp fees side by side, plus a trial test plan to choose on evidence."

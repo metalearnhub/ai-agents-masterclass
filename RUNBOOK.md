@@ -112,5 +112,5 @@ Add new vendor changelogs here when Dijae provides them.
 ## 13. /blog list (card grid)
 - Source of truth: pages/blog/list.json (newest first). After each new post: `python3 tools/blog_list.py <slug> "<H1>" "<blurb>"` (or `tools/blog_patch.py`, same args) → writes pages/blog/list.html and blog_patch.json.
 - Apply blog_patch.json with patch_page (page 51cab93b-…, dry_run false), publish custom_path blog, render at 1280 and 420 and check the gap above the "New posts every week" line.
-- Heights: headless measure + padding (+68 desktop, +208 mobile) because the live render runs taller. Re-tune if the gap drifts as posts are added.
+- Heights: headless measure + per-post padding (2.3px desktop, 7.8px mobile per card) because the live render runs taller. Check the gap above "New posts every week" after every update.
 - Mobile header shows Home (n_0207) next to Subscribe.

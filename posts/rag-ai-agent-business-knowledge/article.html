@@ -1,0 +1,180 @@
+<div class="dd-article">
+<!--COVER-->
+<p>Ask a general AI model about your return policy and it will answer with confidence. The answer will sound right, read well, and have nothing to do with your actual policy. The model learned from the public internet. It has never seen your price list, your delivery areas or the exceptions your team makes every day. Retrieval-augmented generation, usually shortened to RAG, is how you make an AI agent answer from your business knowledge instead of from a good guess.</p>
+<p>This guide is for business owners, consultants and teams who run, or plan to run, an AI agent that talks to customers or staff. You will get RAG in plain English, a simple rule for where each fact belongs, how to prepare knowledge files the agent can actually use, the setup in Botcake AI with real screens, a test plan with acceptance criteria, and how to keep it all current.</p>
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>What <b>RAG</b> is and why it beats pasting everything into the prompt.</li>
+<li>The <b>one-fact, one-home rule</b>: instructions, knowledge files or live tools.</li>
+<li>A copy-ready <b>knowledge file template</b>.</li>
+<li>The <b>Botcake AI setup</b> for knowledge sources, step by step.</li>
+<li>A <b>retrieval test</b> with acceptance criteria and a monthly upkeep routine.</li>
+</ul>
+</div>
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#why">Why agents make things up</a></li>
+<li><a href="#how">How RAG works in plain English</a></li>
+<li><a href="#where">Where each fact belongs</a></li>
+<li><a href="#prepare">Prepare knowledge the agent can use</a></li>
+<li><a href="#botcake">Set it up in Botcake AI</a></li>
+<li><a href="#test">Test the retrieval</a></li>
+<li><a href="#maintain">Keep it current</a></li>
+<li><a href="#practice">How I build knowledge-grounded agents</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+<h2 id="why">1. Why agents make things up</h2>
+<p>A language model is trained to produce the most likely next words. When it knows the answer, likely and correct are the same thing. When it does not, likely still sounds correct. That is why a model with no access to your business will invent a delivery fee, a store hour or a warranty term rather than say "I do not know".</p>
+<p>So why does this matter? Because in a customer conversation, a confident wrong answer is worse than no answer. The customer acts on it, your team has to correct it, and trust drops on both sides.</p>
+<p>RAG fixes the cause instead of the symptom. The research paper that named it, by Patrick Lewis and colleagues in 2020, described models that combine what the model learned in training with a searchable store of documents it can look things up in. For a business, that store is your own knowledge.</p>
+<h2 id="how">2. How RAG works in plain English</h2>
+<p>Think of an open-book exam. Without RAG, the agent answers from memory. With RAG, it first looks up the right pages in your book, then answers using those pages.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 310" role="img" aria-labelledby="fr1t fr1d" xmlns="http://www.w3.org/2000/svg">
+<title id="fr1t">How retrieval-augmented generation answers a customer question</title>
+<desc id="fr1d">Five steps. One, a customer asks: do you deliver to Cebu? Two, the system searches your knowledge for matching passages. Three, it picks the top passages, such as the delivery policy and shipping rates. Four, the model writes an answer using only those passages. Five, the reply goes out grounded in your own files. A dashed line shows your knowledge, meaning policies, prices, FAQs and product files, feeding the search step.</desc>
+<defs><marker id="fr1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect x="0" y="0" width="640" height="310" rx="14" fill="#f6f8fa"/>
+<text x="24" y="34" class="svg-k">HOW RAG ANSWERS A QUESTION</text>
+<rect x="24" y="56" width="176" height="78" rx="10" fill="#fff" stroke="#007a66"/><text x="38" y="82" class="svg-t">1. Question</text><text x="38" y="104" class="svg-s">"Do you deliver</text><text x="38" y="121" class="svg-s">to Cebu?"</text>
+<rect x="232" y="56" width="176" height="78" rx="10" fill="#fff" stroke="#007a66"/><text x="246" y="82" class="svg-t">2. Search</text><text x="246" y="104" class="svg-s">Find the passages</text><text x="246" y="121" class="svg-s">that match</text>
+<rect x="440" y="56" width="176" height="78" rx="10" fill="#e8f4f1" stroke="#007a66"/><text x="454" y="82" class="svg-t">3. Top passages</text><text x="454" y="104" class="svg-s">Delivery policy,</text><text x="454" y="121" class="svg-s">shipping rates</text>
+<rect x="440" y="176" width="176" height="78" rx="10" fill="#007a66" stroke="#007a66"/><text x="454" y="202" class="svg-w">4. Model answers</text><text x="454" y="224" class="svg-ws">Using only those</text><text x="454" y="241" class="svg-ws">passages</text>
+<rect x="232" y="176" width="176" height="78" rx="10" fill="#fff" stroke="#007a66"/><text x="246" y="202" class="svg-t">5. Answer + source</text><text x="246" y="224" class="svg-s">Reply grounded in</text><text x="246" y="241" class="svg-s">your own files</text>
+<path d="M204 95 L226 95" stroke="#5b6470" stroke-width="1.6" fill="none" marker-end="url(#fr1a)"/>
+<path d="M412 95 L434 95" stroke="#5b6470" stroke-width="1.6" fill="none" marker-end="url(#fr1a)"/>
+<path d="M528 138 L528 170" stroke="#5b6470" stroke-width="1.6" fill="none" marker-end="url(#fr1a)"/>
+<path d="M436 215 L414 215" stroke="#5b6470" stroke-width="1.6" fill="none" marker-end="url(#fr1a)"/>
+<rect x="24" y="176" width="176" height="78" rx="10" fill="#fff4ec" stroke="#c2410c"/><text x="38" y="202" class="svg-t">Your knowledge</text><text x="38" y="224" class="svg-s">Policies, prices, FAQs,</text><text x="38" y="241" class="svg-s">product files</text>
+<path d="M112 172 C112 150 280 150 300 138" stroke="#c2410c" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#fr1a)"/>
+<text x="24" y="290" class="svg-o">The model writes the reply. Your files decide what it is allowed to say.</text>
+</svg>
+<figcaption><b>Figure N.</b> Retrieval-augmented generation in five steps. The search step is where most wrong answers start, which is why the quality of your files matters more than the model.</figcaption>
+</figure>
+<p>Two things follow from this picture. First, the agent can only be as right as the passage it finds, so the search step matters as much as the model. Second, you do not need a bigger model to fix most wrong answers. You need better files and a better search.</p>
+<p>Why not paste everything into the prompt? For a small business with one page of facts, that can work. As the knowledge grows, it stops working well. Research by Nelson Liu and colleagues in 2023 found that models use information at the start and end of a long input best, and perform noticeably worse when the relevant part sits in the middle. A focused search that hands the model the three right passages beats a wall of text.</p>
+<h2 id="where">3. Where each fact belongs</h2>
+<p>Most knowledge problems are not search problems. They are filing problems: the same price lives in the instructions, in two files and in an old website page, and they disagree. Decide where each fact lives by how often it changes.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 262" role="img" aria-labelledby="fr2t fr2d" xmlns="http://www.w3.org/2000/svg">
+<title id="fr2t">Where each business fact belongs in an AI agent</title>
+<desc id="fr2d">An arrow shows how often a fact changes, from rarely to every minute. Facts that change rarely, such as who you are, tone, rules and handoff, go in the instructions. Facts that change weekly or monthly, such as policies, FAQs, price lists and product details, go in knowledge files used by RAG. Facts that change every hour or minute, such as stock, bookings, order status and account data, come from live tools through an API or MCP.</desc>
+<defs><marker id="fr2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect x="0" y="0" width="640" height="262" rx="14" fill="#f6f8fa"/>
+<text x="24" y="34" class="svg-k">WHERE EACH FACT BELONGS</text>
+<text x="24" y="58" class="svg-s">How often the fact changes</text>
+<path d="M24 76 L606 76" stroke="#5b6470" stroke-width="1.6" marker-end="url(#fr2a)"/>
+<text x="24" y="102" class="svg-k">RARELY</text><rect x="24" y="114" width="180" height="96" rx="10" fill="#fff" stroke="#007a66"/><text x="38" y="142" class="svg-t">Instructions</text><text x="38" y="168" class="svg-s">Who you are, tone,</text><text x="38" y="186" class="svg-s">rules, handoff</text>
+<text x="230" y="102" class="svg-k">WEEKLY OR MONTHLY</text><rect x="230" y="114" width="180" height="96" rx="10" fill="#007a66" stroke="#007a66"/><text x="244" y="142" class="svg-w">Knowledge files</text><text x="244" y="168" class="svg-ws">Policies, FAQs, price</text><text x="244" y="186" class="svg-ws">lists, product details</text>
+<text x="436" y="102" class="svg-k">EVERY HOUR OR MINUTE</text><rect x="436" y="114" width="180" height="96" rx="10" fill="#fff4ec" stroke="#c2410c"/><text x="450" y="142" class="svg-t">Live tools (API, MCP)</text><text x="450" y="168" class="svg-s">Stock, bookings, order</text><text x="450" y="186" class="svg-s">status, account data</text>
+<text x="24" y="242" class="svg-o">One fact, one home. Duplicates are where contradictions come from.</text>
+</svg>
+<figcaption><b>Figure N.</b> Put each fact where its update speed fits. Instructions for what rarely changes, knowledge files for what changes on a schedule, live tools for what changes all day.</figcaption>
+</figure>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Where</th><th>Put here</th><th>Do not put here</th></tr></thead>
+<tbody>
+<tr><td><b>Instructions</b></td><td>Role, tone, rules, what to never say, when to hand off</td><td>Prices, stock, long policy text</td></tr>
+<tr><td><b>Knowledge files</b></td><td>Policies, FAQs, product and service details, price lists with a date</td><td>Anything that changes during the day</td></tr>
+<tr><td><b>Live tools</b></td><td>Stock, bookings, order status, customer account data</td><td>Static policies that never change</td></tr>
+</tbody>
+</table></div>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span>One fact, one home. Every price, policy and promise lives in exactly one place, and that place has an owner and a last-updated date. When the agent gives a wrong answer, you should be able to find the one line to fix in under a minute.</div>
+<p>Live data is a different job: connect the system itself through an integration or MCP. See <a href="https://www.dijaedadula.com/mcp-ai-agent-business-tools">how to build an AI agent that uses your business tools with MCP</a>.</p>
+<h2 id="prepare">4. Prepare knowledge the agent can use</h2>
+<p>A search system does not read your files the way a person does. It splits them into small passages and finds the passages closest to the question. A passage that only makes sense next to the paragraph before it will often be found without its context, or not found at all.</p>
+<p>Research on this exact problem backs the point. Anthropic reported in September 2024 that adding a short piece of context to each passage before indexing cut failed retrievals by about 35%, about 49% when combined with keyword search, and about 67% when the results were also reranked. You do not need to build that pipeline to use the lesson: write every section so it stands on its own.</p>
+<ul>
+<li><b>One topic per file.</b> "Delivery and shipping", "Returns and refunds", "Product: Model X". Not "Everything 2026 final v3".</li>
+<li><b>Headings shaped like questions.</b> Customers ask questions, so the search matches question-shaped headings better.</li>
+<li><b>Repeat the subject.</b> Write "Delivery to Cebu takes 3 to 5 days", not "It takes 3 to 5 days".</li>
+<li><b>Date your numbers.</b> Every price and fee gets "as of" and a date.</li>
+<li><b>Say what you do not do.</b> "We do not deliver outside the Philippines" prevents a whole class of invented answers.</li>
+</ul>
+<p>A template you can copy for each knowledge file (every detail below is an illustrative example):</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>FILE: Delivery and shipping
+OWNER: [Name]    LAST UPDATED: [Date]
+
+## Do you deliver to [area]?
+Yes. We deliver to [areas]. We do not deliver to [areas].
+
+## How long does delivery take to [area]?
+Delivery to Metro Manila takes [X] business days.
+Delivery to provinces takes [X] to [Y] business days.
+
+## How much is the delivery fee? (as of [Date])
+Delivery to Metro Manila costs [amount].
+Orders above [amount] get free delivery.
+
+## What if my order is late?
+If an order is more than [X] days late, the agent hands
+the customer to a person on the team.
+
+## What we do NOT promise
+We do not promise same-day delivery.</code></pre></div>
+<h2 id="botcake">5. Set it up in Botcake AI</h2>
+<p>Botcake AI keeps knowledge in a shared library, then lets each agent use the files it needs. The setup from Botcake's left menu, under <span class="dd-ui">Botcake AI</span>:</p>
+<p class="dd-step"><span class="dd-num">1</span><b>Open the Knowledge source library.</b> It has two views: <span class="dd-ui">File instruction</span> for documents and <span class="dd-ui">Attachment</span> for images the agent can send. Use <span class="dd-ui">Upload</span> for files or <span class="dd-ui">Config</span> to pick files from Google Drive.</p>
+<figure class="dd-fig"><div class="dd-shot"><img src="https://statics.pancake.vn/web-media-264/43/aa/b9/b2/e7c20bc83a96f858f768f99dbb1d2ef574ecdc7d6986b878f660cdc3.webp" alt="Botcake AI Knowledge source page with File instruction and Attachment tabs, a Config button for Google Drive and an Upload button" loading="lazy"></div><figcaption><b>Figure N.</b> The <span class="dd-ui">Knowledge source</span> library in Botcake AI: <span class="dd-ui">File instruction</span> for documents, <span class="dd-ui">Attachment</span> for images the agent can send, <span class="dd-ui">Config</span> for Google Drive and <span class="dd-ui">Upload</span>. File names are blurred.</figcaption></figure>
+<p class="dd-step"><span class="dd-num">2</span><b>Upload your files or add a website.</b> <span class="dd-ui">Upload</span> opens <span class="dd-ui">Import data</span>. You can add Docx, PDF, TXT, XLSX or MD files up to 15 MB, or enter a website domain and click <span class="dd-ui">Check URL</span> so the AI searches that site live each time it answers. Live web search only works with Botcake AI models, and sites with pop-ups or anti-robot checks may block it.</p>
+<figure class="dd-fig"><div class="dd-shot"><img src="https://statics.pancake.vn/web-media-264/b0/2f/37/6b/cbb58ac7b7fa1474cd368d26de94a8e527c9dfc0e72ae90f8fc600c0.webp" alt="Botcake AI Import data window with a drag-and-drop upload area for files and a field to search web content by domain" loading="lazy"></div><figcaption><b>Figure N.</b> <span class="dd-ui">Import data</span>: upload a file, or add a website domain the AI searches live when it answers.</figcaption></figure>
+<p class="dd-step"><span class="dd-num">3</span><b>Attach the files to the agent.</b> Open the agent, go to the <span class="dd-ui">Knowledge</span> tab, click <span class="dd-ui">Add files</span>, tick the files or links from the library, and click <span class="dd-ui">Add to instruction</span>. Give each agent only the files its job needs.</p>
+<figure class="dd-fig"><div class="dd-shot"><img src="https://statics.pancake.vn/web-media-264/f7/d0/9e/d2/0612d5a0dacde0beac724f004e6d9835fc57406b398dbc715db1f24a.webp" alt="Botcake AI Add files knowledge window with File instructions and Link URL tabs, an Upload button, a file list with checkboxes and the Add to instruction button" loading="lazy"></div><figcaption><b>Figure N.</b> <span class="dd-ui">Add files knowledge</span> inside an agent: pick files or links from the shared library, then <span class="dd-ui">Add to instruction</span>. File names are blurred.</figcaption></figure>
+<p class="dd-step"><span class="dd-num">4</span><b>Test in Preview before you go live.</b> Ask the questions from your test set in the agent's <span class="dd-ui">Preview</span> and compare every answer with the file it should come from.</p>
+<p>For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">here</a>. For the full agent setup, including instructions and handoff, see the <a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake setup guide</a>.</p>
+<div class="dd-warn"><span class="dd-note-label">Watch out</span>A website URL as a knowledge source is convenient, but the agent then answers from whatever that site says today, including old pages and blog posts with outdated prices. Use files you control for prices and policies, and keep the live website source for general information.</div>
+<h2 id="test">6. Test the retrieval</h2>
+<p>If you cannot test it, do not ship it. Build a test set of 30 real questions, taken from your inbox, not invented by you: 20 your files answer, 5 your files do not answer, and 5 tricky ones (two products with similar names, a policy with an exception, a question in a different order of words).</p>
+<p><b>Acceptance criteria before the agent goes live:</b></p>
+<ul>
+<li><b>Grounded accuracy:</b> at least 19 of the 20 answerable questions are correct and match the file they should come from.</li>
+<li><b>Honest gaps:</b> all 5 unanswerable questions get "I do not have that information" plus a handoff, with zero invented answers.</li>
+<li><b>No contradictions:</b> the tricky questions return the right product or exception, not a blend of two.</li>
+<li><b>Freshness:</b> change one price in a file, re-run the price questions, and confirm the agent uses the new price.</li>
+</ul>
+<p>After launch, the metric to watch is the share of conversations where a person had to correct the agent, tracked weekly. If it rises, look at the files first, not the model. The full method is in <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">how to test an AI chatbot before it talks to your customers</a>.</p>
+<p>An honest limitation: RAG reduces invented answers, but it does not remove them. The search can return the wrong passage, and the model can still misread the right one. That is why the test set includes questions your files do not answer, and why every customer-facing agent needs a clear <a href="https://www.dijaedadula.com/ai-chatbot-human-handoff">handoff to a human</a>.</p>
+<h2 id="maintain">7. Keep it current</h2>
+<p>Knowledge goes stale quietly. Nobody announces that a delivery fee changed; the agent just starts being wrong. A simple monthly routine prevents most of it:</p>
+<ul>
+<li><b>Review every file with an owner.</b> Update the date even when nothing changed, so you know it was checked.</li>
+<li><b>Read the unanswered questions.</b> Every "I do not have that information" is a candidate for a new entry.</li>
+<li><b>Re-run the test set</b> after any change to files, instructions or the model.</li>
+<li><b>Remove before you add.</b> Delete the old file when you upload a new version, so two versions never compete.</li>
+</ul>
+<h2 id="practice">8. How I build knowledge-grounded agents</h2>
+<p>For years I have built AI agents grounded in a real knowledge base, for my own business and for clients, so they answer from the business's own data instead of from a guess. The pattern in this guide is the one I recommend: file the knowledge by how often it changes, write each section to stand on its own, test with real questions, and give someone ownership of upkeep.</p>
+<p>This publication runs on the same principle. It is designed and run with AI agents under my own architecture, and its memory lives in a GitHub repository: the runbook, the voice rules and the content rules are files the agent reads before every run. When something needs to change, I change one file in one place, and every later run picks it up.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is RAG in simple terms?</h3>
+<p>RAG, or retrieval-augmented generation, means the AI first searches your own documents for the passages that answer a question, then writes its reply using those passages. It is like an open-book exam for the AI.</p>
+<h3>Do I need RAG if my business is small?</h3>
+<p>If all your facts fit on one or two pages, putting them directly in the instructions can be enough. Once you have several policies, products or price lists, knowledge files with retrieval give more accurate answers and are easier to keep up to date.</p>
+<h3>What file format works best for an AI knowledge base?</h3>
+<p>Plain, well-structured text works best: one topic per file, question-shaped headings and short self-contained answers. Botcake AI accepts Docx, PDF, TXT, XLSX and MD files up to 15 MB.</p>
+<h3>Is RAG the same as training or fine-tuning a model?</h3>
+<p>No. RAG does not change the model. It gives the model your documents to look up at the moment it answers, so you can update the knowledge by editing a file.</p>
+<div class="dd-cta">
+<p class="dd-cta-title">Ground your agent in your own knowledge</p>
+<p>Build the agent and its knowledge sources in <a href="https://www.dijaedadula.com/botcake" rel="sponsored nofollow">Botcake</a> and run the conversations in <a href="https://www.dijaedadula.com/pancake" rel="sponsored nofollow">Pancake</a>. Use coupon <b>CHAMP20</b> for 20% off all Pancake plans plus 30 days free (new Pancake customers or a new billing account only). These are affiliate links.</p>
+<p>Want your knowledge base and agent designed and tested for you? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://papers.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" rel="noopener" target="_blank">Lewis et al.: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>, NeurIPS 2020. Accessed October 2026.</li>
+<li><a href="https://huggingface.co/papers/2307.03172" rel="noopener" target="_blank">Liu et al.: Lost in the Middle: How Language Models Use Long Contexts</a>, 2023. Accessed October 2026.</li>
+<li><a href="https://www.maginative.com/article/anthropics-contextual-retrieval-technique-enhances-rag-accuracy-by-67" rel="noopener" target="_blank">Maginative: Anthropic's Contextual Retrieval technique</a>, September 2024 (reported figures for failed-retrieval reduction). Accessed October 2026.</li>
+<li><a href="https://docs.pancake.biz/botcake/st-f4/st-p5/st-s1?lang=en" rel="noopener" target="_blank">Botcake documentation: Overview of Botcake AI</a>. Accessed October 2026.</li>
+<li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake Setup Guide</a>, Dijae Dadula, October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/mcp-ai-agent-business-tools">Build an AI Agent That Uses Your Business Tools With MCP</a></li>
+<li><a href="https://www.dijaedadula.com/ai-agent-instructions-template">How to Write AI Agent Instructions for Any Business</a></li>
+<li><a href="https://www.dijaedadula.com/chatbot-sound-human">How to Make Your Chatbot Sound Human, Not Robotic</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>

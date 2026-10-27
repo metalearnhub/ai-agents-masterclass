@@ -29,8 +29,8 @@ html="\n".join(out).replace('"',"'")
 open(os.path.join(ROOT,'pages/blog/list.html'),'w').write(html)
 cmd=['node',os.path.join(ROOT,'tools/measure_list.js'),os.path.join(ROOT,'pages/blog/list.html')]+([shot] if shot else [])
 m=json.loads(subprocess.check_output(cmd,cwd=os.path.join(ROOT,'tools')).decode().strip().splitlines()[-1])
-# live Webcake render runs taller than the headless measure (wider letter-spacing): pad +68 desktop, +208 mobile
-DH=math.ceil(m['640'])+68; MH=math.ceil(m['380'])+208
+# live Webcake render runs taller than the headless measure (wider letter-spacing); the gap grows with each card, so pad per post
+n=len(d['posts']); DH=math.ceil(m['640']+2.3*n); MH=math.ceil(m['380']+7.8*n)
 TD,TM=162,130            # list top (desktop, mobile)
 CD,CM=TD+DH+36,TM+MH+28  # CTA t_0241 top
 P=[{"op":"replace","id":"t_0240","element":{"id":"t_0240","type":"editor-blog","specials":{"html":html},
