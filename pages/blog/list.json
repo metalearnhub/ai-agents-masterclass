@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "ai-agent-guardrails",
+   "title": "How to Stop an AI Agent From Making Things Up: Guardrails for Business Chatbots",
+   "blurb": "Five layers of guardrails, a copy-ready template, prompt injection in plain English and a pre-launch test."
+  },
+  {
    "slug": "rag-ai-agent-business-knowledge",
    "title": "How to Ground an AI Agent in Your Business Knowledge (RAG Explained for Business Owners)",
    "blurb": "Stop your agent inventing answers: the one-fact-one-home rule, knowledge files that work, a Botcake setup and a retrieval test."
