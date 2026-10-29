@@ -191,22 +191,45 @@
   {
    "date": "2026-10-15",
    "slug": "what-is-an-ai-agent",
-   "info": "posted now: https://www.facebook.com/1579937777474981/posts/1782018600600230"
+   "info": "posted now: https://www.facebook.com/1579937777474981/posts/1782018600600230",
+   "url": "https://www.facebook.com/1579937777474981/posts/1782018600600230"
   },
   {
    "date": "2026-10-19",
    "slug": "turn-skills-into-ai-income",
-   "info": "scheduled post id 4836, Mon 2026-10-19 09:00 Manila"
+   "info": "scheduled post id 4836, Mon 2026-10-19 09:00 Manila",
+   "url": "https://www.facebook.com/1579937777474981/posts/1786423296826427"
   },
   {
    "date": "2026-10-26",
    "slug": "dont-automate-chaos",
-   "info": "4933"
+   "info": "4933",
+   "url": "https://www.facebook.com/1579937777474981/posts/1794413596027397"
   },
   {
    "date": "2026-11-02",
    "slug": "ai-chatbot-for-small-business",
    "info": "post 5182 scheduled Mon 2026-11-02 09:00 Manila"
+  },
+  {
+   "date": "2026-10-15",
+   "slug": "botcake-ai-pancake-setup-guide",
+   "info": "posted manually by Dijae (YouTube walkthrough post)",
+   "url": "https://www.facebook.com/1579937777474981/posts/1781927573942666"
+  },
+  {
+   "date": "2026-10-29",
+   "slug": "data-privacy-act-chatbots-philippines",
+   "info": "posted now with the blog (new-post rule)",
+   "url": "https://www.facebook.com/1579937777474981/posts/1798584785610278",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793242747703-b3abdd4c8b25f862.png"
+  },
+  {
+   "date": "2026-10-29",
+   "slug": "automate-lead-follow-up",
+   "info": "post 5248 scheduled Thu 2026-10-29 18:00 Manila (backlog)",
+   "url": "",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793242865449-faf2b87fd707d02a.png"
   }
  ]
 }
