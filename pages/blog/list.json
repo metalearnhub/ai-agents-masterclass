@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "data-privacy-act-chatbots-philippines",
+   "title": "Philippine Data Privacy Act for Chatbots: Collecting Leads in Messenger the Right Way",
+   "blurb": "When you need consent, a copy-ready consent message, the 72-hour breach rule and a pre-launch checklist."
+  },
+  {
    "slug": "ai-agent-guardrails",
    "title": "How to Stop an AI Agent From Making Things Up: Guardrails for Business Chatbots",
    "blurb": "Five layers of guardrails, a copy-ready template, prompt injection in plain English and a pre-launch test."

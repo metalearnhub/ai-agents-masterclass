@@ -1,0 +1,187 @@
+<div class="dd-article">
+<!--COVER-->
+<p>A Messenger chatbot is one of the fastest ways for a Philippine business to collect leads. It asks for a name, a mobile number, a delivery address, sometimes a budget or a date. Every one of those answers is personal information under the Data Privacy Act of 2012, and the business that runs the chatbot is responsible for how it is collected, used, stored and deleted.</p>
+<p>This guide is for business owners, marketers and agencies in the Philippines who run chatbots on Messenger, Instagram, a website or WhatsApp. You will get the three principles that matter most in a chat, when you need consent and when you do not, a copy-ready consent message, what never to ask in a chatbot, how to handle requests to delete data, the 72-hour breach rule, and a compliance checklist you can use before launch.</p>
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>Why chatbot leads are <b>personal information</b> under RA 10173.</li>
+<li>The three principles applied to a chat: <b>transparency, legitimate purpose, proportionality</b>.</li>
+<li>When you need <b>consent</b>, and when another lawful basis applies.</li>
+<li>A copy-ready <b>in-chat privacy notice and consent message</b>.</li>
+<li>Data subject rights, the <b>72-hour breach rule</b> and NPC registration triggers.</li>
+<li>A <b>pre-launch compliance checklist</b>.</li>
+</ul>
+</div>
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#why">Why chatbot leads are covered</a></li>
+<li><a href="#principles">Three principles in a chat</a></li>
+<li><a href="#basis">Consent or another lawful basis</a></li>
+<li><a href="#notice">A consent message that works</a></li>
+<li><a href="#sensitive">What never to ask in a chatbot</a></li>
+<li><a href="#rights">Rights, breaches and registration</a></li>
+<li><a href="#vendors">Your chatbot platform is a processor</a></li>
+<li><a href="#checklist">Pre-launch checklist</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+<h2 id="why">1. Why chatbot leads are covered</h2>
+<p>The Data Privacy Act of 2012 (Republic Act No. 10173) applies to the processing of personal information: any information from which a person's identity is apparent or can reasonably be determined. A name with a mobile number qualifies. So does a Messenger profile linked to a delivery address. Collecting, recording, storing, using, sharing and deleting are all processing.</p>
+<p>So why does this matter for a chatbot in particular? Because a chatbot collects at scale and without a person in the loop. A sales agent who asks one customer an unnecessary question makes one mistake. A chatbot flow that asks every visitor for a birthday, a full address and a photo of an ID repeats that mistake thousands of times, and stores the answers in a platform you may not fully control.</p>
+<p>The National Privacy Commission (NPC) enforces the law. Its Implementing Rules and Regulations, as amended, set the details used throughout this guide.</p>
+<h2 id="principles">2. Three principles in a chat</h2>
+<p>The law rests on three general principles. Each one turns into a concrete design rule for a chatbot.</p>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 300" role="img" aria-labelledby="fp1t fp1d" xmlns="http://www.w3.org/2000/svg">
+<title id="fp1t">The three data privacy principles applied to a chatbot</title>
+<desc id="fp1d">Three columns. Transparency: tell people who you are, what you collect and why, before you ask; link the full privacy notice. Legitimate purpose: use the data only for the purpose you stated, such as delivering the order or sending the quote; new uses need a new basis. Proportionality: ask only what the next step needs; no birthdays, IDs or extra fields just in case.</desc>
+<rect x="0" y="0" width="640" height="300" rx="14" fill="#f6f8fa"/>
+<text x="24" y="34" class="svg-k">THREE PRINCIPLES, THREE CHATBOT RULES</text>
+<rect x="24" y="54" width="184" height="220" rx="12" fill="#fff" stroke="#007a66"/>
+<rect x="24" y="54" width="184" height="44" rx="12" fill="#e8f4f1"/>
+<text x="40" y="82" class="svg-t">Transparency</text>
+<text x="40" y="124" class="svg-s">Say who you are, what</text><text x="40" y="142" class="svg-s">you collect and why,</text><text x="40" y="160" class="svg-s">before you ask.</text>
+<text x="40" y="196" class="svg-o">In the chat:</text><text x="40" y="214" class="svg-s">a short notice plus a</text><text x="40" y="232" class="svg-s">link to the full policy</text>
+<rect x="228" y="54" width="184" height="220" rx="12" fill="#fff" stroke="#007a66"/>
+<rect x="228" y="54" width="184" height="44" rx="12" fill="#e8f4f1"/>
+<text x="244" y="82" class="svg-t">Legitimate purpose</text>
+<text x="244" y="124" class="svg-s">Use the data only for</text><text x="244" y="142" class="svg-s">the purpose you stated.</text>
+<text x="244" y="196" class="svg-o">In the chat:</text><text x="244" y="214" class="svg-s">quote today, marketing</text><text x="244" y="232" class="svg-s">only with a separate yes</text>
+<rect x="432" y="54" width="184" height="220" rx="12" fill="#fff" stroke="#c2410c"/>
+<rect x="432" y="54" width="184" height="44" rx="12" fill="#fff4ec"/>
+<text x="448" y="82" class="svg-t">Proportionality</text>
+<text x="448" y="124" class="svg-s">Collect only what the</text><text x="448" y="142" class="svg-s">next step needs.</text>
+<text x="448" y="196" class="svg-o">In the chat:</text><text x="448" y="214" class="svg-s">no birthday, ID or extra</text><text x="448" y="232" class="svg-s">fields "just in case"</text>
+</svg>
+<figcaption><b>Figure N.</b> Each principle of the Data Privacy Act becomes one design rule for a chatbot flow.</figcaption>
+</figure>
+<p>The rules define proportionality as processing that is "adequate, relevant, suitable, necessary, and not excessive" for a declared purpose. In chatbot terms: every question in your flow should have a reason you could explain to the customer in one sentence.</p>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span><p>Ask only for what the next step needs. A quote needs a product and a location, not a birthday. Every field you do not collect is a field you never have to protect, correct or delete.</p></div>
+<h2 id="basis">3. Consent or another lawful basis</h2>
+<p>Consent is not the only lawful basis for processing ordinary personal information. The rules list several, including consent, processing needed to fulfil an agreement with the customer, compliance with a legal obligation, and the legitimate interests of the business, unless the customer's fundamental rights override them.</p>
+<p>For a chatbot, two bases cover almost everything:</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>What the chatbot does</th><th>Likely basis</th><th>What to do in the flow</th></tr></thead>
+<tbody>
+<tr><td>Takes an order and asks for the delivery address</td><td>Needed to fulfil the customer's request</td><td>Explain why you need it; no separate tick box required</td></tr>
+<tr><td>Sends a quote the customer asked for</td><td>Needed to fulfil the customer's request</td><td>Keep the data to what the quote needs</td></tr>
+<tr><td>Adds the person to promotions and broadcasts</td><td>Consent</td><td>Ask separately, with a clear yes and an easy way out</td></tr>
+<tr><td>Shares leads with a partner or reseller</td><td>Consent, in most cases</td><td>Name who receives the data before you share it</td></tr>
+<tr><td>Asks about health, ID numbers or other sensitive information</td><td>Stricter rules apply</td><td>Avoid in the chatbot; move to a human and a secure channel</td></tr>
+</tbody>
+</table></div>
+<p>When you do rely on consent, it must be "freely given, specific, informed" and evidenced by written, electronic or recorded means. A logged button tap in a chat, with the notice the person saw, is an electronic record. A pre-ticked box, or consent buried in a long welcome message, is weak evidence.</p>
+<h2 id="notice">4. A consent message that works</h2>
+<p>A privacy notice in a chat has to be short, or nobody reads it. Put the essentials in the message and link the full privacy policy on your website. Separate consent for marketing from the request the person actually made.</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>MESSAGE 1 (before the first personal question)
+Hi! Before I take your details: [Business name] uses your name, mobile
+number and [address] only to [send your quote / deliver your order].
+We keep it for [period] and never sell it.
+Full privacy notice: [link]
+
+[ Continue ]   [ Talk to a person ]
+
+MESSAGE 2 (separate, after the request is handled)
+Want to hear about promos and new arrivals here in Messenger?
+You can stop anytime by typing STOP.
+
+[ Yes, send me promos ]   [ No thanks ]
+
+LOG FOR EACH CONTACT
+- Notice version shown + date and time
+- Button tapped (Continue / Yes / No)
+- Tag: consent_marketing = yes / no</code></pre></div>
+<figure class="dd-fig">
+<svg viewBox="0 0 640 250" role="img" aria-labelledby="fp2t fp2d" xmlns="http://www.w3.org/2000/svg">
+<title id="fp2t">A privacy-respecting chatbot lead flow</title>
+<desc id="fp2d">Five steps from left to right. One, short notice with a link to the full privacy policy. Two, ask only the fields the request needs. Three, fulfil the request: quote, order or booking. Four, a separate marketing opt-in with yes or no. Five, tag and log the choice with the notice version and time. Below, a note: a no at step four never blocks steps one to three.</desc>
+<defs><marker id="fp2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect x="0" y="0" width="640" height="250" rx="14" fill="#f6f8fa"/>
+<text x="24" y="34" class="svg-k">A PRIVACY-RESPECTING LEAD FLOW</text>
+<rect x="24" y="60" width="104" height="96" rx="10" fill="#fff" stroke="#007a66"/><text x="36" y="86" class="svg-t">1. Notice</text><text x="36" y="108" class="svg-s">Short, with</text><text x="36" y="126" class="svg-s">policy link</text>
+<rect x="148" y="60" width="104" height="96" rx="10" fill="#fff" stroke="#007a66"/><text x="160" y="86" class="svg-t">2. Ask</text><text x="160" y="108" class="svg-s">Only what</text><text x="160" y="126" class="svg-s">is needed</text>
+<rect x="272" y="60" width="104" height="96" rx="10" fill="#fff" stroke="#007a66"/><text x="284" y="86" class="svg-t">3. Deliver</text><text x="284" y="108" class="svg-s">Quote, order</text><text x="284" y="126" class="svg-s">or booking</text>
+<rect x="396" y="60" width="104" height="96" rx="10" fill="#fff4ec" stroke="#c2410c"/><text x="408" y="86" class="svg-t">4. Opt-in</text><text x="408" y="108" class="svg-s">Separate</text><text x="408" y="126" class="svg-s">yes or no</text>
+<rect x="520" y="60" width="96" height="96" rx="10" fill="#007a66"/><text x="532" y="86" class="svg-w">5. Log</text><text x="532" y="108" class="svg-ws">Choice made</text><text x="532" y="126" class="svg-ws">and when</text>
+<line x1="128" y1="108" x2="144" y2="108" stroke="#5b6470" stroke-width="1.5" marker-end="url(#fp2a)"/>
+<line x1="252" y1="108" x2="268" y2="108" stroke="#5b6470" stroke-width="1.5" marker-end="url(#fp2a)"/>
+<line x1="376" y1="108" x2="392" y2="108" stroke="#5b6470" stroke-width="1.5" marker-end="url(#fp2a)"/>
+<line x1="500" y1="108" x2="516" y2="108" stroke="#5b6470" stroke-width="1.5" marker-end="url(#fp2a)"/>
+<rect x="24" y="180" width="592" height="44" rx="10" fill="#e8f4f1"/>
+<text x="40" y="207" class="svg-s">A "no" at step 4 never blocks steps 1 to 3. The customer still gets what they asked for.</text>
+</svg>
+<figcaption><b>Figure N.</b> The request and the marketing opt-in are separate steps, and every choice is logged.</figcaption>
+</figure>
+<p>Notice the design choice in step four: saying no to promotions never blocks the quote or the order. Bundling marketing consent with the service the person asked for undermines the "freely given" part of consent.</p>
+<h2 id="sensitive">5. What never to ask in a chatbot</h2>
+<p>The law treats some data as sensitive personal information, with stricter rules for processing. It includes information about a person's health, ethnic origin, religious or political affiliation, and government-issued identifiers such as SSS or TIN numbers, among others.</p>
+<div class="dd-warn"><p>Keep sensitive information out of automated chat flows. A clinic's chatbot can book a consultation without asking for symptoms or a diagnosis. A lender's chatbot can capture interest without asking for an ID photo. When you truly need sensitive data, hand the conversation to a trained person and use a secure channel.</p></div>
+<p>This matters most for clinics, med spas, insurance, lending and recruitment. The <a href="https://www.dijaedadula.com/ai-automation-clinics-med-spas">clinic and med spa automation guide</a> shows how to automate bookings and reminders without collecting medical details in the chat. For AI agents, add a guardrail that stops the agent from asking for or repeating sensitive data; the method is in <a href="https://www.dijaedadula.com/ai-agent-guardrails">guardrails for business chatbots</a>.</p>
+<h2 id="rights">6. Rights, breaches and registration</h2>
+<p><b>Data subject rights.</b> The rules list the right to be informed, to object, to access, to rectification, to erasure or blocking, and to damages. In a chatbot, the most common request is some version of "Delete my details" or "Stop messaging me". Build for it before launch:</p>
+<ol>
+<li>Recognise the request: "stop", "unsubscribe", "delete my data", "remove me".</li>
+<li>Stop marketing at once and tag the contact.</li>
+<li>Route deletion or access requests to a named person, with a target response time.</li>
+<li>Delete or block the data in the chatbot platform and in every connected sheet or CRM.</li>
+<li>Confirm to the person what was done.</li>
+</ol>
+<p><b>The 72-hour breach rule.</b> The personal information controller must notify the NPC and affected data subjects within 72 hours of knowing, or reasonably believing, that a personal data breach requiring notification has occurred. A leaked lead sheet or a compromised chatbot account can trigger it. Decide in advance who investigates and who notifies.</p>
+<p><b>Registration with the NPC.</b> Under NPC Circular 2022-04, a business must register its data processing systems if it employs 250 or more persons, processes the sensitive personal information of at least 1,000 individuals, or processes data likely to pose a risk to people's rights and freedoms. Systems that involve automated decision-making or profiling must be registered in all instances. If your chatbot scores or segments leads automatically, ask your data protection officer whether it counts.</p>
+<h2 id="vendors">7. Your chatbot platform is a processor</h2>
+<p>When you run a chatbot on a platform, the platform processes personal data on your behalf. Under the law you remain the controller and stay responsible for that data, including what the platform, your agency and any connected tool does with it. Three practical steps:</p>
+<ul>
+<li><b>Know where the data goes.</b> List every place a lead lands: the chatbot platform, the inbox, a Google Sheet, the CRM, an email tool.</li>
+<li><b>Have a written outsourcing or data processing agreement</b> with the platform and any agency that touches the data, and read the platform's own data processing terms.</li>
+<li><b>Limit access.</b> Remove former staff and freelancers from the page, the chatbot and every sheet. Use roles instead of shared logins.</li>
+</ul>
+<p>The same discipline improves lead quality. A clean, minimal flow, like the one in <a href="https://www.dijaedadula.com/qualify-leads-messenger-automatically">how to qualify leads in Messenger automatically</a>, asks fewer questions and gets more complete answers.</p>
+<h2 id="checklist">8. Pre-launch checklist</h2>
+<p>Run this before a chatbot goes live, and again whenever you add a field, a channel or a connected tool. Treat any "no" as a launch blocker.</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Check</th><th>Pass when</th></tr></thead>
+<tbody>
+<tr><td>Field inventory</td><td>Every question in the flow has a one-sentence reason</td></tr>
+<tr><td>Notice</td><td>A short notice appears before the first personal question, with a working policy link</td></tr>
+<tr><td>Separate opt-in</td><td>Marketing consent is its own step; "no" does not block the request</td></tr>
+<tr><td>Consent log</td><td>Each contact shows the choice, notice version and time</td></tr>
+<tr><td>Sensitive data</td><td>No health, ID or other sensitive questions in automated steps</td></tr>
+<tr><td>Rights requests</td><td>"Stop" and "delete my data" are recognised and routed to a named person</td></tr>
+<tr><td>Data map</td><td>Every system that receives lead data is listed, with an agreement in place</td></tr>
+<tr><td>Access</td><td>Only current team members have access; no shared passwords</td></tr>
+<tr><td>Breach plan</td><td>A named owner and a 72-hour notification plan exist</td></tr>
+<tr><td>Retention</td><td>A deletion period is set and someone is responsible for it</td></tr>
+</tbody>
+</table></div>
+<p>Track one number after launch: the share of contacts with a logged consent choice. It should be close to 100% of everyone who reached the opt-in step. If it is not, the flow or the logging is broken.</p>
+<p>An honest limitation: I am not a lawyer, and this guide is a practical starting point, not legal advice. NPC circulars and advisories change, and your industry may carry extra rules. Have your data protection officer or counsel review your notice, your agreements and your retention periods.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Does the Data Privacy Act apply to small businesses with a Messenger chatbot?</h3>
+<p>Yes. The law applies to processing personal information, whatever the size of the business. Size affects whether you must register your systems with the NPC, not whether the law applies.</p>
+<h3>Do I need consent for every chatbot conversation?</h3>
+<p>Not always. When a customer asks for a quote or places an order, processing their details to deliver that request has its own lawful basis. Marketing messages, sharing with partners and sensitive information need consent or stricter grounds.</p>
+<h3>Is a button tap in Messenger valid consent?</h3>
+<p>Consent must be freely given, specific and informed, and evidenced by written, electronic or recorded means. A logged tap on a clear, separate opt-in button, with the notice the person saw, is an electronic record of that choice.</p>
+<h3>How fast must I report a data breach in the Philippines?</h3>
+<p>Within 72 hours of knowing, or reasonably believing, that a personal data breach requiring notification has occurred, to both the National Privacy Commission and the affected data subjects.</p>
+<div class="dd-cta">
+<p class="dd-cta-title">Build lead flows customers can trust</p>
+<p>Want your chatbot flows, consent logging and data map designed and tested for you? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a>.</p>
+<p>Prefer to learn it step by step? <a href="https://grow.dijaedadula.com/newsletter">Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://privacy.gov.ph/wp-content/uploads/2023/06/IRR_RA-10173-as-amended.pdf" rel="noopener" target="_blank">Implementing Rules and Regulations of the Data Privacy Act of 2012, as amended</a>, National Privacy Commission (definitions of consent and proportionality, lawful criteria, rights, 72-hour breach notification). Accessed October 2026.</li>
+<li><a href="https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04.pdf" rel="noopener" target="_blank">NPC Circular No. 2022-04: Registration of Personal Data Processing Systems and Data Protection Officers</a>, December 5, 2022. Accessed October 2026.</li>
+<li><a href="https://www.digest.ph/laws/data-privacy-act" rel="noopener" target="_blank">Digest PH: Data Privacy Act of 2012 (Republic Act No. 10173) summary</a>. Accessed October 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/ai-agent-guardrails">How to Stop an AI Agent From Making Things Up: Guardrails for Business Chatbots</a></li>
+<li><a href="https://www.dijaedadula.com/qualify-leads-messenger-automatically">How to Qualify Leads in Messenger Automatically (Without Annoying Your Customers)</a></li>
+<li><a href="https://www.dijaedadula.com/facebook-messenger-missed-messages">Why Your Business Is Losing Customers in Facebook Messenger (and How to Fix It)</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>
