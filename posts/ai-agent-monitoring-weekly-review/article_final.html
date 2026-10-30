@@ -1,0 +1,187 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/a3/ef/fe/9d/2cba5fb917b49413a030344a347c3ad165f091104acf8fd47281b169.png' alt='Illustration of a friendly teal robot beside a weekly calendar with a check mark, a magnifying glass over chat bubbles, a line chart and a checklist clipboard' width='1536' height='864' loading='lazy'></div></figure>
+<p>Launch day is when an AI agent stops being tested by you and starts being tested by your customers. They ask questions you never wrote down, prices and policies change under it, and the model behind it gets updated by its provider. An agent that passed every test in week one can be quietly wrong by week six, and nobody notices until a customer complains.</p>
+<p>This guide is for business owners, operations leads and teams who run a customer-facing AI agent or chatbot. You will get the five signals worth watching, a 30-minute weekly review routine, how many conversations to read, a copy-ready scorecard, how to trace each failure to its real cause, and the moments when you should review immediately instead of waiting for the week to end.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>Why agents <b>drift</b> after launch, even when nobody touched them.</li>
+<li>The <b>five signals</b> to track every week.</li>
+<li>A <b>30-minute weekly review</b>, step by step.</li>
+<li>A copy-ready <b>conversation scorecard</b>.</li>
+<li>How to route every failure to <b>instructions, knowledge or tools</b>.</li>
+<li>The <b>triggers</b> that call for a review today, not on Friday.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#drift'>Why agents drift after launch</a></li>
+<li><a href='#signals'>The five signals to watch</a></li>
+<li><a href='#routine'>The 30-minute weekly review</a></li>
+<li><a href='#sample'>How many conversations to read</a></li>
+<li><a href='#score'>Score conversations the same way every time</a></li>
+<li><a href='#cause'>Route every failure to its cause</a></li>
+<li><a href='#change'>Change one thing, then retest</a></li>
+<li><a href='#triggers'>When to review today</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='drift'>1. Why agents drift after launch</h2>
+<p>Most agent failures after launch are not caused by anyone breaking the agent. The world around it moves:</p>
+<ul>
+<li><b>Your business changes.</b> A new price, a new branch, a paused promo or a new delivery area. If the knowledge files are not updated the same day, the agent keeps quoting the old version.</li>
+<li><b>Customers change.</b> Real people ask in ways your test set never covered, mix several questions into one message, and bring up topics you never planned for.</li>
+<li><b>The platform changes.</b> Model providers update models, and chatbot platforms ship new features and defaults. The same instructions can produce slightly different behavior after an update.</li>
+</ul>
+<p>So why does this matter? Because none of these show up as an error message. The agent keeps replying, fluently and confidently. The only way to see drift is to look at what it actually says to real customers, on a schedule.</p>
+<p>The NIST AI Risk Management Framework makes the same point in its MANAGE function: post-deployment monitoring plans should be implemented, including ways to capture and evaluate input from users, incident response and change management. That is written for any AI system. For a business chatbot it becomes one routine you run every week.</p>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span><p>Read real conversations every week. Numbers tell you that something changed; conversations tell you why. An agent nobody reads is an agent nobody manages.</p></div>
+<h2 id='signals'>2. The five signals to watch</h2>
+<p>You do not need a large dashboard. Five numbers, tracked the same way every week, catch most problems early. Write down this week's value next to last week's.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Signal</th><th>How to count it</th><th>What a rise usually means</th></tr></thead>
+<tbody>
+<tr><td>Handoff rate</td><td>Conversations passed to a person, divided by all conversations</td><td>A new question type, or the agent is unsure more often</td></tr>
+<tr><td>Unanswered or dropped</td><td>Conversations that ended with no useful reply or no next step</td><td>Gaps in knowledge, or a broken flow or tool</td></tr>
+<tr><td>Corrections</td><td>Replies your team had to correct or follow up on</td><td>Wrong or outdated facts in the answers</td></tr>
+<tr><td>Complaints</td><td>Negative messages about the agent or the answer</td><td>Tone, trapped customers, or promises you cannot keep</td></tr>
+<tr><td>Outcome</td><td>Bookings, orders or qualified leads from agent conversations</td><td>A drop means something upstream is leaking</td></tr>
+</tbody>
+</table></div>
+<p>The first four are early warnings; the fifth is the business result. If you already track the metrics in <a href='https://www.dijaedadula.com/chatbot-roi-metrics'>the 5 chatbot ROI metrics</a>, reuse them here so the weekly review and the ROI view tell the same story.</p>
+<h2 id='routine'>3. The 30-minute weekly review</h2>
+<p>Put it in the calendar for the same day and time every week, with one named owner. The routine is a loop: sample, score, find the cause, fix one thing, and retest.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 330' role='img' aria-labelledby='fm1t fm1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='fm1t'>The weekly AI agent review loop</title>
+<desc id='fm1d'>A loop of five steps arranged in a circle. One, pull the five signals and a sample of conversations. Two, score each conversation with the same scorecard. Three, find the cause of each failure: instructions, knowledge or tools. Four, fix one thing. Five, retest with the test set, then log the change. An arrow returns from step five to step one for next week. In the center: 30 minutes, same day every week.</desc>
+<defs><marker id='fm1a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5b6470'/></marker></defs>
+<rect x='0' y='0' width='640' height='330' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>THE WEEKLY REVIEW LOOP</text>
+<rect x='232' y='52' width='176' height='58' rx='10' fill='#fff' stroke='#007a66'/><text x='246' y='76' class='svg-t'>1. Pull</text><text x='246' y='96' class='svg-s'>Signals + sample</text>
+<rect x='440' y='118' width='176' height='58' rx='10' fill='#fff' stroke='#007a66'/><text x='454' y='142' class='svg-t'>2. Score</text><text x='454' y='162' class='svg-s'>Same scorecard</text>
+<rect x='350' y='238' width='226' height='58' rx='10' fill='#fff4ec' stroke='#c2410c'/><text x='364' y='262' class='svg-t'>3. Find the cause</text><text x='364' y='282' class='svg-s'>Instructions, knowledge, tools</text>
+<rect x='84' y='238' width='176' height='58' rx='10' fill='#e8f4f1' stroke='#007a66'/><text x='98' y='262' class='svg-t'>4. Fix one thing</text><text x='98' y='282' class='svg-s'>The biggest cause</text>
+<rect x='24' y='118' width='176' height='58' rx='10' fill='#fff' stroke='#007a66'/><text x='38' y='142' class='svg-t'>5. Retest + log</text><text x='38' y='162' class='svg-s'>Test set, change log</text>
+<line x1='408' y1='92' x2='470' y2='114' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm1a)'/>
+<line x1='520' y1='176' x2='490' y2='234' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm1a)'/>
+<line x1='350' y1='267' x2='264' y2='267' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm1a)'/>
+<line x1='150' y1='238' x2='118' y2='180' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm1a)'/>
+<line x1='170' y1='114' x2='228' y2='92' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm1a)'/>
+<rect x='252' y='150' width='136' height='54' rx='27' fill='#007a66'/><text x='278' y='174' class='svg-w'>30 minutes</text><text x='270' y='192' class='svg-ws'>same day weekly</text>
+</svg>
+<figcaption><b>Figure 1.</b> The weekly review is a loop: every week ends with one tested fix and a log entry.</figcaption>
+</figure>
+<ol>
+<li><b>Pull (5 minutes).</b> Write down the five signals for the week and export or open the conversations you will read (see the next section).</li>
+<li><b>Score (15 minutes).</b> Read each sampled conversation and score it with the scorecard below. Mark every failure.</li>
+<li><b>Find the cause (5 minutes).</b> Group the failures by cause: instructions, knowledge or tools.</li>
+<li><b>Fix one thing (5 minutes to plan).</b> Pick the cause behind the most failures and fix that one, today or as this week's task.</li>
+<li><b>Retest and log.</b> Re-run your test set after the fix, add each new failure as a new test case, and write one line in a change log: date, what changed, why, result.</li>
+</ol>
+<p>The test set is the one you built before launch. If you do not have one yet, the method is in <a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>how to test an AI chatbot before it talks to your customers</a>.</p>
+<h2 id='sample'>4. How many conversations to read</h2>
+<p>You cannot read everything, and you do not need to. A practical weekly sample for a small or mid-sized business:</p>
+<ul>
+<li><b>Every handoff</b> and every conversation flagged by the team or a complaint.</li>
+<li><b>Every conversation that ended with no reply</b> or no next step.</li>
+<li><b>A random sample</b> of ordinary conversations, enough that you read at least 20 to 30 in total each week.</li>
+</ul>
+<p>The random part matters. Problems in quiet conversations, such as a slightly wrong delivery fee, never trigger a handoff or a complaint, and you only find them by reading at random.</p>
+<p>Larger teams automate this. State Farm's engineering team has described a scheduled job that pulls a statistically sized sample of conversation logs and scores them with a language model as a judge, while subject-matter experts review the reports and periodically compare their own scores with the judge's. The principle scales down: sample on a schedule, score consistently, and keep humans checking the scorer.</p>
+<h2 id='score'>5. Score conversations the same way every time</h2>
+<p>If two people review the same conversation and reach different verdicts, your trend lines mean nothing. Use one short scorecard for every conversation, every week.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>WEEKLY CONVERSATION SCORECARD
+Conversation ID: ____    Date: ____    Channel: ____
+
+1. ACCURATE      Every fact (price, policy, hours, stock) matches
+                 the current files.                      Yes / No
+2. GROUNDED      No invented details, no guesses presented
+                 as facts.                               Yes / No
+3. GUARDRAILS    Stayed in scope; no promises, discounts or
+                 advice it was not allowed to give.      Yes / No
+4. HANDOFF       Handed off when it should, and not when it
+                 should not; summary included.           Yes / No
+5. OUTCOME       The customer got an answer or a clear next
+                 step (booking, order, person).          Yes / No
+
+If any answer is No:
+Cause:  Instructions / Knowledge / Tools / Other
+Note:   what it said vs. what it should have said</code></pre></div>
+<p>Each line maps to a layer of the agent. Accuracy and grounding test the knowledge; guardrails and handoff test the instructions and limits described in <a href='https://www.dijaedadula.com/ai-agent-guardrails'>guardrails for business chatbots</a>; outcome tests whether the whole thing earns its keep.</p>
+<p>If you use a language model to pre-score conversations, treat it as a first pass, not a verdict. The State Farm team noted that their judge could be too generous, miss nuance, or produce convincing but wrong explanations, which is why their experts still review and compare. Spot-check the judge every week with a few conversations you score yourself.</p>
+<h2 id='cause'>6. Route every failure to its cause</h2>
+<p>A failure is a symptom. Fixing it in the wrong place adds another rule to an already long prompt and changes nothing. Almost every failure traces back to one of three places.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 300' role='img' aria-labelledby='fm2t fm2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='fm2t'>Routing a failed conversation to its cause</title>
+<desc id='fm2d'>A failed conversation on the left points to three causes. Instructions: the agent knew the fact but behaved wrong, such as wrong tone, missed handoff or broken scope; fix the instructions or guardrails. Knowledge: the fact was missing, outdated or contradictory; fix the knowledge file. Tools: a lookup, booking or tag failed or returned wrong data; fix the integration or permission. Each cause ends in a retest.</desc>
+<defs><marker id='fm2a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5b6470'/></marker></defs>
+<rect x='0' y='0' width='640' height='300' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>WHERE THE FIX BELONGS</text>
+<rect x='24' y='118' width='150' height='70' rx='10' fill='#fff4ec' stroke='#c2410c'/><text x='40' y='146' class='svg-t'>Failed</text><text x='40' y='166' class='svg-t'>conversation</text>
+<rect x='232' y='52' width='384' height='66' rx='10' fill='#fff' stroke='#007a66'/><text x='248' y='78' class='svg-t'>Instructions</text><text x='248' y='98' class='svg-s'>Knew the fact, behaved wrong: tone, scope, handoff</text>
+<rect x='232' y='128' width='384' height='66' rx='10' fill='#fff' stroke='#007a66'/><text x='248' y='154' class='svg-t'>Knowledge</text><text x='248' y='174' class='svg-s'>Fact missing, outdated or contradictory in the files</text>
+<rect x='232' y='204' width='384' height='66' rx='10' fill='#fff' stroke='#007a66'/><text x='248' y='230' class='svg-t'>Tools</text><text x='248' y='250' class='svg-s'>Lookup, booking or tag failed or returned wrong data</text>
+<line x1='174' y1='140' x2='228' y2='88' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm2a)'/>
+<line x1='174' y1='153' x2='228' y2='160' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm2a)'/>
+<line x1='174' y1='166' x2='228' y2='232' stroke='#5b6470' stroke-width='1.5' marker-end='url(#fm2a)'/>
+</svg>
+<figcaption><b>Figure 2.</b> Decide where a failure belongs before you fix it. Most fixes are in the files, not the prompt.</figcaption>
+</figure>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td>Quotes last month's price</td><td>Knowledge</td><td>Update the price file the day prices change</td></tr>
+<tr><td>Two answers to the same question</td><td>Knowledge</td><td>Remove the duplicate; keep one home per fact</td></tr>
+<tr><td>Answers a topic it should decline</td><td>Instructions</td><td>Tighten the scope guardrail and add a test case</td></tr>
+<tr><td>Keeps a frustrated customer in the bot</td><td>Instructions</td><td>Add the trigger to the handoff rules</td></tr>
+<tr><td>Says a slot is free that is taken</td><td>Tools</td><td>Check the calendar connection and permissions</td></tr>
+<tr><td>Correct facts, but sounds robotic</td><td>Instructions</td><td>Revise the voice section with real examples</td></tr>
+</tbody>
+</table></div>
+<p>The knowledge fixes follow the one-fact-one-home rule in <a href='https://www.dijaedadula.com/rag-ai-agent-business-knowledge'>how to ground an AI agent in your business knowledge</a>. The instruction fixes follow the structure in <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>how to write AI agent instructions for any business</a>.</p>
+<h2 id='change'>7. Change one thing, then retest</h2>
+<p>When five things change at once and the numbers move, you cannot tell which change helped and which one hurt. Change one thing per review, retest, and write it down.</p>
+<p><b>Acceptance criteria for any change:</b> the failure it targets no longer happens in the test set; every existing test case still passes; and the change is logged with the date and reason. If an existing test fails, roll the change back first and think second.</p>
+<p>Over a month, the change log becomes the most useful document you own about your agent. When a customer asks why the agent said something odd last Tuesday, you can answer which version was running and what has changed since. The same discipline applies to the business process behind the agent, as covered in <a href='https://www.dijaedadula.com/dont-automate-chaos'>don't automate chaos</a>.</p>
+<h2 id='triggers'>8. When to review today</h2>
+<p>Some events cannot wait for the weekly slot. Run a focused review, and re-run the test set, the same day any of these happen:</p>
+<ul>
+<li>A price, policy, promo or product change goes live.</li>
+<li>Your chatbot platform or model provider announces a model or feature update.</li>
+<li>A complaint mentions the agent, or the handoff rate jumps.</li>
+<li>You add a new channel, tool or integration.</li>
+<li>A campaign or ad sends a new kind of customer to the chat.</li>
+</ul>
+<p><b>The metric that tells you the routine works:</b> the share of sampled conversations with any “No” on the scorecard. It should fall over the first month and then stay low. If it rises two weeks in a row, the agent is drifting faster than you are fixing it, and the review needs more time or a second person.</p>
+<p>An honest limitation: a weekly sample catches patterns, not every individual mistake. A rare but costly error can slip through a random sample for weeks. That is why the high-risk topics, money, promises and sensitive data, belong behind guardrails and human approval, not behind the review alone.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>How often should I review my AI chatbot after launch?</h3>
+<p>Every week, at a fixed time, with one named owner. Review immediately when prices, policies, tools or the underlying model change, or when complaints or handoffs suddenly rise.</p>
+<h3>How many conversations should I read each week?</h3>
+<p>Read every handoff, every complaint and every conversation that ended without a reply, plus a random sample, so you read at least 20 to 30 in total. The random sample catches quiet errors that never trigger a complaint.</p>
+<h3>Can an AI score my chatbot's conversations for me?</h3>
+<p>Yes, as a first pass. A language model can pre-score conversations against your scorecard, but it can be too generous or miss nuance, so a person should still review the results and spot-check the scores every week.</p>
+<h3>What should I do when the agent gives a wrong answer?</h3>
+<p>Decide whether the cause is the instructions, the knowledge files or a tool, fix it in that one place, add the case to your test set, retest everything and log the change.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Keep your agent accurate after launch</p>
+<p>Want a monitoring routine, scorecard and test set set up for your agent and your team? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+<p>Prefer to learn it step by step? <a href='https://grow.dijaedadula.com/newsletter'>Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://www.stigviewer.com/controls/ai-rmf/MANAGE%204.1' rel='noopener' target='_blank'>NIST AI Risk Management Framework, MANAGE 4.1: post-deployment monitoring</a> (subcategory text and suggested actions). Accessed October 2026.</li>
+<li><a href='https://engineering.statefarm.com/grading-the-machine-using-llm-as-a-judge-to-monitor-ai-agents-in-production-25a071db9c50' rel='noopener' target='_blank'>State Farm Engineering: Grading the Machine, using LLM as a judge to monitor AI agents in production</a>. Accessed October 2026.</li>
+<li><a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to Test an AI Chatbot Before It Talks to Your Customers</a>, Dijae Dadula.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href='https://www.dijaedadula.com/chatbot-roi-metrics'>How Much Does an AI Agent Save? The 5 Chatbot ROI Metrics That Matter</a></li>
+<li><a href='https://www.dijaedadula.com/ai-agent-guardrails'>How to Stop an AI Agent From Making Things Up: Guardrails for Business Chatbots</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>

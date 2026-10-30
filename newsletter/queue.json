@@ -165,6 +165,11 @@
    "slug": "data-privacy-act-chatbots-philippines",
    "title": "Philippine Data Privacy Act for Chatbots: Collecting Leads in Messenger the Right Way",
    "blurb": "When you need consent, a copy-ready consent message, the 72-hour breach rule and a pre-launch checklist."
+  },
+  {
+   "slug": "ai-agent-monitoring-weekly-review",
+   "title": "AI Agent Monitoring After Launch: A Weekly Review Routine",
+   "blurb": "Why agents drift after launch, the five signals to watch, a 30-minute weekly review and a copy-ready scorecard."
   }
  ],
  "sent": [
@@ -184,6 +189,15 @@
     "ai-chatbot-for-small-business",
     "automate-lead-follow-up",
     "get-more-clients-with-ai"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "broadcastId": "1019",
+   "slugs": [
+    "what-does-an-ai-trainer-do",
+    "easypc-ai-lead-qualification-case-study",
+    "pancake-vs-botcake-vs-manychat"
    ]
   }
  ],
@@ -228,8 +242,15 @@
    "date": "2026-10-29",
    "slug": "automate-lead-follow-up",
    "info": "post 5248 scheduled Thu 2026-10-29 18:00 Manila (backlog)",
-   "url": "",
+   "url": "https://www.facebook.com/1579937777474981/posts/1798954358906654",
    "image": "https://paymegpt.com/objects/generated-images/814/1793242865449-faf2b87fd707d02a.png"
+  },
+  {
+   "date": "2026-10-30",
+   "slug": "get-more-clients-with-ai",
+   "info": "posted with the daily run",
+   "url": "https://www.facebook.com/1579937777474981/posts/1799813168820773",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793320415135-45d1db98f68e3f52.png"
   }
  ]
 }

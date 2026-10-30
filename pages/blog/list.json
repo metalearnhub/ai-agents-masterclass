@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "ai-agent-monitoring-weekly-review",
+   "title": "AI Agent Monitoring After Launch: A Weekly Review Routine",
+   "blurb": "Why agents drift after launch, the five signals to watch, a 30-minute weekly review, a copy-ready scorecard and how to route every failure to the right fix."
+  },
+  {
    "slug": "data-privacy-act-chatbots-philippines",
    "title": "Philippine Data Privacy Act for Chatbots: Collecting Leads in Messenger the Right Way",
    "blurb": "When you need consent, a copy-ready consent message, the 72-hour breach rule and a pre-launch checklist."
