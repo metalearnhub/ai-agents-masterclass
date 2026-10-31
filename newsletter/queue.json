@@ -170,6 +170,11 @@
    "slug": "ai-agent-monitoring-weekly-review",
    "title": "AI Agent Monitoring After Launch: A Weekly Review Routine",
    "blurb": "Why agents drift after launch, the five signals to watch, a 30-minute weekly review and a copy-ready scorecard."
+  },
+  {
+   "slug": "crm-pipeline-stages-service-business",
+   "title": "CRM Pipeline Stages for Service Businesses: Where Automation Fits",
+   "blurb": "Six pipeline stages for service businesses, an exit rule for each and where automation fits."
   }
  ],
  "sent": [
@@ -251,6 +256,13 @@
    "info": "posted with the daily run",
    "url": "https://www.facebook.com/1579937777474981/posts/1799813168820773",
    "image": "https://paymegpt.com/objects/generated-images/814/1793320415135-45d1db98f68e3f52.png"
+  },
+  {
+   "date": "2026-10-31",
+   "slug": "what-does-an-ai-trainer-do",
+   "info": "posted with the daily run",
+   "url": "https://www.facebook.com/1579937777474981/posts/1801091825359574",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793406735654-3322eb3061d70897.png"
   }
  ]
 }

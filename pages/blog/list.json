@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "crm-pipeline-stages-service-business",
+   "title": "CRM Pipeline Stages for Service Businesses: Where Automation Fits",
+   "blurb": "Six pipeline stages that fit most service businesses, an exit rule for each one, where automation belongs and the three numbers to watch."
+  },
+  {
    "slug": "ai-agent-monitoring-weekly-review",
    "title": "AI Agent Monitoring After Launch: A Weekly Review Routine",
    "blurb": "Why agents drift after launch, the five signals to watch, a 30-minute weekly review, a copy-ready scorecard and how to route every failure to the right fix."
