@@ -1,0 +1,27 @@
+.dd-c h2{font-size:25px;margin:48px 0 10px 0}
+.dd-c .dd-short{font-size:19px !important;line-height:1.6 !important;font-weight:600;color:#1a1a1a;border-left:3px dotted #007a66;padding:2px 0 2px 16px !important;margin:0 0 20px 0 !important}
+.dd-c .dd-short b{color:#007a66}
+.dd-c .dd-scene{background:#fbf7f0;border:2px dashed #e0b48f;border-radius:14px;padding:18px 20px;margin:0 0 24px 0}
+.dd-c .dd-scene .dd-note-label{color:#c2410c}
+.dd-c .dd-scene p:last-child{margin-bottom:0}
+.dd-c .dd-plain{font-size:21px !important;line-height:1.55 !important;font-weight:700;margin:0 0 24px 0 !important}
+.dd-c .dd-plain mark{background:linear-gradient(transparent 55%,#ffd8bf 55%);color:inherit;padding:0 2px}
+.dd-c .dd-myth{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 24px 0}
+.dd-c .dd-myth>div{border-radius:12px;padding:14px 16px}
+.dd-c .dd-myth>div p{font-size:15px;line-height:1.6;margin:0}
+.dd-c .dd-myth .dd-m{background:#fff4ec}
+.dd-c .dd-myth .dd-r{background:#e8f4f1}
+.dd-c .dd-myth .dd-lab{display:block;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin:0 0 6px 0}
+.dd-c .dd-myth .dd-m .dd-lab{color:#c2410c}
+.dd-c .dd-myth .dd-r .dd-lab{color:#007a66}
+.dd-c .dd-try{list-style:none !important;padding:0 !important;margin:0 0 24px 0;counter-reset:tr}
+.dd-c .dd-try li{display:block !important;counter-increment:tr;position:relative;padding:4px 0 4px 54px;margin:0 0 14px 0;min-height:40px}
+.dd-c .dd-try li::before{content:counter(tr);position:absolute;left:0;top:0;width:38px;height:38px;border:2px solid #007a66;border-radius:50%;text-align:center;line-height:34px;font-weight:800;color:#007a66;font-size:16px}
+.dd-c .dd-sticky{background:#fff3c4;border-radius:4px;padding:18px 20px;margin:6px 4px 28px 4px;transform:rotate(-0.8deg);box-shadow:0 6px 14px rgba(20,24,28,.10)}
+.dd-c .dd-sticky .dd-note-label{color:#8a5a00;font-family:Caveat,'Comic Sans MS',cursive;font-size:22px;letter-spacing:0;text-transform:none;font-weight:700}
+.dd-c .dd-sticky p{margin:0;font-size:17px}
+.dd-c .dd-words{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px 0}
+.dd-c .dd-words span{border:1px solid #cfe3dd;background:#fff;border-radius:999px;padding:4px 12px;font-size:14px;line-height:1.5}
+.dd-c .dd-words span b{color:#007a66}
+.dd-c .dd-fig svg .svg-hand{font-family:Caveat,'Comic Sans MS',cursive;font-size:20px;font-weight:700;fill:#c2410c}
+@media (max-width:560px){.dd-c .dd-myth{grid-template-columns:1fr}}

@@ -128,3 +128,6 @@ Add new vendor changelogs here when Dijae provides them.
   - New template (eb_2120 article): add an editor-blog element `eb_newg` ("New guides on this topic" box, Inter inline styles) at top = eb_top + eb_height + 10, height measured with tools/measure_list.js (#bl), then h_css2121 top = block bottom + 47 (mobile +39) and sec_2108 height = block bottom + 57 (mobile +49). If eb_newg already exists, update its html instead of adding a second one.
 - After every new post: add a link to it from the 2-3 most related older posts this way, publish each with its own custom_path, and spot-check one per layout at 420 and 1280.
 - Shortcut (Oct 29 2026): `python3 tools/interlink/add_link.py <new-slug> "<H1>" <get_page files of 2-3 related posts>` writes tools/interlink/ops.json with ready patch_page ops for both layouts (old: Keep reading list; new: eb_newg box). Publish each page with its own custom_path.
+
+## 16. Three blog styles (Dijae, Nov 1 2026)
+Before writing, run `python3 tools/style_next.py` and follow STYLES.md for that style (A Field Guide, B Executive Brief, C Story Explainer): writing order, components, diagram look, caption word (Figure / Exhibit / Sketch) and cover prompt. Put `"style"` in meta.json. make_post.py adds the style CSS and checks the wrapper class. Report which style each post used.

@@ -9,7 +9,7 @@ const ff=`@font-face{font-family:Inter;font-weight:400;src:url(${F('inter/files/
 (async()=>{
  const b=await chromium.launch({executablePath:process.env.CHROME||'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'});
  const art=fs.readFileSync(process.argv[2]||'article.html','utf8');
- const css=fs.readFileSync('style.css','utf8');
+ const css=fs.readFileSync('style.css','utf8')+(process.argv[3]?fs.readFileSync(process.argv[3],'utf8'):'');
  const out={};
  for(const w of [640,380]){
   const p=await b.newPage({viewport:{width:w+40,height:900}});

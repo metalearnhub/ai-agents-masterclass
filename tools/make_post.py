@@ -7,9 +7,12 @@ HERE=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.dirname(HERE)
 d=sys.argv[1]; m=json.load(open(os.path.join(d,'meta.json')))
 art=open(os.path.join(d,'article.html')).read()
 art=art.replace('<!--COVER-->','<figure class="dd-fig"><div class="dd-shot" style="aspect-ratio:16/9"><img src="%s" alt="%s" width="1536" height="864" loading="lazy"></div></figure>'%(m['cover'],html.escape(m['cover_alt'],quote=True)))
+STY=m.get('style','A').upper(); assert STY in ('A','B','C'), 'style must be A, B or C'
+WR={'A':'<div class="dd-article">','B':'<div class="dd-article dd-b">','C':'<div class="dd-article dd-c">'}[STY]
+assert art.lstrip().startswith(WR), 'article.html must start with %s for style %s (see STYLES.md)'%(WR,STY)
 n=[0]
-def num(_): n[0]+=1; return '<b>Figure %d.</b>'%n[0]
-art=re.sub(r'<b>Figure N\.</b>',num,art)
+def num(mm): n[0]+=1; return '<b>%s %d.</b>'%(mm.group(1),n[0])
+art=re.sub(r'<b>(Figure|Exhibit|Sketch) N\.</b>',num,art)
 assert '<!--' not in art, 'unreplaced marker in article.html'
 # blank lines collapse, but keep blank lines inside <pre>
 parts=re.split(r'(<pre>.*?</pre>)',art,flags=re.S)
@@ -29,7 +32,8 @@ env=dict(os.environ)
 def node(script,*a):
     return subprocess.check_output(['node',os.path.join(HERE,script),*a],cwd=HERE,env=env).decode()
 hh=json.loads(node('mh.js',m['h1'],m['dek']))
-meas=json.loads(node('measure.js',os.path.abspath(os.path.join(d,'article_final.html'))))
+VCSS=open(os.path.join(HERE,'styles',STY.lower()+'.css')).read() if STY!='A' else ''
+meas=json.loads(node('measure.js',os.path.abspath(os.path.join(d,'article_final.html')),os.path.join(HERE,'styles',STY.lower()+'.css') if STY!='A' else ''))
 h1d,h1m,dkd,dkm=int(hh[0]+6),int(hh[1]+6),int(hh[2]+4),int(hh[3]+4)
 ad,am=meas['640'],meas['380']
 # calibration (fitted on 3 live posts): live code blocks render ~8px/line taller than the local measurement.
@@ -62,6 +66,10 @@ body['responsive']['mobile']['styles']['height']=metop+MH+49
 U='https://www.dijaedadula.com/'; url=U+m['slug']; st=S['settings']
 st.update(title=m['seo'],description=m['desc'],keywords=m['kw'],canonical=url,thumbnail=m['cover'])
 pil=st['bhet']; rest=pil[pil.find("<link rel='preconnect'"):]
+if VCSS:
+    i=rest.find('</style>'); rest=rest[:i]+VCSS.replace('\n','').replace('"',"'")+rest[i:]
+if STY=='C':
+    rest="<link href='https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap' rel='stylesheet'>"+rest
 faq=[]
 if "id='faq'" in art:
     for mm in re.finditer(r'<h3>(.*?)</h3>\n<p>(.*?)</p>',art.split("id='faq'")[1].split("dd-cta")[0],re.S):
@@ -83,6 +91,6 @@ meta=("<meta property='og:type' content='article'><meta property='og:site_name' 
  "<meta name='twitter:image:alt' content='%s'><meta name='author' content='Dijae Dadula'>")%(url,e(m['h1']),e(m['desc']),m['cover'],e(m['cover_alt']),e(m['h1']),e(m['desc']),m['cover'],e(m['cover_alt']))
 st['bhet']=ld+meta+rest
 json.dump(S,open(os.path.join(d,'source.json'),'w'),ensure_ascii=False,separators=(',',':'))
-geo=dict(eb_top_d=etop,DH=DH,hcss_top_d=etop+DH+47,sec_d=etop+DH+57,eb_top_m=metop,MH=MH,hcss_top_m=metop+MH+39,sec_m=metop+MH+49,words=words,mins=mins,faq=len(faq),measured=[ad,am])
+geo=dict(style=STY,eb_top_d=etop,DH=DH,hcss_top_d=etop+DH+47,sec_d=etop+DH+57,eb_top_m=metop,MH=MH,hcss_top_m=metop+MH+39,sec_m=metop+MH+49,words=words,mins=mins,faq=len(faq),measured=[ad,am])
 json.dump(geo,open(os.path.join(d,'geometry.json'),'w'))
 print(json.dumps(geo))
