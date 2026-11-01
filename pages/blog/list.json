@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "ai-agent-vs-chatbot-vs-automation",
+   "title": "AI Agent vs Chatbot vs Automation: Which One Does Your Business Need?",
+   "blurb": "Who decides the next step, a side-by-side comparison, a five-question decision guide and when an agent is worth it."
+  },
+  {
    "slug": "crm-pipeline-stages-service-business",
    "title": "CRM Pipeline Stages for Service Businesses: Where Automation Fits",
    "blurb": "Six pipeline stages that fit most service businesses, an exit rule for each one, where automation belongs and the three numbers to watch."
