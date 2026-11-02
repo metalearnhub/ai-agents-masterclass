@@ -180,6 +180,11 @@
    "slug": "ai-agent-vs-chatbot-vs-automation",
    "title": "AI Agent vs Chatbot vs Automation: Which One Does Your Business Need?",
    "blurb": "Who decides the next step, a comparison table and a decision guide for choosing the right one."
+  },
+  {
+   "slug": "ai-model-choice-agent-costs",
+   "title": "Choosing the Right AI Model for a Business Agent (and Keeping Costs Down)",
+   "blurb": "Match agent jobs to model tiers, route and escalate, and cut costs with caching and batching."
   }
  ],
  "sent": [
@@ -233,7 +238,8 @@
   {
    "date": "2026-11-02",
    "slug": "ai-chatbot-for-small-business",
-   "info": "post 5182 scheduled Mon 2026-11-02 09:00 Manila"
+   "info": "post 5182 scheduled Mon 2026-11-02 09:00 Manila",
+   "url": "https://www.facebook.com/1579937777474981/posts/1803555285113228"
   },
   {
    "date": "2026-10-15",
@@ -275,6 +281,13 @@
    "info": "posted with the daily run",
    "url": "https://www.facebook.com/1579937777474981/posts/1802326348569455",
    "image": "https://paymegpt.com/objects/generated-images/814/1793492994075-91f47a370a24825c.png"
+  },
+  {
+   "date": "2026-11-02",
+   "slug": "pancake-vs-botcake-vs-manychat",
+   "info": "scheduled id 5518 for 2026-11-02 18:00 Manila",
+   "url": "",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793579291911-a8de58a58fefddf3.png"
   }
  ]
 }
