@@ -20,6 +20,7 @@
 <ol>
 <li><a href="#jobs">Move 01: Sort the jobs</a></li>
 <li><a href="#tiers">Move 02: Match each job to a tier</a></li>
+<li><a href="#botcake">Botcake model map</a></li>
 <li><a href="#route">Move 03: Route, then escalate</a></li>
 <li><a href="#cut">Move 04: Cut the bill without cutting quality</a></li>
 <li><a href="#prove">Move 05: Prove it with numbers</a></li>
@@ -65,7 +66,19 @@
 </svg>
 <figcaption><b>Exhibit N.</b> Output tokens drive the gap: the top model's output price is four times the small model's. Source: Gemini API pricing, accessed November 2, 2026.</figcaption>
 </figure>
-<p>Two details matter for budgeting. First, output usually costs much more than input, so long answers are expensive answers. Second, models and prices move fast. Gemini 4 Argon, the newest model on the list, is priced at $2.00 input and $10.00 output per million tokens through November 30, 2026, doubling to $4.00 and $20.00 from December 1, 2026. Gemini 3.8 Flash doubles from January 1, 2027. Chat platforms follow the same tier pattern. Botcake's AI settings, for example, list GPT-5, GPT-5 mini and GPT-5 nano next to older GPT-4.1 and GPT-4o options, plus DeepSeek V4 Flash and V4 Pro. Start on a mini, nano or Flash model and move up only when your test set says so, and recheck the list from time to time, because older generations get retired. For reference, check the pricing page <a href="https://ai.google.dev/pricing" target="_blank" rel="noopener">here</a>. OpenAI and Anthropic publish the same kind of tiered price lists; check their current rates <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">here</a> and <a href="https://docs.claude.com/en/docs/about-claude/pricing" target="_blank" rel="noopener">here</a>.</p>
+<p>Two details matter for budgeting. First, output usually costs much more than input, so long answers are expensive answers. Second, models and prices move fast. Gemini 4 Argon, the newest model on the list, is priced at $2.00 input and $10.00 output per million tokens through November 30, 2026, doubling to $4.00 and $20.00 from December 1, 2026. Gemini 3.8 Flash doubles from January 1, 2027. OpenAI follows the same pattern: its API has moved on to a GPT-6 family with a top model (GPT-6 Astra), a mid model (GPT-6.1 Sol) and a small model (GPT-6 Luna). For reference, check the pricing page <a href="https://ai.google.dev/pricing" target="_blank" rel="noopener">here</a>. OpenAI and Anthropic publish the same kind of tiered price lists; check their current rates <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">here</a> and <a href="https://docs.claude.com/en/docs/about-claude/pricing" target="_blank" rel="noopener">here</a>.</p>
+<h3 id="botcake">If your agent runs on Botcake</h3>
+<p>Chat platforms pick from the same tiers, with their own list. In Botcake's AI settings (checked November 2, 2026), the options include GPT-5, GPT-5 mini and GPT-5 nano, the older GPT-4.1 and GPT-4o families, and DeepSeek V4 Flash, V4.1 Flash and V4 Pro. Botcake labels each one Smart, Smart &amp; Fast or Fast. A practical starting map, to confirm with your own test set:</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Job</th><th>Start with</th><th>Move up to</th></tr></thead>
+<tbody>
+<tr><td>FAQs, hours, prices, order status</td><td>GPT-5 nano or DeepSeek V4 Flash (Fast)</td><td>GPT-5 mini</td></tr>
+<tr><td>Lead qualification, mixed questions</td><td>GPT-5 mini (Smart &amp; Fast)</td><td>GPT-5</td></tr>
+<tr><td>Complaints, long multi-step answers</td><td>GPT-5 (Smart) or DeepSeek V4 Pro</td><td>Hand off to a person</td></tr>
+<tr><td>Bots already tuned on GPT-4.1 or GPT-4o</td><td>Keep while you test</td><td>Rerun the test set on GPT-5 mini and switch if it passes</td></tr>
+</tbody>
+</table></div>
+<p>Botcake's list changes as providers release and retire models, so recheck it each quarter alongside your test set.</p>
 <p class="dd-kicker">Move 03 · Route</p>
 <h2 id="route">Route to the small model first, then escalate</h2>
 <div class="dd-move">
@@ -161,7 +174,7 @@
 <h2>References</h2>
 <ol class="dd-refs">
 <li><a href="https://ai.google.dev/pricing" target="_blank" rel="noopener">Google AI for Developers: Gemini API pricing</a> (paid tier per 1M tokens, context caching, Batch API). Accessed November 2026.</li>
-<li><a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">OpenAI API pricing</a>. Check current rates before budgeting.</li>
+<li><a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">OpenAI API pricing</a> (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna). Check current rates before budgeting.</li>
 <li><a href="https://docs.claude.com/en/docs/about-claude/pricing" target="_blank" rel="noopener">Anthropic Claude API pricing</a>. Check current rates before budgeting.</li>
 </ol>
 <h2>Keep reading</h2>
