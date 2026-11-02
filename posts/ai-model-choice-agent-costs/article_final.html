@@ -1,0 +1,173 @@
+<div class='dd-article dd-b'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/e1/58/4c/0b/610c9c1ad220d419c597d14bf9d6f1e6eb38b47e9e40069b3615b335.png' alt='Isometric illustration of a routing hub sending paths to small, medium and large server blocks, with a falling cost bar chart, a coin stack and a control lever' width='1536' height='864' loading='lazy'></div></figure>
+<div class='dd-brief'>
+<p class='dd-brief-title'>The 60-second brief</p>
+<ol>
+<li>Within one provider, the top model can cost several times more per token than the small one. Most business chats do not need the top model.</li>
+<li>Route by job: small, fast models for routine replies; a larger model only for the hard cases.</li>
+<li>Caching repeated instructions and batching non-urgent work cut the bill further, without changing a word the customer sees.</li>
+</ol>
+<p class='dd-decision'>Decision: default to the smallest model that passes your test set, and pay for more intelligence only where the answer needs it.</p>
+</div>
+<div class='dd-tiles'>
+<div class='dd-tile'><b>6.7×</b><span>input price gap between Gemini 3.1 Pro Preview and 3.5 Flash-Lite</span></div>
+<div class='dd-tile'><b>50%</b><span>lower price for Batch API jobs on the Gemini API</span></div>
+<div class='dd-tile'><b>90%</b><span>lower price for cached input on Gemini 3.5 Flash-Lite</span></div>
+</div>
+<p>This brief is for business owners and teams running an AI chatbot or agent who want to choose a model on purpose instead of by default. The figures come from Google's public Gemini API price list, used here as one verified example. The same levers exist at other providers.</p>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this brief</p>
+<ol>
+<li><a href='#jobs'>Move 01: Sort the jobs</a></li>
+<li><a href='#tiers'>Move 02: Match each job to a tier</a></li>
+<li><a href='#route'>Move 03: Route, then escalate</a></li>
+<li><a href='#cut'>Move 04: Cut the bill without cutting quality</a></li>
+<li><a href='#prove'>Move 05: Prove it with numbers</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<p class='dd-kicker'>Move 01 · Diagnose</p>
+<h2 id='jobs'>Sort the jobs before you pick a model</h2>
+<div class='dd-move'>
+<div><span class='dd-lab'>What</span><p>List what the agent actually does: answering FAQs, qualifying leads, summarizing chats, drafting replies, reasoning over several tools.</p></div>
+<div><span class='dd-lab'>Why it matters</span><p>One model for everything means paying top-tier prices for “what are your opening hours?”</p></div>
+<div><span class='dd-lab'>Do this</span><p>Tag each job by difficulty and by volume. The model choice follows from those two tags.</p></div>
+</div>
+<p>In most business chatbots, the bulk of messages are routine: prices, hours, availability, booking, order status. A smaller share needs real reasoning, such as comparing options, handling a complaint or planning several tool steps. The goal is to price each group separately.</p>
+<p class='dd-kicker'>Move 02 · Match</p>
+<h2 id='tiers'>Match each job to a model tier</h2>
+<div class='dd-move'>
+<div><span class='dd-lab'>What</span><p>Providers sell model families in tiers: a small, fast model, a mid-size model and a top reasoning model.</p></div>
+<div><span class='dd-lab'>Why it matters</span><p>Price rises steeply between tiers, especially for output tokens.</p></div>
+<div><span class='dd-lab'>Do this</span><p>Start every job on the smallest tier and move up only when the test set says so.</p></div>
+</div>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 300' role='img' aria-labelledby='sb1t sb1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sb1t'>Gemini API standard prices per million tokens by tier</title>
+<desc id='sb1d'>Horizontal bar chart in US dollars per one million tokens, paid tier, standard, text, prompts up to 200 thousand tokens. Gemini 3.5 Flash-Lite: input 0.30, output 2.50. Gemini 3.8 Flash: input 0.75, output 3.75. Gemini 3.1 Pro Preview: input 2.00, output 12.00.</desc>
+<rect x='0' y='0' width='640' height='300' fill='#ffffff'/>
+<text x='24' y='28' class='svg-ax'>EXHIBIT · GEMINI API PRICE PER 1M TOKENS (USD)</text>
+<g stroke='#e3e8ee' stroke-width='1'>
+<line x1='200' y1='48' x2='200' y2='250'/><line x1='300' y1='48' x2='300' y2='250'/><line x1='400' y1='48' x2='400' y2='250'/><line x1='500' y1='48' x2='500' y2='250'/><line x1='600' y1='48' x2='600' y2='250'/>
+</g>
+<text x='24' y='76' class='svg-num'>3.5 Flash-Lite</text>
+<rect x='200' y='58' width='10' height='16' fill='#007a66'/><text x='216' y='71' class='svg-ax'>0.30 IN</text>
+<rect x='200' y='78' width='83' height='16' fill='#5b9e90'/><text x='289' y='91' class='svg-ax'>2.50 OUT</text>
+<text x='24' y='138' class='svg-num'>3.8 Flash</text>
+<rect x='200' y='120' width='25' height='16' fill='#007a66'/><text x='231' y='133' class='svg-ax'>0.75 IN</text>
+<rect x='200' y='140' width='125' height='16' fill='#5b9e90'/><text x='331' y='153' class='svg-ax'>3.75 OUT</text>
+<text x='24' y='200' class='svg-num'>3.1 Pro Preview</text>
+<rect x='200' y='182' width='67' height='16' fill='#007a66'/><text x='273' y='195' class='svg-ax'>2.00 IN</text>
+<rect x='200' y='202' width='400' height='16' fill='#c2410c'/><text x='520' y='196' class='svg-ax'>12.00 OUT</text>
+<line x1='200' y1='250' x2='600' y2='250' stroke='#14181c' stroke-width='1.5'/>
+<text x='196' y='270' class='svg-ax'>0</text><text x='296' y='270' class='svg-ax'>3</text><text x='396' y='270' class='svg-ax'>6</text><text x='496' y='270' class='svg-ax'>9</text><text x='590' y='270' class='svg-ax'>12</text>
+<text x='24' y='292' class='svg-ax'>PAID TIER, STANDARD, TEXT, PROMPTS UP TO 200K TOKENS</text>
+</svg>
+<figcaption><b>Exhibit 1.</b> Output tokens drive the gap: the top tier's output price is almost five times the small tier's. Source: Gemini API pricing, accessed November 2026.</figcaption>
+</figure>
+<p>Two details matter for budgeting. First, output usually costs much more than input, so long answers are expensive answers. Second, prices move: the Gemini 3.8 Flash list price is shown at $0.75 input and $3.75 output per million tokens through December 31, 2026, rising to $1.50 and $7.50 from January 1, 2027. For reference, check the pricing page <a href='https://ai.google.dev/pricing' target='_blank' rel='noopener'>here</a>. OpenAI and Anthropic publish the same kind of tiered price lists; check their current rates <a href='https://openai.com/api/pricing/' target='_blank' rel='noopener'>here</a> and <a href='https://docs.claude.com/en/docs/about-claude/pricing' target='_blank' rel='noopener'>here</a>.</p>
+<p class='dd-kicker'>Move 03 · Route</p>
+<h2 id='route'>Route to the small model first, then escalate</h2>
+<div class='dd-move'>
+<div><span class='dd-lab'>What</span><p>A routing rule sends each message to the cheapest model that can handle it.</p></div>
+<div><span class='dd-lab'>Why it matters</span><p>High-volume, simple messages make up most of the bill, so they set the cost.</p></div>
+<div><span class='dd-lab'>Do this</span><p>Escalate to a larger model only for named cases: complaints, multi-step tool work, low-confidence answers.</p></div>
+</div>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 330' role='img' aria-labelledby='sb2t sb2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sb2t'>Model choice by task difficulty and volume</title>
+<desc id='sb2d'>A two by two matrix. Horizontal axis: task difficulty, low to high. Vertical axis: message volume, low to high. High volume and low difficulty: small model with caching. High volume and high difficulty: small model first, escalate hard cases. Low volume and low difficulty: small model, batch when not urgent. Low volume and high difficulty: top reasoning model.</desc>
+<rect x='0' y='0' width='640' height='330' fill='#ffffff'/>
+<text x='24' y='28' class='svg-ax'>EXHIBIT · WHICH MODEL FOR WHICH JOB</text>
+<rect x='110' y='48' width='250' height='110' fill='#e8f4f1' stroke='#d8dee4'/>
+<rect x='360' y='48' width='250' height='110' fill='#f6f8fa' stroke='#d8dee4'/>
+<rect x='110' y='158' width='250' height='110' fill='#f6f8fa' stroke='#d8dee4'/>
+<rect x='360' y='158' width='250' height='110' fill='#fff4ec' stroke='#d8dee4'/>
+<text x='126' y='84' class='svg-num'>Small model + caching</text><text x='126' y='106' class='svg-s'>FAQs, hours, prices, order status</text>
+<text x='376' y='84' class='svg-num'>Small first, escalate</text><text x='376' y='106' class='svg-s'>Lead qualification, mixed questions</text>
+<text x='126' y='194' class='svg-num'>Small model, batch</text><text x='126' y='216' class='svg-s'>Chat summaries, tagging, reports</text>
+<text x='376' y='194' class='svg-num'>Top reasoning model</text><text x='376' y='216' class='svg-s'>Complaints, multi-tool planning</text>
+<line x1='110' y1='268' x2='616' y2='268' stroke='#14181c' stroke-width='1.5'/>
+<line x1='110' y1='268' x2='110' y2='42' stroke='#14181c' stroke-width='1.5'/>
+<text x='110' y='290' class='svg-ax'>LOW</text><text x='300' y='290' class='svg-ax'>TASK DIFFICULTY</text><text x='580' y='290' class='svg-ax'>HIGH</text>
+<text x='24' y='64' class='svg-ax'>HIGH</text><text x='24' y='166' class='svg-ax'>VOLUME</text><text x='24' y='266' class='svg-ax'>LOW</text>
+</svg>
+<figcaption><b>Exhibit 2.</b> Volume decides what dominates the bill; difficulty decides where a larger model earns its price.</figcaption>
+</figure>
+<p>Simple escalation rules work well: hand the message to the larger model when the small one says it is unsure, when the customer is upset, or when the job needs more than one tool. Everything else stays on the small model. The same triggers often decide when a person should step in, as covered in <a href='https://www.dijaedadula.com/ai-chatbot-human-handoff'>the handoff playbook</a>.</p>
+<p class='dd-kicker'>Move 04 · Optimize</p>
+<h2 id='cut'>Cut the bill without cutting quality</h2>
+<div class='dd-move'>
+<div><span class='dd-lab'>What</span><p>Four levers: caching, batching, shorter prompts and capped answers.</p></div>
+<div><span class='dd-lab'>Why it matters</span><p>None of them change what the customer reads.</p></div>
+<div><span class='dd-lab'>Do this</span><p>Turn on caching for your fixed instructions and knowledge, and batch anything that can wait.</p></div>
+</div>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Lever</th><th>How it saves</th><th>Example rate (Gemini 3.5 Flash-Lite)</th></tr></thead>
+<tbody>
+<tr><td>Context caching</td><td>Instructions and knowledge sent with every message are billed at a lower cached rate</td><td>$0.03 per 1M cached input tokens vs $0.30 standard, plus $1.00 per 1M tokens per hour of storage</td></tr>
+<tr><td>Batch API</td><td>Non-urgent jobs (summaries, tagging, reports) run asynchronously at a discount</td><td>$0.15 input / $1.25 output vs $0.30 / $2.50 standard</td></tr>
+<tr><td>Shorter prompts</td><td>Fewer input tokens on every single call</td><td>Remove duplicate rules and old knowledge files</td></tr>
+<tr><td>Capped answers</td><td>Fewer output tokens, the most expensive part</td><td>Set a reply length in the instructions and a max output limit</td></tr>
+</tbody>
+</table></div>
+<p><b>Illustrative example</b> (the token counts and volume are invented; the prices are the Gemini list prices above): an agent handles 10,000 replies a month, each with 3,000 input tokens of instructions, knowledge and conversation, and a 300-token answer.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Setup</th><th>Cost per reply</th><th>Per month</th></tr></thead>
+<tbody>
+<tr><td>Gemini 3.1 Pro Preview for everything</td><td>$0.0096</td><td>$96.00</td></tr>
+<tr><td>Gemini 3.8 Flash for everything</td><td>$0.0034</td><td>$33.75</td></tr>
+<tr><td>Gemini 3.5 Flash-Lite for everything</td><td>$0.0017</td><td>$16.50</td></tr>
+<tr><td>3.5 Flash-Lite, 2,500 of the input tokens cached</td><td>$0.0010</td><td>$11.55 incl. storage</td></tr>
+</tbody>
+</table></div>
+<p>The absolute amounts are small at this volume. The ratio is the point: the same traffic costs about eight times more on the top tier than on the cached small tier, and the gap grows with every new channel and campaign. For the full cost picture beyond tokens, see <a href='https://www.dijaedadula.com/ai-chatbot-cost'>how much an AI chatbot really costs</a>.</p>
+<div class='dd-bottom'><span class='dd-note-label'>Dijae's rule</span><p>Pay for intelligence only where the answer needs it. Every other message goes to the smallest model that passes the test.</p></div>
+<p class='dd-kicker'>Move 05 · Prove</p>
+<h2 id='prove'>Prove the choice with numbers</h2>
+<div class='dd-move'>
+<div><span class='dd-lab'>What</span><p>Run the same test set on each candidate model before you switch.</p></div>
+<div><span class='dd-lab'>Why it matters</span><p>A cheaper model that answers wrongly costs more in lost sales and corrections.</p></div>
+<div><span class='dd-lab'>Do this</span><p>Compare pass rate and cost per resolved conversation, not price per token.</p></div>
+</div>
+<p><b>Success metric:</b> cost per resolved conversation, meaning total model cost divided by conversations that ended with an answer or a booked next step, with the pass rate on your test set held at or above today's level. The test method is in <a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>how to test an AI chatbot</a>, and the weekly review that catches drift after a switch is in <a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>AI agent monitoring after launch</a>.</p>
+<div class='dd-table-wrap'><table class='dd-check'>
+<thead><tr><th></th><th>Decision checklist before you switch models</th></tr></thead>
+<tbody>
+<tr><td></td><td>Jobs are tagged by difficulty and volume</td></tr>
+<tr><td></td><td>The small model passes the test set for routine jobs</td></tr>
+<tr><td></td><td>Escalation rules are written and tested</td></tr>
+<tr><td></td><td>Caching is on for fixed instructions and knowledge</td></tr>
+<tr><td></td><td>Non-urgent jobs run as batch</td></tr>
+<tr><td></td><td>Cost per resolved conversation is tracked weekly</td></tr>
+</tbody>
+</table></div>
+<p>An honest limitation: model names, prices and quality change every few months, and a public benchmark says little about your customers' questions. Treat any model choice as a decision you re-test each quarter, and re-check the price list before you budget.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>What is the best AI model for a business chatbot?</h3>
+<p>For most routine customer questions, a small, fast model from a major provider is enough. Use a larger reasoning model only for complex cases, and choose based on your own test set rather than public rankings.</p>
+<h3>How can I reduce AI agent costs?</h3>
+<p>Route routine messages to a small model, cache the instructions and knowledge sent with every message, batch non-urgent jobs, shorten prompts and cap answer length. Then track cost per resolved conversation.</p>
+<h3>Why do output tokens cost more than input tokens?</h3>
+<p>Providers price generated text higher than text you send. On the Gemini API price list, output tokens cost several times more than input tokens on every tier, so long answers raise the bill quickly.</p>
+<h3>How often should I review my AI model choice?</h3>
+<p>Review it at least every quarter and whenever a provider changes prices or releases a new model. Re-run your test set before switching.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Get a model and cost plan for your agent</p>
+<p>Want your jobs mapped to model tiers, with routing, caching and a cost dashboard set up? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+<p>Prefer to learn it step by step? <a href='https://grow.dijaedadula.com/newsletter'>Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://ai.google.dev/pricing' target='_blank' rel='noopener'>Google AI for Developers: Gemini API pricing</a> (paid tier per 1M tokens, context caching, Batch API). Accessed November 2026.</li>
+<li><a href='https://openai.com/api/pricing/' target='_blank' rel='noopener'>OpenAI API pricing</a>. Check current rates before budgeting.</li>
+<li><a href='https://docs.claude.com/en/docs/about-claude/pricing' target='_blank' rel='noopener'>Anthropic Claude API pricing</a>. Check current rates before budgeting.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/ai-chatbot-cost'>How Much Does an AI Chatbot Really Cost a Small Business? (2026 Math)</a></li>
+<li><a href='https://www.dijaedadula.com/ai-agent-vs-chatbot-vs-automation'>AI Agent vs Chatbot vs Automation: Which One Does Your Business Need?</a></li>
+<li><a href='https://www.dijaedadula.com/chatbot-roi-metrics'>How Much Does an AI Agent Save? The 5 Chatbot ROI Metrics That Matter</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
