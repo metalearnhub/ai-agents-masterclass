@@ -131,3 +131,7 @@ Add new vendor changelogs here when Dijae provides them.
 
 ## 16. Three blog styles (Dijae, Nov 1 2026)
 Before writing, run `python3 tools/style_next.py` and follow STYLES.md for that style (A Field Guide, B Executive Brief, C Story Explainer): writing order, components, diagram look, caption word (Figure / Exhibit / Sketch) and cover prompt. Put `"style"` in meta.json. make_post.py adds the style CSS and checks the wrapper class. Report which style each post used.
+
+## 17. Current models only (Dijae, Nov 2 2026)
+- Any post that names AI models must use the NEWEST generation on the provider's live pricing or models page, opened in that run. Read the whole page (WebFetch with offset for long pages) and lead with the newest model, not the first one you see.
+- Note scheduled price changes and retirements with dates. Platform model lists (Botcake, Pancake, ManyChat) change too: say "check the model list in your AI settings" instead of naming old versions.

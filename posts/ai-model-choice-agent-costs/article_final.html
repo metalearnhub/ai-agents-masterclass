@@ -10,7 +10,7 @@
 <p class='dd-decision'>Decision: default to the smallest model that passes your test set, and pay for more intelligence only where the answer needs it.</p>
 </div>
 <div class='dd-tiles'>
-<div class='dd-tile'><b>6.7×</b><span>input price gap between Gemini 3.1 Pro Preview and 3.5 Flash-Lite</span></div>
+<div class='dd-tile'><b>6.7×</b><span>input price gap between Gemini 4 Argon and Gemini 3.5 Flash-Lite (rates to November 30, 2026)</span></div>
 <div class='dd-tile'><b>50%</b><span>lower price for Batch API jobs on the Gemini API</span></div>
 <div class='dd-tile'><b>90%</b><span>lower price for cached input on Gemini 3.5 Flash-Lite</span></div>
 </div>
@@ -44,7 +44,7 @@
 <figure class='dd-fig'>
 <svg viewBox='0 0 640 300' role='img' aria-labelledby='sb1t sb1d' xmlns='http://www.w3.org/2000/svg'>
 <title id='sb1t'>Gemini API standard prices per million tokens by tier</title>
-<desc id='sb1d'>Horizontal bar chart in US dollars per one million tokens, paid tier, standard, text, prompts up to 200 thousand tokens. Gemini 3.5 Flash-Lite: input 0.30, output 2.50. Gemini 3.8 Flash: input 0.75, output 3.75. Gemini 3.1 Pro Preview: input 2.00, output 12.00.</desc>
+<desc id='sb1d'>Horizontal bar chart in US dollars per one million tokens, paid tier, standard, text, prompts up to 200 thousand tokens. Gemini 3.5 Flash-Lite: input 0.30, output 2.50. Gemini 3.8 Flash: input 0.75, output 3.75. Gemini 4 Argon: input 2.00, output 10.00.</desc>
 <rect x='0' y='0' width='640' height='300' fill='#ffffff'/>
 <text x='24' y='28' class='svg-ax'>EXHIBIT · GEMINI API PRICE PER 1M TOKENS (USD)</text>
 <g stroke='#e3e8ee' stroke-width='1'>
@@ -56,16 +56,16 @@
 <text x='24' y='138' class='svg-num'>3.8 Flash</text>
 <rect x='200' y='120' width='25' height='16' fill='#007a66'/><text x='231' y='133' class='svg-ax'>0.75 IN</text>
 <rect x='200' y='140' width='125' height='16' fill='#5b9e90'/><text x='331' y='153' class='svg-ax'>3.75 OUT</text>
-<text x='24' y='200' class='svg-num'>3.1 Pro Preview</text>
+<text x='24' y='200' class='svg-num'>4 Argon</text>
 <rect x='200' y='182' width='67' height='16' fill='#007a66'/><text x='273' y='195' class='svg-ax'>2.00 IN</text>
-<rect x='200' y='202' width='400' height='16' fill='#c2410c'/><text x='520' y='196' class='svg-ax'>12.00 OUT</text>
+<rect x='200' y='202' width='333' height='16' fill='#c2410c'/><text x='539' y='215' class='svg-ax'>10.00 OUT</text>
 <line x1='200' y1='250' x2='600' y2='250' stroke='#14181c' stroke-width='1.5'/>
 <text x='196' y='270' class='svg-ax'>0</text><text x='296' y='270' class='svg-ax'>3</text><text x='396' y='270' class='svg-ax'>6</text><text x='496' y='270' class='svg-ax'>9</text><text x='590' y='270' class='svg-ax'>12</text>
 <text x='24' y='292' class='svg-ax'>PAID TIER, STANDARD, TEXT, PROMPTS UP TO 200K TOKENS</text>
 </svg>
-<figcaption><b>Exhibit 1.</b> Output tokens drive the gap: the top tier's output price is almost five times the small tier's. Source: Gemini API pricing, accessed November 2026.</figcaption>
+<figcaption><b>Exhibit 1.</b> Output tokens drive the gap: the top model's output price is four times the small model's. Source: Gemini API pricing, accessed November 2, 2026.</figcaption>
 </figure>
-<p>Two details matter for budgeting. First, output usually costs much more than input, so long answers are expensive answers. Second, prices move: the Gemini 3.8 Flash list price is shown at $0.75 input and $3.75 output per million tokens through December 31, 2026, rising to $1.50 and $7.50 from January 1, 2027. For reference, check the pricing page <a href='https://ai.google.dev/pricing' target='_blank' rel='noopener'>here</a>. OpenAI and Anthropic publish the same kind of tiered price lists; check their current rates <a href='https://openai.com/api/pricing/' target='_blank' rel='noopener'>here</a> and <a href='https://docs.claude.com/en/docs/about-claude/pricing' target='_blank' rel='noopener'>here</a>.</p>
+<p>Two details matter for budgeting. First, output usually costs much more than input, so long answers are expensive answers. Second, models and prices move fast. Gemini 4 Argon, the newest model on the list, is priced at $2.00 input and $10.00 output per million tokens through November 30, 2026, doubling to $4.00 and $20.00 from December 1, 2026. Gemini 3.8 Flash doubles from January 1, 2027. Chat platforms move too: Botcake has retired its oldest AI model option and now offers several newer generations, so check the model list in your AI settings before you budget. For reference, check the pricing page <a href='https://ai.google.dev/pricing' target='_blank' rel='noopener'>here</a>. OpenAI and Anthropic publish the same kind of tiered price lists; check their current rates <a href='https://openai.com/api/pricing/' target='_blank' rel='noopener'>here</a> and <a href='https://docs.claude.com/en/docs/about-claude/pricing' target='_blank' rel='noopener'>here</a>.</p>
 <p class='dd-kicker'>Move 03 · Route</p>
 <h2 id='route'>Route to the small model first, then escalate</h2>
 <div class='dd-move'>
@@ -115,13 +115,14 @@
 <div class='dd-table-wrap'><table>
 <thead><tr><th>Setup</th><th>Cost per reply</th><th>Per month</th></tr></thead>
 <tbody>
-<tr><td>Gemini 3.1 Pro Preview for everything</td><td>$0.0096</td><td>$96.00</td></tr>
+<tr><td>Gemini 4 Argon for everything (price to November 30, 2026)</td><td>$0.0090</td><td>$90.00</td></tr>
+<tr><td>Gemini 4 Argon for everything (price from December 1, 2026)</td><td>$0.0180</td><td>$180.00</td></tr>
 <tr><td>Gemini 3.8 Flash for everything</td><td>$0.0034</td><td>$33.75</td></tr>
 <tr><td>Gemini 3.5 Flash-Lite for everything</td><td>$0.0017</td><td>$16.50</td></tr>
 <tr><td>3.5 Flash-Lite, 2,500 of the input tokens cached</td><td>$0.0010</td><td>$11.55 incl. storage</td></tr>
 </tbody>
 </table></div>
-<p>The absolute amounts are small at this volume. The ratio is the point: the same traffic costs about eight times more on the top tier than on the cached small tier, and the gap grows with every new channel and campaign. For the full cost picture beyond tokens, see <a href='https://www.dijaedadula.com/ai-chatbot-cost'>how much an AI chatbot really costs</a>.</p>
+<p>The absolute amounts are small at this volume. The ratio is the point: the same traffic costs about eight times more on the top model than on the cached small model (about sixteen times once the December price applies), and the gap grows with every new channel and campaign. For the full cost picture beyond tokens, see <a href='https://www.dijaedadula.com/ai-chatbot-cost'>how much an AI chatbot really costs</a>.</p>
 <div class='dd-bottom'><span class='dd-note-label'>Dijae's rule</span><p>Pay for intelligence only where the answer needs it. Every other message goes to the smallest model that passes the test.</p></div>
 <p class='dd-kicker'>Move 05 · Prove</p>
 <h2 id='prove'>Prove the choice with numbers</h2>
