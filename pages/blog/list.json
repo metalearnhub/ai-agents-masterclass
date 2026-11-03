@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "chatbot-conversation-design",
+   "title": "Chatbot Conversation Design That Converts: Openers, Quick Replies and Follow-Ups",
+   "blurb": "Write a clear opener, offer the right quick replies and follow up inside Messenger's rules, with copy-ready scripts and a test checklist."
+  },
+  {
    "slug": "ai-model-choice-agent-costs",
    "title": "Choosing the Right AI Model for a Business Agent (and Keeping Costs Down)",
    "blurb": "How to match agent jobs to model tiers, route and escalate, and cut costs with caching and batching."

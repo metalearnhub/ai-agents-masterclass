@@ -185,6 +185,11 @@
    "slug": "ai-model-choice-agent-costs",
    "title": "Choosing the Right AI Model for a Business Agent (and Keeping Costs Down)",
    "blurb": "Match agent jobs to model tiers, route and escalate, and cut costs with caching and batching."
+  },
+  {
+   "slug": "chatbot-conversation-design",
+   "title": "Chatbot Conversation Design That Converts: Openers, Quick Replies and Follow-Ups",
+   "blurb": "Write a clear opener, offer the right quick replies and follow up inside Messenger's rules."
   }
  ],
  "sent": [
@@ -286,8 +291,15 @@
    "date": "2026-11-02",
    "slug": "pancake-vs-botcake-vs-manychat",
    "info": "scheduled id 5518 for 2026-11-02 18:00 Manila",
-   "url": "",
+   "url": "https://www.facebook.com/1579937777474981/posts/1803974588404631",
    "image": "https://paymegpt.com/objects/generated-images/814/1793579291911-a8de58a58fefddf3.png"
+  },
+  {
+   "date": "2026-11-03",
+   "slug": "how-to-test-an-ai-chatbot",
+   "info": "posted 2026-11-03 08:44 Manila",
+   "url": "https://www.facebook.com/1579937777474981/posts/1804762258325864",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793666092565-ec29eb3053993c66.png"
   }
  ]
 }
