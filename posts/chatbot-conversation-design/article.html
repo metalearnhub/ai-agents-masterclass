@@ -13,6 +13,7 @@
 <li><a href="#which-tap">Quick reply, button or free text?</a></li>
 <li><a href="#qualify">How many questions before the offer?</a></li>
 <li><a href="#follow-up">How do you follow up without annoying people?</a></li>
+<li><a href="#outside-window">What can you send after 24 hours?</a></li>
 <li><a href="#try">What can you set up today?</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ol>
@@ -20,7 +21,7 @@
 
 <h2 id="opener">What should a chatbot's first message say?</h2>
 <p class="dd-short"><b>Short answer:</b> who is talking, what it can do right now, and two to four taps for the most common reasons people message you.</p>
-<p>"How can I help you?" feels polite, but it hands the hardest job to the customer: working out what to ask and how to phrase it. A good opener does that work for them. It names the assistant honestly, lists what it can do in one line, and offers taps that match the top reasons people message your page. One tap is always a way to reach a person.</p>
+<p>"How can I help you?" feels polite, but it hands the hardest job to the customer: working out what to ask and how to phrase it. A good opener does that work for them. It names the assistant honestly (Meta's policy requires automated chats to say so where the law requires it, and recommends it everywhere), lists what it can do in one line, and offers taps that match the top reasons people message your page. One tap is always a way to reach a person.</p>
 <p>Where do the taps come from? Your own inbox. Read the last 50 to 100 first messages on your page and group them. For most shops it is price, stock and delivery. For clinics it is booking and prices. For service businesses it is "how much" and "can you do this for me". Those groups become your taps.</p>
 <figure class="dd-fig">
 <svg viewBox="0 0 640 300" role="img" aria-labelledby="sc1t sc1d" xmlns="http://www.w3.org/2000/svg">
@@ -100,13 +101,25 @@ What would you like to do?
 
 <h2 id="follow-up">How do you follow up without annoying people?</h2>
 <p class="dd-short"><b>Short answer:</b> one or two useful nudges inside the 24-hour window, each with a new reason to reply, and stop the moment the customer answers.</p>
-<p>On Messenger, a business can reply freely for 24 hours after the customer's last message. Outside that window the options are narrow, and they narrowed further in 2026: Meta retired the POST_PURCHASE_UPDATE, CONFIRMED_EVENT_UPDATE and ACCOUNT_UPDATE message tags. The HUMAN_AGENT tag still lets a real person reply to a customer within 7 days, for genuine support cases, not mass messages. For order and shipping updates Meta points to utility message templates, and promotional messages go through opt-in marketing messages. For reference, check the summary of the change <a href="https://community.manychat.com/product-updates/meta-s-deprecation-of-the-message-tags-feature-on-messenger-9010" target="_blank" rel="noopener">here</a>.</p>
+<p>On Messenger, a business can reply freely, promotions included, for 24 hours after the customer's last message. When the customer's first message comes from a Click-to-Messenger ad, that window can last up to 7 days. Outside the window, the rules changed in 2026: since April 27, 2026, Messenger rejects the POST_PURCHASE_UPDATE, CONFIRMED_EVENT_UPDATE and ACCOUNT_UPDATE message tags with error code 100. The only tag left is HUMAN_AGENT, which lets a real person reply by hand within 7 days, with no promotional content. For reference, check the documentation <a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/send-messages" target="_blank" rel="noopener">here</a> and the changelog <a href="https://developers.secure.facebook.com/documentation/business-messaging/messenger-platform/changelog" target="_blank" rel="noopener">here</a>.</p>
+<h3 id="outside-window">What you can still send after 24 hours</h3>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Option</th><th>What it is for</th><th>Watch out for</th></tr></thead>
+<tbody>
+<tr><td>Standard window</td><td>Anything, including offers, within 24 hours of the customer's last message (up to 7 days after a Click-to-Messenger ad)</td><td>Every bot follow-up should live here</td></tr>
+<tr><td>HUMAN_AGENT tag</td><td>A real person answering a support case by hand, up to 7 days later</td><td>No promotions, no automation</td></tr>
+<tr><td>Utility messages</td><td>Pre-approved templates for order, account and appointment updates</td><td>No marketing content; Meta's replacement for the retired tags</td></tr>
+<tr><td>Marketing messages</td><td>Promotions to people who opted in</td><td>Paid campaigns through an ad account, with frequency caps enforced since April 2026</td></tr>
+<tr><td>Sponsored messages</td><td>A paid ad sent to people who messaged your Page before</td><td>Labelled "Sponsored", follows ad policies, not available on Instagram</td></tr>
+</tbody>
+</table></div>
+<p>Utility messages matter most for shops. Meta opened them in beta on July 29, 2025, with the Philippines among the first markets, and has since added images (September 2025) and named fields in templates (March 2026). If your bot platform still sends order or shipping notices with the old tags, those messages now fail. Check whether your platform supports utility templates yet; if it does not, send those updates inside the 24-hour window instead.</p>
 <p>So design your follow-ups to work inside the window. In Botcake AI, the agent's AI response behavior tab has an Auto follow-up switch that sends follow-ups when the customer has not replied, with a delay ("Send follow-up messages automatically after") and a cap ("Number of messages"). You can let the AI write them or write them yourself. For flow-based bots, tag-based sequences do the same job: attach a sequence when a tag is added and remove it when the customer replies. For reference, check the documentation <a href="https://docs.pancake.biz/botcake/st-f5/st-p2?lang=en" target="_blank" rel="noopener">here</a>.</p>
 <figure class="dd-fig"><div class="dd-shot"><img src="https://statics.pancake.vn/web-media-264/8c/e7/aa/3c/bd689be48f6a418ed3c5ced51d7defc73fb892853dfad7c22ad688d5.webp" alt="Botcake AI response behavior tab showing the Auto follow-up switch, a delay of 30 minutes, 3 follow-up messages and the option to create follow-up messages automatically with AI or manually" loading="lazy"></div><figcaption><b>Screenshot.</b> Botcake AI's Auto follow-up settings in a demo setup: a 30-minute delay and a cap of 3 messages. Pick values that fit your own sales cycle.</figcaption></figure>
 <p>What makes a follow-up welcome is the reason it gives. "Just checking in" adds nothing. An illustrative nudge like "The size you asked about is back in stock" or "Here is the price list you asked for" gives the customer a reason to answer. Each nudge should carry one new, useful thing and one easy tap. The longer-term follow-up system, including what happens after the window closes, is in <a href="https://www.dijaedadula.com/automate-lead-follow-up">how to automate lead follow-up with AI</a>.</p>
 <div class="dd-myth">
 <div class="dd-m"><span class="dd-lab">Myth</span><p>If the customer stops replying, the bot should keep messaging until they answer.</p></div>
-<div class="dd-r"><span class="dd-lab">Reality</span><p>Messenger's rules limit what you can send after 24 hours, and silence is often an answer. Two useful nudges, then let a person decide.</p></div>
+<div class="dd-r"><span class="dd-lab">Reality</span><p>After 24 hours, automated messages need an approved route (utility template, opt-in marketing message or paid sponsored message), and silence is often an answer. Two useful nudges inside the window, then let a person decide.</p></div>
 </div>
 <div class="dd-sticky"><span class="dd-note-label">Dijae's rule</span><p>Every bot message should end with one easy next step. If the customer has to work out what to type, the conversation is already leaking.</p></div>
 
@@ -150,8 +163,11 @@ What would you like to do?
 <h2>References</h2>
 <ol class="dd-refs">
 <li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/send-messages/quick-replies" target="_blank" rel="noopener">Meta for Developers: Quick replies (Messenger Platform)</a>. Up to 13 quick replies, 20-character titles. Accessed November 2026.</li>
-<li><a href="https://community.manychat.com/product-updates/meta-s-deprecation-of-the-message-tags-feature-on-messenger-9010" target="_blank" rel="noopener">ManyChat Community: Meta's deprecation of the Message Tags feature on Messenger</a> (HUMAN_AGENT unaffected; utility messages as the replacement), February 2026.</li>
-<li><a href="https://www.broadturbo.com/en/messenger-rules/message-tags" target="_blank" rel="noopener">BroadTurbo: Which Facebook Message Tags were retired? 2026 update</a> (retired tags, HUMAN_AGENT 7-day window). Accessed November 2026.</li>
+<li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/send-messages" target="_blank" rel="noopener">Meta for Developers: Send a message (Messenger Platform)</a>. Standard messaging window, Human Agent tag, utility, marketing and sponsored messages. Accessed November 2026.</li>
+<li><a href="https://developers.secure.facebook.com/documentation/business-messaging/messenger-platform/changelog" target="_blank" rel="noopener">Meta for Developers: Messenger Platform changelog</a>. Message tags retired April 27, 2026; utility template updates (September 2025, March 2026).</li>
+<li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/marketing-messages-on-messenger/changelog" target="_blank" rel="noopener">Meta for Developers: Marketing Message API for Messenger changelog</a>. Launch July 1, 2025; frequency caps enforced April 10, 2026.</li>
+<li><a href="https://developers.facebook.com/documentation/business-messaging/messenger-platform/policy" target="_blank" rel="noopener">Meta for Developers: Messenger Platform and IG Messaging API policy</a>. Automated experience disclosure.</li>
+<li><a href="https://ppc.land/meta-introduces-utility-messages-for-business-communication-compliance/" target="_blank" rel="noopener">PPC Land: Meta introduces utility messages for business communication</a>. Open beta from July 29, 2025, including the Philippines.</li>
 <li><a href="https://docs.pancake.biz/botcake/st-f5/st-p2?lang=en" target="_blank" rel="noopener">Botcake documentation: customer tags and sequences</a>.</li>
 <li><a href="https://www.dijaedadula.com/botcake-ai-pancake-setup-guide">Botcake AI + Pancake Setup Guide</a> (the full agent setup, including Auto follow-up).</li>
 </ol>

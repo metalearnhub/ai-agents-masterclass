@@ -135,3 +135,7 @@ Before writing, run `python3 tools/style_next.py` and follow STYLES.md for that 
 ## 17. Current models only (Dijae, Nov 2 2026)
 - Any post that names AI models must use the NEWEST generation on the provider's live pricing or models page, opened in that run. Read the whole page (WebFetch with offset for long pages) and lead with the newest model, not the first one you see.
 - Note scheduled price changes and retirements with dates. Platform model lists (Botcake, Pancake, ManyChat) change too: say "check the model list in your AI settings" instead of naming old versions.
+
+## 18. Reuse verified research (Dijae, Nov 3 2026)
+- Before researching a platform rule, grep posts/*/article.html and context/ for it (e.g. `grep -ril "message tag" posts context`). Earlier posts may already cite the primary source; reuse it and re-check that source for changes.
+- Platform rules (Meta messaging windows, tags, utility and marketing messages, policy) must come from Meta's own pages: developers.facebook.com/documentation/... and the Messenger Platform changelog. Third-party summaries only as secondary sources. Facts are in context/META_MESSAGING_2026.md.
