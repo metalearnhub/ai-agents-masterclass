@@ -1,0 +1,173 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/b0/52/21/76/a94e6605ead7532bde326e3234e9259d07f03fb47bbd9a0040d03f18.png' alt='Flat illustration of a smartphone with an incoming call, a friendly robot wearing a headset, a wall calendar with one slot checked, a clock and a speech bubble with a check mark' width='1536' height='864' loading='lazy'></div></figure>
+<p>Appointment businesses lose calls at the worst possible moments: while the front desk is with a patient, while the stylist has wet hair in her hands, after hours, at lunch. A caller who reaches voicemail often just calls the next business on the list. An AI voice receptionist answers every one of those calls, books the slot into your calendar and hands the difficult ones to a person.</p>
+<p>This guide is for clinics, salons, spas, dental and wellness practices, repair and home services, and agencies that set these systems up for clients. It explains how a voice receptionist works, how to set one up, what to check before it talks to a real caller, and how to know it is working.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>The <b>five parts</b> of every AI voice receptionist, in plain English.</li>
+<li>A <b>setup path</b> with the settings that matter most for booking.</li>
+<li>A <b>pre-launch checklist</b> and a <b>10-call test script</b> you can copy.</li>
+<li>The <b>launch metrics</b> to review every week.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#what'>What it does (and does not do)</a></li>
+<li><a href='#how'>How a call flows</a></li>
+<li><a href='#setup'>Setting it up</a></li>
+<li><a href='#check'>What to check before launch</a></li>
+<li><a href='#test'>The 10-call test script</a></li>
+<li><a href='#metrics'>Metrics after launch</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='what'>1. What an AI voice receptionist does (and does not do)</h2>
+<p>An AI voice receptionist is an AI agent on a phone line. It listens, understands what the caller wants, answers from your business knowledge and takes action in your tools: it checks the calendar, books or moves an appointment, sends a confirmation and transfers the call when a person is needed.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Good jobs for it</th><th>Keep with a person</th></tr></thead>
+<tbody>
+<tr><td>Booking, rescheduling and cancelling appointments</td><td>Medical, legal or financial advice</td></tr>
+<tr><td>Hours, location, parking, prices from your price list</td><td>Complaints and refunds</td></tr>
+<tr><td>After-hours and lunch-time calls</td><td>Anything that needs judgment or an exception</td></tr>
+<tr><td>Taking a clear message with a callback time</td><td>Callers who ask for a person</td></tr>
+</tbody>
+</table></div>
+<p>The receptionist should be honest about what it is. Callers accept an AI that books quickly and transfers smoothly. They do not accept one that pretends to be human and then gets stuck.</p>
+<h2 id='how'>2. How a call flows</h2>
+<p>Every voice receptionist, whatever the platform, is built from the same five parts: a phone number, speech-to-text that turns the caller's voice into text, an AI agent that decides what to do, tools it can use (calendar, CRM, SMS) and a voice that speaks the reply. The quality of the call depends on the weakest of the five.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 250' role='img' aria-labelledby='sa1t sa1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sa1t'>The five parts of an AI voice receptionist</title>
+<desc id='sa1d'>Five boxes left to right: phone number, speech to text, AI agent with your knowledge and rules, tools such as calendar, CRM and SMS, and the voice that speaks the reply. Arrows connect them. Below, an orange box shows the transfer to a person when the agent should not handle the call.</desc>
+<defs><marker id='sa1a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5b6470'/></marker></defs>
+<rect x='0' y='0' width='640' height='250' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>ONE CALL, FIVE PARTS</text>
+<rect x='24' y='56' width='100' height='74' rx='10' fill='#fff' stroke='#007a66'/><text x='36' y='86' class='svg-t'>Phone</text><text x='36' y='108' class='svg-s'>The number</text>
+<rect x='146' y='56' width='100' height='74' rx='10' fill='#fff' stroke='#007a66'/><text x='158' y='86' class='svg-t'>Listen</text><text x='158' y='108' class='svg-s'>Speech to text</text>
+<rect x='268' y='56' width='110' height='74' rx='10' fill='#e8f4f1' stroke='#007a66'/><text x='280' y='86' class='svg-t'>AI agent</text><text x='280' y='108' class='svg-s'>Your rules</text>
+<rect x='400' y='56' width='100' height='74' rx='10' fill='#fff' stroke='#007a66'/><text x='412' y='86' class='svg-t'>Tools</text><text x='412' y='108' class='svg-s'>Calendar</text>
+<rect x='522' y='56' width='94' height='74' rx='10' fill='#fff' stroke='#007a66'/><text x='534' y='86' class='svg-t'>Speak</text><text x='534' y='108' class='svg-s'>The voice</text>
+<line x1='124' y1='93' x2='142' y2='93' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='246' y1='93' x2='264' y2='93' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='378' y1='93' x2='396' y2='93' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='500' y1='93' x2='518' y2='93' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='323' y1='130' x2='323' y2='168' stroke='#c2410c' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<rect x='188' y='172' width='270' height='52' rx='10' fill='#fff4ec' stroke='#c2410c'/><text x='204' y='196' class='svg-t'>Transfer to a person</text><text x='204' y='214' class='svg-s'>Asked for, upset, or outside the rules</text>
+</svg>
+<figcaption><b>Figure 1.</b> Every voice receptionist has the same five parts. The agent in the middle also decides when to hand the call to a person.</figcaption>
+</figure>
+<p>Two parts decide most of the caller's experience. The first is speed: a long pause after the caller stops talking feels broken on a phone, even when the answer is right. The second is the transfer: when the agent hands the call to a person, the caller should hear what is happening, and the person picking up should get a short summary so the caller does not repeat everything. Voice platforms support this. ElevenLabs agents, for example, can transfer a call to a phone number with one message read to the caller and a separate briefing for the person who answers. For reference, check the documentation <a href='https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools/transfer-to-number' target='_blank' rel='noopener'>here</a>.</p>
+<h2 id='setup'>3. Setting it up</h2>
+<p>For appointment businesses I recommend <a href='https://paymegpt.com' target='_blank' rel='noopener'>PayMeGPT</a>, because the phone line, the AI agent, the knowledge, the calendar and the follow-up flows live in one place. These are the settings that matter, checked in PayMeGPT on November 4, 2026:</p>
+<ol>
+<li class='dd-step'><span class='dd-num'>1</span><b>Build the agent first.</b> Write its instructions, add your services, prices, policies and FAQ as knowledge, and test it in chat before it ever takes a call. The instruction structure is in <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>how to write AI agent instructions</a>.</li>
+<li class='dd-step'><span class='dd-num'>2</span><b>Connect a phone number.</b> A Twilio number is bound to the agent so it answers inbound calls. The phone voice is its own setting, separate from the web chat voice, with OpenAI, xAI (Grok) or ElevenLabs voices to choose from.</li>
+<li class='dd-step'><span class='dd-num'>3</span><b>Connect the calendar.</b> Booking writes into a connected Google Calendar (or a native PayMeGPT calendar). Set the appointment lengths, the bookable hours and days, the time zone, a buffer between bookings and the minimum notice. Add your other calendars as conflict calendars so the agent never offers a time when you are already busy.</li>
+<li class='dd-step'><span class='dd-num'>4</span><b>Write the transfer and message rules.</b> Name exactly when the agent transfers, who it transfers to, and what it does when nobody answers: take a message and say when a person will call back.</li>
+<li class='dd-step'><span class='dd-num'>5</span><b>Add the follow-up.</b> A confirmation by SMS or email after every booking, and a reminder before the appointment, run as flows on the same contact record.</li>
+</ol>
+<p>I could not read PayMeGPT's public changelog from here today, so check it for the newest voice features before you build. For reference, check the changelog <a href='https://paymegpt.com/changelog' target='_blank' rel='noopener'>here</a>, and the walkthroughs on the <a href='https://www.youtube.com/@PAYMEGPT' target='_blank' rel='noopener'>PayMeGPT YouTube channel</a>.</p>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span><p>A voice agent should do one of three things on every call: book, transfer or take a clear message with a callback time. A call that ends with none of the three is a lost customer.</p></div>
+<h2 id='check'>4. What to check before launch</h2>
+<p>Most voice agent failures are not about the AI. They come from settings nobody tested: a time zone, a buffer, a transfer number that rings a phone nobody carries.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Check</th><th>Why it matters</th><th>How to test it</th></tr></thead>
+<tbody>
+<tr><td>Booking accuracy</td><td>A wrong slot is worse than no booking</td><td>Book, move and cancel; confirm each change in the calendar</td></tr>
+<tr><td>Time zone and hours</td><td>Callers get offered slots you are closed</td><td>Ask for the earliest and latest slot, and a weekend slot</td></tr>
+<tr><td>Conflict calendars</td><td>Double-booking with your other commitments</td><td>Block a time in another calendar and try to book it</td></tr>
+<tr><td>Response speed</td><td>Long pauses make callers talk over the agent or hang up</td><td>Listen to test calls for gaps after the caller stops speaking</td></tr>
+<tr><td>Transfer</td><td>The caller must reach a person who knows why they called</td><td>Ask for a person during business hours and after hours</td></tr>
+<tr><td>Knowledge</td><td>Wrong prices or policies on a call are hard to take back</td><td>Ask about every service and price on your list</td></tr>
+<tr><td>Disclosure</td><td>Callers should know they are speaking to an AI assistant</td><td>Check the first sentence of every call</td></tr>
+<tr><td>Recording and data</td><td>Recordings and transcripts are personal data</td><td>Confirm what is recorded, who can see it and how long it is kept</td></tr>
+</tbody>
+</table></div>
+<div class='dd-warn'><span class='dd-note-label'>Before you add outbound calls</span><p>Answering calls and making them are treated differently. In the United States, the FCC ruled in February 2024 that AI-generated voices count as “artificial” voices under the Telephone Consumer Protection Act, so outbound AI calls need the called person's prior express consent unless an exemption applies. For reference, check the summary <a href='https://cooley.com/news/insight/2024/2024-02-15-fcc-ai-generated-robocalls-illegal-under-the-tcpa' target='_blank' rel='noopener'>here</a>. In the Philippines, call recordings and caller details fall under the Data Privacy Act; the basics are in <a href='https://www.dijaedadula.com/data-privacy-act-chatbots-philippines'>the Data Privacy Act guide for chatbots</a>.</p></div>
+<h2 id='test'>5. The 10-call test script</h2>
+<p>Run these ten calls yourself, from a phone that is not on your staff list, before the number goes live. Write down what happened on each one.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>VOICE RECEPTIONIST TEST SCRIPT
+1. Book the next available slot for your most common service.
+2. Reschedule that booking to another day.
+3. Cancel it.
+4. Ask the price of a service that is on your price list.
+5. Ask about something that is NOT in the knowledge.
+6. Ask for a person during business hours.
+7. Ask for a person after hours.
+8. Play an upset caller with a complaint.
+9. Call from a noisy place and speak fast.
+10. Stay silent for 10 seconds, then hang up.
+
+Pass when:
+- Calls 1-3 match the calendar exactly (date, time, length, time zone).
+- Call 4 gives the price on your list; call 5 says it will check, not a guess.
+- Calls 6 and 8 reach a person, or end with a message and a callback time.
+- Call 7 takes a message and states the callback time.
+- Calls 9-10 end politely, with no booking made by mistake.</code></pre></div>
+<p>The same method, applied to chat, is in <a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>how to test an AI chatbot</a>. The rules for when to hand off are in <a href='https://www.dijaedadula.com/ai-chatbot-human-handoff'>the handoff playbook</a>.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 260' role='img' aria-labelledby='sa2t sa2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sa2t'>Every call ends in one of three outcomes</title>
+<desc id='sa2d'>A box labelled incoming call branches into three outcome boxes: booked with a confirmation sent, transferred to a person with a summary, and message taken with a callback time. A fourth grey box labelled call ended with no outcome is crossed out as the failure to avoid.</desc>
+<defs><marker id='sa2a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5b6470'/></marker></defs>
+<rect x='0' y='0' width='640' height='260' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>THREE GOOD ENDINGS, ONE TO AVOID</text>
+<rect x='24' y='104' width='130' height='56' rx='10' fill='#007a66'/><text x='40' y='128' class='svg-w'>Incoming</text><text x='40' y='146' class='svg-ws'>call</text>
+<rect x='250' y='50' width='200' height='44' rx='10' fill='#fff' stroke='#007a66'/><text x='264' y='77' class='svg-t'>Booked + confirmation</text>
+<rect x='250' y='108' width='200' height='44' rx='10' fill='#fff' stroke='#007a66'/><text x='264' y='135' class='svg-t'>Transferred + summary</text>
+<rect x='250' y='166' width='200' height='44' rx='10' fill='#fff' stroke='#007a66'/><text x='264' y='193' class='svg-t'>Message + callback time</text>
+<line x1='154' y1='124' x2='246' y2='74' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa2a)'/>
+<line x1='154' y1='132' x2='246' y2='130' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa2a)'/>
+<line x1='154' y1='140' x2='246' y2='186' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa2a)'/>
+<rect x='476' y='108' width='140' height='44' rx='10' fill='#fff4ec' stroke='#c2410c'/><text x='490' y='128' class='svg-o'>No outcome</text><text x='490' y='144' class='svg-s'>Lost caller</text>
+<line x1='476' y1='108' x2='616' y2='152' stroke='#c2410c' stroke-width='2'/>
+<text x='250' y='236' class='svg-s'>Track the share of calls in each box every week.</text>
+</svg>
+<figcaption><b>Figure 2.</b> The outcome map. Every call should land in one of the three teal boxes; the orange box is the failure to design out.</figcaption>
+</figure>
+<h2 id='metrics'>6. Metrics after launch</h2>
+<p>Review these every week for the first month, then every month. Listen to a sample of real calls each time; the numbers tell you where to look, the recordings tell you why.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Metric</th><th>What it tells you</th></tr></thead>
+<tbody>
+<tr><td>Answered call rate</td><td>Share of calls the line picked up, including after hours</td></tr>
+<tr><td>Booking completion rate</td><td>Share of booking calls that ended with a confirmed appointment</td></tr>
+<tr><td>Wrong-booking rate</td><td>Bookings staff had to fix; aim for zero</td></tr>
+<tr><td>Transfer rate and transfer success</td><td>How often the agent hands off, and how often a person actually picks up</td></tr>
+<tr><td>No-outcome calls</td><td>Calls that ended without a booking, transfer or message</td></tr>
+<tr><td>No-show rate</td><td>Whether confirmations and reminders are working</td></tr>
+</tbody>
+</table></div>
+<p>The weekly review routine that keeps an agent accurate after launch is in <a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>AI agent monitoring after launch</a>.</p>
+<p>An honest limitation: voice is harder than chat. Heavy accents, background noise, poor signal and callers who talk over the agent still cause misunderstandings, and phone numbers and call costs differ by country. Start with booking and simple questions, keep a person reachable, and widen the agent's job only after the test calls and the weekly numbers say it is ready.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>What is an AI voice receptionist?</h3>
+<p>It is an AI agent that answers your business phone line. It understands what the caller needs, answers from your business information, books or changes appointments in your calendar and transfers the call to a person when needed.</p>
+<h3>Can an AI receptionist book appointments directly into my calendar?</h3>
+<p>Yes. Voice agents connected to a calendar, such as Google Calendar, can check availability and book, reschedule or cancel. Set the appointment lengths, hours, time zone, buffer and conflict calendars before launch, and test every change.</p>
+<h3>Should an AI receptionist tell callers it is an AI?</h3>
+<p>Yes. Say it in the first sentence. Callers accept an AI assistant that books quickly and transfers smoothly, and disclosure avoids the trust problem of a bot that pretends to be human.</p>
+<h3>Is it legal to make outbound calls with an AI voice?</h3>
+<p>In the United States, the FCC ruled in February 2024 that AI-generated voices are artificial voices under the TCPA, so outbound calls need prior express consent unless an exemption applies. Check the rules in each country you call, and get legal advice for outbound campaigns.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Put a receptionist on your phone line</p>
+<p>Want a voice receptionist set up with your services, calendar, transfer rules and test calls? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+<p>Prefer to learn it step by step? <a href='https://grow.dijaedadula.com/newsletter'>Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://elevenlabs.io/docs/eleven-agents/customization/tools/system-tools/transfer-to-number' target='_blank' rel='noopener'>ElevenLabs documentation: Transfer to number</a> (conference, blind and SIP REFER transfers; caller and operator messages). Accessed November 2026.</li>
+<li><a href='https://cooley.com/news/insight/2024/2024-02-15-fcc-ai-generated-robocalls-illegal-under-the-tcpa' target='_blank' rel='noopener'>Cooley: FCC: AI-generated robocalls illegal under the TCPA</a>, February 15, 2024.</li>
+<li><a href='https://paymegpt.com/changelog' target='_blank' rel='noopener'>PayMeGPT changelog</a>. Could not be read from this workspace on November 4, 2026; check for the newest voice features.</li>
+<li><a href='https://www.youtube.com/@PAYMEGPT' target='_blank' rel='noopener'>PayMeGPT YouTube channel</a> (walkthroughs).</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/ai-automation-clinics-med-spas'>AI Automation for Clinics and Med Spas: Bookings, Reminders and Reviews</a></li>
+<li><a href='https://www.dijaedadula.com/ai-chatbot-human-handoff'>When Should an AI Chatbot Hand Off to a Human? A Handoff Playbook</a></li>
+<li><a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
