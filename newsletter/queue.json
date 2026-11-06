@@ -200,6 +200,11 @@
    "slug": "lead-response-time",
    "title": "Lead Response Time: Why the First Five Minutes Decide Who Wins the Customer",
    "blurb": "What speed-to-lead research shows, why businesses stay slow, and five moves to reply to every lead in minutes."
+  },
+  {
+   "slug": "ai-agent-real-estate",
+   "title": "AI Agents for Real Estate: Qualify Leads, Book Viewings and Follow Up",
+   "blurb": "Answer listing questions, qualify buyers with four questions, book viewings and follow up, with clear limits for licensed agents."
   }
  ],
  "sent": [
@@ -228,6 +233,15 @@
     "what-does-an-ai-trainer-do",
     "easypc-ai-lead-qualification-case-study",
     "pancake-vs-botcake-vs-manychat"
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "broadcastId": "1075",
+   "slugs": [
+    "how-to-test-an-ai-chatbot",
+    "what-is-mcp",
+    "ai-chatbot-platforms-philippines"
    ]
   }
  ],
@@ -324,6 +338,13 @@
    "info": "posted with the daily run",
    "url": "https://www.facebook.com/1579937777474981/posts/1807279064740850",
    "image": "https://paymegpt.com/objects/generated-images/814/1793838768119-339f85a90b3a1422.png"
+  },
+  {
+   "date": "2026-11-06",
+   "slug": "ai-chatbot-for-resorts-hotels-philippines",
+   "info": "posted with the daily run",
+   "url": "https://www.facebook.com/1579937777474981/posts/1808623037939786",
+   "image": "https://paymegpt.com/objects/generated-images/814/1793925098391-f33bc6410b7eac1f.png"
   }
  ]
 }

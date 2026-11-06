@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "ai-agent-real-estate",
+   "title": "AI Agents for Real Estate: Qualify Leads, Book Viewings and Follow Up",
+   "blurb": "Answer listing questions, qualify buyers with four questions, book viewings and follow up, with clear limits for licensed agents."
+  },
+  {
    "slug": "lead-response-time",
    "title": "Lead Response Time: Why the First Five Minutes Decide Who Wins the Customer",
    "blurb": "What speed-to-lead research shows, why businesses stay slow, and five moves to reply to every lead in minutes."
