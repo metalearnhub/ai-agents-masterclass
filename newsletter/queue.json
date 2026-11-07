@@ -205,6 +205,11 @@
    "slug": "ai-agent-real-estate",
    "title": "AI Agents for Real Estate: Qualify Leads, Book Viewings and Follow Up",
    "blurb": "Answer listing questions, qualify buyers with four questions, book viewings and follow up, with clear limits for licensed agents."
+  },
+  {
+   "slug": "ai-agent-project-plan",
+   "title": "Your First AI Agent Project Plan: Scope, Timeline and Acceptance Criteria",
+   "blurb": "A one-page scope, a six-week timeline, acceptance criteria written before the build and a go/no-go check for launch."
   }
  ],
  "sent": [
@@ -345,6 +350,13 @@
    "info": "posted with the daily run",
    "url": "https://www.facebook.com/1579937777474981/posts/1808623037939786",
    "image": "https://paymegpt.com/objects/generated-images/814/1793925098391-f33bc6410b7eac1f.png"
+  },
+  {
+   "date": "2026-11-07",
+   "slug": "qualify-leads-messenger-automatically",
+   "info": "posted with the daily run",
+   "url": "https://www.facebook.com/1579937777474981/posts/1809989457803144",
+   "image": "https://paymegpt.com/objects/generated-images/814/1794011423001-ab8e7143a35270ce.png"
   }
  ]
 }

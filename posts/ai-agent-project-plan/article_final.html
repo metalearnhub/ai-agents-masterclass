@@ -1,0 +1,170 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/6c/2e/d7/2a/3b1f5f7a7ec50dba9f1c6b4eb31ab44b3e959ce83ff24a7193a8ea8e.png' alt='Flat illustration of a clipboard checklist, a friendly robot holding a pencil, a calendar with an orange milestone flag, a five-step timeline ending in a check mark and a target with an arrow in the bullseye' width='1536' height='864' loading='lazy'></div></figure>
+<p>Most first AI agent projects do not fail at the technology. They fail before it: a vague goal (“let's add AI”), a scope that grows every week, no agreed definition of done, and a launch decided by enthusiasm instead of evidence. Gartner expects more than 40% of agentic AI projects to be canceled by the end of 2027, citing rising costs, unclear business value and weak risk controls.</p>
+<p>This guide is the project plan I would want in hand before anyone builds. It is written for business owners, operations leads and the agencies that build agents for them, and it covers one job, one channel and one owner: scope, timeline, acceptance criteria and the launch decision.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>A <b>one-page scope</b> template you can copy.</li>
+<li>A <b>six-week timeline</b> with a deliverable and a sign-off for every phase.</li>
+<li><b>Acceptance criteria</b> written before the build, with how to measure each one.</li>
+<li>A <b>go/no-go check</b> for launch and the first 30 days after it.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#why'>Why first agent projects stall</a></li>
+<li><a href='#scope'>Scope one job</a></li>
+<li><a href='#timeline'>The six-week timeline</a></li>
+<li><a href='#criteria'>Acceptance criteria</a></li>
+<li><a href='#risk'>Risk and budget</a></li>
+<li><a href='#launch'>Launch and the first 30 days</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='why'>1. Why first AI agent projects stall</h2>
+<p>Gartner's June 2025 prediction names three causes: costs that grow faster than expected, business value that was never defined, and risk controls that were not in place. It also warned about “agent washing”: of the thousands of vendors claiming agentic AI, Gartner estimated only about 130 offer real agentic features. A project plan answers all three causes up front, in writing: what value, at what cost, under which controls.</p>
+<p>The plan also protects you from building too much. Anthropic's guidance on building agents makes the same point: start with the simplest solution that works and add agentic complexity only when the task needs it. Many “agent” projects are better served by a fixed workflow or a chatbot. If you are not sure which you need, decide that first with <a href='https://www.dijaedadula.com/ai-agent-vs-chatbot-vs-automation'>AI agent vs chatbot vs automation</a>.</p>
+<h2 id='scope'>2. Scope one job, on one page</h2>
+<p>A first agent should do one job well, on one channel, for one group of users. “Answer customer questions” is not a job. “Answer pricing and availability questions on Messenger and book a call for qualified leads” is. Write the scope before you choose any tool, and keep it to one page so everyone reads it.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>AI AGENT SCOPE (one page)
+Job:            [the one task, in one sentence]
+Channel:        [Messenger / website chat / phone / email]
+Users:          [who talks to it]
+In scope:       [3-5 things it must do]
+Out of scope:   [what it must NOT do, and where those go]
+Knowledge:      [sources it may answer from, and who keeps them current]
+Systems:        [calendar, CRM, inventory; read-only or write]
+Handoff:        [when it hands to a person, and to whom]
+Success metric: [one number that proves value, with today's baseline]
+Owner:          [one named person who decides and signs off]
+Budget:         [setup, monthly platform and usage, review time]</code></pre></div>
+<p>The two lines people skip are the ones that matter most. <b>Out of scope</b> stops the project growing every week. The <b>baseline</b> for the success metric is what lets you prove value later: if you do not know your response time or booking rate today, measure it before you build. The process work behind this step is in <a href='https://www.dijaedadula.com/dont-automate-chaos'>Don't Automate Chaos</a>.</p>
+<h2 id='timeline'>3. The six-week timeline</h2>
+<p>For a single-job agent on one channel, six weeks is a realistic plan when the knowledge already exists and the systems have working connections. Treat it as a typical plan, not a promise: messy data or a new integration adds time, and a simple FAQ agent can take less.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 250' role='img' aria-labelledby='sa1t sa1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sa1t'>A six-week plan for a first AI agent</title>
+<desc id='sa1d'>Five boxes from left to right with arrows: week 1 scope and baseline, week 2 knowledge and instructions, weeks 3 and 4 build and connect, week 5 test and fix, and week 6 soft launch highlighted in orange. Below, a long bar reads weekly review after launch.</desc>
+<defs><marker id='sa1a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5b6470'/></marker></defs>
+<rect x='0' y='0' width='640' height='250' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>SIX WEEKS, FIVE PHASES</text>
+<rect x='24' y='56' width='104' height='80' rx='10' fill='#fff' stroke='#007a66'/><text x='36' y='80' class='svg-s'>Week 1</text><text x='36' y='102' class='svg-t'>Scope</text><text x='36' y='122' class='svg-s'>+ baseline</text>
+<rect x='146' y='56' width='104' height='80' rx='10' fill='#fff' stroke='#007a66'/><text x='158' y='80' class='svg-s'>Week 2</text><text x='158' y='102' class='svg-t'>Knowledge</text><text x='158' y='122' class='svg-s'>+ instructions</text>
+<rect x='268' y='56' width='104' height='80' rx='10' fill='#e8f4f1' stroke='#007a66'/><text x='280' y='80' class='svg-s'>Weeks 3-4</text><text x='280' y='102' class='svg-t'>Build</text><text x='280' y='122' class='svg-s'>+ connect</text>
+<rect x='390' y='56' width='104' height='80' rx='10' fill='#fff' stroke='#007a66'/><text x='402' y='80' class='svg-s'>Week 5</text><text x='402' y='102' class='svg-t'>Test</text><text x='402' y='122' class='svg-s'>+ fix</text>
+<rect x='512' y='56' width='104' height='80' rx='10' fill='#fff4ec' stroke='#c2410c'/><text x='524' y='80' class='svg-s'>Week 6</text><text x='524' y='102' class='svg-o'>Soft launch</text><text x='524' y='122' class='svg-s'>go/no-go first</text>
+<line x1='128' y1='96' x2='142' y2='96' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='250' y1='96' x2='264' y2='96' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='372' y1='96' x2='386' y2='96' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<line x1='494' y1='96' x2='508' y2='96' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa1a)'/>
+<rect x='24' y='166' width='592' height='52' rx='10' fill='#fff' stroke='#007a66' stroke-dasharray='6 5'/><text x='40' y='190' class='svg-t'>After launch: a weekly review</text><text x='40' y='208' class='svg-s'>Read conversations, fix knowledge and rules, track the success metric</text>
+</svg>
+<figcaption><b>Figure 1.</b> A typical six-week plan for a single-job agent. The orange phase only starts after the go/no-go check passes.</figcaption>
+</figure>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Phase</th><th>What happens</th><th>Deliverable</th><th>Signed off by</th></tr></thead>
+<tbody>
+<tr><td>Week 1: Scope</td><td>Write the one-page scope; measure the baseline</td><td>Scope page and baseline number</td><td>Owner</td></tr>
+<tr><td>Week 2: Knowledge</td><td>Collect and clean the answers; write the instructions</td><td>Knowledge files and instruction draft</td><td>The person who knows the answers</td></tr>
+<tr><td>Weeks 3-4: Build</td><td>Set up the agent, channel, tools and handoff</td><td>Working agent in a test environment</td><td>Builder</td></tr>
+<tr><td>Week 5: Test</td><td>Run the test set; fix and re-run</td><td>Test results against the acceptance criteria</td><td>Owner</td></tr>
+<tr><td>Week 6: Launch</td><td>Go/no-go check; soft launch on a limited slice</td><td>Live agent and a weekly review slot</td><td>Owner</td></tr>
+</tbody>
+</table></div>
+<p>The instruction structure for week 2 is in <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>how to write AI agent instructions</a>, and the knowledge setup is in <a href='https://www.dijaedadula.com/rag-ai-agent-business-knowledge'>how to ground an AI agent in your business knowledge</a>.</p>
+<h2 id='criteria'>4. Write acceptance criteria before you build</h2>
+<p>Acceptance criteria are the pass lines the agent must meet before it goes live. Writing them in week 1, before anyone builds, turns “it seems fine” into a decision you can defend. Each criterion needs a target and a way to measure it. The targets below are examples to set with your team, not industry benchmarks.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Criterion</th><th>Example target</th><th>How to measure</th></tr></thead>
+<tbody>
+<tr><td>Answer accuracy</td><td>Correct on at least 18 of 20 real past questions</td><td>Test set built from your own inbox</td></tr>
+<tr><td>Stays in scope</td><td>Declines or hands off every out-of-scope question</td><td>10 off-topic and tricky questions</td></tr>
+<tr><td>No made-up facts</td><td>Zero invented prices, policies or promises</td><td>Ask about things that are not in the knowledge</td></tr>
+<tr><td>Handoff works</td><td>Every handoff reaches the named person with a summary</td><td>Trigger each handoff rule once</td></tr>
+<tr><td>Actions are correct</td><td>Every booking or record update matches the source system</td><td>Book, change and cancel; check the calendar or CRM</td></tr>
+<tr><td>Speed</td><td>First reply within the time you promised customers</td><td>Timed test messages on the live channel</td></tr>
+<tr><td>Privacy</td><td>Collects only the data the job needs</td><td>Review the questions and stored fields</td></tr>
+</tbody>
+</table></div>
+<p>Write the important cases as plain scenarios so the owner and the builder read them the same way:</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>Given a customer asks the price of [service on the price list]
+When the agent answers
+Then it states the listed price and offers the next step
+
+Given a customer asks about something not in the knowledge
+When the agent answers
+Then it says it will check and hands off, with no guess
+
+Given a customer asks for a person
+When the agent replies
+Then it hands off to [name] and tells the customer when to expect a reply</code></pre></div>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span><p>If you cannot write the pass line before the build, you are not ready to build. Agree on what “done” means first; the tool choice comes after.</p></div>
+<p>The full testing method, with a test set you can adapt, is in <a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>how to test an AI chatbot</a>.</p>
+<h2 id='risk'>5. Plan the risk and the budget</h2>
+<p>You do not need an enterprise framework for a first agent, but borrowing its shape helps. The NIST AI Risk Management Framework, a voluntary framework published in January 2023, organizes the work into four functions. Here is what each means for a small first project:</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>NIST function</th><th>What it means for your first agent</th></tr></thead>
+<tbody>
+<tr><td>Govern</td><td>One named owner who can pause the agent and approves every change</td></tr>
+<tr><td>Map</td><td>A short list of what could go wrong: wrong prices, wrong bookings, data shared, an upset customer stuck with a bot</td></tr>
+<tr><td>Measure</td><td>The acceptance criteria and the weekly review numbers</td></tr>
+<tr><td>Manage</td><td>Guardrails, handoff rules and a way to switch the agent off quickly</td></tr>
+</tbody>
+</table></div>
+<div class='dd-warn'><span class='dd-note-label'>Keep version 1 read-only where you can</span><p>Let the first agent read your calendar, CRM or inventory, and write only where the job needs it, such as creating a booking. Leave refunds, payments, deletions and bulk updates to people until the agent has a track record. The layers of protection are in <a href='https://www.dijaedadula.com/ai-agent-guardrails'>AI agent guardrails</a>.</p></div>
+<p>For the budget, list four lines: setup (build time), the platform's monthly plan, AI model usage per conversation, and the weekly review time someone on your team will spend. The per-reply math is in <a href='https://www.dijaedadula.com/ai-chatbot-cost'>how much an AI chatbot really costs</a>, and choosing a model tier is in <a href='https://www.dijaedadula.com/ai-model-choice-agent-costs'>choosing the right AI model for a business agent</a>.</p>
+<h2 id='launch'>6. Launch with a go/no-go check, then review every week</h2>
+<p>Launch is a decision, not a date. On the planned launch day, the owner answers five questions. If any answer is no, fix that item first and check again.</p>
+<figure class='dd-fig'>
+<svg viewBox='0 0 640 270' role='img' aria-labelledby='sa2t sa2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sa2t'>The go/no-go check before launch</title>
+<desc id='sa2d'>Five check boxes stacked on the left: acceptance criteria passed, handoff tested end to end, owner named with a pause switch, baseline measured, and weekly review booked. Arrows lead to a teal box labelled soft launch when all are yes, and an orange box labelled fix and re-test when any is no.</desc>
+<defs><marker id='sa2a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5b6470'/></marker></defs>
+<rect x='0' y='0' width='640' height='270' rx='14' fill='#f6f8fa'/>
+<text x='24' y='34' class='svg-k'>GO / NO-GO</text>
+<rect x='24' y='50' width='300' height='34' rx='8' fill='#fff' stroke='#007a66'/><text x='40' y='72' class='svg-t'>Acceptance criteria passed</text>
+<rect x='24' y='92' width='300' height='34' rx='8' fill='#fff' stroke='#007a66'/><text x='40' y='114' class='svg-t'>Handoff tested end to end</text>
+<rect x='24' y='134' width='300' height='34' rx='8' fill='#fff' stroke='#007a66'/><text x='40' y='156' class='svg-t'>Owner named, pause switch ready</text>
+<rect x='24' y='176' width='300' height='34' rx='8' fill='#fff' stroke='#007a66'/><text x='40' y='198' class='svg-t'>Baseline measured</text>
+<rect x='24' y='218' width='300' height='34' rx='8' fill='#fff' stroke='#007a66'/><text x='40' y='240' class='svg-t'>Weekly review booked</text>
+<line x1='324' y1='130' x2='430' y2='92' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa2a)'/>
+<line x1='324' y1='170' x2='430' y2='200' stroke='#5b6470' stroke-width='1.5' marker-end='url(#sa2a)'/>
+<text x='356' y='98' class='svg-s'>all yes</text><text x='356' y='206' class='svg-s'>any no</text>
+<rect x='434' y='64' width='182' height='56' rx='10' fill='#007a66'/><text x='450' y='88' class='svg-w'>Soft launch</text><text x='450' y='106' class='svg-ws'>one channel or slice</text>
+<rect x='434' y='172' width='182' height='56' rx='10' fill='#fff4ec' stroke='#c2410c'/><text x='450' y='196' class='svg-o'>Fix and re-test</text><text x='450' y='214' class='svg-s'>then check again</text>
+</svg>
+<figcaption><b>Figure 2.</b> The go/no-go check. Launch only when all five answers are yes, and start with a limited slice.</figcaption>
+</figure>
+<p>Start the soft launch on a slice you can watch: one channel, after-hours only, or one listing or service. Read every conversation in the first week. From then on, hold a 30-minute weekly review: read a sample of conversations, fix the knowledge and rules, and track the success metric against the baseline. The routine is in <a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>AI agent monitoring after launch</a>.</p>
+<p><b>How you will know the project worked:</b> after 30 days, the success metric has moved from the baseline in the right direction, every acceptance criterion still passes on a re-run of the test set, and the owner can name the top three fixes made from the weekly reviews.</p>
+<p>An honest limitation: this plan is built for a first, single-job agent. It does not cover multi-agent systems, regulated industries with formal model approval, or large integrations with legacy systems, which need longer timelines and more formal governance. And a good plan cannot rescue a job that was never worth automating; that call belongs in week 1.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>How long does it take to build a first AI agent?</h3>
+<p>For one job on one channel, with the knowledge already written and working system connections, about six weeks is a realistic plan: one week to scope, one for knowledge, two to build, one to test and one to launch. Messy data or new integrations add time.</p>
+<h3>What should be in an AI agent project scope?</h3>
+<p>The one job, the channel, the users, what is in and out of scope, the knowledge sources, the systems it can read or write, the handoff rule, one success metric with a baseline, a named owner and the budget.</p>
+<h3>What are acceptance criteria for an AI agent?</h3>
+<p>They are pass lines the agent must meet before launch, each with a target and a way to measure it: answer accuracy on real past questions, staying in scope, no invented facts, working handoffs, correct actions, speed and privacy.</p>
+<h3>Why do AI agent projects fail?</h3>
+<p>Gartner points to rising costs, unclear business value and inadequate risk controls. A one-page scope, a baseline metric, acceptance criteria and a named owner address all three before the build starts.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Plan your first agent with me</p>
+<p>The free AI Automation Blueprint call is built for this step: we pick the one job worth automating first and sketch its scope and success metric. <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+<p>Prefer to learn it step by step? <a href='https://grow.dijaedadula.com/newsletter'>Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027' target='_blank' rel='noopener'>Gartner: Over 40% of agentic AI projects will be canceled by end of 2027</a>, June 25, 2025. Summary also in <a href='https://www.rcrwireless.com/20250627/business/agentic-ai' target='_blank' rel='noopener'>RCR Wireless</a>.</li>
+<li><a href='https://www.anthropic.com/engineering/building-effective-agents' target='_blank' rel='noopener'>Anthropic: Building effective agents</a>, December 2024.</li>
+<li><a href='https://www.nist.gov/itl/ai-risk-management-framework' target='_blank' rel='noopener'>NIST AI Risk Management Framework</a> (AI RMF 1.0, January 2023). Overview of the four functions in <a href='https://www.morganlewis.com/pubs/2023/02/nist-releases-new-ai-risk-management-framework' target='_blank' rel='noopener'>Morgan Lewis</a>.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/dont-automate-chaos'>Don't Automate Chaos: The 8-Step Method I Use Before Building Any AI System</a></li>
+<li><a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>AI Agent Monitoring After Launch: A Weekly Review Routine</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
