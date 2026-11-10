@@ -8,14 +8,21 @@ Every post uses ONE of three styles. They share the brand (Inter, teal #007a66, 
 - Only swap the order if the topic clearly cannot work in that style (say why in the report). Never use the same style two days in a row.
 - Samples to copy from: `examples/style_a_sample.html`, `examples/style_b_sample.html`, `examples/style_c_sample.html` (plus `examples/c_src.html` for a full A post).
 
+## Dark theme for all graphics (Dijae, Nov 11 2026; applies to blog covers, blog diagrams, Facebook posters and LinkedIn content bank images)
+- Matte dark gradient background: deep charcoal `#12171b` / `#0f1417` blending into dark slate `#1c252b` / dark slate teal `#1c2b2f`. Flat matte finish: no gloss, glow, shine, neon or texture noise.
+- Text is white (`#ffffff`); secondary text light grey `#c3ccd4`. Accents on dark: light teal `#3fbfa6` (labels `#4fd1b5`) and warm orange `#f08a4b` / `#f59a5e` for the one highlight.
+- Image prompts must say: "matte dark gradient background ... flat matte finish, no gloss, no glow".
+- Blog SVG diagrams: add `class="dk"` to the `<svg>`, a `<linearGradient>` background (`#1c252b` to `#0f1417`, unique id) on the base rect, boxes `#222d34` with `#3fbfa6` strokes, the highlighted box `#3a2a22` with `#f08a4b` stroke, gridlines `#2e3a42`, arrows `#8b98a3`. The `dk` CSS (in template/live_src.json and tools/style.css) turns svg-t/svg-num/svg-w white and svg-k/svg-ax/svg-s light grey. Style C sketches: dot grid `#2b363d`, dashed paths `#3fbfa6`, highlighter `#f08a4b` at opacity 0.35.
+- Posts published before Nov 11 2026 keep their light graphics unless Dijae asks to convert them.
+
 ## Style A: Field Guide (the original)
 - **For**: how-to and setup topics, step-by-step builds.
 - **Voice**: senior practitioner teaching a method. "Here is how to do it."
 - **Wrapper**: `<div class="dd-article">`
 - **Order**: problem intro (2 paragraphs) → `dd-tldr` "What you will get" → `dd-toc` → numbered H2 sections ("1. ...") → FAQ → CTA → References → Keep reading.
 - **Components**: `dd-note` (Dijae's rule, blue), `dd-warn`, tables, `dd-code` copy blocks, numbered steps.
-- **Diagrams**: process boxes and arrows on a light grey card (`#f6f8fa`), teal outlines, orange for the risky or final step, uppercase `svg-k` title. Caption: `<b>Figure N.</b>`.
-- **Cover**: clean flat vector illustration, friendly rounded objects (chat bubbles, robots, calendars, charts), teal and orange on soft cream, no text.
+- **Diagrams**: process boxes and arrows on a dark matte gradient card (see Dark theme), light teal outlines, orange for the risky or final step, uppercase `svg-k` title. Caption: `<b>Figure N.</b>`.
+- **Cover**: clean flat vector illustration, friendly rounded objects (chat bubbles, robots, calendars, charts), teal and orange on a matte dark gradient background (charcoal to dark slate teal), flat matte finish, no gloss or glow, no text.
 
 ## Style B: Executive Brief
 - **For**: decisions, comparisons, costs, strategy, metrics, anything a manager signs off.
@@ -29,9 +36,9 @@ Every post uses ONE of three styles. They share the brand (Inter, teal #007a66, 
   5. `dd-bottom` "Dijae's rule" as a bold bottom-line statement (orange bar).
   6. `dd-check` decision checklist table (empty checkbox column) as the PM/QA element, plus a success metric.
   7. FAQ → CTA → References → Keep reading.
-- **Diagrams (Exhibits)**: data style on white. Gridlines `#e3e8ee`, charcoal `#14181c` axes, uppercase axis labels (`svg-ax`), bold value labels (`svg-num`), teal marks with one orange highlight. Use timelines, bar charts, 2x2 matrices, scorecards, waterfalls. First text line inside the SVG: `EXHIBIT · <WHAT IT SHOWS>`. Caption: `<b>Exhibit N.</b>` + the takeaway in one sentence. Draw to scale: every label names a real value on the axis.
+- **Diagrams (Exhibits)**: data style on a dark matte gradient card (see Dark theme). Gridlines `#2e3a42`, light grey `#8b98a3` axes, uppercase axis labels (`svg-ax`), bold value labels (`svg-num`), teal marks with one orange highlight. Use timelines, bar charts, 2x2 matrices, scorecards, waterfalls. First text line inside the SVG: `EXHIBIT · <WHAT IT SHOWS>`. Caption: `<b>Exhibit N.</b>` + the takeaway in one sentence. Draw to scale: every label names a real value on the axis.
 - **Tables**: dark header row (automatic).
-- **Cover**: clean isometric flat illustration on a light cool grey background (#eef1f4), charcoal structures with teal and orange accents: dashboards, stacked blocks, a pipeline of tiles, a control panel. Precise, corporate, generous whitespace, no text.
+- **Cover**: clean isometric flat illustration on a matte dark gradient background (charcoal to dark slate), slate-grey structures with teal and orange accents, flat matte finish, no gloss or glow: dashboards, stacked blocks, a pipeline of tiles, a control panel. Precise, corporate, generous whitespace, no text.
 
 ## Style C: Story Explainer (Q&A)
 - **For**: concepts, beginner topics, myths, "what is / should I" questions. Written so AI search and Google can lift answers.
@@ -46,8 +53,8 @@ Every post uses ONE of three styles. They share the brand (Inter, teal #007a66, 
   6. `dd-sticky` sticky note for "Dijae's rule".
   7. "What can you set up today?" as `<ol class="dd-try">` (big outlined numerals). Include the PM/QA element as a short "How you will know it works" list or table.
   8. FAQ → CTA → References → Keep reading.
-- **Diagrams (Sketches)**: notebook look. Cream card `#fbf7f0` with a dot-grid `<pattern>`, dashed teal paths (`stroke-dasharray="8 7"`, round caps, 2.5-3px), hollow circles for stops, rounded speech bubbles, an orange highlighter rectangle (`#ffd8bf`, opacity 0.7) behind one key phrase, handwritten notes with class `svg-hand` (Caveat font, loaded automatically). Use journeys, before/after, cause-and-effect, simple maps. Caption: `<b>Sketch N.</b>`.
-- **Cover**: layered paper-cut editorial illustration on warm cream paper, teal and orange paper layers with soft shadows, a small scene that tells the post's story. No text.
+- **Diagrams (Sketches)**: notebook look on a dark matte gradient card with a dot-grid `<pattern>` (`#2b363d`), dashed teal paths (`stroke-dasharray="8 7"`, round caps, 2.5-3px), hollow circles for stops, rounded speech bubbles, an orange highlighter rectangle (`#ffd8bf`, opacity 0.7) behind one key phrase, handwritten notes with class `svg-hand` (Caveat font, loaded automatically). Use journeys, before/after, cause-and-effect, simple maps. Caption: `<b>Sketch N.</b>`.
+- **Cover**: layered paper-cut editorial illustration on matte dark charcoal paper with a dark gradient, teal and orange paper layers with soft shadows, no gloss, a small scene that tells the post's story. No text.
 
 ## All styles
 - Unique SVG ids per figure (prefix with the style letter and figure number, e.g. `sb1a`).

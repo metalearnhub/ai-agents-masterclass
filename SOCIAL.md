@@ -12,7 +12,7 @@
 - History: the Monday-only weekly rule was retired Oct 29 2026. Post 5182 (ai-chatbot-for-small-business, Mon Nov 2 09:00) and post 5248 (automate-lead-follow-up, Thu Oct 29 18:00) stay as scheduled. data-privacy-act-chatbots-philippines went out early on Oct 29 (before the oldest-first rule was confirmed) and counts as done.
 
 ## Image: always the "creative" (2nd) style from the content bank
-- Portrait 3:4, soft cream background #f3ece0. Top-left: small letter-spaced teal (#007a66) uppercase pillar label, then a large bold dark Inter-style headline (2-3 lines). Lower two-thirds: flat vector illustration in teal #007a66 + warm orange #c2410c showing the post's idea. Bottom-left: white rounded pill "DIJAE DADULA". No other text.
+- Dark theme (Dijae, Nov 11 2026): portrait 3:4, matte dark gradient background (deep charcoal #12171b at the top into dark slate teal #1c2b2f at the bottom), flat matte finish, no gloss or glow. Top-left: small letter-spaced light teal (#4fd1b5) uppercase pillar label, then a large bold WHITE Inter-style headline (2-3 lines). Lower two-thirds: flat vector illustration in muted teal #3fbfa6 + warm orange #f08a4b showing the post's idea. Bottom-left: rounded pill with a thin white outline and white "DIJAE DADULA". No other text. (Posts before Nov 11 used the cream style.)
 - mcp__MC__generate_image, model gpt-image-2.5-flare, aspect 3:4, prompt spells the label and headline exactly ("reading exactly ..."). Use the content bank's artTitle/pillar when a LinkedIn post exists for the same blog.
 - ALWAYS look at it (render_preview url, width 800) and check spelling, word spacing and layout. Regenerate if anything is off. Use the paymegpt.com image URL directly in the post.
 
