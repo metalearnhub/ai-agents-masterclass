@@ -210,6 +210,11 @@
    "slug": "ai-agent-project-plan",
    "title": "Your First AI Agent Project Plan: Scope, Timeline and Acceptance Criteria",
    "blurb": "A one-page scope, a six-week timeline, acceptance criteria written before the build and a go/no-go check for launch."
+  },
+  {
+   "slug": "follow-up-channels",
+   "title": "Email, Messenger, SMS or WhatsApp: Choosing the Right Channel for Automated Follow-Up",
+   "blurb": "The messaging windows, consent rules and costs of each channel, which message belongs where, and how to measure it."
   }
  ],
  "sent": [
@@ -357,6 +362,13 @@
    "info": "posted with the daily run",
    "url": "https://www.facebook.com/1579937777474981/posts/1809989457803144",
    "image": "https://paymegpt.com/objects/generated-images/814/1794011423001-ab8e7143a35270ce.png"
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "live-selling-automation-philippines",
+   "info": "posted with the daily run",
+   "url": "https://www.facebook.com/1579937777474981/posts/1814340457368044",
+   "image": "https://paymegpt.com/objects/generated-images/814/1794287493865-5bee0716ee22bfff.png"
   }
  ]
 }

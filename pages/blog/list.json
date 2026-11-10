@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "follow-up-channels",
+   "title": "Email, Messenger, SMS or WhatsApp: Choosing the Right Channel for Automated Follow-Up",
+   "blurb": "The messaging windows, consent rules and costs of each channel, which message belongs where, and how to measure it."
+  },
+  {
    "slug": "ai-agent-project-plan",
    "title": "Your First AI Agent Project Plan: Scope, Timeline and Acceptance Criteria",
    "blurb": "A one-page scope, a six-week timeline, acceptance criteria written before the build and a go/no-go check for launch."
