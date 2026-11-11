@@ -51,7 +51,7 @@
 #dd-lb img{max-width:100%;max-height:100%;border-radius:8px}
 #dd-lb span{position:absolute;top:12px;right:18px;color:#fff;font:700 28px/1 Inter,sans-serif}
 .dd-article .dd-fig svg.dk{border-radius:14px}
-.dd-article .dd-fig svg.dk .svg-t,.dd-article .dd-fig svg.dk .svg-num,.dd-article .dd-fig svg.dk .svg-w{fill:#ffffff}
-.dd-article .dd-fig svg.dk .svg-k,.dd-article .dd-fig svg.dk .svg-ax,.dd-article .dd-fig svg.dk .svg-s,.dd-article .dd-fig svg.dk .svg-ws{fill:#c3ccd4}
-.dd-article .dd-fig svg.dk .svg-o{fill:#f59a5e}
-.dd-article .dd-fig svg.dk .svg-hand{fill:#f5a26b}
+.dd-article .dd-fig svg.dk .svg-t,.dd-article .dd-fig svg.dk .svg-num,.dd-article .dd-fig svg.dk .svg-w{fill:#ffffff;font-weight:800}
+.dd-article .dd-fig svg.dk .svg-k,.dd-article .dd-fig svg.dk .svg-ax{fill:#4fd1b5;font-weight:900}
+.dd-article .dd-fig svg.dk .svg-s,.dd-article .dd-fig svg.dk .svg-ws{fill:#b5b9bd;font-weight:600}
+.dd-article .dd-fig svg.dk .svg-o,.dd-article .dd-fig svg.dk .svg-hand{fill:#4fd1b5;font-weight:800}

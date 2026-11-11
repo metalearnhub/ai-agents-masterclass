@@ -43,7 +43,7 @@ Read `context/README.md` first. On Fridays and Tuesdays also follow NEWSLETTER.m
 Use normal double quotes in your HTML; the build converts everything to the quote-free format Webcake needs.
 
 ## 4. Cover image
-- `mcp__MC__generate_image`, model `gpt-image-2.5-flare`, aspect 16:9. Dark theme (STYLES.md, Nov 11 2026): matte dark gradient background (charcoal #12171b to dark slate teal #1c2b2f), flat matte finish, no gloss or glow, teal and warm orange accents, friendly rounded objects (chat bubbles, robots, calendars, charts, price tags) that show the topic, NO text or letters in the image.
+- `mcp__MC__generate_image`, model `gpt-image-2.5-flare`, aspect 16:9. Dark theme (STYLES.md, Nov 11 2026): matte black-to-graphite-grey gradient background (#0a0b0c to #1f2224), flat matte finish, no gloss or glow, mostly black and grey objects with green (#3fbfa6) accents only, no orange, friendly rounded objects (chat bubbles, robots, calendars, charts, price tags) that show the topic, NO text or letters in the image.
 - Re-host with `mcp__Webcake__upload_images` (pass the generated https URL) and use the returned statics.pancake.vn URL. Look at the image (render_preview url) before using it.
 
 ## 5. `posts/<slug>/meta.json`
