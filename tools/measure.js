@@ -7,7 +7,7 @@ const ff=`@font-face{font-family:Inter;font-weight:400;src:url(${F('inter/files/
 @font-face{font-family:Inter;font-weight:800;src:url(${F('inter/files/inter-latin-800-normal.woff2')})}
 @font-face{font-family:"JetBrains Mono";font-weight:400;src:url(${F('jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2')})}`;
 (async()=>{
- const b=await chromium.launch({executablePath:process.env.CHROME||'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'});
+ const b=await chromium.launch({executablePath:process.env.CHROME||'/opt/pw-browsers/chromium-1243/chrome-linux64/chrome'});
  const art=fs.readFileSync(process.argv[2]||'article.html','utf8');
  const css=fs.readFileSync('style.css','utf8')+(process.argv[3]?fs.readFileSync(process.argv[3],'utf8'):'');
  const out={};

@@ -4,7 +4,7 @@ const fs=require('fs'),path=require('path');
 const F=w=>'file://'+path.resolve(__dirname,'node_modules/@fontsource/inter/files/inter-latin-'+w+'-normal.woff2');
 const ff=[500,800].map(w=>`@font-face{font-family:Inter;font-weight:${w};src:url(${F(w)})}`).join('');
 (async()=>{
- const b=await chromium.launch({executablePath:process.env.CHROME||'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'});
+ const b=await chromium.launch({executablePath:process.env.CHROME||'/opt/pw-browsers/chromium-1243/chrome-linux64/chrome'});
  const html=fs.readFileSync(process.argv[2],'utf8'),out={};
  for(const w of [640,380]){
   const p=await b.newPage({viewport:{width:w+40,height:900}});

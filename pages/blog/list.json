@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "chatbot-liability-air-canada",
+   "title": "AI Chatbot Liability: What the Air Canada Ruling Means for Your Business",
+   "blurb": "What the Air Canada chatbot ruling decided, why the airline had to pay, and how to keep your chatbot's promises accurate."
+  },
+  {
    "slug": "follow-up-channels",
    "title": "Email, Messenger, SMS or WhatsApp: Choosing the Right Channel for Automated Follow-Up",
    "blurb": "The messaging windows, consent rules and costs of each channel, which message belongs where, and how to measure it."
