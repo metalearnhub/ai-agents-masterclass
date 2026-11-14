@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "assist-first-automate-second",
+   "title": "Assist First, Automate Second: A Safe Rollout Path for AI in Your Business",
+   "blurb": "A five-level autonomy ladder, a graduation checklist and three weekly metrics so AI earns each task before it runs alone."
+  },
+  {
    "slug": "chatbot-liability-air-canada",
    "title": "AI Chatbot Liability: What the Air Canada Ruling Means for Your Business",
    "blurb": "What the Air Canada chatbot ruling decided, why the airline had to pay, and how to keep your chatbot's promises accurate."

@@ -1,0 +1,173 @@
+<div class="dd-article">
+<!--COVER-->
+<p>Most AI rollouts fail in one of two ways. Some never leave the pilot because nobody trusts the output enough to switch it on. Others switch everything on at once, and the first wrong answer to a customer becomes the reason the whole project gets pulled.</p>
+<p>There is a calmer path: let the AI assist your team first, measure how often its work is right, and hand it a task to do alone only when the evidence says it has earned it. This guide gives you that rollout path step by step, with a five-level ladder, the gate a task must pass before it is automated, and the numbers to watch.</p>
+<div class="dd-tldr">
+<p class="dd-tldr-title">What you will get</p>
+<ul>
+<li>A <b>five-level autonomy ladder</b> from "AI drafts" to "AI acts alone".</li>
+<li>A way to <b>sort your tasks</b> by risk so you know which ones may ever be automated.</li>
+<li>A copy-ready <b>graduation checklist</b> a task must pass before it moves up a level.</li>
+<li>The <b>three numbers</b> that tell you whether the rollout is working.</li>
+</ul>
+</div>
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#why">Why assist first</a></li>
+<li><a href="#ladder">The five-level autonomy ladder</a></li>
+<li><a href="#sort">Sort your tasks by risk</a></li>
+<li><a href="#gate">The graduation gate</a></li>
+<li><a href="#measure">What to measure each week</a></li>
+<li><a href="#rollback">How to move a task back down</a></li>
+</ol>
+</nav>
+
+<h2 id="why">1. Why assist first</h2>
+<p>The companies that moved fastest to replace people with AI have been the loudest about stepping back. In May 2025, Klarna's CEO told Bloomberg the company was hiring human customer service staff again, saying AI support had been cheaper but lower in quality and that customers should know "there will always be a human if you want."</p>
+<p>The wider market points the same way. In a June 2025 release, Gartner predicted that by 2027, 50% of organizations that had expected to significantly reduce their customer service workforce will abandon those plans. In the same survey of 163 customer service leaders, 95% said they plan to keep human agents to help define AI's role, and Gartner described a hybrid model, with AI and people working in tandem, as the most effective approach.</p>
+<p>Assist-first is how you get there on purpose instead of by retreat. The AI does the heavy lifting from day one, your team keeps the final say, and every approval or correction becomes evidence about what the AI can be trusted with next.</p>
+<div class="dd-note"><span class="dd-note-label">Dijae's rule</span><p>Automation is a promotion, not a starting point. A task earns it with evidence, one level at a time.</p></div>
+
+<h2 id="ladder">2. The five-level autonomy ladder</h2>
+<p>Instead of a yes-or-no decision about "using AI", give every task a level. Each level adds one thing the AI may do without a person.</p>
+<figure class="dd-fig">
+<svg class="dk" viewBox="0 0 640 280" role="img" aria-labelledby="fa1t fa1d" xmlns="http://www.w3.org/2000/svg">
+<title id="fa1t">The five-level autonomy ladder</title>
+<desc id="fa1d">Five rising steps from left to right: level 1 the AI drafts and a person sends, level 2 the AI suggests the next step, level 3 the AI acts after approval, level 4 the AI acts and reports, level 5 the AI acts alone. Levels 1 to 3 are labelled assist, levels 4 and 5 automate. A note says each move up requires passing the gate.</desc>
+<defs><linearGradient id="fa1g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f2224"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+<marker id="fa1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8f94"/></marker></defs>
+<rect x="0" y="0" width="640" height="280" rx="14" fill="url(#fa1g)"/>
+<text x="24" y="34" class="svg-k">ONE LEVEL AT A TIME</text>
+<rect x="24" y="186" width="112" height="56" rx="10" fill="#17191b" stroke="#3a3f43" stroke-width="2"/><text x="36" y="208" class="svg-t">1 · Draft</text><text x="36" y="228" class="svg-s">person sends</text>
+<rect x="146" y="156" width="112" height="56" rx="10" fill="#17191b" stroke="#3a3f43" stroke-width="2"/><text x="158" y="178" class="svg-t">2 · Suggest</text><text x="158" y="198" class="svg-s">next step</text>
+<rect x="268" y="126" width="112" height="56" rx="10" fill="#17191b" stroke="#3a3f43" stroke-width="2"/><text x="280" y="148" class="svg-t">3 · Approve</text><text x="280" y="168" class="svg-s">acts after OK</text>
+<rect x="390" y="96" width="112" height="56" rx="10" fill="#17191b" stroke="#3a3f43" stroke-width="2"/><text x="402" y="118" class="svg-t">4 · Report</text><text x="402" y="138" class="svg-s">acts, then tells</text>
+<rect x="512" y="66" width="108" height="56" rx="10" fill="#10302a" stroke="#3fbfa6" stroke-width="3"/><text x="524" y="88" class="svg-t">5 · Alone</text><text x="524" y="108" class="svg-s">exceptions only</text>
+<line x1="136" y1="200" x2="144" y2="190" stroke="#8a8f94" stroke-width="1.5" marker-end="url(#fa1a)"/>
+<line x1="258" y1="170" x2="266" y2="160" stroke="#8a8f94" stroke-width="1.5" marker-end="url(#fa1a)"/>
+<line x1="380" y1="140" x2="388" y2="130" stroke="#8a8f94" stroke-width="1.5" marker-end="url(#fa1a)"/>
+<line x1="502" y1="110" x2="510" y2="100" stroke="#8a8f94" stroke-width="1.5" marker-end="url(#fa1a)"/>
+<text x="24" y="266" class="svg-s">ASSIST: levels 1 to 3</text>
+<text x="390" y="266" class="svg-s">AUTOMATE: levels 4 and 5</text>
+<text x="24" y="66" class="svg-t">Every step up must pass the gate</text>
+</svg>
+<figcaption><b>Figure N.</b> The autonomy ladder. Levels 1 to 3 keep a person on every action; levels 4 and 5 are earned, task by task.</figcaption>
+</figure>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Level</th><th>What the AI does</th><th>What the person does</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>1. Draft</td><td>Writes the reply or document</td><td>Edits and sends</td><td>Drafts a reply to a pricing question</td></tr>
+<tr><td>2. Suggest</td><td>Recommends the next step and why</td><td>Decides</td><td>Flags a lead as ready to book a call</td></tr>
+<tr><td>3. Approve</td><td>Prepares the action and waits</td><td>Clicks approve</td><td>Books the slot once a person confirms</td></tr>
+<tr><td>4. Report</td><td>Acts, then logs and notifies</td><td>Reviews a daily sample</td><td>Sends booking reminders and reports them</td></tr>
+<tr><td>5. Alone</td><td>Acts end to end</td><td>Handles exceptions only</td><td>Answers opening-hours questions</td></tr>
+</tbody></table></div>
+<p>Most businesses find that many tasks belong at level 1 to 3 for a long time, and some should never go higher. That is a good outcome, not a failure: your team still gets most of the time savings from drafting and preparation.</p>
+
+<h2 id="sort">3. Sort your tasks by risk</h2>
+<p>Before anything moves up the ladder, decide the highest level each task is ever allowed to reach. Two questions do most of the work: what does a mistake cost, and can it be undone?</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Task type</th><th>Cost of a mistake</th><th>Undoable?</th><th>Highest level</th></tr></thead>
+<tbody>
+<tr><td>Factual answers from your published info (hours, location, services)</td><td>Low</td><td>Yes, with a correction</td><td>5</td></tr>
+<tr><td>Reminders and follow-ups</td><td>Low to medium</td><td>Partly</td><td>4</td></tr>
+<tr><td>Booking and rescheduling</td><td>Medium</td><td>Yes</td><td>3, then 4 with evidence</td></tr>
+<tr><td>Prices, discounts, refunds, eligibility</td><td>High</td><td>Hard</td><td>3</td></tr>
+<tr><td>Complaints, legal, medical or financial advice</td><td>High</td><td>No</td><td>1 or 2</td></tr>
+</tbody></table></div>
+<p>Anything that commits your business to money or a promise stays where a person signs off. My post on <a href="https://www.dijaedadula.com/chatbot-liability-air-canada">chatbot liability and the Air Canada ruling</a> shows why: a tribunal treated a chatbot's wrong refund answer as the company's own statement.</p>
+<div class="dd-warn"><span class="dd-note-label">Watch out</span><p>Do not let a task's level drift up because the team is busy. Moving a task to level 4 or 5 is a written decision with a date and an owner, never a quiet change in settings.</p></div>
+
+<h2 id="gate">4. The graduation gate</h2>
+<p>A task moves up one level only when it passes the gate. The gate has four parts: enough volume to judge, a high approval rate, no serious errors, and a working way back.</p>
+<figure class="dd-fig">
+<svg class="dk" viewBox="0 0 640 230" role="img" aria-labelledby="fa2t fa2d" xmlns="http://www.w3.org/2000/svg">
+<title id="fa2t">The graduation gate</title>
+<desc id="fa2d">A task at its current level flows into a gate with four checks: enough volume, approval rate at or above the target, zero serious errors, and a tested rollback. If all four pass, the task moves up one level. If any fails, it stays and the cause is fixed.</desc>
+<defs><linearGradient id="fa2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f2224"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+<marker id="fa2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8f94"/></marker></defs>
+<rect x="0" y="0" width="640" height="230" rx="14" fill="url(#fa2g)"/>
+<text x="24" y="34" class="svg-k">FOUR CHECKS, ONE STEP UP</text>
+<rect x="24" y="86" width="120" height="58" rx="10" fill="#17191b" stroke="#3a3f43" stroke-width="2"/><text x="38" y="110" class="svg-t">Task at</text><text x="38" y="130" class="svg-t">level N</text>
+<rect x="176" y="52" width="270" height="126" rx="12" fill="#17191b" stroke="#3a3f43" stroke-width="2"/>
+<text x="192" y="78" class="svg-t">1. Enough volume reviewed</text>
+<text x="192" y="104" class="svg-t">2. Approval rate on target</text>
+<text x="192" y="130" class="svg-t">3. Zero serious errors</text>
+<text x="192" y="156" class="svg-t">4. Rollback tested</text>
+<rect x="478" y="52" width="138" height="54" rx="10" fill="#10302a" stroke="#3fbfa6" stroke-width="3"/><text x="492" y="76" class="svg-t">All pass</text><text x="492" y="94" class="svg-s">move to N+1</text>
+<rect x="478" y="124" width="138" height="54" rx="10" fill="#17191b" stroke="#3a3f43" stroke-width="2"/><text x="492" y="148" class="svg-t">Any fails</text><text x="492" y="166" class="svg-s">stay, fix the cause</text>
+<line x1="144" y1="115" x2="172" y2="115" stroke="#8a8f94" stroke-width="1.5" marker-end="url(#fa2a)"/>
+<line x1="446" y1="90" x2="474" y2="80" stroke="#3fbfa6" stroke-width="2" marker-end="url(#fa2a)"/>
+<line x1="446" y1="140" x2="474" y2="150" stroke="#8a8f94" stroke-width="1.5" marker-end="url(#fa2a)"/>
+<text x="24" y="210" class="svg-s">Targets are yours to set. Write them down before the review starts.</text>
+</svg>
+<figcaption><b>Figure N.</b> The graduation gate. A task climbs one level only when all four checks pass.</figcaption>
+</figure>
+<p>Set your own targets before you start, and write them into the checklist. The numbers below are an illustrative example, not a standard; a clinic and an online shop will choose differently.</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>GRADUATION CHECKLIST
+Task: ______________________   Current level: __   Proposed level: __
+Owner: ____________________    Review period: ____ to ____
+
+[ ] Volume: at least ___ real cases reviewed at the current level
+    (illustrative example: 200 cases over 4 weeks)
+[ ] Approval rate: ___% or more approved without edits
+    (illustrative example: 95%)
+[ ] Serious errors: zero wrong prices, promises, or policy answers
+[ ] Edge cases: complaints, angry customers and unclear requests
+    were handed to a person every time
+[ ] Rollback: we tested moving the task back down in under ___ minutes
+[ ] Customers can still reach a person at any point
+[ ] Decision recorded: date ______  approved by ______</code></pre></div>
+<p>The approval rate comes straight from levels 1 to 3: every time a person sends a draft unchanged, approves a suggestion or confirms an action, that is a vote of confidence you can count. Edits and rejections are your improvement list.</p>
+
+<h2 id="measure">5. What to measure each week</h2>
+<p>Three numbers tell you whether the rollout is working. Track them per task, not for the AI as a whole.</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Metric</th><th>How to calculate it</th><th>What it tells you</th></tr></thead>
+<tbody>
+<tr><td>Approval rate</td><td>Items approved unchanged ÷ items reviewed</td><td>Whether the task is ready for the next level</td></tr>
+<tr><td>Time saved per item</td><td>Old handling time minus review time</td><td>Whether assist mode is already paying off</td></tr>
+<tr><td>Serious error count</td><td>Wrong prices, promises or policy answers caught</td><td>Whether the task must stay or move down</td></tr>
+</tbody></table></div>
+<p>Review them in the same 30-minute session as the rest of your AI checks. The routine in my <a href="https://www.dijaedadula.com/ai-agent-monitoring-weekly-review">weekly AI agent review</a> fits this well, and the <a href="https://www.dijaedadula.com/chatbot-roi-metrics">chatbot ROI metrics</a> post shows how time saved turns into a business case.</p>
+
+<h2 id="rollback">6. How to move a task back down</h2>
+<p>A ladder works in both directions. Decide in advance what sends a task down a level, so nobody has to argue about it in the middle of a problem:</p>
+<ol>
+<li><b>One serious error</b> at level 4 or 5 sends the task back to level 3 the same day.</li>
+<li><b>A policy, price or product change</b> sends affected tasks back to level 3 until the AI's knowledge is updated and re-tested.</li>
+<li><b>A drop in approval rate</b> below your target for two weeks in a row moves the task down one level.</li>
+<li><b>Customer complaints</b> about the AI on a task trigger a review before the next week's session.</li>
+</ol>
+<p>Make the switch simple: one setting, one owner, and a written note of why. If moving back down takes a developer and a week, you do not really have a rollback. The <a href="https://www.dijaedadula.com/ai-chatbot-human-handoff">human handoff guide</a> covers how conversations reach a person cleanly when that happens.</p>
+<p>An honest limitation: an approval rate only measures what your reviewers notice. If reviewers are rushed, they approve drafts they should have fixed, so spot-check a sample of approved items yourself, especially in the first month.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What does "human in the loop" mean for a small business?</h3>
+<p>It means a person reviews or approves the AI's work before it reaches a customer or changes a record. In practice that is levels 1 to 3 of the ladder: the AI drafts, suggests or prepares, and someone on your team makes the final call.</p>
+<h3>Does assist-first save time if a person still checks everything?</h3>
+<p>Usually yes. Reviewing and editing a good draft is faster than writing from scratch, and the AI can prepare work around the clock. Measure time saved per item in the first weeks to confirm it for your own tasks.</p>
+<h3>How long should a task stay in assist mode?</h3>
+<p>Until it passes the graduation gate you set. For low-risk tasks with high volume that can be a few weeks; for anything touching money or promises it may be permanent, and that is fine.</p>
+<h3>Which tasks should never be fully automated?</h3>
+<p>Anything where a mistake is costly and cannot be undone: refunds and exceptions, complaints, and medical, legal or financial advice. Keep those at drafting or suggestion level with a person deciding.</p>
+
+<div class="dd-cta">
+<p class="dd-cta-title">Plan your rollout with a clear ladder</p>
+<p>Want help sorting your tasks, setting the gate and choosing what to automate first? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a> and we will map your first three tasks to the right level.</p>
+<p>Prefer to learn it step by step? <a href="https://grow.dijaedadula.com/newsletter">Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-10-gartner-predicts-50-percent-of-organizations-will-abandon-plans-to-reduce-customer-service-workforce-due-to-ai" target="_blank" rel="noopener">Gartner: Gartner Predicts 50% of Organizations Will Abandon Plans to Reduce Customer Service Workforce Due to AI</a>, press release, June 10, 2025 (survey of 163 customer service and support leaders, March 2025).</li>
+<li><a href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396" target="_blank" rel="noopener">Entrepreneur: Klarna Is Hiring Customer Service Agents After AI Couldn't Cut It on Calls, According to the Company's CEO</a>, May 9, 2025 (reporting the CEO's interview with Bloomberg).</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/chatbot-liability-air-canada">AI Chatbot Liability: What the Air Canada Ruling Means for Your Business</a></li>
+<li><a href="https://www.dijaedadula.com/ai-agent-monitoring-weekly-review">AI Agent Monitoring After Launch: A Weekly Review Routine</a></li>
+<li><a href="https://www.dijaedadula.com/ai-agent-project-plan">Your First AI Agent Project Plan: Scope, Timeline and Acceptance Criteria</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>
