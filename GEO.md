@@ -7,8 +7,8 @@ Audit date: Nov 14, 2026. Read with RUNBOOK.md. Never promise rankings or recomm
 - /sitemap.xml and /llms.txt do not exist on the live domain: both URLs return the /home page. The sitemap.xml in this repo is not served. Fix needs a Webcake setting or support ticket; until then submit URLs by hand in Google Search Console and Bing Webmaster Tools.
 - Domain root (/) serves the home page with canonical /home (checked live Nov 14). Any unknown URL also returns the home page with status 200 instead of a 404; the canonical tag limits the damage, but a real 404 page would be cleaner.
 - Verified on the live server HTML (Nov 14, no JavaScript needed): /home has valid Person, ProfessionalService, WebSite and FAQPage JSON-LD, one h1 and six h2s; posts have their full text, headings and JSON-LD in the HTML, so AI crawlers can read them.
-- Posts built with make_post.py have BlogPosting + FAQPage + BreadcrumbList. Older text-block posts have BlogPosting only (to retrofit).
-- The Google Analytics tag (gtag) is in the HTML of /home only. /blog and the posts do not carry it, so blog traffic and AI-referral visits may be unmeasured unless Webcake's own tracking covers them.
+- Full survey of 46 posts (Nov 14): 42 already had BlogPosting + FAQPage + BreadcrumbList. what-is-an-ai-agent, dont-automate-chaos and turn-skills-into-ai-income had BlogPosting only; BreadcrumbList added the same day through an html-box `h_bc01` in the header section (patch_page add, then publish). They still have no visible FAQ, so no FAQPage schema: add a real FAQ section first.
+- Analytics: the gtag snippet is in the server HTML of /home only, but Google Analytics and the Meta pixel load at runtime on posts through Webcake's global tracking (checked in a browser, Nov 14). Do not add a second tag.
 
 ## Standards for every new post (added Nov 14, 2026)
 1. Answer first: the first paragraph answers the title question in 2-3 plain sentences that still make sense when quoted alone. Definitions use the "X is Y" form.
