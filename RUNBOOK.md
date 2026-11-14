@@ -144,3 +144,6 @@ Before writing, run `python3 tools/style_next.py` and follow STYLES.md for that 
 - The calendar alternates regular posts with a GEO series (getting a business recommended when people ask ChatGPT and other AI assistants) and adds a human-expert data series (how AI companies invest in domain experts to improve models). Order and rules: SCHEDULE.md.
 - GEO posts: cite each AI vendor's own docs and the GEO research paper, date every fact, never promise rankings or guaranteed recommendations.
 - Human-expert data posts: public facts only, general industry framing, never first person, never name or describe any private engagement. Run the confidentiality scan as always; it applies to these posts with no exceptions.
+
+## 20. GEO standards for every post (Nov 14 2026)
+Read GEO.md before writing. Every new post follows its "Standards for every new post" list (answer-first opening, question-style H2s, dated and sourced facts, FAQ block). make_post.py now adds Dijae's profile links to the author schema. First Monday of each month: run the GEO.md monthly check and report the result.
