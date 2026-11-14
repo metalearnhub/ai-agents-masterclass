@@ -34,3 +34,7 @@ Ask ChatGPT (search on), Perplexity, Google AI Mode, Copilot and Claude the prom
 
 ## Off-site (largest lever, needs Dijae)
 AI answers lean on third-party mentions more than on a site's own pages. Priorities: Bing Webmaster Tools + Google Search Console verified, consistent name and one-line description on YouTube, LinkedIn, Threads and partner directories, guest posts or interviews on sites that already rank, and YouTube descriptions linking the matching blog post.
+
+## Service pages (outside the blog rotation)
+- /ai-chatbot-philippines (Nov 14, 2026): built with make_post.py from pages/ai-chatbot-philippines/, then the BlogPosting schema was swapped for Service schema and the breadcrumb set to Home > AI Chatbot Philippines. Listed on /sitemap under Main pages and linked from /ai-automation-philippines. No platform prices on the page: it links to the cost post instead.
+- To create a page without sending one huge payload: create_page with a short placeholder in eb_2120, then patch_page the article html, then compare get_page against source.json before publishing.
