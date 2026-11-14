@@ -139,3 +139,8 @@ Before writing, run `python3 tools/style_next.py` and follow STYLES.md for that 
 ## 18. Reuse verified research (Dijae, Nov 3 2026)
 - Before researching a platform rule, grep posts/*/article.html and context/ for it (e.g. `grep -ril "message tag" posts context`). Earlier posts may already cite the primary source; reuse it and re-check that source for changes.
 - Platform rules (Meta messaging windows, tags, utility and marketing messages, policy) must come from Meta's own pages: developers.facebook.com/documentation/... and the Messenger Platform changelog. Third-party summaries only as secondary sources. Facts are in context/META_MESSAGING_2026.md.
+
+## 19. GEO and human-expert data series (Dijae, Nov 14 2026)
+- The calendar alternates regular posts with a GEO series (getting a business recommended when people ask ChatGPT and other AI assistants) and adds a human-expert data series (how AI companies invest in domain experts to improve models). Order and rules: SCHEDULE.md.
+- GEO posts: cite each AI vendor's own docs and the GEO research paper, date every fact, never promise rankings or guaranteed recommendations.
+- Human-expert data posts: public facts only, general industry framing, never first person, never name or describe any private engagement. Run the confidentiality scan as always; it applies to these posts with no exceptions.
