@@ -154,6 +154,13 @@
    "page_post": "https://www.facebook.com/1579937777474981/posts/1819561116845978",
    "blog": "https://www.dijaedadula.com/chatbot-roi-metrics",
    "page_text": "Is your AI earning its keep?\n\nFive metrics answer it: speed to first reply, containment rate, conversion rate, cost per conversation and handoff quality. One simple formula turns them into ROI you can defend.\n\nThe full guide: https://www.dijaedadula.com/chatbot-roi-metrics"
+  },
+  {
+   "slug": "ai-agent-instructions-template",
+   "date": "2026-11-15",
+   "page_post": "https://www.facebook.com/1579937777474981/posts/1820974060038017",
+   "blog": "https://www.dijaedadula.com/ai-agent-instructions-template",
+   "page_text": ""
   }
  ],
  "group": [
@@ -168,6 +175,11 @@
    "slug": "botcake-ai-pancake-setup-guide",
    "url": "https://www.instagram.com/p/DfuGpklky2s/",
    "date": "2026-11-14"
+  },
+  {
+   "slug": "what-is-an-ai-agent",
+   "url": "https://www.instagram.com/p/Dfvl49nkx6k/",
+   "date": "2026-11-15"
   }
  ]
 }
