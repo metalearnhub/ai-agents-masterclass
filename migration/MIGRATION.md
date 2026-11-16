@@ -1,0 +1,35 @@
+# PayMeGPT (MC) -> Vercel + Supabase migration (Dijae, Nov 16 2026)
+
+Decision: stop using PayMeGPT. Rebuild every project on Vercel (static/Next sites from GitHub repos) with Supabase (project qbubwemdvwflxvxwesrl, ap-south-1) as the database and API layer.
+Dijae's answers (Nov 16): deploy by linking GitHub repos in Vercel; sign in to MC once so everything can be exported; scope = web apps + Supabase, landing pages, newsletter sending, and PM University (keep its passcode gate).
+
+## Done
+- [x] 37 PayMeGPT-hosted images (Facebook posters, content bank) mirrored to statics.pancake.vn; references rewritten in dijae-cv-landing posts.json, newsletter/queue.json, fb_pending.json. Map: migration/pmg_image_map.json.
+
+## PayMeGPT dependencies found in GitHub repos
+| Repo | Depends on | Replace with |
+|---|---|---|
+| dijae-cv-landing (content bank + CV) | /api/landing/context (page context XHR) | static, or Supabase edge function |
+| dijae-dadula-ai-native-systems-architect-cv | /api/landing/context | static |
+| drivefolio | /api/landing/context; data already in Supabase (df_* tables, edge functions) | static + Supabase |
+| ai-trainer-defense (+ /tasker) | PayMeGPT coach agent embed (COACH_URL); tasker already on Supabase | Supabase edge function calling an LLM API |
+| pm-university | PIN login (generate-pin / verify-pin), Google Sheet data via PayMeGPT sheet API, coach agent embed, /api/landing/context | Supabase table + PIN edge function + LLM edge function; passcode gate kept |
+
+## Blocked until MC is signed in once (export list)
+- Every landing page's HTML (list_landing_pages / get_landing_page), incl. grow.dijaedadula.com newsletter page and funnels.
+- Contacts with tags (newsletter id 1532), form 947 submissions, other forms.
+- Flows (welcome flow 7030), broadcasts/templates, automations, widgets/agents (prompts + knowledge).
+- PM University sheet data (page 7953).
+- Hands-off pages 7509/7510 (old referral + interview lead magnet): export to a PRIVATE place only, never publish.
+
+## Needs Dijae
+1. Sign in to MC (connector card) for one export run.
+2. In Vercel: Add New Project -> import each metalearnhub repo (static, no build command). Then point domains (drivefolio.dijaedadula.com, grow.dijaedadula.com, etc.) to Vercel.
+3. Email sending provider for newsletter/welcome flow (proposed: Resend, sender hello@dijaedadula.com, needs DNS records; fix duplicate DMARC first).
+4. Facebook/Instagram posting: MC was the Facebook page poster. Replacement: browser posting (Chrome extension) or a Meta app token in a Supabase edge function.
+
+## Plan (order)
+1. Export everything from MC into Supabase tables (pm_pages, contacts, forms, submissions, flows, broadcasts) and HTML into repos.
+2. Rebuild pages as static sites per repo; swap PayMeGPT APIs for Supabase edge functions.
+3. Newsletter: contacts table + send edge function (provider API) + scheduled jobs (pg_cron) for welcome flow, Friday digest, Tuesday story email.
+4. Point domains to Vercel, test desktop/mobile, then retire MC.
