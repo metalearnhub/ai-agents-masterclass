@@ -20,7 +20,7 @@ Dijae's answers (Nov 16): deploy by linking GitHub repos in Vercel; sign in to M
 - Contacts with tags (newsletter id 1532), form 947 submissions, other forms.
 - Flows (welcome flow 7030), broadcasts/templates, automations, widgets/agents (prompts + knowledge).
 - PM University sheet data (page 7953).
-- Hands-off pages 7509/7510 (old referral + interview lead magnet): export to a PRIVATE place only, never publish.
+- Hands-off pages 7509/7510: export to a PRIVATE place only, never publish.
 
 ## Needs Dijae
 1. Sign in to MC (connector card) for one export run.
