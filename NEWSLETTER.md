@@ -30,3 +30,10 @@ Mention the scheduled email (subject, send time, broadcast id) in the daily repo
 
 ## Public-content rules
 Follow CONFIDENTIALITY.md. Run the private zero-hit scan on every email before scheduling. AI-trainer career posts are framed as general career guides, never as the lead story.
+
+## Sending without PayMeGPT (from Nov 16, 2026)
+- Subscribers: Supabase table nl_subscribers (status 'subscribed', tag 'newsletter'). Signup form on grow.dijaedadula.com/newsletter posts to the edge function `nl`, which sends the welcome email.
+- Broadcasts: insert one row into nl_broadcasts (kind 'digest' or 'story', subject, preheader, html, text, send_at, status 'scheduled'). Use {{first_name}} for the name. The unsubscribe footer and List-Unsubscribe headers are added automatically.
+- A pg_cron job (nl-broadcasts, every 5 minutes) calls `nl` for due broadcasts and sends 40 emails per run through Zoho SMTP from hello@dijaedadula.com. Each subscriber gets each broadcast once (nl_sends).
+- Test first by setting test_to to one address: that row sends a single "[TEST]" email and is marked sent.
+- Check results: select status, sent, failed from nl_broadcasts order by id desc.
