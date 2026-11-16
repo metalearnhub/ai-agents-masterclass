@@ -51,3 +51,4 @@ ZOHO_SMTP_USER (mailbox login), ZOHO_SMTP_PASS (Zoho app-specific password), NL_
 - PM University: repo pm-university rebuilt for Vercel; passcode gate + progress sync via Supabase function pmu (tables pmu_rows, pmu_config, pmu_keys). Coach copies prompts for Claude/ChatGPT. Old progress data was not recoverable.
 - AI Trainer Defense: coach button copies the report with debrief instructions and opens Claude/ChatGPT.
 - Content bank: next-up post on top, posted posts grouped at the bottom.
+- CRM backlog (low priority, Dijae Nov 16): email analytics per audience. Save the audience (tag, status, pipeline/stage) on each broadcast, show sent/failed/unsubscribed per audience on the dashboard and per email. Opens/clicks would need tracking pixels and redirect links.
