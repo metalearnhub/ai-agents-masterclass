@@ -1,0 +1,179 @@
+<div class='dd-article dd-c'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/90/cf/c4/4c/9ba19836cd604f01030d20e81ba77389153d726af4f55a37090c77e4.png' alt='Dark paper-cut illustration of a stack of documents with a green tab and a check mark, linked by a dashed green path to a friendly robot and a chat bubble' width='1536' height='864' loading='lazy'></div></figure>
+<div class='dd-scene'><span class='dd-note-label'>Picture this · illustrative</span>
+<p>A customer asks a shop's AI agent how much delivery to Cavite costs. The answer is in the knowledge base, on page six of a long document, in a table under the heading “Rates”. The agent replies that it is not sure and offers to connect a person. The owner opens the document, sees the fee right there, and wonders why the agent “can't read”.</p></div>
+<p class='dd-plain'>An AI-ready knowledge base is <mark>a set of short, single-topic entries that each make sense on their own, so the agent can find the right one and quote it accurately.</mark></p>
+<div class='dd-words'><span><b>Knowledge base</b> the documents your agent answers from</span><span><b>Chunk</b> a small piece of a document the system stores and searches</span><span><b>Retrieval</b> the search step that picks which chunks the agent sees</span><span><b>Entry</b> one topic, written to stand alone</span><span><b>Source of truth</b> the one place a fact lives</span></div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>Questions in this guide</p>
+<ol>
+<li><a href='#miss'>Why does an AI agent miss answers that are in your documents?</a></li>
+<li><a href='#files'>What files should a business knowledge base have?</a></li>
+<li><a href='#write'>How do you write an entry an AI agent can use?</a></li>
+<li><a href='#templates'>What does a good entry look like?</a></li>
+<li><a href='#current'>How do you keep the knowledge base accurate?</a></li>
+<li><a href='#try'>What can you set up today?</a></li>
+</ol>
+</nav>
+<h2 id='miss'>Why does an AI agent miss answers that are in your documents?</h2>
+<p class='dd-short'><b>Short answer:</b> the agent never reads your whole document. It searches small pieces of it, and a piece that does not say what it is about is hard to find and easy to misread.</p>
+<p>Most AI agents answer with retrieval-augmented generation (RAG): before replying, the system searches your files and passes the best-matching passages to the model. To make that search work, documents are split into chunks. OpenAI's file search, for example, splits files into chunks of 800 tokens with a 400-token overlap by default. A long document becomes dozens of separate pieces.</p>
+<p>The problem is what a piece loses when it is cut out. Anthropic's research on retrieval gives the classic example: a chunk that says “The company's revenue grew by 3% over the previous quarter” does not say which company or which quarter. The same happens with business documents. A table row that says “₱150 · 2 to 3 days” means nothing once it is separated from the heading that said “Delivery to Cavite”.</p>
+<figure class='dd-fig'>
+<svg class='dk' viewBox='0 0 640 300' role='img' aria-labelledby='sc1t sc1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sc1t'>The same fact written two ways</title>
+<desc id='sc1d'>Two note cards side by side. The left card, labelled hard to find, holds a bare table row: 150 pesos, 2 to 3 days, with a handwritten note asking delivery to where. The right card, labelled easy to find, holds a full sentence: delivery to Cavite costs 150 pesos and takes 2 to 3 working days, updated November 2026, with the word Cavite highlighted. A dashed arrow runs from the left card to the right card. The amounts are an illustrative example.</desc>
+<defs><linearGradient id='sc1bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#1f2224'/><stop offset='1' stop-color='#0a0b0c'/></linearGradient>
+<pattern id='sc1g' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='2' cy='2' r='1' fill='#2a2e31'/></pattern>
+<marker id='sc1a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#3fbfa6'/></marker></defs>
+<rect x='0' y='0' width='640' height='300' rx='14' fill='url(#sc1bg)'/>
+<rect x='0' y='0' width='640' height='300' rx='14' fill='url(#sc1g)'/>
+<text x='24' y='34' class='svg-k'>SAME FACT, TWO WAYS</text>
+<rect x='24' y='60' width='240' height='170' rx='12' fill='#17191b' stroke='#3a3f43' stroke-width='2'/>
+<text x='40' y='88' class='svg-k'>HARD TO FIND</text>
+<text x='40' y='128' class='svg-t'>₱150 · 2 to 3 days</text>
+<text x='40' y='180' class='svg-hand' font-size='18'>delivery to where?</text>
+<text x='40' y='206' class='svg-hand' font-size='18'>for what order?</text>
+<path d='M276 145 C 300 120, 330 120, 352 140' fill='none' stroke='#3fbfa6' stroke-width='3' stroke-dasharray='8 7' stroke-linecap='round' marker-end='url(#sc1a)'/>
+<rect x='364' y='60' width='252' height='170' rx='12' fill='#10302a' stroke='#3fbfa6' stroke-width='2'/>
+<text x='380' y='88' class='svg-k'>EASY TO FIND</text>
+<rect x='452' y='110' width='58' height='22' rx='4' fill='#3fbfa6' opacity='0.3'/>
+<text x='380' y='126' class='svg-t'>Delivery to Cavite</text>
+<text x='380' y='150' class='svg-t'>costs ₱150 and takes</text>
+<text x='380' y='174' class='svg-t'>2 to 3 working days.</text>
+<text x='380' y='206' class='svg-s'>Updated November 2026</text>
+<text x='24' y='262' class='svg-s'>Illustrative amounts. The right card still makes sense if it is the only thing the agent reads.</text>
+</svg>
+<figcaption><b>Sketch 1.</b> A fact that names its own subject survives being cut into chunks; a bare table row does not.</figcaption>
+</figure>
+<p>Anthropic measured how much this matters. Adding a short line of context to each chunk before storing it cut failed retrievals by 35%, and by 49% when combined with keyword search, on its test sets. You do not need to build that system yourself. You get much of the same effect by writing entries that carry their own context from the start.</p>
+<h2 id='files'>What files should a business knowledge base have?</h2>
+<p class='dd-short'><b>Short answer:</b> five, each with one job: business facts, products or services, policies, FAQs, and handoff rules.</p>
+<p>A common mistake is uploading everything: brochures, old price lists, chat exports, the website copied page by page. More documents do not make a smarter agent. They make more places for two versions of the same fact to disagree. Start with five files and put each fact in exactly one of them, the “one fact, one home” rule from <a href='https://www.dijaedadula.com/rag-ai-agent-business-knowledge'>grounding an AI agent in your business knowledge</a>.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>File</th><th>What goes in it</th><th>Changes how often</th></tr></thead>
+<tbody>
+<tr><td>Business facts</td><td>Name, locations, hours, contact channels, service areas, payment methods</td><td>Rarely</td></tr>
+<tr><td>Products or services</td><td>One entry per item: what it is, who it is for, price, options, what is not included</td><td>With every price or menu change</td></tr>
+<tr><td>Policies</td><td>Delivery, returns, refunds, cancellations, warranties, booking rules, each as its own entry</td><td>When the policy changes</td></tr>
+<tr><td>FAQs</td><td>The real questions customers ask, in their words, with full-sentence answers</td><td>Monthly, from new questions in chat</td></tr>
+<tr><td>Handoff rules</td><td>What the agent must not answer, and who takes over</td><td>When the team changes</td></tr>
+</tbody></table></div>
+<p>The last file connects to your agent's instructions. How to write those is in <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>AI agent instructions for any business</a>.</p>
+<div class='dd-myth'>
+<div class='dd-m'><span class='dd-lab'>Myth</span><p>The more documents you upload, the more the agent knows.</p></div>
+<div class='dd-r'><span class='dd-lab'>Reality</span><p>Every extra document is another chance for an outdated or conflicting version to be retrieved. A small, clean set beats a large, messy one.</p></div>
+</div>
+<h2 id='write'>How do you write an entry an AI agent can use?</h2>
+<p class='dd-short'><b>Short answer:</b> one topic per entry, the subject named in the first sentence, full sentences instead of yes or no, and exact numbers with a date.</p>
+<p>Intercom's guidance for its Fin AI agent lines up closely with what the retrieval research shows. Its help centre asks for single-topic sections, full sentences instead of bare “yes” or “no” answers, precise numbers and limits, numbered lists for steps, and written text alongside every image. Put together, that gives eight rules:</p>
+<ol>
+<li><b>One topic per entry.</b> “Returns” and “exchanges” are two entries if the rules differ.</li>
+<li><b>Name the subject in the first sentence.</b> Write “Delivery to Cavite costs...” rather than “It costs...”. Headings do not always travel with the chunk.</li>
+<li><b>Answer in full sentences.</b> “Yes, we deliver to Cebu by courier in 5 to 7 working days” beats “Yes”.</li>
+<li><b>State numbers exactly.</b> Prices, fees, limits, days and hours, with the currency and unit.</li>
+<li><b>Write the conditions.</b> Who it applies to, minimum order, cut-off times, exceptions.</li>
+<li><b>Introduce every table.</b> One sentence above it saying what the table covers.</li>
+<li><b>Never put a fact only in an image.</b> A price list as a photo is invisible to most agents.</li>
+<li><b>Date every entry and name an owner.</b> The agent and your team both need to know how fresh it is.</li>
+</ol>
+<div class='dd-sticky'><span class='dd-note-label'>Dijae's rule</span><p>Write every entry so it still makes sense if it is the only thing the agent reads.</p></div>
+<h2 id='templates'>What does a good entry look like?</h2>
+<p class='dd-short'><b>Short answer:</b> a short title phrased like the customer's question, a one-sentence answer, the details and conditions, and a footer with the date and owner.</p>
+<p>Copy these two templates and replace the brackets. Keep each entry short; if it runs past a few paragraphs, it is probably two topics.</p>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>ENTRY: [Customer question, e.g. How much is delivery to Cavite?]
+ANSWER: [One full sentence that names the subject, e.g. Delivery to
+Cavite costs PHP 150 and takes 2 to 3 working days.]
+DETAILS:
+- Applies to: [who or which orders]
+- Conditions: [minimum order, cut-off time, exceptions]
+- Not included: [what this does not cover]
+IF UNSURE: [what the agent should do, e.g. hand off to the team]
+UPDATED: [date] | OWNER: [name or role]</code></pre></div>
+<div class='dd-code'><button class='dd-copy' type='button'>Copy</button><pre><code>POLICY: [Name, e.g. Refunds for online orders]
+SUMMARY: [One sentence a customer could act on.]
+STEPS:
+1. [First thing the customer does]
+2. [What happens next, with the time it takes]
+3. [How they get the refund or replacement]
+LIMITS: [time window, condition of item, exclusions, exact numbers]
+THE AGENT MAY: [explain the policy, share the link, collect details]
+THE AGENT MAY NOT: [approve exceptions, promise refunds] -> hand off
+UPDATED: [date] | OWNER: [name or role] | SOURCE: [link to the public policy page]</code></pre></div>
+<p>The “may not” line matters as much as the facts. A refund rule the agent invents is a promise your business may have to keep, as covered in <a href='https://www.dijaedadula.com/chatbot-liability-air-canada'>the Air Canada chatbot ruling</a>.</p>
+<h2 id='current'>How do you keep the knowledge base accurate?</h2>
+<p class='dd-short'><b>Short answer:</b> give every entry an owner and a review date, retire expired content on the day it expires, and add new entries from the questions the agent could not answer.</p>
+<figure class='dd-fig'>
+<svg class='dk' viewBox='0 0 640 270' role='img' aria-labelledby='sc2t sc2d' xmlns='http://www.w3.org/2000/svg'>
+<title id='sc2t'>The monthly knowledge base loop</title>
+<desc id='sc2d'>A dashed loop with four stops: read the questions the agent handed off or got wrong, fix or add the entry in its one home, retest the question set, then retire expired promos and old prices. The fix step is highlighted. A handwritten note says once a month, plus every price change.</desc>
+<defs><linearGradient id='sc2bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#1f2224'/><stop offset='1' stop-color='#0a0b0c'/></linearGradient>
+<pattern id='sc2g' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='2' cy='2' r='1' fill='#2a2e31'/></pattern></defs>
+<rect x='0' y='0' width='640' height='270' rx='14' fill='url(#sc2bg)'/>
+<rect x='0' y='0' width='640' height='270' rx='14' fill='url(#sc2g)'/>
+<text x='24' y='34' class='svg-k'>THE MONTHLY LOOP</text>
+<ellipse cx='320' cy='148' rx='170' ry='70' fill='none' stroke='#3fbfa6' stroke-width='3' stroke-dasharray='8 7' stroke-linecap='round'/>
+<circle cx='150' cy='148' r='12' fill='#17191b' stroke='#3fbfa6' stroke-width='2.5'/>
+<text x='24' y='140' class='svg-t'>1 · Read</text><text x='24' y='158' class='svg-t'>misses</text><text x='24' y='178' class='svg-s'>handoffs,</text><text x='24' y='194' class='svg-s'>wrong answers</text>
+<circle cx='320' cy='78' r='12' fill='#10302a' stroke='#3fbfa6' stroke-width='2.5'/>
+<rect x='252' y='40' width='136' height='22' rx='4' fill='#3fbfa6' opacity='0.3'/>
+<text x='320' y='56' text-anchor='middle' class='svg-t'>2 · Fix the entry</text>
+<circle cx='490' cy='148' r='12' fill='#17191b' stroke='#3fbfa6' stroke-width='2.5'/>
+<text x='616' y='140' text-anchor='end' class='svg-t'>3 · Retest</text><text x='616' y='160' text-anchor='end' class='svg-s'>the question set</text>
+<circle cx='320' cy='218' r='12' fill='#17191b' stroke='#3fbfa6' stroke-width='2.5'/>
+<text x='320' y='256' text-anchor='middle' class='svg-t'>4 · Retire old content</text>
+<text x='320' y='146' text-anchor='middle' class='svg-hand' font-size='18'>once a month</text>
+<text x='320' y='166' text-anchor='middle' class='svg-hand' font-size='18'>+ every price change</text>
+</svg>
+<figcaption><b>Sketch 2.</b> The knowledge base improves from real misses: each handoff or wrong answer points to an entry to fix or add.</figcaption>
+</figure>
+<p>Three habits keep it honest. First, put an end date on every promo the day you add it, and delete it on that date. Second, treat a price change as a knowledge base change: the same person who updates the price list updates the entry. Third, read the conversations your agent handed off. Each one is either a missing entry, an unclear entry, or a question the agent should never answer. The weekly side of this is in <a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>AI agent monitoring after launch</a>.</p>
+<h2 id='try'>What can you set up today?</h2>
+<ol class='dd-try'>
+<li>Collect the 20 questions customers ask most, from your chat inbox, comments and calls.</li>
+<li>Create the five files and move every fact you have into exactly one of them. Delete duplicates.</li>
+<li>Rewrite each entry with the template: question as title, one-sentence answer, conditions, date and owner.</li>
+<li>Replace any price list or schedule that exists only as an image with text.</li>
+<li>Load the files into your agent and ask it all 20 questions, then compare each answer with its entry.</li>
+</ol>
+<p><b>How you will know it works</b> (acceptance criteria for the 20-question test):</p>
+<p>The table below lists the checks to run after loading the files, and what a pass looks like.</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Check</th><th>Pass when</th></tr></thead>
+<tbody>
+<tr><td>Accuracy</td><td>At least 18 of 20 answers match their entry on every number, date and condition</td></tr>
+<tr><td>No invention</td><td>Zero answers contain a price, fee or policy that is not in the knowledge base</td></tr>
+<tr><td>Uncovered questions</td><td>Questions with no entry are handed off, not guessed</td></tr>
+<tr><td>Freshness</td><td>Every entry has a date from the last 90 days or a confirmed review</td></tr>
+<tr><td>Retest</td><td>The 20 questions are rerun after every price, policy or agent change</td></tr>
+</tbody></table></div>
+<p>An honest limitation: a well-written knowledge base raises the odds of a correct answer, but it does not guarantee one. How well retrieval works also depends on the platform's search, the model and your agent's instructions, which you may not control. That is why the test set and a human handoff stay in place even after the agent passes.</p>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>What is a knowledge base for an AI agent?</h3>
+<p>It is the set of documents an AI agent searches before answering, such as business facts, product and service details, policies and FAQs. The agent quotes from it instead of relying on what the model learned in training.</p>
+<h3>Should a chatbot knowledge base be one big document or many small ones?</h3>
+<p>Many small, single-topic entries usually work better. Systems split documents into chunks before searching, so an entry that names its own subject and stands alone is easier to find and harder to misread.</p>
+<h3>Can I just upload my website to the AI agent?</h3>
+<p>You can, but website pages mix several topics, repeat facts and often hold prices in images. Use them as raw material, then rewrite the facts into short entries with one home each.</p>
+<h3>How often should I update the knowledge base?</h3>
+<p>Update it the same day a price, promo or policy changes, and review it once a month using the questions the agent handed off or answered wrongly.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Get your agent's knowledge right</p>
+<p>Want a knowledge base and AI agent set up so customers get accurate answers from day one? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+<p>Prefer to learn it step by step? <a href='https://grow.dijaedadula.com/newsletter'>Join the free weekly newsletter</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://www.anthropic.com/engineering/contextual-retrieval' target='_blank' rel='noopener'>Anthropic: Introducing Contextual Retrieval</a>, September 19, 2024 (chunk context problem; 35% and 49% fewer failed retrievals).</li>
+<li><a href='https://www.intercom.com/help/en/articles/7860255-fin-ai-agent-content-best-practices' target='_blank' rel='noopener'>Intercom: Fin AI agent content best practices</a>. Checked November 2026.</li>
+<li><a href='https://javadoc.io/static/com.openai/openai-java/4.5.0/com/openai/models/vectorstores/StaticFileChunkingStrategy.html' target='_blank' rel='noopener'>OpenAI Java SDK reference: StaticFileChunkingStrategy</a> (default chunk size 800 tokens, overlap 400).</li>
+<li><a href='https://arxiv.org/abs/2005.11401' target='_blank' rel='noopener'>Lewis et al.: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>, 2020.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/rag-ai-agent-business-knowledge'>How to Ground an AI Agent in Your Business Knowledge (RAG Explained for Business Owners)</a></li>
+<li><a href='https://www.dijaedadula.com/ai-agent-instructions-template'>How to Write AI Agent Instructions for Any Business (Templates Inside)</a></li>
+<li><a href='https://www.dijaedadula.com/ai-agent-guardrails'>How to Stop an AI Agent From Making Things Up: Guardrails for Business Chatbots</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
