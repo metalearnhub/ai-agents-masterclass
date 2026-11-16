@@ -1,10 +1,17 @@
 # PayMeGPT (MC) -> Vercel + Supabase migration (Dijae, Nov 16 2026)
 
 Decision: stop using PayMeGPT. Rebuild every project on Vercel (static/Next sites from GitHub repos) with Supabase (project qbubwemdvwflxvxwesrl, ap-south-1) as the database and API layer.
-Dijae's answers (Nov 16): deploy by linking GitHub repos in Vercel; sign in to MC once so everything can be exported; scope = web apps + Supabase, landing pages, newsletter sending, and PM University (keep its passcode gate).
+Nov 16 update: Dijae is permanently blocked from PayMeGPT, so nothing can be exported. Rebuild from GitHub + Supabase only; skip what only lived in PayMeGPT.
+Dijae's answers (Nov 16, earlier): deploy by linking GitHub repos in Vercel; sign in to MC once so everything can be exported; scope = web apps + Supabase, landing pages, newsletter sending, and PM University (keep its passcode gate).
 
 ## Done
 - [x] 37 PayMeGPT-hosted images (Facebook posters, content bank) mirrored to statics.pancake.vn; references rewritten in dijae-cv-landing posts.json, newsletter/queue.json, fb_pending.json. Map: migration/pmg_image_map.json.
+
+- [x] Removed PayMeGPT runtime scripts and added vercel.json in dijae-cv-landing, drivefolio, dijae-dadula-ai-native-systems-architect-cv; ai-trainer-defense coach iframe replaced with a notice.
+- [x] Newsletter signup rebuilt: Supabase tables nl_subscribers + nl_sends, edge function `nl` (subscribe POST, one-click unsubscribe ?u=token, welcome email through Zoho SMTP port 465 once secrets exist). grow.dijaedadula.com/newsletter (Webcake 9ff5ec38) now posts to it.
+
+## Supabase secrets to set (Dashboard > Edge Functions > Secrets), never in chat or git
+ZOHO_SMTP_USER (mailbox login), ZOHO_SMTP_PASS (Zoho app-specific password), NL_FROM (hello@dijaedadula.com), optional ZOHO_SMTP_HOST (smtp.zoho.com, or smtppro.zoho.com for organization accounts).
 
 ## PayMeGPT dependencies found in GitHub repos
 | Repo | Depends on | Replace with |
