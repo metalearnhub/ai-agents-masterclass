@@ -13,6 +13,8 @@ Dijae's answers (Nov 16, earlier): deploy by linking GitHub repos in Vercel; sig
 - [x] Vercel (account dijae0-8708, GitHub app installed on 4 repos only): ai-trainer-defense.vercel.app (+ /tasker/), drivefolio-wheat.vercel.app, dijae-cv-landing.vercel.app (+ /assets/content-bank/app.html), dijae-dadula-ai-native-systems-arch.vercel.app. Pushes to main auto-deploy.
 - [x] Tasker sign-in: PayMeGPT email-code webhook removed; one-time device PIN (hashed in tk_config, 1-year session, locks after 10 wrong tries). Email codes via Zoho return automatically once secrets exist.
 
+- [x] DNS (Namecheap, Nov 16): cv and drivefolio CNAMEs moved from GitHub Pages to Vercel; tasker.dijaedadula.com added (root redirects to /tasker/); duplicate _dmarc removed (kept rua=hello@). All three show Valid Configuration in Vercel.
+
 ## Supabase secrets to set (Dashboard > Edge Functions > Secrets), never in chat or git
 ZOHO_SMTP_USER (mailbox login), ZOHO_SMTP_PASS (Zoho app-specific password), NL_FROM (hello@dijaedadula.com), optional ZOHO_SMTP_HOST (smtp.zoho.com, or smtppro.zoho.com for organization accounts).
 
