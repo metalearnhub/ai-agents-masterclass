@@ -52,3 +52,4 @@ ZOHO_SMTP_USER (mailbox login), ZOHO_SMTP_PASS (Zoho app-specific password), NL_
 - AI Trainer Defense: coach button copies the report with debrief instructions and opens Claude/ChatGPT.
 - Content bank: next-up post on top, posted posts grouped at the bottom.
 - CRM backlog (low priority, Dijae Nov 16): email analytics per audience. Save the audience (tag, status, pipeline/stage) on each broadcast, show sent/failed/unsubscribed per audience on the dashboard and per email. Opens/clicks would need tracking pixels and redirect links.
+- CRM Apps gallery (Nov 17): table crm_apps (30 apps seeded), visit beacon function hit -> app_hits (daily hashed visitor id, no IP stored), API function crm-apps. Tracked: crm, tasker, pm-university, content-bank, ai-trainer-defense, drivefolio, cv-landing, architect-cv. Not tracked yet: Webcake sites, jobs board.
