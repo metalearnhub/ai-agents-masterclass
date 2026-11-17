@@ -1,5 +1,8 @@
 # Community posting: FB group + Instagram (Dijae, Nov 14 2026)
 
+> Nov 17 2026, Dijae: Facebook group posting is removed from the schedule. No group posts from now on. Instagram continues daily.
+
+
 Targets
 - Facebook group "Chatbot Authority Philippines": https://www.facebook.com/groups/chatbotauthority (post as the page identity "Dijae", which the composer shows by default).
 - Instagram @chatengrdijae: https://www.instagram.com/chatengrdijae/
