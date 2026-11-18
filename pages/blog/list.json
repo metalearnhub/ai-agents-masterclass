@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "why-ai-companies-pay-domain-experts",
+   "title": "Why AI Companies Now Pay Domain Experts to Teach Their Models",
+   "blurb": "Public 2025 deals show why AI companies pay specialists, and how to test an expert claim."
+  },
+  {
    "slug": "ai-agent-knowledge-base",
    "title": "How to Write a Knowledge Base Your AI Agent Can Actually Use",
    "blurb": "Why agents miss answers in your documents, the five files to create, eight writing rules, copy-ready templates and a 20-question test."
