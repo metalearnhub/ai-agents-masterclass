@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "prompt-injection-business-owners",
+   "title": "Prompt Injection Explained for Business Owners: Keeping Your AI Agent Safe",
+   "blurb": "How hidden text hijacks AI agents, how to score your risk, and the controls to sign off before launch."
+  },
+  {
    "slug": "why-ai-companies-pay-domain-experts",
    "title": "Why AI Companies Now Pay Domain Experts to Teach Their Models",
    "blurb": "Public 2025 deals show why AI companies pay specialists, and how to test an expert claim."
