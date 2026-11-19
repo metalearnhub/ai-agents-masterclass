@@ -19,3 +19,5 @@ How (browser: Claude in Chrome, Dijae's Windows Chrome; MC has no group or IG pu
 4. Copy rules: English only, calm enterprise tone, a question that invites replies, no invented numbers or stories, confidentiality scan on all text (post and comments), AI-trainer career topics as general guides only, never any partner or job links.
 5. Record: `cq.py mark ...` with the permalink, commit and push. Report both links.
 6. If the browser is not connected or a step fails twice, skip the community post for that day, keep the queue unchanged and say so in the report.
+
+> Nov 19 2026, Dijae: Facebook page posting now goes to Chatbot Authority (asset_id 697909400542109), not the Dijae page. See SOCIAL.md.

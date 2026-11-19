@@ -1,3 +1,5 @@
+> Nov 19 2026, Dijae: ALL Facebook posting moves to the **Chatbot Authority** page (facebook.com/chatbotauthority, Meta Business Suite asset_id 697909400542109; the former CHAMP page). The "Dijae" page (1578607178925897, facebook.com/aidijae) and the Dijae Dadula page are retired: never post there again. Post through Claude in Chrome: https://business.facebook.com/latest/composer?asset_id=697909400542109 (check "Post to" says Chatbot Authority). The 22 past Dijae-page blog posts were reposted to Chatbot Authority on Nov 19 (fresh dark posters with a CHATBOT AUTHORITY badge, same captions; the manual Botcake video post was skipped). Daily oldest-first queue continues unchanged (`tools/fbq.py next`).
+
 # Facebook posts (PayMeGPT / MC connector) — rules from Dijae, Oct 29 2026
 
 - Page: "Dijae", pageId 1578607178925897 (platform facebook). Tool: mcp__MC__post_to_social_media (post now, or scheduledTime ISO with +08:00).
