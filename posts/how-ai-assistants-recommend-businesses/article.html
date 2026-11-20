@@ -1,0 +1,163 @@
+<div class="dd-article dd-c">
+<!--COVER-->
+
+<p>AI assistants recommend a business by searching the web, reading a small set of pages and citing the ones that answer the question clearly. None of the big platforms sells a spot in those answers, and none publishes a ranking formula. What they do publish is how their crawlers work and what makes a page eligible, and that is enough to know where a business can lose.</p>
+
+<div class="dd-scene"><span class="dd-note-label">Picture this · illustrative</span>
+<p>A clinic owner in Cavite asks ChatGPT for the best dental clinics nearby that open on Sundays. The answer names three clinics and links two websites. Her clinic is open on Sundays and has good reviews, but it is not in the answer. Her website never says "open Sundays" in plain text, and its booking page is a picture of a schedule.</p></div>
+
+<p class="dd-plain">An AI recommendation is <mark>an answer the assistant writes after reading pages it can reach, understand and trust enough to cite.</mark></p>
+
+<div class="dd-words"><span><b>Crawler</b> the bot that fetches your pages</span><span><b>Index</b> the stored copy a search tool looks up</span><span><b>Query fan-out</b> several related searches behind one question</span><span><b>Citation</b> the link shown as a source</span></div>
+
+<p>This guide walks through the path from a customer's question to a cited answer, using what OpenAI, Google, Perplexity and Microsoft say in their own documentation. It is part of the GEO series on this blog. For the strategy behind it, start with <a href="https://www.dijaedadula.com/what-is-generative-engine-optimization">What Is Generative Engine Optimization (GEO)?</a></p>
+
+<div class="dd-toc"><b>On this page</b>
+<ol>
+<li><a href="#steps">What happens between the question and the answer?</a></li>
+<li><a href="#per-assistant">What does each assistant say it needs?</a></li>
+<li><a href="#pay">Can a business pay to be recommended?</a></li>
+<li><a href="#where-lose">Where do most businesses drop out?</a></li>
+<li><a href="#measure">How do you know if assistants cite you?</a></li>
+<li><a href="#try">What can you set up today?</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></div>
+
+<h2 id="steps">What happens between the question and the answer?</h2>
+<p class="dd-short"><b>Short answer:</b> the assistant decides whether to search, runs one or more searches, reads the pages it finds, and writes an answer that cites some of them.</p>
+<p>Each step is a filter. OpenAI says ChatGPT decides whether to search based on what the user asks, and that it also uses the context of the conversation for follow-up questions (<a href="https://openai.com/blog/introducing-chatgpt-search" rel="noopener">OpenAI, October 31, 2024</a>). Google says its AI Overviews and AI Mode may use "query fan-out": several related searches across subtopics, which surface a wider set of supporting links than a classic results page (<a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">Google Search Central</a>).</p>
+<p>So one customer question can become several searches. A page only gets a chance if a crawler could fetch it, the search index holds it, and its text matches one of those searches well enough to be read. Only then does the model decide what to quote and link.</p>
+
+<figure class="dd-fig"><svg class="dk" viewBox="0 0 640 300" role="img" aria-labelledby="ar1t ar1d">
+<title id="ar1t">From question to cited answer</title>
+<desc id="ar1d">A dashed path runs from a question bubble through four stops: decide to search, run related searches, read reachable pages, and cite a few. Small notes mark where a business can drop out: blocked crawler, not indexed, vague page.</desc>
+<defs><linearGradient id="arg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2224"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+<pattern id="ard1" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2a2e31"/></pattern></defs>
+<rect x="0" y="0" width="640" height="300" rx="14" fill="url(#arg1)"/>
+<rect x="0" y="0" width="640" height="300" rx="14" fill="url(#ard1)"/>
+<text class="svg-k" x="28" y="36">SKETCH · QUESTION TO CITATION</text>
+<path d="M90 170 C 150 110, 190 110, 230 160 S 330 220, 380 160 S 470 100, 520 150" fill="none" stroke="#3fbfa6" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round"/>
+<rect x="24" y="148" width="92" height="46" rx="20" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="44" y="177">Ask</text>
+<circle cx="190" cy="124" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-s" x="150" y="98">decide to search</text>
+<circle cx="300" cy="200" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-s" x="250" y="236">related searches</text>
+<circle cx="420" cy="120" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-s" x="380" y="94">read pages</text>
+<rect x="510" y="128" width="112" height="46" rx="20" fill="#10302a" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="526" y="157">Cite a few</text>
+<rect x="24" y="252" width="430" height="26" rx="4" fill="#3fbfa6" opacity="0.3"/><text class="svg-hand" x="34" y="271">drop-outs: blocked bot, not indexed, vague page</text>
+</svg><figcaption><b>Sketch 1.</b> Every stop is a filter. Most businesses that never appear were filtered out before the model wrote a word.</figcaption></figure>
+
+<h2 id="per-assistant">What does each assistant say it needs?</h2>
+<p class="dd-short"><b>Short answer:</b> a page its search crawler may fetch, that is indexed, and that answers clearly. None of them asks for special AI files or markup.</p>
+
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Assistant</th><th>What its own docs say</th><th>What it means for you</th></tr></thead>
+<tbody>
+<tr><td>ChatGPT search (OpenAI)</td><td>OAI-SearchBot surfaces sites in ChatGPT search. A site that opts out will not appear in ChatGPT search answers, though it can still show as a navigational link. Robots.txt changes take about 24 hours.</td><td>Allow OAI-SearchBot in robots.txt.</td></tr>
+<tr><td>Google AI Overviews and AI Mode</td><td>No extra optimization, AI text files or special schema needed. A page must be indexed and eligible to show with a snippet. Traffic appears in Search Console under "Web".</td><td>Ordinary Google SEO is the entry ticket.</td></tr>
+<tr><td>Perplexity</td><td>PerplexityBot surfaces and links websites in Perplexity search results and should be allowed for a site to appear. Changes can take up to 24 hours.</td><td>Allow PerplexityBot and do not block it at the firewall.</td></tr>
+<tr><td>Microsoft Copilot and Bing</td><td>Bing Webmaster Tools shows where your content is cited in AI answers across Copilot, Bing and partner experiences.</td><td>Verify your site in Bing Webmaster Tools and watch the report.</td></tr>
+</tbody>
+</table></div>
+
+<p>Sources: <a href="https://developers.openai.com/api/docs/bots" rel="noopener">OpenAI crawler overview</a>, <a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">Google: AI features and your website</a> (updated December 10, 2025), <a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers" rel="noopener">Perplexity crawlers</a> and <a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare" rel="noopener">Bing Search Blog, June 16, 2026</a>.</p>
+
+<p>Notice what is missing from every one of these pages: a list of ranking factors. OpenAI's launch post describes how ChatGPT decides to search and where sources appear, but not how it chooses between two clinics. Treat anyone who claims to know the exact formula with care.</p>
+
+<h2 id="pay">Can a business pay to be recommended?</h2>
+<p class="dd-short"><b>Short answer:</b> not in the organic answer. The platforms describe how to be eligible, not how to buy placement.</p>
+<p>OpenAI says any website or publisher can choose to appear in ChatGPT search (<a href="https://openai.com/blog/introducing-chatgpt-search" rel="noopener">OpenAI</a>). It also lists content partners such as the Associated Press and Reuters, which supply news directly. That is a content deal for news publishers, not a paid slot for local businesses.</p>
+<p>Ads are a separate product with their own labels. If a vendor promises your business will be "recommended by ChatGPT" for a fee, ask what exactly they control. The honest answer is your pages, your listings and your reputation, not the model.</p>
+
+<div class="dd-myth">
+<div class="dd-m"><span class="dd-lab">Myth</span><p>You need a special AI file or new schema to show up in AI answers.</p></div>
+<div class="dd-r"><span class="dd-lab">Reality</span><p>Google says no new AI text files or special schema are required. Crawl access, indexing and clear answers come first.</p></div>
+</div>
+
+<h2 id="where-lose">Where do most businesses drop out?</h2>
+<p class="dd-short"><b>Short answer:</b> before the model ever reads them: blocked crawlers, pages that are not indexed, and key facts that are not written as text.</p>
+<p>Go back to the clinic in the opening scene. It was not rejected for quality. It was never in the pool, because the fact the customer asked about was inside an image. The same happens when opening hours live only in a Facebook post, prices sit in a PDF, or a security plugin blocks every bot by default.</p>
+
+<figure class="dd-fig"><svg class="dk" viewBox="0 0 640 260" role="img" aria-labelledby="ar2t ar2d">
+<title id="ar2t">Before and after: a page an assistant can use</title>
+<desc id="ar2d">Two columns. Left, before: hours inside an image, services in a PDF, crawler blocked. Right, after: hours written as text, one page per service, search crawlers allowed. The right column is highlighted in green.</desc>
+<defs><linearGradient id="arg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2224"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+<pattern id="ard2" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2a2e31"/></pattern></defs>
+<rect x="0" y="0" width="640" height="260" rx="14" fill="url(#arg2)"/>
+<rect x="0" y="0" width="640" height="260" rx="14" fill="url(#ard2)"/>
+<text class="svg-k" x="28" y="36">SKETCH · BEFORE AND AFTER</text>
+<rect x="28" y="56" width="280" height="176" rx="16" fill="#17191b" stroke="#3a3f43" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text class="svg-t" x="48" y="88">Before</text>
+<text class="svg-s" x="48" y="124">Hours inside an image</text>
+<text class="svg-s" x="48" y="154">Services in a PDF</text>
+<text class="svg-s" x="48" y="184">Security plugin blocks bots</text>
+<text class="svg-hand" x="48" y="216">assistant sees nothing</text>
+<rect x="332" y="56" width="280" height="176" rx="16" fill="#10302a" stroke="#3fbfa6" stroke-width="2.5"/>
+<text class="svg-t" x="352" y="88">After</text>
+<text class="svg-s" x="352" y="124">"Open Sundays, 9 am to 3 pm"</text>
+<text class="svg-s" x="352" y="154">One page per service</text>
+<text class="svg-s" x="352" y="184">Search crawlers allowed</text>
+<text class="svg-hand" x="352" y="216">eligible to be cited</text>
+<path d="M300 144 L 340 144" stroke="#8a8f94" stroke-width="3" stroke-linecap="round"/><path d="M332 136 L 342 144 L 332 152" fill="none" stroke="#8a8f94" stroke-width="3" stroke-linecap="round"/>
+</svg><figcaption><b>Sketch 2.</b> The fix is rarely clever. It is writing the facts customers ask about as plain text on pages the crawlers may read.</figcaption></figure>
+
+<p>Writing helps too. A 2024 study presented at the ACM KDD conference found that adding cited sources, quotations and statistics raised a page's visibility in generative engine answers, while keyword stuffing did worse than doing nothing (<a href="https://arxiv.org/abs/2311.09735" rel="noopener">Aggarwal et al., GEO</a>). The lesson for a small business is simple: say specific, checkable things.</p>
+
+<div class="dd-sticky"><span class="dd-note-label">Dijae's rule</span><p>If a customer would ask it, write the answer as a sentence on your website. Assistants can only repeat what they can read.</p></div>
+
+<h2 id="measure">How do you know if assistants cite you?</h2>
+<p class="dd-short"><b>Short answer:</b> use the reports the platforms give you, then ask the assistants your customers' real questions once a month.</p>
+<p>Google counts AI feature traffic inside the Search Console Performance report under the "Web" search type, so it is mixed with normal search traffic rather than shown separately. Bing Webmaster Tools goes further: its AI Performance report shows where your content is cited across Microsoft Copilot and Bing, and in June 2026 Microsoft previewed citation share, intents and topics (<a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare" rel="noopener">Bing Search Blog</a>).</p>
+<p>For ChatGPT and Perplexity, the practical test is manual. Keep a list of ten questions a buyer asks before choosing a business like yours, ask each assistant every month, and record whether you are named or linked.</p>
+
+<h2 id="try">What can you set up today?</h2>
+<ol class="dd-try">
+<li>Open your robots.txt and confirm OAI-SearchBot, PerplexityBot, Googlebot and Bingbot are not blocked.</li>
+<li>Check in Google Search Console that your key pages are indexed.</li>
+<li>Write your hours, location, services and prices as plain text, one clear page per service.</li>
+<li>Verify your site in Bing Webmaster Tools and open the AI Performance report.</li>
+<li>Write down ten buyer questions and test them in ChatGPT, Perplexity, Google and Copilot.</li>
+</ol>
+
+<p><b>How you will know it works</b></p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Check</th><th>Pass when</th></tr></thead>
+<tbody>
+<tr><td>Crawler access</td><td>No search crawler is blocked in robots.txt or at the firewall</td></tr>
+<tr><td>Indexing</td><td>Every key service page shows as indexed in Search Console</td></tr>
+<tr><td>Plain-text facts</td><td>Hours, location, services and prices are readable as text, not only in images</td></tr>
+<tr><td>Monthly test</td><td>You record named or linked results for all ten questions, every month</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="limits">What this cannot promise</h2>
+<p>Doing all of this makes a business eligible. It does not guarantee a recommendation. No platform publishes its selection criteria, answers change between runs and between models, and Google notes that meeting its requirements does not guarantee crawling, indexing or serving. Think of it as removing the reasons to be skipped, then measuring what happens.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>How does ChatGPT decide which businesses to recommend?</h3>
+<p>OpenAI does not publish ranking criteria. Its documentation says ChatGPT decides when to search, uses search providers and its OAI-SearchBot crawler, and shows the pages it used as sources. A site that blocks OAI-SearchBot will not appear in ChatGPT search answers.</p>
+<h3>Do I need special schema or an AI text file?</h3>
+<p>Google says no for its AI Overviews and AI Mode: standard SEO applies, with no new AI files or special schema required. Clear, crawlable pages matter more.</p>
+<h3>How long until a robots.txt change takes effect?</h3>
+<p>OpenAI and Perplexity both say about 24 hours for their search crawlers. Google notes that recrawling can take days to months.</p>
+<h3>Can I see when AI assistants cite my site?</h3>
+<p>Bing Webmaster Tools reports citations across Copilot and Bing. Google mixes AI feature traffic into its Search Console Web report. For ChatGPT and Perplexity, test your key questions by hand each month.</p>
+
+<div class="dd-cta"><b>Want to know if assistants can find your business?</b> Book a free AI Automation Blueprint call and we will check your crawler access, key pages and buyer questions together: <a href="https://www.dijaedadula.com/book" rel="noopener">www.dijaedadula.com/book</a>. Or join the free weekly newsletter for one practical idea each week: <a href="https://grow.dijaedadula.com/newsletter" rel="noopener">Subscribe</a>.</div>
+
+<h2>References</h2>
+<ol class="dd-refs">
+<li>OpenAI, "Introducing ChatGPT search," October 31, 2024 (updated February 5, 2025). <a href="https://openai.com/blog/introducing-chatgpt-search" rel="noopener">openai.com</a></li>
+<li>OpenAI, "Overview of OpenAI crawlers." Checked November 2026. <a href="https://developers.openai.com/api/docs/bots" rel="noopener">developers.openai.com</a></li>
+<li>Google Search Central, "AI features and your website," updated December 10, 2025. <a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">developers.google.com</a></li>
+<li>Perplexity, "Perplexity crawlers." Checked November 2026. <a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers" rel="noopener">docs.perplexity.ai</a></li>
+<li>Microsoft Bing Search Blog, "New AI Visibility Insights in Bing Webmaster Tools," June 16, 2026. <a href="https://blogs.bing.com/search/June-2026/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare" rel="noopener">blogs.bing.com</a></li>
+<li>Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan and Deshpande, "GEO: Generative Engine Optimization," KDD 2024. <a href="https://arxiv.org/abs/2311.09735" rel="noopener">arxiv.org</a></li>
+</ol>
+
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/what-is-generative-engine-optimization">What Is Generative Engine Optimization (GEO)?</a></li>
+<li><a href="https://www.dijaedadula.com/ai-agent-knowledge-base">How to write a knowledge base your AI agent can actually use</a></li>
+<li><a href="https://www.dijaedadula.com/blog-traffic-to-chat-leads">How to turn blog and search traffic into chat leads</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>

@@ -1,0 +1,17 @@
+{
+ "facebook": {
+  "date": "2026-11-20",
+  "slug": "facebook-messenger-missed-messages",
+  "page": "Chatbot Authority (asset 697909400542109)",
+  "image": "social/pending/fb-2026-11-20-facebook-messenger-missed-messages.png",
+  "caption": "Most pages don't have a traffic problem. They have an inbox problem.\n\nMessages land at night, sit with no owner, or get a slow reply. The page that answers first wins.\n\nWhere Messenger conversations leak and how to fix it:\nhttps://www.dijaedadula.com/facebook-messenger-missed-messages",
+  "reason": "Chrome extension not connected (2 attempts)"
+ },
+ "instagram": {
+  "date": "2026-11-20",
+  "slug": "dont-automate-chaos",
+  "image": "social/pending/ig-2026-11-20-dont-automate-chaos.png",
+  "caption": "The tools come last.\n\nMost automation fails because it speeds up a broken process. Before building any AI system, map the work, fix the gaps, then automate what is already working.\n\nThe 8-step method is on the blog: link in bio (dijaedadula.com/dont-automate-chaos)",
+  "reason": "Chrome extension not connected (2 attempts)"
+ }
+}
