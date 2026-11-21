@@ -12,3 +12,4 @@
 - 2026-11-13: Friday digest broadcast 1162 "3 new guides: guests book whoever answers first" (ai-chatbot-for-resorts-hotels-philippines, qualify-leads-messenger-automatically, live-selling-automation-philippines), tag 1532 (3 recipients), scheduled 2026-11-13 02:00 UTC = 10:00 Manila.
 - 2026-11-20: Friday digest nl_broadcasts id 2 '3 guides: an AI sales agent that takes orders' (botcake-ai-pancake-setup-guide, filipino-freelancers-ai-clients-abroad, how-to-become-an-ai-trainer last as general career guide), Supabase/Zoho, scheduled 2026-11-20 02:00 UTC = 10:00 Manila, 3 subscribers.
 - 2026-11-20: digest nlb-2 sent 10:00 Manila: 3 sent, 0 failed.
+- 2026-11-21: FB Chatbot Authority ai-chatbot-cost https://www.facebook.com/chatbotauthority/posts/1596370662506270 ; IG data-privacy-act-chatbots-philippines https://www.instagram.com/p/Df--XPQkwKu/ (2 comments)
