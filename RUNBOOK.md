@@ -147,3 +147,15 @@ Before writing, run `python3 tools/style_next.py` and follow STYLES.md for that 
 
 ## 20. GEO standards for every post (Nov 14 2026)
 Read GEO.md before writing. Every new post follows its "Standards for every new post" list (answer-first opening, question-style H2s, dated and sourced facts, FAQ block). make_post.py now adds Dijae's profile links to the author schema. First Monday of each month: run the GEO.md monthly check and report the result.
+
+## 21. Keyword, SERP and AI-answer research BEFORE writing (Dijae, Nov 22 2026)
+Work as SEO, GEO, copywriter, CMO and product manager. No post is written until `posts/<slug>/brief.md` exists. Steps:
+1. **Keyword set.** From the checklist's "Main search target", list 1 primary keyword and 3-6 variants (question forms, "for small business", "Philippines", "vs", "cost", "how to"). Run WebSearch on the primary and at least 2 variants (send them in one turn).
+2. **SERP read.** For the primary query, record the top 8 results: domain, page type (guide, listicle, tool, vendor page, forum), angle, freshness (year in title), and whether a big-authority site owns it (Ahrefs, Semrush, HubSpot, Search Engine Land, Neil Patel, vendors). Note the questions the results answer and the ones they skip.
+3. **Trend signal.** If Claude in Chrome is connected, open Google Trends (trends.google.com/trends/explore?q=<primary>&geo=PH, then worldwide, past 12 months) and note direction (rising, flat, falling) and the top related queries. If the browser is offline, say "Trends not checked (browser offline)" in the brief; never invent trend numbers.
+4. **Own data.** If the browser is connected, check Google Search Console (Performance, last 3 months, query contains the primary term) and Bing Webmaster Tools for impressions on related queries. Use real numbers only.
+5. **AI-answer check (GEO).** Ask the primary question in ChatGPT search or Perplexity when the browser is available; note which sources are cited. Otherwise skip and say so.
+6. **Decide (PM call).** Pick: search intent (informational, commercial, transactional), the winnable angle (the gap the top results leave: local Philippines/SEA, small-business cost, step-by-step setup, first-party docs, a checklist), the H1 and SEO title built around the primary keyword, 4-6 question H2s taken from real queries, and internal links. If big-authority sites own the head term, target the long-tail variant in the title and keep the head term in H2s and body.
+7. **Acceptance criteria** in the brief: primary keyword in title, H1, first 100 words, one H2 and the meta description; every variant used at least once naturally; answer-first opening; FAQ from real questions; one asset the top results lack (calculator, checklist, template, diagram).
+8. Report the brief summary (primary keyword, intent, top competitors, chosen gap, trend status) in the daily report and email.
+Brief template: `templates/brief.md`.
