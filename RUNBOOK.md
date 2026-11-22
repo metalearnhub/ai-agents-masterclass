@@ -159,3 +159,12 @@ Work as SEO, GEO, copywriter, CMO and product manager. No post is written until 
 7. **Acceptance criteria** in the brief: primary keyword in title, H1, first 100 words, one H2 and the meta description; every variant used at least once naturally; answer-first opening; FAQ from real questions; one asset the top results lack (calculator, checklist, template, diagram).
 8. Report the brief summary (primary keyword, intent, top competitors, chosen gap, trend status) in the daily report and email.
 Brief template: `templates/brief.md`.
+
+## 22. Independent review agent before publishing (Dijae, Nov 22 2026)
+After make_post.py and before create_page, spawn ONE fresh review agent (Agent tool, general-purpose, run_in_background false) that has not seen the writing. Give it: posts/<slug>/brief.md, posts/<slug>/article.html, meta.json, VOICE_dijae.md, CONFIDENTIALITY.md, STYLES.md and RUNBOOK sections 2, 20 and 21. It reviews as SEO lead, GEO lead, conversion copywriter, CMO and product manager and returns a scored verdict:
+- SEO: primary keyword placement per the brief's acceptance criteria, title <=60, meta 120-160, H2s match real queries, internal links.
+- GEO: answer-first opening, quotable dated facts with sources, FAQ shape, no unsupported claims.
+- Copy and brand: Dijae's voice, English only, no hype, no invented stories or numbers, clear CTA, Dijae's rule, honest limitation.
+- PM/QA: acceptance criteria met, one unique asset, figures readable, every statistic traceable to a cited source.
+- Confidentiality: the zero-hit scan terms.
+Verdict = APPROVE or FIX (with a numbered list of required edits). Apply every required edit, rebuild, and re-run the review once if anything substantive changed. Publish only on APPROVE. Put the verdict and the edits made in the daily report.
