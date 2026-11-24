@@ -1,0 +1,168 @@
+<div class="dd-article dd-c">
+<!--COVER-->
+<p>An AI agent brief is a one-page document that says what your AI agent must do, what it must never do, what it knows, what it can touch and how you will judge it, written before anyone builds it. It turns vague chatbot requirements into decisions a builder can follow and a business owner can sign off. Without one, the build becomes the place where those decisions get made, usually by accident.</p>
+<div class="dd-scene"><span class="dd-note-label">Picture this · illustrative</span>
+<p>A dental clinic hires a freelancer to "set up an AI chatbot." Three weeks later the bot answers prices nobody approved, books appointments into a calendar the front desk does not use, and has no idea when to call a person. Nobody did anything wrong. Nobody wrote down what "set up an AI chatbot" meant.</p></div>
+<p class="dd-plain">An AI agent brief is <mark>the list of decisions you make on paper so the build does not make them for you.</mark></p>
+<div class="dd-words"><span><b>Job</b> the one outcome the agent owns</span><span><b>Scope</b> what it answers, hands off or never touches</span><span><b>Source of truth</b> where its facts come from</span><span><b>Acceptance criteria</b> the tests it must pass before launch</span></div>
+<div class="dd-tldr"><p class="dd-tldr-title">What you will get</p><ul><li>The <b>eight decisions</b> every AI agent brief needs.</li><li>A <b>copy-ready one-page template</b>.</li><li><b>Acceptance criteria</b> and how to test them.</li><li>A <b>four-step setup</b> you can start today.</li></ul></div>
+<nav class="dd-toc" aria-label="Table of contents">
+<p class="dd-toc-title">In this guide</p>
+<ol>
+<li><a href="#what">What is an AI agent brief?</a></li>
+<li><a href="#include">What should an AI agent brief include?</a></li>
+<li><a href="#scope">How do you decide what the agent should not do?</a></li>
+<li><a href="#who">Who should write the brief?</a></li>
+<li><a href="#detail">How detailed should chatbot requirements be?</a></li>
+<li><a href="#good">How do you know the brief is good enough?</a></li>
+<li><a href="#try">What can you set up today?</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+
+<h2 id="what">What is an AI agent brief, and why write one first?</h2>
+<p class="dd-short"><b>Short answer:</b> it is the agreement between the business and whoever builds the agent, and it is the cheapest place to change your mind.</p>
+<p>Changing a sentence in a brief takes a minute. Changing the same decision after the agent is connected to your inbox, calendar and CRM means rework, retesting and sometimes an apology to a customer. The brief also stops the most common failure when setting up an AI agent for business: starting too big.</p>
+<p>The people who build these systems for a living say the same thing. Anthropic's engineering guide on building agents recommends "finding the simplest solution possible, and only increasing complexity when needed." OpenAI's practical guide to building agents says customers "typically achieve greater success with an incremental approach," and advises teams to "start small, validate with real users, and grow capabilities over time." A brief is where you decide what small means for your business.</p>
+<p>A brief is not the agent's instructions. Instructions are the text the AI reads on every message. The brief comes first and decides what those instructions must say. When you get to writing them, the <a href="https://www.dijaedadula.com/ai-agent-instructions-template">AI agent instructions template</a> turns the brief into the agent's actual rules.</p>
+
+<h2 id="include">What should an AI agent brief include?</h2>
+<p class="dd-short"><b>Short answer:</b> eight AI agent requirements, each decided in a sentence or two.</p>
+<figure class="dd-fig"><svg class="dk" viewBox="0 0 640 300" role="img" aria-labelledby="ab1t ab1d" xmlns="http://www.w3.org/2000/svg">
+<title id="ab1t">The eight decisions in an AI agent brief</title>
+<desc id="ab1d">A dashed path runs through eight stops in two rows: job, channels, scope, knowledge, then actions, voice, data, and done. The last stop, done, is highlighted. A note says each stop is one decision written in a sentence or two.</desc>
+<defs><linearGradient id="abg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2224"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+<pattern id="abd1" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2a2e31"/></pattern></defs>
+<rect x="0" y="0" width="640" height="300" rx="14" fill="url(#abg1)"/>
+<rect x="0" y="0" width="640" height="300" rx="14" fill="url(#abd1)"/>
+<text class="svg-k" x="28" y="36">SKETCH · ONE PAGE, EIGHT DECISIONS</text>
+<path d="M70 100 L 570 100 C 610 100, 610 200, 570 200 L 70 200" fill="none" stroke="#3fbfa6" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round"/>
+<circle cx="80" cy="100" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="62" y="80">1 Job</text>
+<circle cx="230" cy="100" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="196" y="80">2 Channels</text>
+<circle cx="380" cy="100" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="354" y="80">3 Scope</text>
+<circle cx="530" cy="100" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="492" y="80">4 Knowledge</text>
+<circle cx="530" cy="200" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="500" y="236">5 Actions</text>
+<circle cx="380" cy="200" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="356" y="236">6 Voice</text>
+<circle cx="230" cy="200" r="11" fill="#17191b" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="210" y="236">7 Data</text>
+<rect x="34" y="180" width="92" height="40" rx="18" fill="#10302a" stroke="#3fbfa6" stroke-width="2.5"/><text class="svg-t" x="50" y="205">8 Done</text>
+<rect x="28" y="256" width="400" height="26" rx="4" fill="#3fbfa6" opacity="0.3"/><text class="svg-hand" x="38" y="275">each stop = one decision, a sentence or two</text>
+</svg><figcaption><b>Sketch N.</b> The brief is a short path of decisions. The last one, how you will know it is done, is the one most briefs skip.</figcaption></figure>
+<ol>
+<li><b>The job.</b> One outcome the agent owns, written as a result: "answer service and price questions and book consultations." Not "handle customer service."</li>
+<li><b>Channels.</b> Where customers will talk to it: Messenger, Instagram, WhatsApp, website chat or phone. Each channel has its own rules and costs.</li>
+<li><b>Scope.</b> Three lists: what it answers alone, what it hands to a person, and what it never touches (see Sketch 2 below).</li>
+<li><b>Knowledge.</b> The documents it answers from, who owns each one, and how often it is updated. The <a href="https://www.dijaedadula.com/ai-agent-knowledge-base">knowledge base guide</a> covers how to write them.</li>
+<li><b>Actions.</b> Which tools it can read from and which it can write to: calendar, CRM, order system. Start read-only where you can.</li>
+<li><b>Voice and disclosure.</b> How it sounds, its name, and a clear statement that it is an AI.</li>
+<li><b>Data.</b> What personal information it collects, why, where it is stored and who can see it.</li>
+<li><b>Done.</b> The acceptance criteria and the launch test it must pass, plus the budget and the person who owns it after launch.</li>
+</ol>
+
+<h2 id="scope">How do you decide what the agent should not do?</h2>
+<p class="dd-short"><b>Short answer:</b> sort every task into answer, hand off or never, and write the hand-off triggers down.</p>
+<figure class="dd-fig"><svg class="dk" viewBox="0 0 640 280" role="img" aria-labelledby="ab2t ab2d" xmlns="http://www.w3.org/2000/svg">
+<title id="ab2t">Three zones of scope</title>
+<desc id="ab2d">Three zones drawn as boxes. Answer alone: hours, services, prices you approved, booking open slots. Hand to a person: complaints, refunds, custom quotes, anything unclear. Never: medical or legal advice, payments, promises outside policy. The hand-off zone is highlighted.</desc>
+<defs><linearGradient id="abg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2224"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+<pattern id="abd2" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2a2e31"/></pattern></defs>
+<rect x="0" y="0" width="640" height="280" rx="14" fill="url(#abg2)"/>
+<rect x="0" y="0" width="640" height="280" rx="14" fill="url(#abd2)"/>
+<text class="svg-k" x="28" y="36">SKETCH · ANSWER, HAND OFF, NEVER</text>
+<rect x="24" y="56" width="184" height="190" rx="14" fill="#17191b" stroke="#3a3f43" stroke-width="2"/>
+<text class="svg-t" x="40" y="84">Answer alone</text>
+<text class="svg-s" x="40" y="114">hours, location</text><text class="svg-s" x="40" y="138">services</text><text class="svg-s" x="40" y="162">approved prices</text><text class="svg-s" x="40" y="186">open slots</text>
+<rect x="228" y="56" width="184" height="190" rx="14" fill="#10302a" stroke="#3fbfa6" stroke-width="2.5"/>
+<text class="svg-t" x="244" y="84">Hand to a person</text>
+<text class="svg-s" x="244" y="114">complaints</text><text class="svg-s" x="244" y="138">refunds</text><text class="svg-s" x="244" y="162">custom quotes</text><text class="svg-s" x="244" y="186">anything unclear</text>
+<rect x="432" y="56" width="184" height="190" rx="14" fill="#17191b" stroke="#3a3f43" stroke-width="2" stroke-dasharray="6 6"/>
+<text class="svg-t" x="448" y="84">Never</text>
+<text class="svg-s" x="448" y="114">medical or legal advice</text><text class="svg-s" x="448" y="138">taking payments</text><text class="svg-s" x="448" y="162">promises off policy</text><text class="svg-s" x="448" y="186">deleting records</text>
+<text class="svg-hand" x="244" y="226">list the triggers</text>
+</svg><figcaption><b>Sketch N.</b> Scope in three zones. The middle zone needs the most detail, because it decides when a customer reaches a person.</figcaption></figure>
+<p>The middle zone matters most. OpenAI's guide names two triggers worth copying into any brief: hand over when the agent exceeds a set number of failed attempts, and require human oversight for actions that are "sensitive, irreversible, or have high stakes," such as refunds or payments. Add your own: an upset customer, a question the knowledge base does not cover, a request to speak to a person. The <a href="https://www.dijaedadula.com/ai-chatbot-human-handoff">handoff playbook</a> has seven ready-made triggers.</p>
+<div class="dd-myth">
+<div class="dd-m"><span class="dd-lab">Myth</span><p>A capable AI agent should be able to handle everything, so scope limits waste its potential.</p></div>
+<div class="dd-r"><span class="dd-lab">Reality</span><p>Tight scope is what makes an agent safe to switch on. You widen it later, one task at a time, once the numbers say it is ready.</p></div>
+</div>
+
+<h2 id="who">Who should write the brief: the owner or the builder?</h2>
+<p class="dd-short"><b>Short answer:</b> the owner decides, the builder asks the questions and writes it up, and both sign it.</p>
+<p>The owner knows the business: which questions customers ask, which promises are allowed, who handles complaints. The builder knows what the platform can and cannot do. A good builder will refuse to start without the answers. If you are hiring, a builder who never asks about scope, hand-offs or acceptance criteria is telling you how the project will go.</p>
+<div class="dd-sticky"><span class="dd-note-label">Dijae's rule</span><p>If you cannot write down what "done" looks like, you are not ready to build. Decide it on one page first. It is the cheapest change you will ever make.</p></div>
+
+<h2 id="detail">How detailed should chatbot requirements be?</h2>
+<p class="dd-short"><b>Short answer:</b> one page for a first agent; detail goes into the knowledge files and instructions, not the brief.</p>
+<p>Chatbot requirements fail in two directions. Too thin ("answer customer questions") and the builder guesses. Too thick (a 30-page specification) and nobody reads it, so it drifts out of date before launch. One page forces the real decisions to the top. Copy this chatbot requirements template and fill in each line:</p>
+<div class="dd-code"><button class="dd-copy" type="button">Copy</button><pre><code>AI AGENT BRIEF: [Business name]          Owner: [name]    Date: [date]
+
+1. JOB: The agent owns [one outcome], measured by [one number].
+2. CHANNELS: [Messenger / Instagram / WhatsApp / website / phone]
+3. SCOPE
+   Answers alone: [list]
+   Hands to a person when: [triggers]   Person on duty: [name, hours]
+   Never: [list]
+4. KNOWLEDGE: [documents] - owner [name] - updated [how often]
+5. ACTIONS: reads [tools]; writes [tools, or "none in version 1"]
+6. VOICE: name [agent name], tone [3 words], says it is an AI: yes
+7. DATA: collects [fields] for [reason]; stored in [system]; access [roles]
+8. DONE
+   Acceptance criteria: [see test below]
+   Launch test: [number] real past questions, pass rate [target]
+   Budget: setup [amount], monthly [amount]
+   Owner after launch: [name], weekly review [day]
+
+Signed: [owner]  [builder]</code></pre></div>
+<p>Two lines in that template carry more weight than they look. The budget line keeps the project honest: the <a href="https://www.dijaedadula.com/ai-chatbot-cost">AI chatbot cost guide</a> breaks down what to put there. The data line matters under privacy law; if you serve customers in the Philippines, see the <a href="https://www.dijaedadula.com/data-privacy-act-chatbots-philippines">Data Privacy Act guide for chatbots</a>.</p>
+
+<h2 id="good">How do you know the brief is good enough?</h2>
+<p class="dd-short"><b>Short answer:</b> a stranger could build from it, and you could fail the agent against it.</p>
+<p>Write the acceptance criteria before building an AI agent, as tests that pass or fail. For a first agent, these work for most businesses:</p>
+<div class="dd-table-wrap"><table>
+<thead><tr><th>Acceptance criterion</th><th>How to test it</th></tr></thead>
+<tbody>
+<tr><td>Answers the top questions correctly</td><td>Run 30 real past questions; it passes at the rate you set in the brief</td></tr>
+<tr><td>Hands off on every trigger</td><td>Send one message per trigger; each reaches the named person</td></tr>
+<tr><td>Stays out of the "never" zone</td><td>Ask for each forbidden item; it declines and offers a person</td></tr>
+<tr><td>Uses only approved facts</td><td>Ask about a price or policy not in the knowledge files; it says it will check</td></tr>
+<tr><td>Says it is an AI</td><td>Ask "am I talking to a person?"; it answers honestly</td></tr>
+</tbody></table></div>
+<p>The <a href="https://www.dijaedadula.com/how-to-test-an-ai-chatbot">chatbot testing guide</a> shows how to build the question set, and the <a href="https://www.dijaedadula.com/ai-agent-project-plan">AI agent project plan</a> turns the brief into a six-week timeline.</p>
+<p>An honest limitation: a brief cannot predict every question customers will ask. Real conversations will surface gaps in the first weeks. The brief's job is not to be complete; it is to make sure every gap has an owner and a way back into the knowledge files.</p>
+
+<h2 id="try">What can you set up today?</h2>
+<ol class="dd-try">
+<li>Write the agent's job in one sentence, with the one number that proves it is working.</li>
+<li>Pull 30 real questions from last month's messages; they become your launch test.</li>
+<li>Draw the three scope zones and list at least three hand-off triggers.</li>
+<li>Name the person who owns the knowledge files and the weekly review.</li>
+</ol>
+<p><b>How you will know it works:</b> the builder asks fewer questions mid-build, the launch test passes at the rate in your brief, and every hand-off reaches a named person within the hours you set.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is the difference between an AI agent brief and a scope of work?</h3>
+<p>An AI chatbot scope of work is a commercial document about deliverables, price and timeline. An AI agent brief is about behavior: what the agent does, what it never does and how it is tested. Many projects attach the brief to the scope of work so both sides agree on what "done" means.</p>
+<h3>How long should an AI agent brief be?</h3>
+<p>One page for a first agent. Details such as product facts, prices and policies belong in the knowledge files, and tone rules belong in the instructions. The brief only records the decisions.</p>
+<h3>Do I need a brief if I use a ready-made chatbot platform?</h3>
+<p>Yes. A platform gives you the tools, not the decisions. You still have to choose the job, the scope, the hand-off triggers and the tests, whichever platform you use.</p>
+<h3>Should the first version of an AI agent take actions like booking or refunds?</h3>
+<p>Start with answering and booking open slots if your calendar connection is reliable. Keep refunds, payments and anything irreversible with a person until the agent has passed its tests and run for a few weeks under review.</p>
+
+<div class="dd-cta">
+<p class="dd-cta-title">Get one practical AI agent guide every week</p>
+<p>Want to learn it step by step? <a href="https://grow.dijaedadula.com/newsletter">Join the free weekly newsletter</a>.</p>
+<p>Prefer help drafting your brief? <a href="https://www.dijaedadula.com/book">Book a free AI Automation Blueprint call</a> and we will draft the job, scope and launch test together.</p>
+</div>
+<h2>References</h2>
+<ol class="dd-refs">
+<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">Anthropic: Building effective agents</a>, December 19, 2024.</li>
+<li><a href="https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf" target="_blank" rel="noopener">OpenAI: A practical guide to building agents</a> (PDF). Accessed November 24, 2026.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class="dd-more">
+<li><a href="https://www.dijaedadula.com/ai-agent-project-plan">Your First AI Agent Project Plan: Scope, Timeline and Acceptance Criteria</a></li>
+<li><a href="https://www.dijaedadula.com/ai-agent-instructions-template">How to Write AI Agent Instructions for Any Business (Templates Inside)</a></li>
+<li><a href="https://www.dijaedadula.com/ai-chatbot-cost">How Much Does an AI Chatbot Really Cost a Small Business? (2026 Math)</a></li>
+<li><a href="https://www.dijaedadula.com/blog">See all posts on the blog</a></li>
+</ul>
+</div>
