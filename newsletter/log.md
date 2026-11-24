@@ -13,3 +13,4 @@
 - 2026-11-20: Friday digest nl_broadcasts id 2 '3 guides: an AI sales agent that takes orders' (botcake-ai-pancake-setup-guide, filipino-freelancers-ai-clients-abroad, how-to-become-an-ai-trainer last as general career guide), Supabase/Zoho, scheduled 2026-11-20 02:00 UTC = 10:00 Manila, 3 subscribers.
 - 2026-11-20: digest nlb-2 sent 10:00 Manila: 3 sent, 0 failed.
 - 2026-11-21: FB Chatbot Authority ai-chatbot-cost https://www.facebook.com/chatbotauthority/posts/1596370662506270 ; IG data-privacy-act-chatbots-philippines https://www.instagram.com/p/Df--XPQkwKu/ (2 comments)
+- 2026-11-24: FB Chatbot Authority stop-bogus-cod-orders https://www.facebook.com/chatbotauthority/posts/1599840098825993 ; chatbot-sound-human https://www.facebook.com/chatbotauthority/posts/1599841325492537 ; IG held (signed out). Story email nlb-3 scheduled 20:00 Manila.
