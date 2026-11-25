@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "human-feedback-ai-training",
+   "title": "Human Feedback in AI Training Explained: How Expert Judgment Makes Models Better",
+   "blurb": "How models learn from people's judgments, why expert judges matter, the documented limits and what businesses can borrow."
+  },
+  {
    "slug": "ai-agent-brief",
    "title": "The AI Agent Brief: What to Decide Before Anyone Builds Your Chatbot",
    "blurb": "The eight decisions to write down before anyone builds your AI agent, with a copy-ready template and acceptance criteria."

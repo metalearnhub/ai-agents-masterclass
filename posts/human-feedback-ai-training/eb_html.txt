@@ -1,0 +1,128 @@
+<div class='dd-article'>
+<figure class='dd-fig'><div class='dd-shot' style='aspect-ratio:16/9'><img src='https://statics.pancake.vn/web-media-264/6b/9e/9d/b1/a6fb1f34e72382c729b6d44320b6a5da74b0bdbad65d0b1fc04eadee-w:1536-h:864-l:33087-t:image/jpeg.jpg' alt='Dark flat illustration of a person choosing the better of two answer cards, marked with a green check, with an arrow leading to a friendly robot' width='1536' height='864' loading='lazy'></div></figure>
+<p>Human feedback in AI training means people judge a model's answers, usually by writing good examples and choosing the better of two responses, and the model is then tuned to produce more of what people preferred. It is a big part of why modern AI assistants follow instructions instead of rambling. The quality of that feedback depends on who gives it, which is why AI companies increasingly want people with real expertise doing the judging.</p>
+<p>This guide explains how AI learns from human feedback in plain English, using only the public research that introduced and tested it. It also covers where the method falls short, and the one lesson every business running its own AI agent can borrow.</p>
+<div class='dd-tldr'>
+<p class='dd-tldr-title'>What you will get</p>
+<ul>
+<li>The <b>three stages</b> of training with human feedback, from the original papers.</li>
+<li>Why <b>expert judgment</b> beats volume, and the limits researchers have documented.</li>
+<li><b>AI feedback vs human feedback</b>: what changes when a model judges itself.</li>
+<li>A <b>feedback-loop table</b> you can use for your own business AI agent.</li>
+</ul>
+</div>
+<nav class='dd-toc' aria-label='Table of contents'>
+<p class='dd-toc-title'>In this guide</p>
+<ol>
+<li><a href='#what'>What is human feedback in AI training?</a></li>
+<li><a href='#how'>How does AI learn from human feedback?</a></li>
+<li><a href='#experts'>Why do AI companies use human experts?</a></li>
+<li><a href='#limits'>What are the limits of human feedback?</a></li>
+<li><a href='#ai-feedback'>AI feedback vs human feedback</a></li>
+<li><a href='#business'>What can a business borrow from this?</a></li>
+<li><a href='#faq'>FAQ</a></li>
+</ol>
+</nav>
+<h2 id='what'>1. What is human feedback in AI training?</h2>
+<p>A large language model first learns by reading enormous amounts of text and predicting the next word. That makes it fluent, but not necessarily helpful: it can answer the question you did not ask, or confidently make things up. Human feedback is the step that teaches it what people actually want.</p>
+<p>The idea is older than chatbots. In June 2017, OpenAI showed a simulated robot learning to do a backflip from people comparing pairs of short video clips and picking the one closer to the goal. The system needed 900 bits of feedback, and it took less than an hour of a person's time. The same research names the core limitation plainly: the method is “only as good as the human evaluator's intuition about what behaviors look correct.”</p>
+<p>In 2022, the same approach was applied to language models at scale. The technique is usually called reinforcement learning from human feedback. Here is reinforcement learning from human feedback explained in one line: people show the model good answers, people rank its answers, and the model is tuned toward the answers people ranked higher.</p>
+<h2 id='how'>2. How does AI learn from human feedback?</h2>
+<p>OpenAI's InstructGPT paper, submitted in March 2022, describes the process most explanations still follow. It has three stages.</p>
+<figure class='dd-fig'>
+<svg class='dk' viewBox='0 0 640 260' role='img' aria-labelledby='ha1t ha1d' xmlns='http://www.w3.org/2000/svg'>
+<title id='ha1t'>Three stages of training with human feedback</title>
+<desc id='ha1d'>Three boxes left to right with arrows. Stage 1, demonstrations: people write good answers and the model learns from them. Stage 2, preferences: people rank several model answers and a reward model learns to predict their choices. Stage 3, tuning: the model is optimized to score well on the reward model. Stage 3 is highlighted. A bar under the boxes says people supply the judgment in stages 1 and 2.</desc>
+<defs><linearGradient id='ha1g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#1f2224'/><stop offset='1' stop-color='#0a0b0c'/></linearGradient>
+<marker id='ha1a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#8a8f94'/></marker></defs>
+<rect x='0' y='0' width='640' height='260' rx='14' fill='url(#ha1g)'/>
+<text class='svg-k' x='24' y='36'>THREE STAGES, FROM THE INSTRUCTGPT PAPER</text>
+<rect x='24' y='58' width='176' height='120' rx='12' fill='#17191b' stroke='#3a3f43' stroke-width='2'/>
+<text class='svg-t' x='40' y='86'>1 Demonstrations</text>
+<text class='svg-s' x='40' y='114'>People write good</text><text class='svg-s' x='40' y='134'>answers; the model</text><text class='svg-s' x='40' y='154'>learns from them</text>
+<rect x='232' y='58' width='176' height='120' rx='12' fill='#17191b' stroke='#3a3f43' stroke-width='2'/>
+<text class='svg-t' x='248' y='86'>2 Preferences</text>
+<text class='svg-s' x='248' y='114'>People rank answers;</text><text class='svg-s' x='248' y='134'>a reward model learns</text><text class='svg-s' x='248' y='154'>to predict their picks</text>
+<rect x='440' y='58' width='176' height='120' rx='12' fill='#10302a' stroke='#3fbfa6' stroke-width='2'/>
+<text class='svg-t' x='456' y='86'>3 Tuning</text>
+<text class='svg-s' x='456' y='114'>The model is tuned</text><text class='svg-s' x='456' y='134'>to score well on</text><text class='svg-s' x='456' y='154'>the reward model</text>
+<line x1='200' y1='118' x2='228' y2='118' stroke='#8a8f94' stroke-width='2' marker-end='url(#ha1a)'/>
+<line x1='408' y1='118' x2='436' y2='118' stroke='#8a8f94' stroke-width='2' marker-end='url(#ha1a)'/>
+<rect x='24' y='202' width='384' height='36' rx='8' fill='#17191b' stroke='#3fbfa6' stroke-width='2'/>
+<text class='svg-t' x='40' y='225'>People supply the judgment here</text>
+</svg>
+<figcaption><b>Figure 1.</b> People write examples and rank answers. The final tuning step only amplifies the judgment captured in the first two.</figcaption>
+</figure>
+<ol>
+<li><b>Demonstrations.</b> The researchers started from “labeler-written prompts and prompts submitted through the OpenAI API” and collected “labeler demonstrations of the desired model behavior.” The model is fine-tuned on those examples.</li>
+<li><b>Preferences.</b> They then collected “rankings of model outputs.” These rankings are human preference data: for the same prompt, which answer is better? A separate reward model learns to predict those choices.</li>
+<li><b>Tuning.</b> The model is optimized with reinforcement learning to produce answers the reward model scores highly, which means answers people would likely prefer.</li>
+</ol>
+<p>The headline result: according to the paper, outputs from a 1.3-billion-parameter InstructGPT model were preferred to outputs from the 175-billion-parameter GPT-3, “despite having 100x fewer parameters.” Better judgment in training beat sheer size.</p>
+<div class='dd-note'><span class='dd-note-label'>Dijae's rule</span><p>A model can only be as good as the judgment it learns from. Whether it is a frontier model or your shop's chatbot, decide who judges “good” before you decide anything else.</p></div>
+<h2 id='experts'>3. Why do AI companies use human experts?</h2>
+<p>Why AI companies use human experts comes down to one point: ranking answers is easy only when the answers are easy. Anyone can tell a polite reply from a rude one. Judging whether a tax explanation, a drug interaction summary or a piece of code is actually correct takes someone who knows the field.</p>
+<p>The research on the method's limits says this directly. A 2023 survey led by Stephen Casper of MIT and Xander Davies of Harvard, <i>Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback</i>, lists the problem that “humans cannot evaluate performance on difficult tasks well,” and warns that people “can be misled, so their evaluations can be gamed,” for example by an answer that sounds confident while being wrong. As models get better, the people judging them need deeper knowledge to catch the errors that remain.</p>
+<p>That is the economic logic behind the trend covered in <a href='https://www.dijaedadula.com/why-ai-companies-pay-domain-experts'>why AI companies now pay domain experts to teach their models</a>. For the career side, a <a href='https://www.dijaedadula.com/what-does-an-ai-trainer-do'>general guide to these roles</a> explains the skills they ask for.</p>
+<h2 id='limits'>4. What are the limits of human feedback?</h2>
+<p>Human feedback made assistants far more useful, but the researchers who built it are open about what it does not fix. The most important limits, from the sources above:</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Limit</th><th>What it means in practice</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Judgment ceiling</td><td>The model learns what looks correct to the judges, not what is correct</td><td>OpenAI, 2017</td></tr>
+<tr><td>Gaming</td><td>Confident wrong answers can win approval</td><td>Casper et al., 2023</td></tr>
+<tr><td>Whose preferences?</td><td>Aligning to the average judge “may not be desirable”; minority views can be outvoted</td><td>OpenAI, 2022; Casper et al., 2023</td></tr>
+<tr><td>Still not fully safe</td><td>InstructGPT models were “far from fully aligned or fully safe” and could still make up facts</td><td>OpenAI, 2022</td></tr>
+</tbody></table></div>
+<div class='dd-warn'><span class='dd-note-label'>Know the limits</span><p>An honest limitation: this guide explains the published, public versions of the method. AI companies have refined their training since these papers, and most do not publish the details. Treat this as how the approach works in principle, not as a description of any company's current pipeline.</p></div>
+<h2 id='ai-feedback'>5. AI feedback vs human feedback: what changes?</h2>
+<p>Human feedback is slow and expensive, so researchers have looked for ways to let models help judge themselves. Anthropic's Constitutional AI paper, submitted in December 2022, is the best-known public example. In it, “the only human oversight is provided through a list of rules or principles.” The model critiques and revises its own answers against those principles, then a model, not a person, picks the better of two answers to train on. The paper calls this “RL from AI Feedback.”</p>
+<p>People do not disappear in this approach; their judgment moves upstream into the written principles. That is a pattern worth noticing: the more automated the training, the more the quality depends on the rules people write at the start.</p>
+<h2 id='business'>6. What can a business borrow from this?</h2>
+<p>Most businesses will never train a model. When you run an AI agent on Messenger, your website or the phone, the model is fixed. What you control is the knowledge it answers from and the instructions it follows. Human feedback still matters there, it just goes into those two places instead of the model's weights.</p>
+<p>The lesson from the research carries over directly: the person judging must know the right answer. A support lead or the owner reviewing real conversations will catch wrong prices and broken promises that a random reviewer would miss. A simple loop looks like this:</p>
+<div class='dd-table-wrap'><table>
+<thead><tr><th>Signal</th><th>Who reviews it</th><th>Where the fix goes</th><th>Target speed</th></tr></thead>
+<tbody>
+<tr><td>A wrong fact in an answer</td><td>Owner or the person who owns that topic</td><td>The knowledge base file</td><td>Same week</td></tr>
+<tr><td>Right facts, wrong tone or steps</td><td>Owner or support lead</td><td>The agent's instructions</td><td>Same week</td></tr>
+<tr><td>A question it should not have answered</td><td>Owner</td><td>Scope and hand-off rules</td><td>Before the next busy day</td></tr>
+<tr><td>A customer asked for a person</td><td>Support lead</td><td>Hand-off triggers, if it took too long</td><td>Same day</td></tr>
+</tbody></table></div>
+<p>The guides on <a href='https://www.dijaedadula.com/ai-agent-knowledge-base'>writing a knowledge base</a>, <a href='https://www.dijaedadula.com/ai-agent-instructions-template'>writing agent instructions</a> and the <a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>30-minute weekly review</a> show how to run each part.</p>
+<p><b>How you will know your feedback loop works:</b></p>
+<ul>
+<li>The same wrong answer never shows up in two weekly reviews in a row.</li>
+<li>Every fix is logged with the file it changed and the date.</li>
+<li>The reviewer is someone who could answer the customer correctly without the AI.</li>
+</ul>
+<h2 id='faq'>Frequently asked questions</h2>
+<h3>Is human feedback the same as training a model from scratch?</h3>
+<p>No. Training from scratch teaches a model language from huge amounts of text. Human feedback comes afterwards and tunes an already capable model toward answers people prefer.</p>
+<h3>Why not let AI judge itself instead of people?</h3>
+<p>AI feedback is cheaper and faster, and research such as Constitutional AI shows it can work for some goals. But people still set the principles the AI judges against, and errors in those principles flow straight into the model.</p>
+<h3>Does more feedback always mean a better model?</h3>
+<p>Not on its own. The research shows that feedback is limited by what the judges can tell is correct, so expert feedback on hard questions can matter more than a large volume of casual feedback.</p>
+<h3>Can my business chatbot learn from customer thumbs-up and thumbs-down?</h3>
+<p>Not directly in most platforms; the model itself does not change. Use those signals to find answers to review, then fix the knowledge base or instructions so the next customer gets the right answer.</p>
+<div class='dd-cta'>
+<p class='dd-cta-title'>Get one practical AI guide every week</p>
+<p>Want plain-English explainers like this in your inbox? <a href='https://grow.dijaedadula.com/newsletter'>Join the free weekly newsletter</a>.</p>
+<p>Running an AI agent and want a feedback loop that actually fixes it? <a href='https://www.dijaedadula.com/book'>Book a free AI Automation Blueprint call</a>.</p>
+</div>
+<h2>References</h2>
+<ol class='dd-refs'>
+<li><a href='https://openai.com/index/learning-from-human-preferences/' target='_blank' rel='noopener'>OpenAI: Learning from human preferences</a>, June 13, 2017.</li>
+<li><a href='https://openai.com/index/instruction-following/' target='_blank' rel='noopener'>OpenAI: Aligning language models to follow instructions</a>, January 27, 2022.</li>
+<li><a href='https://arxiv.org/abs/2203.02155' target='_blank' rel='noopener'>Ouyang et al.: Training language models to follow instructions with human feedback</a> (arXiv 2203.02155), March 4, 2022.</li>
+<li><a href='https://arxiv.org/abs/2212.08073' target='_blank' rel='noopener'>Bai et al.: Constitutional AI: Harmlessness from AI Feedback</a> (arXiv 2212.08073), December 15, 2022.</li>
+<li><a href='https://arxiv.org/abs/2307.15217' target='_blank' rel='noopener'>Casper, Davies et al.: Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback</a> (arXiv 2307.15217), 2023.</li>
+</ol>
+<h2>Keep reading</h2>
+<ul class='dd-more'>
+<li><a href='https://www.dijaedadula.com/why-ai-companies-pay-domain-experts'>Why AI Companies Now Pay Domain Experts to Teach Their Models</a></li>
+<li><a href='https://www.dijaedadula.com/ai-agent-monitoring-weekly-review'>AI Agent Monitoring After Launch: A Weekly Review Routine</a></li>
+<li><a href='https://www.dijaedadula.com/how-to-test-an-ai-chatbot'>How to Test an AI Chatbot Before It Talks to Your Customers</a></li>
+<li><a href='https://www.dijaedadula.com/blog'>See all posts on the blog</a></li>
+</ul>
+</div>
