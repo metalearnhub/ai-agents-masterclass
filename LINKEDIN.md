@@ -28,7 +28,23 @@
 | 12 | 2026-11-24 | Pricing | Clients don't buy a chatbot. They buy what changes after it's live. | /price-ai-automation-services |  |
 | 13 | 2026-11-26 | Client system | Get clients without living on social media. | /get-more-clients-with-ai | How to Turn Blog and Search Traffic Into Automated Chat Leads |
 | 14 | 2026-12-01 | Assistive AI | Assist first. Automate second. | /what-is-an-ai-agent |  |
+| 15 | 2026-12-03 | AI search | Write the answer first. Then the explanation. | /what-is-generative-engine-optimization | checklist #53 |
+| 16 | 2026-12-08 | Lead response | Every inquiry deserves a next step. | /lead-response-time | checklist #31 |
+| 17 | 2026-12-10 | Follow-up | Silence isn't a no. | /automate-lead-follow-up | checklist #34 |
+| 18 | 2026-12-15 | Process first | Write the SOP before you write the prompt. | /dont-automate-chaos | checklist #37 |
+| 19 | 2026-12-17 | Knowledge | Your best people are your agent's best teachers. | /ai-agent-knowledge-base | checklist #64 |
+| 20 | 2026-12-22 | Development | Automate the boring, frequent work first. | /assist-first-automate-second | checklist #40 |
+| 21 | 2026-12-24 | Optimization | Peak season tests your chatbot more than any demo. | /how-to-test-an-ai-chatbot | checklist #44 |
+| 22 | 2026-12-29 | Review & audit | Hire the AI builder who asks the most questions. | /ai-agent-brief | checklist #36 |
+| 23 | 2026-12-31 | Review & audit | Before you add more AI next year, review what you already run. | /ai-agent-monitoring-weekly-review | checklist #49 |
+| 24 | 2027-01-05 | Cost control | It's not chatbot or virtual assistant. It's chatbot and virtual assistant. | /ai-chatbot-cost | checklist #67 |
+| 25 | 2027-01-07 | Human handoff | Automate the answer. Keep the relationship human. | /ai-chatbot-human-handoff | checklist #70 |
+| 26 | 2027-01-12 | AI training, explained | A benchmark score is not a job interview. | /human-feedback-ai-training | checklist #73 |
+| 27 | 2027-01-14 | Pricing | How you pay for an AI agent shapes what you get from it. | /ai-model-choice-agent-costs | checklist #76 |
+| 28 | 2027-01-19 | Integrations | Pick the automation tool your team can maintain, not just the cheapest one. | /mcp-ai-agent-business-tools | checklist #78 |
+| 29 | 2027-01-21 | Governance | Your team may already be using AI tools. Write the rules down. | /prompt-injection-business-owners | checklist #83 |
 
+Entries 15-29 carry `upcomingBlog` (checklist #) in posts.json; generator: dijae-cv-landing crm/content-bank/src/batch_p15.py.
 When an upcoming blog post goes live, swap or add its URL in that LinkedIn post's first comment (posts.json) before the LinkedIn date.
 
 Status: #01 posted and verified 2026-10-15.
