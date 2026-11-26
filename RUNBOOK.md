@@ -171,3 +171,7 @@ Verdict = APPROVE or FIX (with a numbered list of required edits). Apply every r
 
 ## 23. Webcake organization (Nov 26 2026)
 The Webcake connector no longer auto-selects the organization. Pass `organization_id: "93230"` (Chatbot Authority) on EVERY Webcake call (get_page, patch_page, publish_page, update_page, create_page, upload_images), even though some tool schemas do not list it; the server accepts it. Without it every call fails with "organization_required".
+
+## 24. Content bank lives in the CRM (Nov 26 2026)
+The content bank moved into the CRM: repo metalearnhub/dijae-cv-landing, folder `crm/content-bank/` (local `/home/claude/cvl/crm/content-bank/`), live at https://crm.dijaedadula.com/crm/content-bank/app. Old `/assets/content-bank/*` links redirect there. Write posts.json, images and posters ONLY under `crm/content-bank/`; never recreate `assets/content-bank/`. Image URLs: `https://crm.dijaedadula.com/crm/content-bank/<file>`.
+The content bank now has a Blog tab (the content calendar). After every checklist change (publish or new rows) run `python3 tools/calendar_bank.py` and commit+push cvl.

@@ -1,7 +1,7 @@
 import json,sys,html as H
 from playwright.sync_api import sync_playwright
 OUT='/tmp/claude-0/-home-claude/a0ddebc3-1c9f-5dc3-9d51-6b734607f315/scratchpad/ca'
-d=json.load(open('/home/claude/cvl/assets/content-bank/posts.json'))['facebook']
+d=json.load(open('/home/claude/cvl/crm/content-bank/posts.json'))['facebook']
 LBL={0:'AI AGENTS',2:'DIGITAL INCOME',3:'AUTOMATION',4:'DATA PRIVACY',5:'LEAD FOLLOW-UP',6:'AI CHATBOTS',7:'CLIENT GROWTH',8:'AI TRAINING',9:'CASE STUDY',10:'CHAT TOOLS',11:'AI QUALITY',12:'MCP',13:'PLATFORMS',14:'RESORTS AND HOTELS',15:'LEAD QUALIFICATION',16:'LIVE SELLING',17:'AI CAREERS',18:'FREELANCING',19:'PRICING',20:'CHATBOT ROI',21:'AI AGENTS',22:'CLINICS AND MED SPAS'}
 MOT={0:'network',2:'ladder',3:'funnel',4:'shield',5:'chat',6:'chat',7:'funnel',8:'gauge',9:'funnel',10:'network',11:'gauge',12:'network',13:'network',14:'chat',15:'funnel',16:'chat',17:'ladder',18:'network',19:'ladder',20:'gauge',21:'chat',22:'funnel'}
 src=open('/home/claude/autopilot/tools/community/poster.py').read()

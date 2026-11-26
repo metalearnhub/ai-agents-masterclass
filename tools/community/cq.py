@@ -16,7 +16,7 @@ elif a=='sync':
     base=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     fbq=json.load(open(os.path.join(base,'newsletter','queue.json')))['fb']
     have={i['slug'] for i in q['items']}
-    try: cb={f['slug']:f for f in json.load(open('/home/claude/cvl/assets/content-bank/posts.json'))['facebook']}
+    try: cb={f['slug']:f for f in json.load(open('/home/claude/cvl/crm/content-bank/posts.json'))['facebook']}
     except Exception: cb={}
     for x in sorted(fbq,key=lambda e:e['date']):
         if x['slug'] not in have:

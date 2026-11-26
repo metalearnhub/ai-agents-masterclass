@@ -46,7 +46,7 @@ ZOHO_SMTP_USER (mailbox login), ZOHO_SMTP_PASS (Zoho app-specific password), NL_
 3. Newsletter: contacts table + send edge function (provider API) + scheduled jobs (pg_cron) for welcome flow, Friday digest, Tuesday story email.
 4. Point domains to Vercel, test desktop/mobile, then retire MC.
 
-- Content bank (dijae-cv-landing.vercel.app/assets/content-bank/app): passcode gate now served by the Supabase content-bank function (action unlock, hash in table cb_config). A correct passcode issues a device key; verifications sync from cb_state.
+- Content bank (crm.dijaedadula.com/crm/content-bank/app): passcode gate now served by the Supabase content-bank function (action unlock, hash in table cb_config). A correct passcode issues a device key; verifications sync from cb_state.
 - Newsletter broadcasts: nl_broadcasts table + pg_cron job nl-broadcasts + edge function nl (run action). Tested Nov 16 with a test send.
 - PM University: repo pm-university rebuilt for Vercel; passcode gate + progress sync via Supabase function pmu (tables pmu_rows, pmu_config, pmu_keys). Coach copies prompts for Claude/ChatGPT. Old progress data was not recoverable.
 - AI Trainer Defense: coach button copies the report with debrief instructions and opens Claude/ChatGPT.
