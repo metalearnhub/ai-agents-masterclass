@@ -54,3 +54,38 @@ On hold until Dijae records (December or when he says): Website Blog Plan #3 Wha
 ## Rules for the two new series
 - GEO: cite each AI vendor's own documentation (OpenAI, Google Search Central, Microsoft Bing, Perplexity, Anthropic) and the GEO research paper; state facts with dates; never promise rankings or guaranteed recommendations; mark proposals (for example llms.txt) as proposals.
 - Human-expert data: public facts only (funding rounds, acquisitions, published papers, public job pages); general industry framing; never first person, never name or describe any private engagement, its company, terms or methods; plain wording (no internal jargon); career posts stay general guides and are never the lead story; no partner or affiliate links of any kind.
+
+## Extension added Nov 26, 2026 (Dec 25 - Jan 23)
+
+| Date (Manila) | Blog post (Website Blog Plan #) | Series | Also |
+|---|---|---|---|
+| Fri Dec 25 | #66 AI Chatbot Pricing in the Philippines: What Businesses Actually Pay in 2027 | - | Digest 10:00, Facebook |
+| Sat Dec 26 | #67 Chatbot vs Hiring a Virtual Assistant: Cost, Coverage and When You Need Both | - | Facebook |
+| Sun Dec 27 | #68 ChatGPT for Small Business: 10 Workflows That Save Hours Every Week | - | Facebook |
+| Mon Dec 28 | #69 How to Get Your Business Into AI Shopping Answers and Product Recommendations | GEO | Facebook |
+| Tue Dec 29 | #70 AI Customer Service for Small Business: What to Automate and What to Keep Human | - | Story email 10:00, Facebook |
+| Wed Dec 30 | #71 How Many Leads Does a Chatbot Need to Pay for Itself? A Break-Even Calculator | - | Facebook |
+| Thu Dec 31 | #72 Facebook Messenger Chatbot Examples: 12 Flows That Work for Local Businesses | - | Facebook |
+| Fri Jan 1 | #73 AI Benchmarks Explained: What Leaderboard Scores Do and Don't Tell a Business | Expert data | Digest 10:00, Facebook |
+| Sat Jan 2 | #74 AI for Dental Clinics: Bookings, Reminders and Recall Messages | - | Facebook |
+| Sun Jan 3 | #75 Perplexity for Business: How It Finds, Ranks and Cites Sources | GEO | Facebook |
+| Mon Jan 4 | #76 AI Agent Pricing Models Explained: Per Seat, Per Conversation and Per Outcome | - | Facebook |
+| Tue Jan 5 | #77 Instagram DM Automation in 2027: Rules, Limits and Safe Setups | - | Story email 10:00, Facebook |
+| Wed Jan 6 | #78 Zapier vs Make vs n8n for Small Business Automation (2027) | - | Facebook |
+| Thu Jan 7 | #79 Synthetic Data vs Human Data: What Public Research Says About Training AI | Expert data | Facebook |
+| Fri Jan 8 | #80 Where Is My Order? Building an Order-Status Bot for Online Shops | - | Digest 10:00, Facebook |
+| Sat Jan 9 | #81 Local SEO in the AI Era: Map Results, AI Overviews and Reviews | GEO | Facebook |
+| Sun Jan 10 | #82 AI Voice Agent or Chatbot? When a Phone Call Beats a Chat | - | Facebook |
+| Mon Jan 11 | #83 A One-Page AI Use Policy for Small Teams (Template) | - | Facebook |
+| Tue Jan 12 | #84 AI for Gyms and Fitness Studios: Trials, Memberships and Renewals | - | Story email 10:00, Facebook |
+| Wed Jan 13 | #85 Comparison Pages AI Assistants Cite: How to Write 'X vs Y' Pages Honestly | GEO | Facebook |
+| Thu Jan 14 | #86 Chatbot Conversion Rate: How to Measure It and Improve It | - | Facebook |
+| Fri Jan 15 | #87 AI Agent Security Basics: Access, Data and Permissions for Small Businesses | - | Digest 10:00, Facebook |
+| Sat Jan 16 | #88 Why Your Industry Knowledge Is the Edge When Building AI Agents | Expert data | Facebook |
+| Sun Jan 17 | #89 Lead Scoring With AI: Rank Inquiries by Buying Intent | - | Facebook |
+| Mon Jan 18 | #90 Multilingual Chatbots: Serving Customers Who Mix Languages | - | Facebook |
+| Tue Jan 19 | #91 AI for Car Dealers and Auto Service Shops: Inquiries, Test Drives and Service Reminders | - | Story email 10:00, Facebook |
+| Wed Jan 20 | #92 How AI Assistants Read Reviews: What Customers' Words Do for Your Visibility | GEO | Facebook |
+| Thu Jan 21 | #93 Pipedrive vs HubSpot vs GoHighLevel for Small Service Businesses | - | Facebook |
+| Fri Jan 22 | #94 The Handover Pack: What to Get From Your Chatbot Builder Before They Leave | - | Digest 10:00, Facebook |
+| Sat Jan 23 | #95 How to Write Chatbot FAQs Customers Actually Use | - | Facebook |
