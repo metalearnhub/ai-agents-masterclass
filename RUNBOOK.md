@@ -168,3 +168,6 @@ After make_post.py and before create_page, spawn ONE fresh review agent (Agent t
 - PM/QA: acceptance criteria met, one unique asset, figures readable, every statistic traceable to a cited source.
 - Confidentiality: the zero-hit scan terms.
 Verdict = APPROVE or FIX (with a numbered list of required edits). Apply every required edit, rebuild, and re-run the review once if anything substantive changed. Publish only on APPROVE. Put the verdict and the edits made in the daily report.
+
+## 23. Webcake organization (Nov 26 2026)
+The Webcake connector no longer auto-selects the organization. Pass `organization_id: "93230"` (Chatbot Authority) on EVERY Webcake call (get_page, patch_page, publish_page, update_page, create_page, upload_images), even though some tool schemas do not list it; the server accepts it. Without it every call fails with "organization_required".
