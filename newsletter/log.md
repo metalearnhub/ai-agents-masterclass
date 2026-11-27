@@ -14,3 +14,4 @@
 - 2026-11-20: digest nlb-2 sent 10:00 Manila: 3 sent, 0 failed.
 - 2026-11-21: FB Chatbot Authority ai-chatbot-cost https://www.facebook.com/chatbotauthority/posts/1596370662506270 ; IG data-privacy-act-chatbots-philippines https://www.instagram.com/p/Df--XPQkwKu/ (2 comments)
 - 2026-11-24: FB Chatbot Authority stop-bogus-cod-orders https://www.facebook.com/chatbotauthority/posts/1599840098825993 ; chatbot-sound-human https://www.facebook.com/chatbotauthority/posts/1599841325492537 ; IG held (signed out). Story email nlb-3 scheduled 20:00 Manila.
+- 2026-11-27 digest nlb-4 scheduled 10:00 Manila: price-ai-automation-services, chatbot-roi-metrics, ai-agent-instructions-template
