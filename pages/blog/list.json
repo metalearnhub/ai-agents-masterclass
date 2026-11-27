@@ -1,6 +1,11 @@
 {
  "posts": [
   {
+   "slug": "write-content-for-ai-search",
+   "title": "How to Write Content for AI Search That Gets Quoted",
+   "blurb": "Answer-first headings, short quotable answers and sourced facts, plus a six-point page check before you publish."
+  },
+  {
    "slug": "human-feedback-ai-training",
    "title": "Human Feedback in AI Training Explained: How Expert Judgment Makes Models Better",
    "blurb": "How models learn from people's judgments, why expert judges matter, the documented limits and what businesses can borrow."
