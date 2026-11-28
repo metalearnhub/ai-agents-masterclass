@@ -3,3 +3,7 @@ __pycache__/
 *.png
 *.jpg
 tools/node_modules
+
+products/messenger-fix/build.py
+products/messenger-fix/*.pdf
+products/messenger-fix/*.png
