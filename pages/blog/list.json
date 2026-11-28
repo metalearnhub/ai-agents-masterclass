@@ -1,9 +1,19 @@
 {
  "posts": [
   {
+   "slug": "automation-for-coaches-consultants",
+   "title": "Automation for Coaches and Consultants: From Inquiry to Booked Call",
+   "blurb": "A six-stage system that replies in minutes, qualifies, books, reminds and follows up once, with copy-ready messages."
+  },
+  {
    "slug": "write-content-for-ai-search",
    "title": "How to Write Content for AI Search That Gets Quoted",
    "blurb": "Answer-first headings, short quotable answers and sourced facts, plus a six-point page check before you publish."
+  },
+  {
+   "slug": "agentic-ai-small-business",
+   "title": "What Agentic AI Means for Small Businesses in 2026",
+   "blurb": "What the 2026 data says about AI agents, how to spot agent washing, and a decision checklist before you buy."
   },
   {
    "slug": "human-feedback-ai-training",
